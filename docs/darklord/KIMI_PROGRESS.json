@@ -1,0 +1,171 @@
+{
+  "updated": "2026-11-25T01:25:00+05:00",
+  "repo": "/home/gamedev/LunexMMOKit",
+  "base_commit": "7470627",
+  "disk_before": {
+    "root_use_percent": 77,
+    "root_avail": "14G"
+  },
+  "notes": [
+    "Обязательные NEXT.md/ROAD.md/DEMO.md отсутствуют; фактическое состояние зафиксировано AGENTS.md, docs/roadmap.json и docs/darklord/*.",
+    "Последние доказательства: коммит 7470627, приватные GLB в /home/gamedev/darklord-dgi/exports.",
+    "Работающие сервисы/Docker/original Darklord не изменялись.",
+    "docs/NEXT.md не создан: каталог docs/ недоступен пользователю kimi на запись; требуется root chmod/chown при необходимости."
+  ],
+  "tasks": [
+    {
+      "id": "KIMI-001",
+      "status": "in_progress",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Созданы roadmap/progress; начат аудит GLB/manifest/Git"
+    },
+    {
+      "id": "KIMI-002",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует KIMI-001 и проверки точек DM_R_Hand/DM_L_wuqi01"
+    },
+    {
+      "id": "KIMI-003",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует KIMI-001/KIMI-002 и параметров материалов"
+    },
+    {
+      "id": "KIMI-004",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует source particle prefabs и существующего particle_index.py"
+    },
+    {
+      "id": "KIMI-005",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует KIMI-003/KIMI-004 и полного VFX цикла"
+    },
+    {
+      "id": "KIMI-006",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует KIMI-005 и таблиц skill/action/audio/effect"
+    },
+    {
+      "id": "KIMI-007",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует готовых анимаций и боевых событий"
+    },
+    {
+      "id": "KIMI-008",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует стабильных персонажей и combat preview"
+    },
+    {
+      "id": "KIMI-009",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Требует training/combat сцены и Xvfb capture"
+    },
+    {
+      "id": "KIMI-010",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "После базовых персонажей"
+    },
+    {
+      "id": "KIMI-011",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "После KIMI-008/KIMI-009"
+    },
+    {
+      "id": "KIMI-012",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Параллельно после визуальной стабилизации"
+    },
+    {
+      "id": "KIMI-013",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "Только после одобренных кадров"
+    },
+    {
+      "id": "KIMI-014",
+      "status": "pending",
+      "depends": [],
+      "done": [],
+      "modified_files": [],
+      "tests": [],
+      "screenshots": [],
+      "errors": [],
+      "next_action": "После KIMI-011/KIMI-012"
+    }
+  ]
+}
