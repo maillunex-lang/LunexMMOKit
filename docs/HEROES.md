@@ -1,0 +1,2 @@
+# Heroes
+Design baseline: three launch classes Guardian (tank), Blade (melee damage), Arcanist (ranged magic); add healer/support after vertical slice. Class choice at character creation; class-specific equipment. No dragon forms. Select actual models and clips only after inventory; names are working names. Shared actor component and data-driven stats, animation mapping, equipment sockets. Camera elevated third-person, adjustable zoom, landscape touch UI. Manual joystick and tap-to-move; auto-navigation optional.

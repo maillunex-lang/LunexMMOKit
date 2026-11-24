@@ -1,0 +1,564 @@
+[
+  {
+    "id": "F01",
+    "phase": "foundation",
+    "depends": [],
+    "read": [],
+    "scope": [],
+    "work": "Initial Godot skeleton",
+    "accept": "Local smoke and push",
+    "status": "done",
+    "evidence": "bdd63ed"
+  },
+  {
+    "id": "F02",
+    "phase": "foundation",
+    "depends": [
+      "F01"
+    ],
+    "read": [],
+    "scope": [],
+    "work": "Module layout and static CI",
+    "accept": "Local smoke and push",
+    "status": "done",
+    "evidence": "f19d5b8; CI result unverified"
+  },
+  {
+    "id": "F03",
+    "phase": "foundation",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/ARCHITECTURE.md"
+    ],
+    "scope": [
+      "tests/",
+      ".github/"
+    ],
+    "work": "Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов",
+    "accept": "CI green; APK устанавливается",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "F04",
+    "phase": "foundation",
+    "depends": [
+      "F03"
+    ],
+    "read": [
+      "docs/ARCHITECTURE.md"
+    ],
+    "scope": [
+      "server/",
+      "shared/"
+    ],
+    "work": "Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов",
+    "accept": "go test; health; миграции на тестовой БД",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "D01",
+    "phase": "data",
+    "depends": [
+      "F03"
+    ],
+    "read": [
+      "docs/ASSETS.md"
+    ],
+    "scope": [
+      "tools/",
+      "shared/"
+    ],
+    "work": "Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены",
+    "accept": "Повторный индекс идентичен; отчет пропусков",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "D02",
+    "phase": "data",
+    "depends": [
+      "D01"
+    ],
+    "read": [
+      "docs/ASSETS.md"
+    ],
+    "scope": [
+      "tools/",
+      "shared/"
+    ],
+    "work": "Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр",
+    "accept": "Fixtures; dangling refs отчет",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "D03",
+    "phase": "data",
+    "depends": [
+      "D02"
+    ],
+    "read": [
+      "docs/ASSETS.md"
+    ],
+    "scope": [
+      "tools/",
+      "client/content/"
+    ],
+    "work": "Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack",
+    "accept": "Godot import; четыре типа моделей; визуальная проверка",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "D04",
+    "phase": "data",
+    "depends": [
+      "D02"
+    ],
+    "read": [
+      "docs/ASSETS.md"
+    ],
+    "scope": [
+      "tools/",
+      "client/content/"
+    ],
+    "work": "Конвертер сцен, terrain, коллизий, навигации и размещения объектов",
+    "accept": "Сравнение масштаба и координат; тест маршрута",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "D05",
+    "phase": "data",
+    "depends": [
+      "D03"
+    ],
+    "read": [
+      "docs/ASSETS.md"
+    ],
+    "scope": [
+      "tools/",
+      "client/content/"
+    ],
+    "work": "Конвертер VFX, аудио и событий клипов; ручные overrides",
+    "accept": "Тест синхронизации; отчет неподдержанных эффектов",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "W01",
+    "phase": "world",
+    "depends": [
+      "D04"
+    ],
+    "read": [
+      "docs/LOCATIONS.md"
+    ],
+    "scope": [
+      "client/world/",
+      "shared/"
+    ],
+    "work": "Протяженная тестовая зона, чанки, LOD, коллизии, навигация",
+    "accept": "Маршрут 2–4 минуты без телепорта; замер памяти",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "W02",
+    "phase": "world",
+    "depends": [
+      "W01"
+    ],
+    "read": [
+      "docs/LOCATIONS.md"
+    ],
+    "scope": [
+      "client/world/",
+      "client/ui/"
+    ],
+    "work": "Карта, миникарта, переходы, точки возрождения, безопасные зоны",
+    "accept": "Переход туда-обратно; корректные координаты",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "A01",
+    "phase": "actors",
+    "depends": [
+      "D03",
+      "W01"
+    ],
+    "read": [
+      "docs/HEROES.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/ui/"
+    ],
+    "work": "Герой, камера, джойстик, тап, навигация, экипировка визуально",
+    "accept": "Движение и коллизии; Android touch",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "A02",
+    "phase": "actors",
+    "depends": [
+      "A01",
+      "D05"
+    ],
+    "read": [
+      "docs/COMBAT.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/combat/"
+    ],
+    "work": "AnimationPlayer/Tree, события атаки, VFX, звук, прерывания",
+    "accept": "Попадание совпадает с кадром; нет двойного события",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "N01",
+    "phase": "network",
+    "depends": [
+      "F04",
+      "A01"
+    ],
+    "read": [
+      "docs/ARCHITECTURE.md"
+    ],
+    "scope": [
+      "server/",
+      "client/network/",
+      "shared/"
+    ],
+    "work": "Регистрация, логин, персонаж, сессии, reconnect, версия протокола",
+    "accept": "Два клиента; просроченный токен отклонен",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "N02",
+    "phase": "network",
+    "depends": [
+      "N01",
+      "W02"
+    ],
+    "read": [
+      "docs/ARCHITECTURE.md"
+    ],
+    "scope": [
+      "server/",
+      "client/network/"
+    ],
+    "work": "Авторитетное движение, AOI, снапшоты, интерполяция",
+    "accept": "Два клиента видят друг друга; teleport cheat отклонен",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "C01",
+    "phase": "combat",
+    "depends": [
+      "N02",
+      "A02"
+    ],
+    "read": [
+      "docs/COMBAT.md"
+    ],
+    "scope": [
+      "server/",
+      "client/combat/",
+      "shared/"
+    ],
+    "work": "Серверный бой, цели, cooldown, ресурсы, урон, смерть",
+    "accept": "Детерминированные тесты; клиент не задает урон",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "C02",
+    "phase": "combat",
+    "depends": [
+      "C01"
+    ],
+    "read": [
+      "docs/COMBAT.md"
+    ],
+    "scope": [
+      "server/",
+      "client/actors/"
+    ],
+    "work": "Монстры, aggro, patrol, leash, respawn, loot, босс",
+    "accept": "Убийство, возврат, респаун, награда один раз",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "C03",
+    "phase": "combat",
+    "depends": [
+      "C02"
+    ],
+    "read": [
+      "docs/COMBAT.md"
+    ],
+    "scope": [
+      "server/",
+      "client/combat/",
+      "client/ui/"
+    ],
+    "work": "Автобой, автопуть, ручной приоритет, небесная форма",
+    "accept": "Ручной ввод отменяет авто; сервер проверяет форму",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "Q01",
+    "phase": "quest",
+    "depends": [
+      "C03"
+    ],
+    "read": [
+      "docs/STORY.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/",
+      "shared/"
+    ],
+    "work": "Квестовый движок, NPC, диалоги, цели, награды",
+    "accept": "Повторный запрос не дублирует награду",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "Q02",
+    "phase": "quest",
+    "depends": [
+      "Q01"
+    ],
+    "read": [
+      "docs/STORY.md"
+    ],
+    "scope": [
+      "client/content/",
+      "server/"
+    ],
+    "work": "Первая глава, обучение, город, маршрут, финальный босс",
+    "accept": "Новый аккаунт проходит главу без блокеров",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "R01",
+    "phase": "rpg",
+    "depends": [
+      "Q02"
+    ],
+    "read": [
+      "docs/RPG.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/"
+    ],
+    "work": "Уровни, инвентарь, экипировка, характеристики, БМ",
+    "accept": "Транзакции; перезаход сохраняет прогресс",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "R02",
+    "phase": "rpg",
+    "depends": [
+      "R01"
+    ],
+    "read": [
+      "docs/RPG.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/"
+    ],
+    "work": "Таланты, усиление, разбор, крылья, маунты, питомцы",
+    "accept": "Нет дюпов; эффекты экипировки пересчитываются",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "R03",
+    "phase": "rpg",
+    "depends": [
+      "R01"
+    ],
+    "read": [
+      "docs/RPG.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/"
+    ],
+    "work": "Офлайн-прогресс, ежедневки, лимиты, серверное время",
+    "accept": "Идемпотентность; часы клиента не влияют",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "M01",
+    "phase": "mmo",
+    "depends": [
+      "R01"
+    ],
+    "read": [
+      "docs/MMO.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/"
+    ],
+    "work": "Чат, друзья, группы, гильдии",
+    "accept": "Права доступа; антиспам; reconnect",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "M02",
+    "phase": "mmo",
+    "depends": [
+      "M01",
+      "C02"
+    ],
+    "read": [
+      "docs/MMO.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/"
+    ],
+    "work": "Подземелья, мировые боссы, распределение наград",
+    "accept": "Два игрока; честная выдача; таймеры",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "M03",
+    "phase": "mmo",
+    "depends": [
+      "M01",
+      "R02"
+    ],
+    "read": [
+      "docs/MMO.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/"
+    ],
+    "work": "Аукцион, комиссии, журнал операций",
+    "accept": "Конкурентные покупки; нет отрицательного баланса",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "M04",
+    "phase": "mmo",
+    "depends": [
+      "M02"
+    ],
+    "read": [
+      "docs/MMO.md"
+    ],
+    "scope": [
+      "server/",
+      "client/ui/"
+    ],
+    "work": "Арена, PvP зоны, рейтинг; межсервер позже",
+    "accept": "Безопасная зона; матч и рейтинг",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "O01",
+    "phase": "ops",
+    "depends": [
+      "Q02"
+    ],
+    "read": [
+      "docs/ARCHITECTURE.md"
+    ],
+    "scope": [
+      "server/",
+      "tools/"
+    ],
+    "work": "Админка RBAC, редактор данных, asset preview, audit log",
+    "accept": "Неавторизованный доступ запрещен; rollback",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "P01",
+    "phase": "perf",
+    "depends": [
+      "Q02"
+    ],
+    "read": [
+      "docs/PERFORMANCE.md"
+    ],
+    "scope": [
+      "client/",
+      "tests/"
+    ],
+    "work": "Профилирование Android, пресеты, LOD, пулы, чанки",
+    "accept": "30 FPS цель на 6 ГБ; реальные замеры",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "P02",
+    "phase": "perf",
+    "depends": [
+      "M04",
+      "P01",
+      "R03",
+      "M03",
+      "O01"
+    ],
+    "read": [
+      "docs/PERFORMANCE.md"
+    ],
+    "scope": [
+      "server/",
+      "tests/"
+    ],
+    "work": "Нагрузочный тест, backup restore, безопасность, метрики",
+    "accept": "Отчет нагрузки и успешное восстановление",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "L01",
+    "phase": "release",
+    "depends": [
+      "P02"
+    ],
+    "read": [
+      "docs/PERFORMANCE.md"
+    ],
+    "scope": [
+      "client/",
+      ".github/",
+      "tools/"
+    ],
+    "work": "Подписанный APK, обновление пакетов, проверка лицензий",
+    "accept": "Установка, обновление, rollback, контроль хешей",
+    "status": "todo",
+    "evidence": ""
+  }
+]

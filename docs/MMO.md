@@ -1,0 +1,2 @@
+# MMO
+Shared zones with channels if load requires. Parties up to four initially; guilds, chat, friends, group dungeons, world bosses, auction, opt-in PvP zones and arena. Safe cities. Cross-server activities deferred until stable multi-zone operation. Server owns loot, trades, currencies and ranking. Idempotent transactional grants, auction escrow, audit ledger, rate limits and moderation. No real-money player trading.
