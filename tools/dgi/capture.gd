@@ -33,6 +33,9 @@ func run():
 		var w := load_model(base+"exports/weapon-"+id.substr(0,1)+"00011000.glb")
 		if a==null or w==null: quit(1); return
 		var records: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(base+"material-params.json"))
+		var body_count := Materials.apply(a, records[id][0], "/home/gamedev/Darklord")
+		print("BODY ",id," meshes=",body_count)
+		if body_count==0: quit(5); return
 		var count := Materials.apply(w, records[id.substr(0,1)+"00011000"][0], "/home/gamedev/Darklord")
 		print("MATERIAL ",id," meshes=",count)
 		if count==0: quit(4); return

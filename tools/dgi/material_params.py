@@ -2,7 +2,7 @@ import sqlite3,json,re,pathlib
 root=pathlib.Path('/home/gamedev/Darklord')
 db=sqlite3.connect('file:/home/gamedev/darklord-dgi/catalog.sqlite?mode=ro',uri=True)
 out={}
-for i in ['100011000','200011000','300011000','400011000']:
+for i in ['10001','20001','30001','40001','100011000','200011000','300011000','400011000']:
  v=json.loads(db.execute('select data from visual_models where id=?',(i,)).fetchone()[0])
  mats=[]
  for p in v['prefab_dependencies']:
