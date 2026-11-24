@@ -14,13 +14,21 @@ func run():
 	var player := actor.find_children("*","AnimationPlayer",true,false)[0] as AnimationPlayer
 	var training := Training.new()
 	root.add_child(training)
-	var marker := Node3D.new()
-	training.add_child(marker)
+	var marker := actor.find_child("E_fire",true,false) as Node3D
+	if marker == null:
+		quit(3)
+		return
+	var audio := AudioStreamMP3.load_from_file("/home/gamedev/Darklord/Client/Assets/Resources/Sound/skill/FS_Atk_01.mp3")
+	if audio == null or audio.get_length() <= 0:
+		quit(4)
+		return
+	training.attack_audio = audio
+	print("socket=",marker.name," audio_seconds=",audio.get_length())
 	training.origin = marker
 	var target := MeshInstance3D.new()
 	target.mesh = CapsuleMesh.new()
 	training.add_child(target)
-	target.position = Vector3(1.2,0,0)
+	target.global_position = marker.global_position + Vector3(1.2,0,0)
 	training.target = target
 	var attack := Attack.new()
 	root.add_child(attack)
