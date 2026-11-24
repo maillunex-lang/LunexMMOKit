@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T02:12:59+05:00",
+  "updated": "2026-11-25T02:15:06+05:00",
   "repo": "/home/gamedev/LunexMMOKit",
   "base_commit": "7470627",
   "disk_before": {
@@ -89,14 +89,31 @@
     },
     {
       "id": "KIMI-003",
-      "status": "pending",
+      "status": "completed",
       "depends": [],
-      "done": [],
-      "modified_files": [],
-      "tests": [],
-      "screenshots": [],
+      "done": [
+        "Для четырёх акторов и четырёх базовых weapon model извлечены исходные материалы/параметры в приватный material-params.json.",
+        "client/content/shaders/darklord_material.gd применяет ShaderMaterial с main_tex, spec params, optional flow, cutout и исходными текстурами Darklord.",
+        "capture.gd применяет восстановленные материалы ко всем body/weapon meshes и выводит full-body/grip captures без белых потерянных поверхностей.",
+        "Добавлен автоматический tools/dgi/test_materials.gd: все 9 mesh surfaces получили ShaderMaterial и непустую main_tex."
+      ],
+      "modified_files": [
+        "client/content/shaders/darklord_character.gdshader",
+        "client/content/shaders/darklord_material.gd",
+        "tools/dgi/material_params.py",
+        "tools/dgi/test_materials.gd",
+        "tools/dgi/capture.gd",
+        "docs/darklord/KIMI_PROGRESS.json"
+      ],
+      "tests": [
+        "test_materials EXIT=0: MATERIAL 10001/20001/30001 body=1/1 weapon=1/1 ok=true; 40001 weapon=2/2 ok=true; material_total=9 failures=0",
+        "capture.gd Xvfb/OpenGL3 EXIT=0; textured body/weapon captures сохранены приватно"
+      ],
+      "screenshots": [
+        "/home/gamedev/darklord-dgi/screens/*-{stand,attack001}{,-alt,-grip,-grip-alt}.png"
+      ],
       "errors": [],
-      "next_action": "Требует KIMI-001/KIMI-002 и параметров материалов"
+      "next_action": "Закрыто; дальше при необходимости только тонкая настройка shader params по визуальным замечаниям."
     },
     {
       "id": "KIMI-004",
@@ -173,7 +190,7 @@
         "/home/gamedev/darklord-dgi/screens/combat-impact.png"
       ],
       "errors": [
-        "Актор в combat capture ещё без полного restored material pass, target временный серый capsule.",
+        "capture_combat.gd пока демонстрирует сцену без полного actor material/training target pass; материалы самих body/weapon подтверждены отдельно.",
         "Визуальное соответствие оригинальному skill 1000001 не одобрено; требуется сравнение с эталоном/ручная проверка.",
         "События пока заданы тестовым attack001/projectile timing, необходимо окончательно привязать к извлечённым SkillData в KIMI-005/KIMI-006."
       ],
@@ -298,6 +315,6 @@
       "next_action": "После KIMI-011/KIMI-012"
     }
   ],
-  "last_commit": "efb159f",
-  "github_push": "efb159f pushed via ssh.github.com:443 deploy key"
+  "last_commit": "cd28267",
+  "github_push": "cd28267 pushed via ssh.github.com:443 deploy key"
 }
