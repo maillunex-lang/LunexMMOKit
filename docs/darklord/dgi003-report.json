@@ -1,0 +1,150 @@
+{
+  "models": 1685,
+  "models_with_folder_mesh": 609,
+  "models_with_prefab_mesh": 1138,
+  "refs": [
+    [
+      "candidate_basename",
+      102
+    ],
+    [
+      "exact",
+      18074
+    ],
+    [
+      "missing",
+      21985
+    ],
+    [
+      "multiple",
+      70
+    ],
+    [
+      "requires_actor_rig",
+      581
+    ]
+  ],
+  "prefab_refs": 19526,
+  "integrity": "ok",
+  "exports": [
+    {
+      "id": "10001",
+      "sha256": "646490d7cf3313b5e45df2c911b97a8cf78d438661cbe17061751dc53f225c05",
+      "meshes": 1,
+      "skins": 1,
+      "animations": 24,
+      "images": 1,
+      "rig_visual_verified": false
+    },
+    {
+      "id": "20001",
+      "sha256": "6df29ada76467a54f8a29e89898f6855fc5d51a961df4db8c73ed15fba81f867",
+      "meshes": 1,
+      "skins": 1,
+      "animations": 29,
+      "images": 1,
+      "rig_visual_verified": false
+    },
+    {
+      "id": "30001",
+      "sha256": "5f5f2fb611f741b23ce3ccb80a98d4f5eb8864c3544e9bd33da322909181b6fb",
+      "meshes": 1,
+      "skins": 1,
+      "animations": 23,
+      "images": 1,
+      "rig_visual_verified": false
+    },
+    {
+      "id": "40001",
+      "sha256": "460c244d2a51a483f9b919b40e65c4eef52fbf15ac17f2aa07c486b4cef58476",
+      "meshes": 1,
+      "skins": 1,
+      "animations": 28,
+      "images": 1,
+      "rig_visual_verified": false
+    }
+  ],
+  "missing_by_field": [
+    [
+      "t_monster.lua.txt",
+      "born_pfx",
+      8483
+    ],
+    [
+      "t_monster.lua.txt",
+      "hit_sound",
+      8402
+    ],
+    [
+      "t_monster.lua.txt",
+      "DeathSound",
+      2403
+    ],
+    [
+      "t_monster.lua.txt",
+      "foot_pfx",
+      920
+    ],
+    [
+      "t_model",
+      "sklui",
+      501
+    ],
+    [
+      "t_model",
+      "skl",
+      447
+    ],
+    [
+      "t_monster.lua.txt",
+      "modelId",
+      383
+    ],
+    [
+      "t_skill_action",
+      "skilleffect",
+      265
+    ],
+    [
+      "t_AudioDesc",
+      "fileName_0",
+      115
+    ],
+    [
+      "t_skill.lua.txt",
+      "skill_action",
+      31
+    ],
+    [
+      "t_model",
+      "skllogin",
+      13
+    ],
+    [
+      "t_equip.lua.txt",
+      "pfxname1",
+      5
+    ],
+    [
+      "t_equip.lua.txt",
+      "pfxname2",
+      5
+    ],
+    [
+      "t_equip.lua.txt",
+      "pfxname3",
+      5
+    ],
+    [
+      "t_equip.lua.txt",
+      "pfxname4",
+      5
+    ],
+    [
+      "t_skill.lua.txt",
+      "sound_id",
+      2
+    ]
+  ],
+  "original_unresolved": 705
+}
