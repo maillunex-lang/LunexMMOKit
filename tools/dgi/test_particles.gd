@@ -12,4 +12,4 @@ func run():
 		count += node.get_child_count()
 		await process_frame
 		node.free()
-	quit(0 if count==5 else 1)
+	quit(0 if count==8 else 1)

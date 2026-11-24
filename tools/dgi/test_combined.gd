@@ -1,4 +1,5 @@
 extends SceneTree
+const VFX = preload("res://particle_preview.gd")
 const Attack = preload("res://preview_attack.gd")
 const Training = preload("res://preview_training.gd")
 func _initialize():
@@ -23,6 +24,18 @@ func run():
 		quit(4)
 		return
 	training.attack_audio = audio
+	var records: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("/home/gamedev/darklord-dgi/particle-index.json"))
+	for key in records:
+		var fx := VFX.build(records[key],"/home/gamedev/Darklord")
+		for child in fx.get_children(): child.owner = fx
+		var packed := PackedScene.new()
+		if packed.pack(fx)!=OK:
+			quit(5)
+			return
+		if key.ends_with("FS_hti.prefab"): training.impact_visual = packed
+		else: training.projectile_visual = packed
+		print("VFX ",key," emitters=",fx.get_child_count())
+		fx.free()
 	print("socket=",marker.name," audio_seconds=",audio.get_length())
 	training.origin = marker
 	var target := MeshInstance3D.new()

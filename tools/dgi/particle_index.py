@@ -25,6 +25,8 @@ def inspect(path):
    for p in resolve(g):
     if p.endswith('.mat'):
      textures={k:resolve(v) for k,v in re.findall(r'- (_\w+):\s*m_Texture: \{[^}]*guid: ([a-f0-9]{32})',(root/p).read_text())}
+     for k,v in re.findall(r'name: (_\w+)\s+second:\s+m_Texture: \{[^}]*guid: ([a-f0-9]{32})',(root/p).read_text()):
+      textures[k]=resolve(v)
      materials.append({'path':p,'textures':textures})
   result.append({'id':i,'name':field(bs[gid][1],'m_Name'),'duration':float(field(b,'lengthInSec')),'loop':field(b,'looping')=='1','curves':curves,'materials':materials,'render_mode':field(render.get(go,''),'m_RenderMode'),'raw_modules':re.findall(r'^  (\w+Module):',b,re.M)})
  return result
