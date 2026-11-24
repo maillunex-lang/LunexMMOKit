@@ -1,0 +1,10 @@
+name: Foundation
+on: [push, pull_request]
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m json.tool shared/zone.schema.json >/dev/null
+      - run: bash -n tests/smoke.sh
+      - run: test -f client/project.godot && test -f client/scenes/main.tscn
