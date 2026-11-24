@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T02:00:37+05:00",
+  "updated": "2026-11-25T02:06:54+05:00",
   "repo": "/home/gamedev/LunexMMOKit",
   "base_commit": "7470627",
   "disk_before": {
@@ -58,23 +58,34 @@
         "Подтверждено: runtime parent container получает localPosition=0, localRotation=identity, localScale=1; t_model display transform в ChangeWeapon не применяется.",
         "Для ассасина извлечены body2 rotation и body1 negative scale из CK_W_wuqi_01_pre.prefab.",
         "Реализован spec-driven API equip_weapon/unequip_weapon в client/actors/equipment.gd.",
-        "Обновлен tools/dgi/test_equipment.gd: проверяет single/dual крепление, точные child-transforms и движение оружия в sampled attack/skill клипах."
+        "Обновлен tools/dgi/test_equipment.gd: проверяет single/dual крепление, точные child-transforms и движение оружия в sampled attack/skill клипах.",
+        "tools/dgi/capture.gd переведён на Equipment.equip_weapon/unequip_weapon и сохраняет stand/attack001 full-body кадры плюс два grip close-up на персонажа.",
+        "Получены приватные rendered captures через xvfb-run + Mesa Compatibility/OpenGL3 для 10001/20001/30001/40001; файлы остаются вне публичного GitHub."
       ],
       "modified_files": [
         "client/actors/equipment.gd",
         "tools/dgi/test_equipment.gd",
         "docs/darklord/KIMI-002.md",
-        "docs/darklord/KIMI_PROGRESS.json"
+        "docs/darklord/KIMI_PROGRESS.json",
+        "tools/dgi/capture.gd",
+        "tools/dgi/capture_combat.gd"
       ],
       "tests": [
-        "test_equipment: four actors attached=true transform_ok=true moved=true"
+        "test_equipment: four actors attached=true transform_ok=true moved=true",
+        "capture.gd Xvfb/OpenGL3 EXIT=0; full/grip PNG 1280x720 сохранены для 4 классов"
       ],
-      "screenshots": [],
+      "screenshots": [
+        "/home/gamedev/darklord-dgi/screens/10001-{stand,attack001}{,-alt,-grip,-grip-alt}.png",
+        "/home/gamedev/darklord-dgi/screens/20001-{stand,attack001}{,-alt,-grip,-grip-alt}.png",
+        "/home/gamedev/darklord-dgi/screens/30001-{stand,attack001}{,-alt,-grip,-grip-alt}.png",
+        "/home/gamedev/darklord-dgi/screens/40001-{stand,attack001}{,-alt,-grip,-grip-alt}.png"
+      ],
       "errors": [
         "Визуальный хват ещё не подтверждён rendered close-ups; требуется KIMI-009.",
-        "Оригинальные DM_R_wuqi01/DM_L_wuqi01 отсутствуют в GLB; используются уникальные DM_R_Hand2/DM_L_Hand2."
+        "Оригинальные DM_R_wuqi01/DM_L_wuqi01 отсутствуют в GLB; используются уникальные DM_R_Hand2/DM_L_Hand2.",
+        "Grip close-up требует художественной проверки: камера близко к броне/оружию, положительное одобрение ещё не зафиксировано."
       ],
-      "next_action": "Сделать rendered captures для grip parity и затем закрыть визуальную часть KIMI-002."
+      "next_action": "Проверить вручную grip captures, при необходимости скорректировать фокус/масштаб close-up и только после этого закрыть визуальную часть KIMI-002."
     },
     {
       "id": "KIMI-003",
@@ -97,7 +108,8 @@
         "Добавлены tools/dgi/fbx_to_glb.gd и tools/dgi/convert_mesh_fbx.py для приватного FBX→GLB без копирования больших каталогов.",
         "Конвертированы приватные mesh GLB: bingzhu_mesh.glb и luoshitou.glb.",
         "client/content/vfx/particle_preview.gd переписан на расширенную схему: иерархия Transform, CPUParticles3D, исходные текстуры, additive/alpha/multiply, lifetime/speed/size/rotation ranges, shape, local coords, burst/overLifetime/UV metadata и mesh particles.",
-        "test_particles обновлён на рекурсивный подсчёт эмиттеров; test_combined/capture_combat сохраняют owner для вложенной VFX-иерархии."
+        "test_particles обновлён на рекурсивный подсчёт эмиттеров; test_combined/capture_combat сохраняют owner для вложенной VFX-иерархии.",
+        "Получены combat-flight.png и combat-impact.png с конвертированными projectile/impact VFS; размеры/цвет/формы требуют ручной визуальной оценки перед закрытием."
       ],
       "modified_files": [
         "client/content/vfx/particle_preview.gd",
@@ -115,13 +127,16 @@
         "test_particles EXIT=0: total_emitters=8 failures=[]",
         "test_combined EXIT=0: before=100 after=90 events=[\"launch\",\"hit\"] ok=true"
       ],
-      "screenshots": [],
-      "errors": [
-        "Визуальное сравнение частиц ещё не выполнено; требуется KIMI-009 Xvfb/Mesa capture.",
-        "Некоторые overLifetime/UV детали сохранены в metadata, потому что CPUParticles3D не покрывает их нативно; уточнить после rendered-проверки.",
-        "Headless dummy renderer пишет RID leak diagnostics при выходе теста, функциональный exit остаётся 0."
+      "screenshots": [
+        "/home/gamedev/darklord-dgi/screens/combat-flight.png",
+        "/home/gamedev/darklord-dgi/screens/combat-impact.png"
       ],
-      "next_action": "Сделать rendered captures KIMI-009 для VFX/hit/projectile, затем при необходимости донастроить кривые и закрыть KIMI-004."
+      "errors": [
+        "Визуальные captures получены, но соответствие оригиналу ещё не одобрено; требуется ручная проверка и, вероятно, донастройка размера/цвета эмиттеров.",
+        "Некоторые overLifetime/UV детали сохранены в metadata, потому что CPUParticles3D не покрывает их нативно.",
+        "Xvfb/OpenGL3 capture завершается с renderer leak diagnostics при функциональном EXIT=0."
+      ],
+      "next_action": "По результатам combat-flight/combat-impact скорректировать particle_preview и повторить captures."
     },
     {
       "id": "KIMI-005",
@@ -169,14 +184,33 @@
     },
     {
       "id": "KIMI-009",
-      "status": "pending",
+      "status": "in_progress",
       "depends": [],
-      "done": [],
-      "modified_files": [],
-      "tests": [],
-      "screenshots": [],
-      "errors": [],
-      "next_action": "Требует training/combat сцены и Xvfb capture"
+      "done": [
+        "Настроен rendered capture через xvfb-run -a godot --path client --rendering-driver opengl3.",
+        "Получены equipment captures для четырёх классов: stand/attack001, full-body и grip close-up.",
+        "Получены combat-flight.png и combat-impact.png для магической атаки с VFX.",
+        "Скриншоты сохраняются атомарно через временный PNG, чтобы не ломать права на существующие файлы."
+      ],
+      "modified_files": [
+        "tools/dgi/capture.gd",
+        "tools/dgi/capture_combat.gd",
+        "docs/darklord/KIMI_PROGRESS.json"
+      ],
+      "tests": [
+        "capture.gd Xvfb/OpenGL3 EXIT=0, 16 PNG сохранены",
+        "capture_combat.gd Xvfb/OpenGL3 EXIT=0, combat-flight.png и combat-impact.png сохранены, combat logic ok=true"
+      ],
+      "screenshots": [
+        "/home/gamedev/darklord-dgi/screens/*-{stand,attack001}{,-alt,-grip,-grip-alt}.png",
+        "/home/gamedev/darklord-dgi/screens/combat-flight.png",
+        "/home/gamedev/darklord-dgi/screens/combat-impact.png"
+      ],
+      "errors": [
+        "Визуальное одобрение пользователем ещё не получено.",
+        "Godot/Mesa пишет leak diagnostics после rendered captures; функциональные save/logic checks равны 0/true."
+      ],
+      "next_action": "Показать/проверить приватные captures, исправить замечания по материалам, хвату и VFX, затем повторить рендер."
     },
     {
       "id": "KIMI-010",
@@ -234,6 +268,6 @@
       "next_action": "После KIMI-011/KIMI-012"
     }
   ],
-  "last_commit": "bab95c6",
-  "github_push": "bab95c6 pushed via ssh.github.com:443 deploy key"
+  "last_commit": "a464892",
+  "github_push": "a464892 pushed via ssh.github.com:443 deploy key"
 }
