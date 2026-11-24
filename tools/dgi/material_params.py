@@ -8,7 +8,11 @@ for i in ['100011000','200011000','300011000','400011000']:
  for p in v['prefab_dependencies']:
   if '/Materials/' not in p or not p.endswith('.mat'):continue
   s=(root/p).read_text()
-  params={k:float(x) for k,x in re.findall(r'^    - (_(?:SpecPower2?|SpecIntensity2?|EnableCutout|Cutout|EnableFlow)): ([0-9.eE+-]+)$',s,re.M)}
+  params={k:float(x) for k,x in re.findall(r'^    - (_(?:SpecPower2?|SpecIntensity2?|EnableCutout|Cutout|EnableFlow|FlowIntensity)): ([0-9.eE+-]+)$',s,re.M)}
+  for k,vals in re.findall(r'^    - (_FlowAni|_FlowColor): \{([^}]+)\}',s,re.M):
+   params[k]=[float(x) for x in re.findall(r'[rgba]: ([0-9.eE+-]+)',vals)]
+  flow=re.search(r'- _FlowTex:.*?m_Scale: \{x: ([^,]+), y: ([^}]+)\}.*?m_Offset: \{x: ([^,]+), y: ([^}]+)\}',s,re.S)
+  if flow:params['_FlowScale']=[float(x) for x in flow.groups()[:2]];params['_FlowOffset']=[float(x) for x in flow.groups()[2:]]
   textures={}
   for k,g in re.findall(r'- (_\w+):\s*m_Texture: \{[^}]*guid: ([a-f0-9]{32})',s):
    paths=db.execute('select path from assets where guid=?',(g,)).fetchall()

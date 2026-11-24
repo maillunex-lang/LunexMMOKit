@@ -1,4 +1,5 @@
 extends SceneTree
+const Materials = preload("res://darklord_material.gd")
 const Equipment = preload("res://equipment.gd")
 func _initialize():
 	call_deferred("run")
@@ -31,6 +32,10 @@ func run():
 		var a := load_model(base+"exports/"+id+".glb")
 		var w := load_model(base+"exports/weapon-"+id.substr(0,1)+"00011000.glb")
 		if a==null or w==null: quit(1); return
+		var records: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(base+"material-params.json"))
+		var count := Materials.apply(w, records[id.substr(0,1)+"00011000"][0], "/home/gamedev/Darklord")
+		print("MATERIAL ",id," meshes=",count)
+		if count==0: quit(4); return
 		root.add_child(a)
 		var marker := Equipment.attach_marker(a,"DM_R_Hand2",w)
 		if marker==null: quit(2); return
