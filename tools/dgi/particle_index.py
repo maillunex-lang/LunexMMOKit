@@ -238,15 +238,56 @@ def inspect(path):
     block_map = blocks(text)
     hierarchy, transforms = transform_table(block_map)
     renderers = {}
+    mesh_renderers = {}
+    mesh_filters = {}
     for object_id, data in block_map.items():
         kind, body = data
         if kind == 199:
             game_object = integer(re.search(r"m_GameObject: \{fileID: (\d+)\}", body).group(1), 0)
             renderers[game_object] = body
+        elif kind == 23:
+            game_object = integer(re.search(r"m_GameObject: \{fileID: (\d+)\}", body).group(1), 0)
+            mesh_renderers[game_object] = body
+        elif kind == 33:
+            game_object = integer(re.search(r"m_GameObject: \{fileID: (\d+)\}", body).group(1), 0)
+            mesh_filters[game_object] = body
     go_to_transform = {}
     for transform_id, node in transforms.items():
         go_to_transform[node["game_object"]] = transform_id
     rows = []
+    mesh_rows = []
+    for game_object, renderer in mesh_renderers.items():
+        mesh_filter = mesh_filters.get(game_object)
+        if not mesh_filter:
+            continue
+        transform_id = go_to_transform.get(game_object, 0)
+        if not transform_id:
+            continue
+        material_paths = []
+        for guid in re.findall(r"guid: ([a-f0-9]{32})", renderer):
+            for material_path in resolve(guid):
+                if material_path.endswith(".mat"):
+                    material_paths.append(material_path)
+        mesh_match = re.search(r"m_Mesh: \{fileID: [^,]+, guid: ([a-f0-9]{32})", mesh_filter)
+        mesh_source = ""
+        if mesh_match:
+            resolved = resolve(mesh_match.group(1))
+            mesh_source = resolved[0] if resolved else ""
+        mesh_glb = ""
+        if mesh_source:
+            candidate = MESH_EXPORT_ROOT / (pathlib.Path(mesh_source).stem + ".glb")
+            if candidate.exists():
+                mesh_glb = str(candidate)
+        mesh_rows.append({
+            "id": game_object,
+            "name": transforms.get(transform_id, {}).get("name", str(game_object)),
+            "materials": [parse_material(material_path) for material_path in sorted(set(material_paths))],
+            "mesh_source": mesh_source,
+            "mesh_glb": mesh_glb,
+            "transform_id": transform_id,
+            "parent_transform_id": transforms.get(transform_id, {}).get("parent", 0),
+            "path": path_for(transform_id, transforms),
+        })
     for object_id, data in block_map.items():
         kind, body = data
         if kind != 198:
@@ -343,7 +384,7 @@ def inspect(path):
             "raw_modules": re.findall(r"^  (\w+Module):", body, re.M),
         }
         rows.append(row)
-    return {"source": path, "hierarchy": hierarchy, "emitters": rows}
+    return {"source": path, "hierarchy": hierarchy, "emitters": rows, "mesh_renderers": mesh_rows}
 
 
 def main():
@@ -355,9 +396,11 @@ def main():
     tmp_path.write_text(json.dumps(output, indent=2), encoding="utf-8")
     os.replace(tmp_path, OUT)
     for path, payload in output.items():
-        print(path, len(payload["emitters"]))
+        print(path, len(payload["emitters"]), "emitters", len(payload["mesh_renderers"]), "mesh_renderers")
         for row in payload["emitters"]:
             print(" ", row["name"], "render", row["render_mode"], "blend", [material.get("blend") for material in row["materials"]], "mesh", row["mesh_glb"] or "-")
+        for row in payload["mesh_renderers"]:
+            print(" mesh", row["path"], "materials", [material.get("path") for material in row["materials"]], "glb", row["mesh_glb"] or "-")
 
 
 if __name__ == "__main__":

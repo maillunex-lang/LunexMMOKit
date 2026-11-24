@@ -1,6 +1,7 @@
 extends RefCounted
 
 static var MESH_CACHE := {}
+static var SCENE_CACHE := {}
 
 static func _vec3(value: Variant, fallback := Vector3.ZERO) -> Vector3:
 	if value is Array and value.size() >= 3:
@@ -84,12 +85,12 @@ static func _load_texture(material: Dictionary, source_root: String) -> Texture2
 	return null
 
 
-static func _particle_material(record: Dictionary, source_root: String) -> StandardMaterial3D:
+static func _particle_material(record: Dictionary, source_root: String, billboard := true) -> StandardMaterial3D:
 	var material := StandardMaterial3D.new()
 	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	material.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
-	material.billboard_mode = BaseMaterial3D.BILLBOARD_PARTICLES
+	material.billboard_mode = BaseMaterial3D.BILLBOARD_PARTICLES if billboard else BaseMaterial3D.BILLBOARD_DISABLED
 	var color := Color.WHITE
 	if record.materials.size() > 0:
 		var source: Dictionary = record.materials[0]
@@ -101,7 +102,7 @@ static func _particle_material(record: Dictionary, source_root: String) -> Stand
 		elif source.get("blend", "") == "multiply":
 			material.blend_mode = BaseMaterial3D.BLEND_MODE_MUL
 		var colors: Dictionary = source.get("colors", {})
-		var tint: Variant = colors.get("_color", colors.get("_TintColor", colors.get("_Color", null)))
+		var tint: Variant = colors.get("_TintColor", colors.get("_Color", colors.get("_color", null)))
 		if tint != null:
 			color = _color(tint, Color.WHITE)
 	material.albedo_color = color
@@ -140,6 +141,65 @@ static func _gradient_from_minmax(value: Dictionary) -> Gradient:
 	return gradient
 
 
+static func _has_gradient_variation(value: Dictionary) -> bool:
+	var gradient: Dictionary = value.get("maxGradient", {})
+	var color_keys: Array = gradient.get("colorKeys", [])
+	var alpha_keys: Array = gradient.get("alphaKeys", [])
+	if color_keys.size() > 2 or alpha_keys.size() > 2:
+		return true
+	for item in color_keys:
+		var c := _color(item.get("color", [1, 1, 1, 1]), Color.WHITE)
+		if c != Color.WHITE:
+			return true
+	for item in alpha_keys:
+		if not is_equal_approx(float(item.get("alpha", 1.0)), 1.0):
+			return true
+	return false
+
+
+static func _combined_color_ramp(start_value: Dictionary, over_value: Dictionary) -> Gradient:
+	var start := _gradient_from_minmax(start_value)
+	if over_value.is_empty() or not _has_gradient_variation(over_value):
+		return start
+	var over := _gradient_from_minmax(over_value)
+	var result := Gradient.new()
+	var colors := PackedColorArray()
+	var offsets := PackedFloat32Array()
+	for t in [0.0, 0.25, 0.5, 0.75, 1.0]:
+		colors.append(start.sample(t) * over.sample(t))
+		offsets.append(t)
+	result.colors = colors
+	result.offsets = offsets
+	return result
+
+
+static func _curve_from_minmax(value: Dictionary) -> Curve:
+	if value.is_empty():
+		return null
+	var scalar := float(value.get("scalar", 1.0))
+	var keys: Array = value.get("maxCurve", {}).get("keys", [])
+	var curve := Curve.new()
+	curve.bake_resolution = 256
+	if keys.is_empty():
+		curve.add_point(Vector2(0.0, scalar))
+		curve.add_point(Vector2(1.0, scalar))
+		return curve
+	if keys.size() == 1:
+		var single := float(keys[0].get("value", scalar)) * scalar
+		curve.add_point(Vector2(0.0, single))
+		curve.add_point(Vector2(1.0, single))
+		return curve
+	var first_time := clampf(float(keys[0].get("time", 0.0)), 0.0, 1.0)
+	if first_time > 0.0:
+		curve.add_point(Vector2(0.0, float(keys[0].get("value", 1.0)) * scalar))
+	for item in keys:
+		curve.add_point(Vector2(clampf(float(item.get("time", 0.0)), 0.0, 1.0), float(item.get("value", 1.0)) * scalar))
+	var last: Dictionary = keys[keys.size() - 1]
+	if float(last.get("time", 1.0)) < 1.0:
+		curve.add_point(Vector2(1.0, float(last.get("value", 1.0)) * scalar))
+	return curve
+
+
 static func _load_mesh(path: String) -> Mesh:
 	if path == "":
 		return null
@@ -156,6 +216,35 @@ static func _load_mesh(path: String) -> Mesh:
 				mesh = (meshes[0] as MeshInstance3D).mesh
 	MESH_CACHE[path] = mesh
 	return mesh
+
+
+static func _load_mesh_scene(path: String) -> Node3D:
+	if path == "":
+		return null
+	if SCENE_CACHE.has(path):
+		return SCENE_CACHE[path].duplicate() as Node3D
+	var doc := GLTFDocument.new()
+	var state := GLTFState.new()
+	var scene: Node3D = null
+	if doc.append_from_file(path, state) == OK:
+		scene = doc.generate_scene(state)
+	if scene == null:
+		return null
+	SCENE_CACHE[path] = scene
+	return scene.duplicate() as Node3D
+
+
+static func _build_static_mesh(record: Dictionary, source_root: String) -> Node3D:
+	var source: Node3D = _load_mesh_scene(str(record.get("mesh_glb", "")))
+	if source == null:
+		return null
+	source.name = str(record.get("name", "mesh")).validate_node_name() + "_model"
+	var material := _particle_material(record, source_root, false)
+	for mesh in source.find_children("*", "MeshInstance3D", true, false):
+		if mesh is MeshInstance3D:
+			mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+			mesh.material_override = material
+	return source
 
 
 static func _configure_emission(particles: CPUParticles3D, record: Dictionary) -> void:
@@ -204,8 +293,12 @@ static func _configure_particles(record: Dictionary, source_root: String) -> CPU
 	var gravity := _range(curves.get("gravityModifier", {}), 0.0, 0.0)
 	particles.gravity = Vector3.DOWN * 9.81 * gravity.y
 	_configure_emission(particles, record)
+	var render_mode := int(record.get("render_mode", 0))
+	if render_mode == 1:
+		particles.particle_flag_align_y = true
 	var color_curve: Dictionary = curves.get("startColor", {})
-	particles.color_ramp = _gradient_from_minmax(color_curve)
+	var over_color: Dictionary = record.get("overLifetime", {}).get("color", {})
+	particles.color_ramp = _combined_color_ramp(color_curve, over_color)
 	var velocity: Dictionary = record.get("overLifetime", {}).get("velocity", {})
 	if bool(velocity.get("enabled", false)):
 		var vx := _range(velocity.get("x", {}), 0.0, 0.0)
@@ -216,14 +309,21 @@ static func _configure_particles(record: Dictionary, source_root: String) -> CPU
 	if bool(uv.get("enabled", false)):
 		particles.set_meta("source_uv", uv)
 	var start_size := _range(curves.get("startSize", {}), 1.0, 1.0)
+	particles.scale_amount_min = maxf(0.0, start_size.x)
+	particles.scale_amount_max = maxf(0.0, start_size.y)
 	var over_size: Dictionary = record.get("overLifetime", {}).get("size", {})
+	var over_size_curve := _curve_from_minmax(over_size)
+	if over_size_curve != null:
+		particles.scale_amount_curve = over_size_curve
 	var mesh: Mesh = null
-	if int(record.get("render_mode", 0)) == 4:
+	if render_mode == 4:
 		mesh = _load_mesh(str(record.get("mesh_glb", "")))
 	var material := _particle_material(record, source_root)
+	if render_mode == 1:
+		material.billboard_mode = BaseMaterial3D.BILLBOARD_DISABLED
 	if mesh == null:
 		var quad := QuadMesh.new()
-		quad.size = Vector2.ONE * maxf(0.01, start_size.y)
+		quad.size = Vector2.ONE
 		quad.material = material
 		mesh = quad
 	particles.mesh = mesh
@@ -240,9 +340,11 @@ static func build(payload: Variant, source_root: String) -> Node3D:
 	var effect := Node3D.new()
 	var records: Array = []
 	var hierarchy: Array = []
+	var mesh_records: Array = []
 	if payload is Dictionary and payload.has("emitters"):
 		records = payload.get("emitters", [])
 		hierarchy = payload.get("hierarchy", [])
+		mesh_records = payload.get("mesh_renderers", [])
 	elif payload is Array:
 		records = payload
 	var by_id: Dictionary = {}
@@ -262,6 +364,13 @@ static func build(payload: Variant, source_root: String) -> Node3D:
 		var parent_id := int(item.get("parent", 0))
 		var parent: Node = by_id.get(parent_id, effect)
 		parent.add_child(node)
+	for record in mesh_records:
+		if not record is Dictionary:
+			continue
+		var mesh_parent: Node = by_id.get(int(record.get("transform_id", 0)), effect)
+		var mesh_node := _build_static_mesh(record, source_root)
+		if mesh_node != null:
+			mesh_parent.add_child(mesh_node)
 	for record in records:
 		if not record is Dictionary:
 			continue
