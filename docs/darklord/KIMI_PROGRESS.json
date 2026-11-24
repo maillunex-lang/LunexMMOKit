@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T02:06:54+05:00",
+  "updated": "2026-11-25T02:12:59+05:00",
   "repo": "/home/gamedev/LunexMMOKit",
   "base_commit": "7470627",
   "disk_before": {
@@ -109,7 +109,11 @@
         "Конвертированы приватные mesh GLB: bingzhu_mesh.glb и luoshitou.glb.",
         "client/content/vfx/particle_preview.gd переписан на расширенную схему: иерархия Transform, CPUParticles3D, исходные текстуры, additive/alpha/multiply, lifetime/speed/size/rotation ranges, shape, local coords, burst/overLifetime/UV metadata и mesh particles.",
         "test_particles обновлён на рекурсивный подсчёт эмиттеров; test_combined/capture_combat сохраняют owner для вложенной VFX-иерархии.",
-        "Получены combat-flight.png и combat-impact.png с конвертированными projectile/impact VFS; размеры/цвет/формы требуют ручной визуальной оценки перед закрытием."
+        "Получены combat-flight.png и combat-impact.png с конвертированными projectile/impact VFS; размеры/цвет/формы требуют ручной визуальной оценки перед закрытием.",
+        "particle_index теперь извлекает статические MeshRenderer/MeshFilter в mesh_renderers с материалами и приватными GLB.",
+        "particle_preview подключает bingzhu_mesh.glb как статическую модель внутри иерархии эффекта.",
+        "Учтены Unity _TintColor/_Color/_color в приоритете частичного материала, combined startColor+overLifetime color ramp, startSize min/max, scale_amount_curve и stretched billboard align_y.",
+        "combat-flight/combat-impact повторены после настройки: жёлтый перекос убран, projectile mesh core и голубой trail видны в кадре."
       ],
       "modified_files": [
         "client/content/vfx/particle_preview.gd",
@@ -125,29 +129,55 @@
         "python3 -m py_compile tools/dgi/particle_index.py EXIT=0",
         "particle_index: FS_W_attack001 emitters=3, FS_hti emitters=5, mesh particle luoshitou.glb найден",
         "test_particles EXIT=0: total_emitters=8 failures=[]",
-        "test_combined EXIT=0: before=100 after=90 events=[\"launch\",\"hit\"] ok=true"
+        "test_combined EXIT=0: before=100 after=90 events=[\"launch\",\"hit\"] ok=true",
+        "test_particles EXIT=0 после static mesh renderer: total_emitters=8 failures=[]",
+        "test_combined EXIT=0 со static projectile mesh: before=100 after=90 events=[\"launch\",\"hit\"] ok=true",
+        "capture_combat.gd Xvfb/OpenGL3 EXIT=0 после static projectile mesh и particle curve tuning"
       ],
       "screenshots": [
         "/home/gamedev/darklord-dgi/screens/combat-flight.png",
         "/home/gamedev/darklord-dgi/screens/combat-impact.png"
       ],
       "errors": [
-        "Визуальные captures получены, но соответствие оригиналу ещё не одобрено; требуется ручная проверка и, вероятно, донастройка размера/цвета эмиттеров.",
-        "Некоторые overLifetime/UV детали сохранены в metadata, потому что CPUParticles3D не покрывает их нативно.",
-        "Xvfb/OpenGL3 capture завершается с renderer leak diagnostics при функциональном EXIT=0."
+        "Визуальные captures получены, но финальное соответствие оригиналу ещё не одобрено вручную.",
+        "Velocity-over-lifetime и часть UV/rotation curve details пока сохранены как metadata или аппроксимированы.",
+        "Godot/Mesa пишет leak diagnostics после rendered captures; функциональные save/logic checks равны 0/true."
       ],
-      "next_action": "По результатам combat-flight/combat-impact скорректировать particle_preview и повторить captures."
+      "next_action": "После ручной проверки combat-flight/combat-impact донастроить размер/скорость/цвет эмиттеров и закрыть KIMI-004."
     },
     {
       "id": "KIMI-005",
-      "status": "pending",
+      "status": "in_progress",
       "depends": [],
-      "done": [],
-      "modified_files": [],
-      "tests": [],
-      "screenshots": [],
-      "errors": [],
-      "next_action": "Требует KIMI-003/KIMI-004 и полного VFX цикла"
+      "done": [
+        "Конвертирован оригинальный bingzhu_mesh.FBX → приватный bingzhu_mesh.glb.",
+        "FS_W_attack001 собирается как projectile visual с bingzhu_mesh core, lizi/dise/tw emitters и исходным материалом fs_bingzhui.mat.",
+        "FS_hti собирается как impact visual с пятью эмиттерами и mesh debris luoshitou.glb.",
+        "Полный цикл attack001 → projectile launch → FS_Atk_01.mp3 → hit → FS_hti → damage/reaction проходит в test_combined.",
+        "Получены rendered captures combat-flight.png и combat-impact.png через Xvfb/Mesa."
+      ],
+      "modified_files": [
+        "client/content/vfx/particle_preview.gd",
+        "tools/dgi/particle_index.py",
+        "tools/dgi/convert_mesh_fbx.py",
+        "tools/dgi/fbx_to_glb.gd",
+        "docs/darklord/KIMI_PROGRESS.json"
+      ],
+      "tests": [
+        "test_particles EXIT=0: FS_W_attack001 3 emitters + 1 static mesh renderer; FS_hti 5 emitters",
+        "test_combined EXIT=0: before=100 after=90 events=[\"launch\",\"hit\"] ok=true",
+        "capture_combat.gd Xvfb/OpenGL3 EXIT=0: flight/impact saves=0, combat logic ok=true"
+      ],
+      "screenshots": [
+        "/home/gamedev/darklord-dgi/screens/combat-flight.png",
+        "/home/gamedev/darklord-dgi/screens/combat-impact.png"
+      ],
+      "errors": [
+        "Актор в combat capture ещё без полного restored material pass, target временный серый capsule.",
+        "Визуальное соответствие оригинальному skill 1000001 не одобрено; требуется сравнение с эталоном/ручная проверка.",
+        "События пока заданы тестовым attack001/projectile timing, необходимо окончательно привязать к извлечённым SkillData в KIMI-005/KIMI-006."
+      ],
+      "next_action": "Довести визуальный цикл до одобрения, затем вынести SkillData/timing из источников и перейти к training scene KIMI-008."
     },
     {
       "id": "KIMI-006",
@@ -268,6 +298,6 @@
       "next_action": "После KIMI-011/KIMI-012"
     }
   ],
-  "last_commit": "a464892",
-  "github_push": "a464892 pushed via ssh.github.com:443 deploy key"
+  "last_commit": "efb159f",
+  "github_push": "efb159f pushed via ssh.github.com:443 deploy key"
 }
