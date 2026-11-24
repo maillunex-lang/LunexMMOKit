@@ -2,6 +2,11 @@ extends SceneTree
 const VFX = preload("res://particle_preview.gd")
 const Attack = preload("res://preview_attack.gd")
 const Training = preload("res://preview_training.gd")
+func own_tree(node: Node, owner: Node) -> void:
+	for child in node.get_children():
+		child.owner = owner
+		own_tree(child, owner)
+
 func _initialize():
 	call_deferred("run")
 func run():
@@ -27,14 +32,14 @@ func run():
 	var records: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("/home/gamedev/darklord-dgi/particle-index.json"))
 	for key in records:
 		var fx := VFX.build(records[key],"/home/gamedev/Darklord")
-		for child in fx.get_children(): child.owner = fx
+		own_tree(fx, fx)
 		var packed := PackedScene.new()
 		if packed.pack(fx)!=OK:
 			quit(5)
 			return
 		if key.ends_with("FS_hti.prefab"): training.impact_visual = packed
 		else: training.projectile_visual = packed
-		print("VFX ",key," emitters=",fx.get_child_count())
+		print("VFX ",key," emitters=",VFX.emitter_count(fx))
 		fx.free()
 	print("socket=",marker.name," audio_seconds=",audio.get_length())
 	training.origin = marker
