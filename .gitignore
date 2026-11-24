@@ -1,0 +1,7 @@
+.godot/
+.env
+*.keystore
+*.apk
+*.glb
+*.fbx
+assets_private/
