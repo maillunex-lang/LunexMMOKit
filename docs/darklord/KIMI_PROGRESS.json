@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T01:25:00+05:00",
+  "updated": "2026-11-25T01:40:00+05:00",
   "repo": "/home/gamedev/LunexMMOKit",
   "base_commit": "7470627",
   "disk_before": {
@@ -15,25 +15,50 @@
   "tasks": [
     {
       "id": "KIMI-001",
-      "status": "in_progress",
+      "status": "completed",
       "depends": [],
-      "done": [],
-      "modified_files": [],
-      "tests": [],
+      "done": [
+        "Проверен Git/диск/документация; NEXT.md/ROAD.md/DEMO.md отсутствуют.",
+        "Созданы KIMI_ROADMAP.md и KIMI_PROGRESS.json.",
+        "Добавлен tools/dgi/kimi_actor_audit.gd и выполнен аудит Godot 4.7.2.",
+        "Сохранён приватный JSON /home/gamedev/darklord-dgi/kimi-audit.json.",
+        "Сгенерирован docs/darklord/KIMI_AUDIT.md.",
+        "Прогнаны baseline-тесты: test_equipment, test_timeline, test_projectile, test_training, test_particles, test_combined — все EXIT=0."
+      ],
+      "modified_files": [
+        "tools/dgi/kimi_actor_audit.gd",
+        "docs/darklord/KIMI_AUDIT.md",
+        "docs/darklord/KIMI_PROGRESS.json",
+        "docs/darklord/KIMI_ROADMAP.md"
+      ],
+      "tests": [
+        "kimi_actor_audit.gd failures=0",
+        "test_equipment EXIT=0",
+        "test_timeline EXIT=0",
+        "test_projectile EXIT=0",
+        "test_training EXIT=0",
+        "test_particles EXIT=0",
+        "test_combined EXIT=0"
+      ],
       "screenshots": [],
-      "errors": [],
-      "next_action": "Созданы roadmap/progress; начат аудит GLB/manifest/Git"
+      "errors": [
+        "KIMI-001 не подтверждает визуальный хват; это отдельный KIMI-002/KIMI-009.",
+        "В импортированных GLB нет многих исходных маркеров: DM_R_Hand/DM_L_Hand/DM_R_wuqi01/DM_L_wuqi01/E_back/Horse_E_back; у ассасина есть Bone041 negative scale."
+      ],
+      "next_action": "Перейти к KIMI-002: точное крепление оружия по оригинальным Unity prefab/CActorObject/ActorLoader."
     },
     {
       "id": "KIMI-002",
-      "status": "pending",
-      "depends": [],
+      "status": "in_progress",
+      "depends": [
+        "KIMI-001"
+      ],
       "done": [],
       "modified_files": [],
       "tests": [],
       "screenshots": [],
       "errors": [],
-      "next_action": "Требует KIMI-001 и проверки точек DM_R_Hand/DM_L_wuqi01"
+      "next_action": "Извлечь оригинальные локальные трансформации контейнеров оружия из Unity prefab/meta/CActorObject.cs и заменить approximate attach_dual на точную систему."
     },
     {
       "id": "KIMI-003",
@@ -167,5 +192,7 @@
       "errors": [],
       "next_action": "После KIMI-011/KIMI-012"
     }
-  ]
+  ],
+  "last_commit": "20a4b3d",
+  "github_push": "20a4b3d pushed via ssh.github.com:443 deploy key"
 }
