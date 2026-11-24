@@ -20,3 +20,6 @@
 
 ## Делегированный дизайн CONCEPT-003–010
 См. DECISIONS.md и профильные документы HEROES, COMBAT, RPG, MMO, LOCATIONS, STORY. Эти решения являются проектной основой, не реализованными функциями. Числовые параметры предварительные.
+
+## DARKLORD-BASELINE-001
+Darklord is the primary mechanical and content baseline. Four source classes; prior provisional class count, level cap and skill slot limits superseded. Preserve original IDs, formulas and content after validation. No dragon transformations. External references guide improvements only.
