@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+WARNING: Started the engine as `root`/superuser. This is a security risk, and subsystems like audio may not work correctly.
+Set the environment variable `GODOT_SILENCE_ROOT_WARNING` to 1 to silence this warning.
+     at: setup2 (main/main.cpp:3581)
+
+TEST 10001 bones=["Bip001 L Hand", "Bip001 R Hand"] attached=true sampled=9 moved=true left=false
+TEST 20001 bones=["Bip001 L Hand", "Bip001 R Hand"] attached=true sampled=10 moved=true left=false
+TEST 30001 bones=["Bip001 L Hand", "Bip001 R Hand"] attached=true sampled=9 moved=true left=false
+TEST 40001 bones=["Bip001 L Hand", "Bip001 R Hand"] attached=true sampled=10 moved=true left=true
