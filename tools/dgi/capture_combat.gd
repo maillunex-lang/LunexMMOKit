@@ -7,6 +7,17 @@ func own_tree(node: Node, owner: Node) -> void:
 		child.owner = owner
 		own_tree(child, owner)
 
+func capture(path: String) -> Error:
+	await process_frame
+	await RenderingServer.frame_post_draw
+	var tmp := path + ".tmp.png"
+	var result := root.get_texture().get_image().save_png(tmp)
+	if result == OK:
+		result = DirAccess.rename_absolute(tmp, path)
+		if result != OK:
+			DirAccess.remove_absolute(tmp)
+	return result
+
 func _initialize():
 	call_deferred("run")
 func run():
@@ -39,7 +50,7 @@ func run():
 			return
 		if key.ends_with("FS_hti.prefab"): training.impact_visual = packed
 		else: training.projectile_visual = packed
-		print("VFX ",key," emitters=",Preview.emitter_count(fx))
+		print("VFX ",key," emitters=",VFX.emitter_count(fx))
 		fx.free()
 	print("socket=",marker.name," audio_seconds=",audio.get_length())
 	training.origin = marker
@@ -68,10 +79,10 @@ func run():
 	await create_timer(0.7).timeout
 	var before := training.hp
 	await RenderingServer.frame_post_draw
-	print("flight capture=",root.get_texture().get_image().save_png("/home/gamedev/darklord-dgi/screens/combat-flight.png"))
+	print("flight capture=",await capture("/home/gamedev/darklord-dgi/screens/combat-flight.png"))
 	await create_timer(0.65).timeout
 	await RenderingServer.frame_post_draw
-	print("impact capture=",root.get_texture().get_image().save_png("/home/gamedev/darklord-dgi/screens/combat-impact.png"))
+	print("impact capture=",await capture("/home/gamedev/darklord-dgi/screens/combat-impact.png"))
 	var ok: bool = before==100 and training.hp==90 and events==["launch","hit"]
 	print("before=",before," after=",training.hp," events=",events," ok=",ok)
 	quit(0 if ok else 1)
