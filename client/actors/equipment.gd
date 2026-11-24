@@ -23,3 +23,18 @@ static func attach_marker(actor: Node3D, marker_name: String, item: Node3D, offs
 	marker.add_child(item)
 	item.transform = offset
 	return marker
+
+## Reconstruct the two Unity weapon containers. FBX geometry is already
+## converted by Godot; child transforms are candidates until visual parity.
+static func attach_dual(actor: Node3D, item: Node3D) -> Array[Node3D]:
+	var right := item.find_child("body2", true, false) as Node3D
+	var left := item.find_child("body1", true, false) as Node3D
+	var r := actor.find_children("DM_R_Hand2", "Node3D", true, false)
+	var l := actor.find_children("DM_L_Hand2", "Node3D", true, false)
+	if right == null or left == null or r.size() != 1 or l.size() != 1:
+		return []
+	right.reparent(r[0], false)
+	left.reparent(l[0], false)
+	right.transform = Transform3D(Basis(Vector3.BACK, PI), Vector3.ZERO)
+	left.transform = Transform3D(Basis.from_scale(Vector3(-1, 1, 1)), Vector3.ZERO)
+	return [right, left]

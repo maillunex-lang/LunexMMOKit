@@ -35,11 +35,8 @@ func run():
 		var marker := Equipment.attach_marker(a,"DM_R_Hand2",w)
 		if marker==null: quit(2); return
 		if id=="40001":
-			var right := w.find_child("body2",true,false) as Node3D
-			var left := w.find_child("body1",true,false) as Node3D
-			right.reparent(marker,false)
-			left.get_parent().remove_child(left)
-			Equipment.attach_marker(a,"DM_L_Hand2",left)
+			if Equipment.attach_dual(a,w).size()!=2: quit(3); return
+			w.free()
 		var player := a.find_children("*","AnimationPlayer",true,false)[0] as AnimationPlayer
 		for clip in ["stand","attack001"]:
 			if not player.has_animation(clip): print("missing ",id,clip); continue
@@ -49,6 +46,13 @@ func run():
 			await process_frame
 			await RenderingServer.frame_post_draw
 			var result := root.get_texture().get_image().save_png(base+"screens/"+id+"-"+clip+".png")
+			cam.position = Vector3(-2.0,1.5,3.2)
+			cam.look_at(Vector3(0,1,0))
+			await process_frame
+			await RenderingServer.frame_post_draw
+			root.get_texture().get_image().save_png(base+"screens/"+id+"-"+clip+"-alt.png")
+			cam.position = Vector3(2.0,1.5,3.2)
+			cam.look_at(Vector3(0,1,0))
 			print(id," ",clip," save=",result)
 		a.free()
 	quit()
