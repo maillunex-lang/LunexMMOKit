@@ -10,3 +10,5 @@ All 1560 target Lua files parsed; literal parser does not execute Lua. NaN prese
 Run mechanics.py after extract/augment. Adds mechanics and link_review tables. Class skill graphs use explicit profession roots, initial skills and next_lv edges, not faction_limit or guessed ID ranges. Candidate effects are not confirmed dispatch. All 705 original unresolved links classified and alternative exact-ID table matches retained, not automatically repaired. See FORMULAS.md and dgi002-report.json. Runtime parity and exhaustive mechanic dispatch remain pending.
 
 DGI-003: see VISUAL.md and dgi003-report.json. Run visual.py to rebuild visual reference index, convert_model.py for conservative base mesh export.
+
+DGI-004 initial pass: ATTACHMENTS.md, dgi004-report.json, attachments.py. Four weapons exported privately; assembly and visual verification pending.

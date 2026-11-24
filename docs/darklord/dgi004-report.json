@@ -1,0 +1,72 @@
+{
+  "attachments": [
+    [
+      "1",
+      "{\"body\": \"30001\", \"item\": \"200100000\", \"weapon\": \"300011000\", \"weapon_exists\": true, \"sockets\": {\"DM_R_Hand\": [\"DM_R_Hand2\"], \"DM_L_Hand\": [], \"E_back\": [\"E_back2\"], \"E_fire\": [\"E_fire\"]}, \"dual\": false, \"mount_socket\": \"Horse_E_back\", \"transform\": \"identity\", \"verified_visual\": false}"
+    ],
+    [
+      "2",
+      "{\"body\": \"20001\", \"item\": \"200200000\", \"weapon\": \"200011000\", \"weapon_exists\": true, \"sockets\": {\"DM_R_Hand\": [\"DM_R_Hand2\"], \"DM_L_Hand\": [], \"E_back\": [\"E_back2\"], \"E_fire\": []}, \"dual\": false, \"mount_socket\": \"Horse_E_back\", \"transform\": \"identity\", \"verified_visual\": false}"
+    ],
+    [
+      "3",
+      "{\"body\": \"10001\", \"item\": \"200300000\", \"weapon\": \"100011000\", \"weapon_exists\": true, \"sockets\": {\"DM_R_Hand\": [\"DM_R_Hand2\"], \"DM_L_Hand\": [], \"E_back\": [\"E_back2\"], \"E_fire\": []}, \"dual\": false, \"mount_socket\": \"Horse_E_back\", \"transform\": \"identity\", \"verified_visual\": false}"
+    ],
+    [
+      "4",
+      "{\"body\": \"40001\", \"item\": \"200400000\", \"weapon\": \"400011000\", \"weapon_exists\": true, \"sockets\": {\"DM_R_Hand\": [\"DM_R_Hand2\"], \"DM_L_Hand\": [\"DM_L_Hand2\"], \"E_back\": [\"E_back2\"], \"E_fire\": []}, \"dual\": true, \"mount_socket\": \"Horse_E_back\", \"transform\": \"identity\", \"verified_visual\": false}"
+    ]
+  ],
+  "events": [
+    [
+      "SkillClassDisplayDesc.xml",
+      407
+    ],
+    [
+      "SkillDesc.xml",
+      11
+    ]
+  ],
+  "accessories": [
+    [
+      "t_hero.lua.txt",
+      360,
+      360
+    ],
+    [
+      "t_horse.lua.txt",
+      80,
+      80
+    ],
+    [
+      "t_horseskn.lua.txt",
+      136,
+      136
+    ],
+    [
+      "t_newwing.lua.txt",
+      40,
+      40
+    ],
+    [
+      "t_newwingskin.lua.txt",
+      42,
+      42
+    ]
+  ],
+  "review": [
+    [
+      "legacy_alias_no_asset_match",
+      8483
+    ],
+    [
+      "legacy_field_commented_in_CMonsterObject",
+      2403
+    ],
+    [
+      "unresolved",
+      11099
+    ]
+  ],
+  "integrity": "ok"
+}
