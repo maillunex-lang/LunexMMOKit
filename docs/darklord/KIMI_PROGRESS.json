@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T01:40:00+05:00",
+  "updated": "2026-11-25T01:55:00+05:00",
   "repo": "/home/gamedev/LunexMMOKit",
   "base_commit": "7470627",
   "disk_before": {
@@ -53,12 +53,28 @@
       "depends": [
         "KIMI-001"
       ],
-      "done": [],
-      "modified_files": [],
-      "tests": [],
+      "done": [
+        "Извлечены точные источники крепления: ActorLoader.LoadModelObject/GetWeaponModelID, CActorObject.ChangeWeapon, RoleModelShow, t_model.lua.txt и четыре weapon prefab.",
+        "Подтверждено: runtime parent container получает localPosition=0, localRotation=identity, localScale=1; t_model display transform в ChangeWeapon не применяется.",
+        "Для ассасина извлечены body2 rotation и body1 negative scale из CK_W_wuqi_01_pre.prefab.",
+        "Реализован spec-driven API equip_weapon/unequip_weapon в client/actors/equipment.gd.",
+        "Обновлен tools/dgi/test_equipment.gd: проверяет single/dual крепление, точные child-transforms и движение оружия в sampled attack/skill клипах."
+      ],
+      "modified_files": [
+        "client/actors/equipment.gd",
+        "tools/dgi/test_equipment.gd",
+        "docs/darklord/KIMI-002.md",
+        "docs/darklord/KIMI_PROGRESS.json"
+      ],
+      "tests": [
+        "test_equipment: four actors attached=true transform_ok=true moved=true"
+      ],
       "screenshots": [],
-      "errors": [],
-      "next_action": "Извлечь оригинальные локальные трансформации контейнеров оружия из Unity prefab/meta/CActorObject.cs и заменить approximate attach_dual на точную систему."
+      "errors": [
+        "Визуальный хват ещё не подтверждён rendered close-ups; требуется KIMI-009.",
+        "Оригинальные DM_R_wuqi01/DM_L_wuqi01 отсутствуют в GLB; используются уникальные DM_R_Hand2/DM_L_Hand2."
+      ],
+      "next_action": "Сделать rendered captures для grip parity и затем закрыть визуальную часть KIMI-002."
     },
     {
       "id": "KIMI-003",
