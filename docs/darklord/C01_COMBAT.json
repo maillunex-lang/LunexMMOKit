@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "damage_table": {
+    "basic": 35,
+    "skill0": 55,
+    "skill1": 80,
+    "skill2": 110
+  },
+  "client_damage_ignored": true,
+  "checks": ["range", "cooldown", "mp", "death"],
+  "tests": [
+    "TestAttackDeterministicIgnoresClientDamage",
+    "TestAttackCooldownAndDeath",
+    "TestAttackOutOfRange",
+    "TestAttackMPCost"
+  ],
+  "gaps": [
+    "full Darklord skill XML coefficients not yet wired",
+    "client presentation still uses local CombatRuntime until play scenes poll attack API"
+  ]
+}

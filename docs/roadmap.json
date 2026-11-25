@@ -774,8 +774,8 @@
     ],
     "work": "Авторитетное движение, AOI, снапшоты, интерполяция",
     "accept": "Два клиента видят друг друга; teleport cheat отклонен",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "N02_WORLD: go test two-clients+teleport+AOI+HTTP; N02_INTERP_SMOKE_OK; /v1/world/join|move|snapshot"
   },
   {
     "id": "C01",
@@ -794,8 +794,8 @@
     ],
     "work": "Серверный бой, цели, cooldown, ресурсы, урон, смерть",
     "accept": "Детерминированные тесты; клиент не задает урон",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "C01_COMBAT: go test Attack* (client_damage ignored, CD/MP/range/death); /v1/world/attack"
   },
   {
     "id": "C02",

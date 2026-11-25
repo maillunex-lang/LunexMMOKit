@@ -15,6 +15,7 @@ import (
 	"github.com/maillunex-lang/LunexMMOKit/server/internal/auth"
 	"github.com/maillunex-lang/LunexMMOKit/server/internal/db"
 	"github.com/maillunex-lang/LunexMMOKit/server/internal/health"
+	"github.com/maillunex-lang/LunexMMOKit/server/internal/world"
 )
 
 func main() {
@@ -31,6 +32,7 @@ func main() {
 		log.Printf("database connected")
 		svc := auth.New(d)
 		ah := &auth.HTTP{Svc: svc}
+		wh := &world.HTTP{Sim: world.NewSim(), Auth: svc}
 		mux := http.NewServeMux()
 		mux.HandleFunc("/health", health.Handle)
 		mux.HandleFunc("/version", version)
@@ -40,11 +42,12 @@ func main() {
 		mux.HandleFunc("/v1/session", ah.Session)
 		mux.HandleFunc("/v1/test/expire", ah.Expire)
 		mux.HandleFunc("/v1/characters", ah.Characters)
+		wh.Mount(mux)
 		serve(*addr, mux)
 		return
 	}
 
-	log.Printf("LUNEX_DATABASE_URL unset — health without DB (dev)")
+	log.Printf("LUNEX_DATABASE_URL unset — health without DB (dev); world endpoints need auth+DB")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/health", health.Handle)
 	mux.HandleFunc("/version", version)
