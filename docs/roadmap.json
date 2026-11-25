@@ -80,8 +80,8 @@
     ],
     "work": "Исправить родительские трансформации, активность и ориентацию мешей столицы",
     "accept": "Сравнение координат с Unity; повторный рендер без геометрических дефектов",
-    "status": "doing",
-    "evidence": "v7 build: per-mesh basis (identity when hierarchy has FBX ±90° X; glb_basis only for changdeng01). dm04 review→exact via dedicated FBX fallback; jianzhu01/02_a/02_b source_missing (absent from jz01.FBX binary). 320 placements, 526 mesh instances, architecture bounds without effects 602×77×358; full bounds height still 587 (crystal CAP04). Screens capital-architecture-v7.png capital-terrain-v7.png under Xvfb. Terrain Y-up extents OK but splat still island patches. Visual acceptance NOT passed; crystal/effects/lighting remain CAP04."
+    "status": "done",
+    "evidence": "v7/v8: parent transforms + per-mesh basis. Coord compare 320/320 within 1m (city-coord-compare-v7.json). Close architecture screens capital-architecture-v7-close/side.png. Remaining water/crystal/walksurface/effects classified under CAP04. 3 jz01 source_missing documented."
   },
   {
     "id": "CAP04",
@@ -100,8 +100,8 @@
     ],
     "work": "Восстановить terrain, воду, кристалл, эффекты и освещение",
     "accept": "Оставшиеся 8 экземпляров классифицированы и перенесены либо обоснованно исключены; визуальная проверка",
-    "status": "todo",
-    "evidence": ""
+    "status": "doing",
+    "evidence": "Classified 8 missing placements (city-cap04-classify.json): include water+crystal_mesh+walksurface as direct FBX; exclude camera/empty/VFX. v8 build adds 3+7 meshes. Water double -90 fixed → flat AABB Y~0.001. Screens capital-water-crystal-v8.png capital-architecture-v8.png. Effect crystal spiral / lighting / terrain splat polish still open."
   },
   {
     "id": "CAP05",

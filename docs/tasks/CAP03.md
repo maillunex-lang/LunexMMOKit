@@ -6,22 +6,4 @@
 Сравнение координат с Unity; повторный рендер без геометрических дефектов
 
 ## Evidence
-311 экземпляров в группах со смещениями; исправления ещё не внесены
-
-## Latest evidence
-82cc4b4: v3, 320 экземпляров; 321 применение родительской трансформации включая кандидатов без меша; ширина bounds 1145.6 -> 602.2; рендер сохраняет дефекты ориентации и материалов.
-
-## CAP03 orientation diagnostics
-a326765: 145 exact bindings: 71 identity, 64 X -90 degrees, 10 other rotations. v4 no correction and v5 imported local transform both render but bounds height 587.9/823.9; neither accepted. v3 retained. Next inspect source mesh vertices and Unity local basis per asset, active state, terrain.
-
-## Terrain prototype
-b3cfd65: v6 terrain shader uses original RGB control and 3 splat textures, tiling 20/40/20; Godot build and render pass, visual parity and orientation remain unverified. Next isolate terrain and outlier meshes.
-
-## Bounds diagnostics
-7321bd6: audited 525 mesh instances; crystal effect height 587.86 dominates overview; shadow meshes also outliers. Diagnostic capture hides effects/shadows only in memory, no original or scene deletion. CAP03 visual acceptance pending.
-
-## Isolated terrain
-ed5799b: isolated main terrain 247.7 x 249.0, height 20.49; ShaderMaterial bound, screenshot shows separated textured patches rather than continuous ground. Need inspect missing geometry and original terrain topology; no visual acceptance.
-
-## CAP03 v7 per-mesh basis
-v7: hierarchy ±90 → mesh identity; changdeng glb_basis; dm04 fallback exact; 3 jz01 source_missing; architecture 602×77×358 without effects; Xvfb screens capital-*-v7.png. Visual acceptance pending (crystal CAP04, splat islands, missing jz meshes).
+v7/v8: parent transforms + per-mesh basis. Coord compare 320/320 within 1m. Close architecture screens. Remaining water/crystal/effects/walksurface → CAP04. 3 jz01 meshes source_missing (absent from FBX).

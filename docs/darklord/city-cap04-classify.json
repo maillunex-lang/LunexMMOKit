@@ -1,0 +1,56 @@
+{
+  "note": "CAP04 classification of 8 placements missing from capital geometry v7",
+  "include_as_direct_fbx": [
+    {
+      "id": "1561411520",
+      "asset": "AssetsRaw/Scene/fbx/water/cs_yw_zhucheng_water.FBX",
+      "glb": "415e8f3d707ef067.glb",
+      "role": "water",
+      "action": "place_all_meshes"
+    },
+    {
+      "id": "1818136461",
+      "asset": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_shuijing.FBX",
+      "glb": "b0fd9dc013d7e460.glb",
+      "role": "crystal_mesh",
+      "action": "place_all_meshes"
+    },
+    {
+      "id": "968377539",
+      "asset": "AssetsRaw/Scene/fbx/walksurface/cs_zhucheng_jz01_walksurface.FBX",
+      "glb": "999296d28b1dbb3e.glb",
+      "role": "walksurface",
+      "action": "place_all_meshes"
+    }
+  ],
+  "exclude_justified": [
+    {
+      "id": "860592022",
+      "asset": "AssetsRaw/Scene/prefab/thing/FBCamera.prefab",
+      "reason": "Unity scene camera rig; not world geometry"
+    },
+    {
+      "id": "527388598",
+      "asset": "Resources/Animation/collection/cs_caijiwu_emptything_l.prefab",
+      "reason": "Empty collectable placeholder; unresolved mesh ref"
+    },
+    {
+      "id": "891380112",
+      "asset": "Resources/Effect/scence/sc_yanhua_vfx.prefab",
+      "reason": "Fireworks VFX prefab; effect conversion is CAP04/D05, not static mesh"
+    },
+    {
+      "id": "1746857595",
+      "asset": "Resources/Effect/scence/sf_effect/sf_xue.prefab",
+      "reason": "Snow VFX prefab; deferred with effect pipeline"
+    },
+    {
+      "id": "1817485013",
+      "asset": "Resources/Effect/skill/buff/fx_xueren_shuanglengzhixi.prefab",
+      "reason": "Buff/skill VFX prefab; not capital static content"
+    }
+  ],
+  "effect_geometry_existing": {
+    "note": "cs_zc_03_shuijing_01.prefab already placed in v7 (tall crystal effect, height ~587); refine materials/visibility in CAP04 lighting pass"
+  }
+}

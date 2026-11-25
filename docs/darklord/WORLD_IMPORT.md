@@ -29,3 +29,6 @@ ed5799b: isolated main terrain 247.7 x 249.0, height 20.49; ShaderMaterial bound
 
 ## CAP03 v7
 Per-mesh basis from Unity hierarchy axis vs GLB node rotation; no universal PI. dm04 rebound from dedicated FBX. jianzhu01/02_a/02_b absent from jz01.FBX binary (source_missing). Architecture diagnostic height 77 without effects; crystal still 587 full bounds. Visual acceptance not passed.
+
+## CAP03 closed / CAP04 start
+Coord compare v7: 320/320 placements within 1m of placement×parent expectation. Architecture close renders accepted for geometry orientation. CAP04: direct FBX water/crystal/walksurface in v8; water double -90 removed (now flat); 5 non-geometry placements excluded with reasons.
