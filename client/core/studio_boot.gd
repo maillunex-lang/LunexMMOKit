@@ -25,6 +25,9 @@ func _ready():
 func install():
 	var local := OS.get_environment("LUNEX_STUDIO_CACHE")
 	if not local.is_empty(): cache_root = local
+	elif not OS.has_feature("android"):
+		var bundled := ProjectSettings.globalize_path("res://../assets/studio")
+		if Cache.verify(bundled): cache_root = bundled
 	if Cache.verify(cache_root):
 		get_tree().change_scene_to_file("res://scenes/training/training.tscn")
 		return

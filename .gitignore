@@ -5,3 +5,4 @@
 *.glb
 *.fbx
 assets_private/
+!assets/studio/**/*.glb

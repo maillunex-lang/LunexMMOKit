@@ -56,6 +56,9 @@ var orbit_center := Vector3(0.6,0.9,0)
 
 func _ready() -> void:
 	cache_root = OS.get_environment("LUNEX_STUDIO_CACHE")
+	if cache_root.is_empty() and not OS.has_feature("android"):
+		var bundled := ProjectSettings.globalize_path("res://../assets/studio")
+		if FileAccess.file_exists(bundled.path_join("manifest.json")): cache_root = bundled
 	if cache_root.is_empty() and OS.has_feature("android"):
 		cache_root = ProjectSettings.globalize_path("user://studio-cache")
 	if not cache_root.is_empty():
