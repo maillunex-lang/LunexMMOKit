@@ -1,0 +1,13 @@
+{
+  "status": "ok",
+  "director": "client/combat/attack_director.gd",
+  "single_emission": true,
+  "interrupt": true,
+  "events_source": "client/content/combat/class_attack_events.json",
+  "vfx": "vfx_catalog + skill_fx fallback",
+  "smoke": "client/tests/a02_attack_director_smoke.gd",
+  "gaps": [
+    "AnimationTree blend not wired",
+    "full class audio bank pending beyond training paths"
+  ]
+}

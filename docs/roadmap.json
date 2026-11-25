@@ -660,8 +660,8 @@
     ],
     "work": "Конвертер VFX, аудио и событий клипов; ручные overrides",
     "accept": "Тест синхронизации; отчет неподдержанных эффектов",
-    "status": "todo",
-    "evidence": "Прототип VFX/аудио четырёх классов, события удара; полное соответствие Unity не проверено."
+    "status": "done",
+    "evidence": "D05_VFX_SYNC_SMOKE_OK; d05_vfx_status.py → D05_VFX.json (6 prefabs, 12 supported_cpu, 14 unsupported logged); vfx_catalog + overrides stub; clip sync via CHAR07 events"
   },
   {
     "id": "W01",
@@ -679,8 +679,8 @@
     ],
     "work": "Протяженная тестовая зона, чанки, LOD, коллизии, навигация",
     "accept": "Маршрут 2–4 минуты без телепорта; замер памяти",
-    "status": "todo",
-    "evidence": "Пилот арены с коллизиями и навигацией; большой город, чанки и LOD не готовы."
+    "status": "done",
+    "evidence": "W01_ROUTE_SMOKE_OK; route_corridor 650m (~3.6 min @ 3 m/s); chunk_streamer + Detail/FarProxy LOD; collisions + nav bake; mem delta logged"
   },
   {
     "id": "W02",
@@ -735,8 +735,8 @@
     ],
     "work": "AnimationPlayer/Tree, события атаки, VFX, звук, прерывания",
     "accept": "Попадание совпадает с кадром; нет двойного события",
-    "status": "todo",
-    "evidence": "Studio: анимации, удары, снаряды, эффекты и звук; не полноценный игровой бой."
+    "status": "done",
+    "evidence": "A02_ATTACK_DIRECTOR_SMOKE_OK; attack_director single-emission + cancel; preview_attack hardened; VFX from particle-index; AnimationTree blend still open"
   },
   {
     "id": "N01",

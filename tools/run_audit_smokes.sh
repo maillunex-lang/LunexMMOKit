@@ -28,6 +28,12 @@ echo "== char07_hit_time_smoke =="
 "$GODOT" --path client --headless --script res://tests/char07_hit_time_smoke.gd
 echo "== d04_scene_smoke =="
 "$GODOT" --path client --headless --script res://tests/d04_scene_smoke.gd
+echo "== d05_vfx_sync_smoke =="
+"$GODOT" --path client --headless --script res://tests/d05_vfx_sync_smoke.gd
+echo "== a02_attack_director_smoke =="
+"$GODOT" --path client --headless --script res://tests/a02_attack_director_smoke.gd
+echo "== w01_route_smoke =="
+"$GODOT" --path client --headless --script res://tests/w01_route_smoke.gd
 if command -v go >/dev/null || [[ -x "$ROOT/tools/sdk/go/bin/go" ]]; then
   export PATH="$ROOT/tools/sdk/go/bin:${PATH:-}"
   echo "== go test =="

@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T11:53:19Z",
+  "generated_at": "2026-11-25T12:01:51Z",
   "product": "Осколки вечности",
   "note": "Used game resources only. Original Darklord / full DGI / full asset library are NOT included.",
-  "count": 363,
-  "total_bytes": 130674118,
+  "count": 365,
+  "total_bytes": 130680226,
   "duplicate_sha256_groups": 12,
   "duplicates": [
     {
@@ -1384,6 +1384,19 @@
       "license_status": "project"
     },
     {
+      "id": "asset:9b4ceb950dfe:attack_director.gd",
+      "category": "combat",
+      "path": "client/combat/attack_director.gd",
+      "size": 3428,
+      "sha256": "9b4ceb950dfe9fee4f7c2ffbb892868c7d76e169e08e5dfe862f67aecaddd32e",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "combat",
+      "license_status": "project"
+    },
+    {
       "id": "asset:12d727afa055:combat_runtime.gd",
       "category": "combat",
       "path": "client/combat/combat_runtime.gd",
@@ -1410,11 +1423,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:72d1e2289fa0:preview_attack.gd",
+      "id": "asset:461ce9667cbd:preview_attack.gd",
       "category": "combat",
       "path": "client/combat/preview_attack.gd",
-      "size": 902,
-      "sha256": "72d1e2289fa06fef716c6d485bcd386ab25ae26d18e4ffe9421ba9e0cf693cd6",
+      "size": 1126,
+      "sha256": "461ce9667cbd1128cb94ddf3d33c6b895fa9bb167d13b6cff5fd29519681e43c",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1883,6 +1896,19 @@
       "path": "client/content/vfx/skill_fx.gd.uid",
       "size": 20,
       "sha256": "08cce2746d8ae7fb199a1fc2f45f39cf79cb8f78b0ec181605fe33ea42cb3512",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "content",
+      "license_status": "project"
+    },
+    {
+      "id": "asset:30af209fe1e1:vfx_catalog.gd",
+      "category": "content",
+      "path": "client/content/vfx/vfx_catalog.gd",
+      "size": 2456,
+      "sha256": "30af209fe1e1d9a617e9a127d6f7451a98a0b78521d418a29a9a5723bead088b",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
