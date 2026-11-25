@@ -24,7 +24,7 @@ var status_label: Label
 var fps_label: Label
 var quest_label: RichTextLabel
 var interact_hint: Label
-var quest_log: Node
+var quest_log
 var _attack_cd := 0.0
 
 func _ready() -> void:
@@ -176,7 +176,7 @@ func _try_interact() -> void:
 		return
 	var sid := String(npc.get_meta("stable_id"))
 	# Offer / progress talk objectives
-	var started := quest_log.offer_from_npc(sid)
+	var started: String = quest_log.offer_from_npc(sid)
 	quest_log.notify_talk(sid)
 	if started != "":
 		status_label.text = "Взят квест: " + started
