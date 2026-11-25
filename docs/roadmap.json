@@ -1098,8 +1098,8 @@
     ],
     "work": "DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery",
     "accept": "Клон без Darklord/DGI проходит манифест; сервер из репо; docs восстановления; CI portability; ограничения задокументированы",
-    "status": "doing",
-    "evidence": "2026-11-25: manifest 359/~125MiB verify OK; 33+ library GLB; CLIENT_CLEAN; deploy/backup/restore; ISOLATED_RECOVERY_SMOKE_OK; CI portability job added; Windows/bare-metal VPS UI not run here; external backup credentials pending owner"
+    "status": "done",
+    "evidence": "fc62c19; MANIFEST_VERIFY_OK 359/~125MiB; CLIENT_CLEAN; ISOLATED_RECOVERY_SMOKE_OK; CI Foundation success (portability+contracts+versions+go-server) runs 45597690407/45597701550; limits: Windows/bare-metal UI not run; off-VPS backup creds pending owner; 12 texture SHA alias dup groups"
   },
   {
     "id": "BETA01",

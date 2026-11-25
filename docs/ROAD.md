@@ -1,7 +1,7 @@
 # Roadmap
 Read AGENTS.md and NEXT.md first. Machine source: roadmap.json.
 
-**Product: Closed Beta 0.1.0 (BETA01). DR01 is a hard blocker.**
+**Product: Closed Beta 0.1.0 (BETA01). DR01 done (limits in DISASTER_RECOVERY.md).**
 
 - F01 [done] Initial Godot skeleton (deps: )
 - F02 [done] Module layout and static CI (deps: F01)
@@ -58,5 +58,5 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json.
 - P01 [todo] Профилирование Android, пресеты, LOD, пулы, чанки (deps: Q02)
 - P02 [todo] Нагрузочный тест, backup restore, безопасность, метрики (deps: M04, P01, R03, M03, O01)
 - L01 [todo] Пакет Closed Beta: подписанный APK, докачка контента, integrity, обновление клиента (deps: P02)
-- DR01 [doing] DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery (deps: F02)
+- DR01 [done] DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery (deps: F02)
 - BETA01 [todo] Closed Beta 0.1.0 «Осколки вечности»: онлайн MMORPG готовая к закрытому тестированию реальными игроками (deps: L01, DR01)
