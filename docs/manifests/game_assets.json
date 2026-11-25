@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T12:09:41Z",
+  "generated_at": "2026-11-25T12:14:45Z",
   "product": "Осколки вечности",
   "note": "Used game resources only. Original Darklord / full DGI / full asset library are NOT included.",
-  "count": 370,
-  "total_bytes": 130693020,
+  "count": 371,
+  "total_bytes": 130694087,
   "duplicate_sha256_groups": 12,
   "duplicates": [
     {
@@ -1397,6 +1397,19 @@
       "license_status": "project"
     },
     {
+      "id": "asset:0528e1f66f3a:auto_battle.gd",
+      "category": "combat",
+      "path": "client/combat/auto_battle.gd",
+      "size": 872,
+      "sha256": "0528e1f66f3aaca557c5f6e0d23ca7afb6e03b4199db9b1b1035bcd3471327a3",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "combat",
+      "license_status": "project"
+    },
+    {
       "id": "asset:12d727afa055:combat_runtime.gd",
       "category": "combat",
       "path": "client/combat/combat_runtime.gd",
@@ -2047,11 +2060,11 @@
       "license_status": "restricted_adapted_runtime"
     },
     {
-      "id": "asset:262868b604d7:api_client.gd",
+      "id": "asset:2040b3c4dd69:api_client.gd",
       "category": "network",
       "path": "client/network/api_client.gd",
-      "size": 4369,
-      "sha256": "262868b604d734c9bde6df4b2095299b2bdac7c1d3cae0e78f008373780487a6",
+      "size": 4564,
+      "sha256": "2040b3c4dd69867ce094f4cd913fe18a9f94c9b1afcbf4318fa793be9445d7ab",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",

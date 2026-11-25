@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "endpoints": ["/v1/world/auto_battle", "/v1/world/celestial"],
+  "manual_cancels_auto": true,
+  "celestial": {
+    "energy_cost": 50,
+    "duration_s": 8,
+    "cooldown_s": 20,
+    "damage_mult": 1.35
+  },
+  "tests": [
+    "TestManualInputCancelsAuto",
+    "TestAutoBattleAttacksNearest",
+    "TestCelestialServerValidated",
+    "C03_AUTO_BATTLE_SMOKE_OK"
+  ]
+}

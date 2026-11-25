@@ -38,6 +38,8 @@ echo "== w02_travel_smoke =="
 "$GODOT" --path client --headless --script res://tests/w02_travel_smoke.gd
 echo "== n02_interp_smoke =="
 "$GODOT" --path client --headless --script res://tests/n02_interp_smoke.gd
+echo "== c03_auto_battle_smoke =="
+"$GODOT" --path client --headless --script res://tests/c03_auto_battle_smoke.gd
 if command -v go >/dev/null || [[ -x "$ROOT/tools/sdk/go/bin/go" ]]; then
   export PATH="$ROOT/tools/sdk/go/bin:${PATH:-}"
   echo "== go test =="

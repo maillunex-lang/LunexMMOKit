@@ -33,6 +33,7 @@ type Entity struct {
 	AccountID    int64   `json:"account_id"`
 	Name         string  `json:"name"`
 	ClassActorID string  `json:"class_actor_id"`
+	Kind         string  `json:"kind"` // player|mob|boss
 	Location     string  `json:"location"`
 	Pos          Vec3    `json:"pos"`
 	Yaw          float64 `json:"yaw"`
@@ -43,6 +44,13 @@ type Entity struct {
 	Alive        bool    `json:"alive"`
 	LastMove     time.Time
 	AtkReadyAt   time.Time
+	AI           *MobAI `json:"-"`
+	// C03 player combat assists (server-validated)
+	AutoBattle       bool      `json:"auto_battle"`
+	Celestial        bool      `json:"celestial"`
+	CelestialUntil   time.Time `json:"-"`
+	CelestialEnergy  int       `json:"celestial_energy"`
+	CelestialReadyAt time.Time `json:"-"`
 }
 
 // SnapshotEntity is AOI-safe public state.
@@ -51,6 +59,7 @@ type SnapshotEntity struct {
 	AccountID    int64   `json:"account_id"`
 	Name         string  `json:"name"`
 	ClassActorID string  `json:"class_actor_id"`
+	Kind         string  `json:"kind"`
 	Location     string  `json:"location"`
 	Pos          Vec3    `json:"pos"`
 	Yaw          float64 `json:"yaw"`
@@ -59,6 +68,8 @@ type SnapshotEntity struct {
 	MP           int     `json:"mp"`
 	MaxMP        int     `json:"max_mp"`
 	Alive        bool    `json:"alive"`
+	AutoBattle   bool    `json:"auto_battle,omitempty"`
+	Celestial    bool    `json:"celestial,omitempty"`
 }
 
 // MoveResult reports whether the intended move was accepted.
@@ -112,6 +123,7 @@ func (s *Sim) Join(accountID int64, name, classID, location string, spawn Vec3) 
 		e := s.ents[eid]
 		e.Name = name
 		e.ClassActorID = classID
+		e.Kind = KindPlayer
 		e.Location = location
 		e.Pos = spawn
 		e.Alive = true
@@ -126,9 +138,9 @@ func (s *Sim) Join(accountID int64, name, classID, location string, spawn Vec3) 
 	id := s.nextID
 	e := &Entity{
 		ID: id, AccountID: accountID, Name: name, ClassActorID: classID,
-		Location: location, Pos: spawn, Yaw: 0,
+		Kind: KindPlayer, Location: location, Pos: spawn, Yaw: 0,
 		HP: 500, MaxHP: 500, MP: 100, MaxMP: 100, Alive: true,
-		LastMove: s.now(),
+		LastMove: s.now(), CelestialEnergy: 0,
 	}
 	if classID == "20001" {
 		e.HP, e.MaxHP = 420, 420
@@ -176,6 +188,10 @@ func (s *Sim) Move(entityID int64, desired Vec3, yaw float64, clientDT float64) 
 	e.Pos = desired
 	e.Yaw = yaw
 	e.LastMove = s.now()
+	// Manual move cancels auto-battle (C03)
+	if e.Kind == KindPlayer && e.AutoBattle {
+		e.AutoBattle = false
+	}
 	return MoveResult{Accepted: true, Pos: e.Pos, Yaw: e.Yaw}, nil
 }
 
@@ -212,11 +228,32 @@ func (s *Sim) EntityByAccount(accountID int64) (*Entity, bool) {
 	return &cp, true
 }
 
+// EntityByID returns a shallow copy (AI pointer shared — tests copy AI if needed).
+func (s *Sim) EntityByID(id int64) (*Entity, bool) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	e, ok := s.ents[id]
+	if !ok {
+		return nil, false
+	}
+	cp := *e
+	return &cp, true
+}
+
 func toSnap(e *Entity) SnapshotEntity {
+	kind := e.Kind
+	if kind == "" {
+		if e.AccountID == 0 {
+			kind = KindMob
+		} else {
+			kind = KindPlayer
+		}
+	}
 	return SnapshotEntity{
 		ID: e.ID, AccountID: e.AccountID, Name: e.Name, ClassActorID: e.ClassActorID,
-		Location: e.Location, Pos: e.Pos, Yaw: e.Yaw,
+		Kind: kind, Location: e.Location, Pos: e.Pos, Yaw: e.Yaw,
 		HP: e.HP, MaxHP: e.MaxHP, MP: e.MP, MaxMP: e.MaxMP, Alive: e.Alive,
+		AutoBattle: e.AutoBattle, Celestial: e.Celestial,
 	}
 }
 

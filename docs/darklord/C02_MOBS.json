@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "templates": ["mob_shardling", "boss_shard_warden"],
+  "ai_states": ["idle", "patrol", "aggro", "return", "dead"],
+  "accept": {
+    "kill_loot_once_per_life": true,
+    "leash_return": true,
+    "respawn": true
+  },
+  "tests": [
+    "TestMonsterKillLootOnceRespawnLeash",
+    "TestLeashReturn",
+    "TestBossSpawn"
+  ],
+  "gaps": ["client actor AI visual parity with server tick", "boss telegraph VFX pending"]
+}

@@ -22,15 +22,17 @@ type AttackRequest struct {
 
 // AttackResult is the authoritative combat outcome.
 type AttackResult struct {
-	OK            bool   `json:"ok"`
-	Reason        string `json:"reason,omitempty"`
-	Damage        int    `json:"damage"`
-	TargetHP      int    `json:"target_hp"`
-	TargetMaxHP   int    `json:"target_max_hp"`
-	TargetAlive   bool   `json:"target_alive"`
-	AttackerMP    int    `json:"attacker_mp"`
-	SkillID       string `json:"skill_id"`
-	ClientIgnored bool   `json:"client_damage_ignored"`
+	OK             bool       `json:"ok"`
+	Reason         string     `json:"reason,omitempty"`
+	Damage         int        `json:"damage"`
+	TargetHP       int        `json:"target_hp"`
+	TargetMaxHP    int        `json:"target_max_hp"`
+	TargetAlive    bool       `json:"target_alive"`
+	AttackerMP     int        `json:"attacker_mp"`
+	SkillID        string     `json:"skill_id"`
+	ClientIgnored  bool       `json:"client_damage_ignored"`
+	Loot           *LootGrant `json:"loot,omitempty"`
+	CelestialBonus bool       `json:"celestial_bonus,omitempty"`
 }
 
 type skillDef struct {
@@ -84,13 +86,38 @@ func (s *Sim) Attack(req AttackRequest) (AttackResult, error) {
 	}
 	// Authoritative damage — never take ClientDamage
 	dmg := sk.Damage
+	celestialBonus := false
+	if at.Celestial && now.Before(at.CelestialUntil) {
+		dmg = int(float64(dmg) * 1.35)
+		celestialBonus = true
+	} else if at.Celestial {
+		at.Celestial = false
+	}
 	at.MP -= sk.MPCost
 	at.AtkReadyAt = now.Add(sk.CD)
+	wasAlive := tg.Alive
 	if tg.Alive {
 		tg.HP -= dmg
 		if tg.HP <= 0 {
 			tg.HP = 0
 			tg.Alive = false
+		}
+	}
+	var loot *LootGrant
+	if wasAlive && !tg.Alive && (tg.Kind == KindMob || tg.Kind == KindBoss || tg.AI != nil) {
+		loot = s.grantLootOnce(at, tg)
+		if tg.AI != nil {
+			tg.AI.State = MobDead
+			delay := tg.AI.Def.RespawnAfter
+			if delay <= 0 {
+				delay = 5 * time.Second
+			}
+			tg.AI.RespawnAt = now.Add(delay)
+		}
+		// Combat earns celestial energy
+		at.CelestialEnergy += 10
+		if at.CelestialEnergy > 100 {
+			at.CelestialEnergy = 100
 		}
 	}
 	sid := req.SkillID
@@ -100,25 +127,16 @@ func (s *Sim) Attack(req AttackRequest) (AttackResult, error) {
 	return AttackResult{
 		OK: true, Damage: dmg, TargetHP: tg.HP, TargetMaxHP: tg.MaxHP,
 		TargetAlive: tg.Alive, AttackerMP: at.MP, SkillID: sid,
-		ClientIgnored: req.ClientDamage != 0,
+		ClientIgnored: req.ClientDamage != 0, Loot: loot, CelestialBonus: celestialBonus,
 	}, nil
 }
 
 // SpawnDummy places a hostile dummy for combat tests / slice.
 func (s *Sim) SpawnDummy(location string, pos Vec3, hp int) *Entity {
-	s.mu.Lock()
-	defer s.mu.Unlock()
-	s.nextID++
-	id := s.nextID
-	if hp <= 0 {
-		hp = 80
-	}
-	e := &Entity{
-		ID: id, AccountID: 0, Name: "Dummy", ClassActorID: "mob",
-		Location: location, Pos: pos, HP: hp, MaxHP: hp, MP: 0, MaxMP: 0, Alive: true,
-		LastMove: s.now(),
-	}
-	s.ents[id] = e
-	cp := *e
-	return &cp
+	return s.SpawnMonster(location, pos, MonsterDef{
+		Name: "Dummy", StableID: "mob_dummy", Kind: KindMob, HP: hp,
+		Damage: 5, AggroRadius: 0, LeashRadius: 30, PatrolRadius: 0,
+		RespawnAfter: 3 * time.Second, AttackRange: 2, AttackCD: time.Second, Speed: 0,
+		Loot: LootGrant{ItemID: "dummy_chip", Qty: 1, Currency: 1, XP: 5},
+	})
 }

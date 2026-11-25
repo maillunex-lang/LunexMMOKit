@@ -61,6 +61,12 @@ func world_attack(target_id: int, skill_id: String = "basic", client_damage: int
 		"target_id": target_id, "skill_id": skill_id, "client_damage": client_damage,
 	})
 
+func world_auto_battle(enabled: bool) -> Dictionary:
+	return _post("/v1/world/auto_battle", {"enabled": enabled})
+
+func world_celestial() -> Dictionary:
+	return _post("/v1/world/celestial", {})
+
 func _post(path: String, body: Dictionary) -> Dictionary:
 	return _req(HTTPClient.METHOD_POST, path, body)
 

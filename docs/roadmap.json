@@ -812,8 +812,8 @@
     ],
     "work": "Монстры, aggro, patrol, leash, respawn, loot, босс",
     "accept": "Убийство, возврат, респаун, награда один раз",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "C02_MOBS: go test kill/loot-once/leash/respawn/boss; monsters.go Tick AI"
   },
   {
     "id": "C03",
@@ -831,8 +831,8 @@
     ],
     "work": "Автобой, автопуть, ручной приоритет, небесная форма",
     "accept": "Ручной ввод отменяет авто; сервер проверяет форму",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "C03_AUTO: go test manual-cancels/celestial gate; C03_AUTO_BATTLE_SMOKE_OK; /v1/world/auto_battle|celestial"
   },
   {
     "id": "Q01",

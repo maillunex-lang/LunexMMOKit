@@ -1,6 +1,6 @@
 # Next
-Primary: C02 (monsters/aggro/loot) then C03 → Q01 toward BETA01.
-N02 + C01 done (authoritative move/AOI/snapshots + server damage/CD/death; client interpolator).
-Optional: WebSocket push; wire play scenes to poll `/v1/world/*` instead of local CombatRuntime.
+Primary: Q01 (quest engine / NPC / rewards) then Q02 toward BETA01.
+C02 + C03 done (mob AI loot/leash/respawn; autobattle cancel + celestial server gate).
+Optional: wire play scenes to world Tick + auto_battle HTTP; boss telegraph VFX.
 Product path remains Closed Beta 0.1.0.
-Read: docs/darklord/N02.md, docs/darklord/C01.md, docs/BETA_001.md
+Read: docs/darklord/C02.md, docs/darklord/C03.md, docs/BETA_001.md

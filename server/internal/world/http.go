@@ -85,6 +85,7 @@ func (h *HTTP) Move(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+	// Move already clears AutoBattle when accepted (C03 manual priority)
 	writeJSON(w, map[string]any{"ok": true, "move": res})
 }
 
@@ -135,6 +136,7 @@ func (h *HTTP) Attack(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "bad json", http.StatusBadRequest)
 		return
 	}
+	h.Sim.ManualInput(accountID) // manual skill cancels auto-battle
 	res, err := h.Sim.Attack(AttackRequest{
 		AttackerID: ent.ID, TargetID: body.TargetID,
 		SkillID: body.SkillID, ClientDamage: body.ClientDamage,
@@ -145,6 +147,47 @@ func (h *HTTP) Attack(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	writeJSON(w, map[string]any{"ok": res.OK, "attack": res})
+}
+
+func (h *HTTP) AutoBattle(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "method", http.StatusMethodNotAllowed)
+		return
+	}
+	accountID, err := h.account(r)
+	if err != nil {
+		http.Error(w, "unauthorized", http.StatusUnauthorized)
+		return
+	}
+	var body struct {
+		Enabled bool `json:"enabled"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		http.Error(w, "bad json", http.StatusBadRequest)
+		return
+	}
+	if err := h.Sim.SetAutoBattle(accountID, body.Enabled); err != nil {
+		http.Error(w, err.Error(), http.StatusConflict)
+		return
+	}
+	writeJSON(w, map[string]any{"ok": true, "auto_battle": body.Enabled})
+}
+
+func (h *HTTP) Celestial(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "method", http.StatusMethodNotAllowed)
+		return
+	}
+	accountID, err := h.account(r)
+	if err != nil {
+		http.Error(w, "unauthorized", http.StatusUnauthorized)
+		return
+	}
+	ok, reason, until := h.Sim.ActivateCelestial(accountID)
+	writeJSON(w, map[string]any{
+		"ok": ok, "reason": reason,
+		"until_unix": until.Unix(),
+	})
 }
 
 func (h *HTTP) account(r *http.Request) (int64, error) {
@@ -174,4 +217,6 @@ func (h *HTTP) Mount(mux *http.ServeMux) {
 	mux.HandleFunc("/v1/world/move", h.Move)
 	mux.HandleFunc("/v1/world/snapshot", h.Snapshot)
 	mux.HandleFunc("/v1/world/attack", h.Attack)
+	mux.HandleFunc("/v1/world/auto_battle", h.AutoBattle)
+	mux.HandleFunc("/v1/world/celestial", h.Celestial)
 }
