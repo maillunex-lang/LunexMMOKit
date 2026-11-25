@@ -16,4 +16,5 @@
 | shard_ruins | `world/locations/shard_ruins/` | Руины осколков — третья зона гл.1 |
 | route_corridor | `world/route_corridor/` | W01 тестовый коридор 650 м, чанки/LOD/nav |
 
+Каталог переходов/safe zones/minimap bounds: `client/world/location_registry.gd` (W02).
 Маркеры NPC/порталов/spawn несут `stable_id`. Редактирование — WORLD-EDITOR-003; генераторы не затирают owner overlay.

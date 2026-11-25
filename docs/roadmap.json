@@ -697,8 +697,8 @@
     ],
     "work": "Карта, миникарта, переходы, точки возрождения, безопасные зоны",
     "accept": "Переход туда-обратно; корректные координаты",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "W02_TRAVEL_SMOKE_OK; location_registry + world_travel; GameSession pending spawn/exit; minimap+world_map_panel; capital↔ashen round-trip landings"
   },
   {
     "id": "A01",

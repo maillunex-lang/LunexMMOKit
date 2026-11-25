@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T12:01:51Z",
+  "generated_at": "2026-11-25T12:04:59Z",
   "product": "Осколки вечности",
   "note": "Used game resources only. Original Darklord / full DGI / full asset library are NOT included.",
-  "count": 365,
-  "total_bytes": 130680226,
+  "count": 367,
+  "total_bytes": 130688140,
   "duplicate_sha256_groups": 12,
   "duplicates": [
     {
@@ -1943,11 +1943,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:0098139bcad0:game_session.gd",
+      "id": "asset:8eeb0f8729b7:game_session.gd",
       "category": "core",
       "path": "client/core/game_session.gd",
-      "size": 6572,
-      "sha256": "0098139bcad0b2d4c97a56c53ed8f98bd33ab12f59b7ff4e2161b466d1dc3e1f",
+      "size": 8759,
+      "sha256": "8eeb0f8729b7f7485396c2ebe1fb4ebb20bd60e3a5e4ab468a1e2a94a0ac64de",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -2169,6 +2169,32 @@
       "path": "client/ui/hud/game_hud.tscn",
       "size": 4300,
       "sha256": "3ec34f287b5639133ab42f78072632687af4ce4463b920e48f00a43b7eb845b6",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "ui",
+      "license_status": "project"
+    },
+    {
+      "id": "asset:c4eaf9c83313:minimap.gd",
+      "category": "ui",
+      "path": "client/ui/hud/minimap.gd",
+      "size": 1497,
+      "sha256": "c4eaf9c833139b882b7ee38c01c52086c6ed38d16de4b1a38d7bd85163dd4d03",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "ui",
+      "license_status": "project"
+    },
+    {
+      "id": "asset:4ad5ac50cfc7:world_map_panel.gd",
+      "category": "ui",
+      "path": "client/ui/hud/world_map_panel.gd",
+      "size": 2337,
+      "sha256": "4ad5ac50cfc7a06739589d59a736d11f235bcfeb723861c3e5db81fa21c7d2f3",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -4634,11 +4660,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:b9b6bbbb90fe:ashen_play_runtime.gd",
+      "id": "asset:55e549021b93:ashen_play_runtime.gd",
       "category": "locations",
       "path": "client/world/locations/ashen_outskirts/ashen_play_runtime.gd",
-      "size": 4706,
-      "sha256": "b9b6bbbb90fef32ad33ab680a5e188931670ea5a8a963586e4442a8a07864436",
+      "size": 5149,
+      "sha256": "55e549021b939054a0de345f68eba294a3bf231c0d3879d9458cf08f849dbc60",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -4673,11 +4699,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:38af5c114aee:eternity_play.gd",
+      "id": "asset:c7d7e92a9d60:eternity_play.gd",
       "category": "locations",
       "path": "client/world/locations/eternity_capital/eternity_play.gd",
-      "size": 14086,
-      "sha256": "38af5c114aee4fa90b6b48906e038a2653c14d516da92b8c6bbcc64a596e45ad",
+      "size": 15179,
+      "sha256": "c7d7e92a9d6035689cf615642ac73f0606a60bed440a117e02d530d04b0f9d51",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -4712,11 +4738,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:a349b6374519:ruins_play.gd",
+      "id": "asset:08976d5dcf02:ruins_play.gd",
       "category": "locations",
       "path": "client/world/locations/shard_ruins/ruins_play.gd",
-      "size": 4027,
-      "sha256": "a349b63745193aa10ad8deb8d2b700550282417dde6148fe038da8dc4d00318e",
+      "size": 4384,
+      "sha256": "08976d5dcf02744d79094742112cdd691a716176e6da847c4eb78262926dfe22",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",

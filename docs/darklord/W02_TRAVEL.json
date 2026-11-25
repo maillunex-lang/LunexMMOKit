@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "registry": "client/world/location_registry.gd",
+  "round_trip": [
+    "eternity_capital/portal_ashen_gate → ashen_outskirts landing (0,1,-8)",
+    "ashen_outskirts/portal_capital_return → eternity_capital landing (0,1,-55)"
+  ],
+  "features": [
+    "pending_spawn",
+    "exit_position",
+    "safe_zones",
+    "minimap_uv",
+    "world_map_panel",
+    "respawn_helper"
+  ],
+  "smoke": "client/tests/w02_travel_smoke.gd",
+  "gaps": [
+    "full painted world map art pending",
+    "server-authoritative AOI travel is N02"
+  ]
+}
