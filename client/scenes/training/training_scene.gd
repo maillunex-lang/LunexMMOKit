@@ -13,6 +13,8 @@ var weapon_ids := {
 	"30001": "300011000",
 	"40001": "400011000",
 }
+var source_root := "/home/gamedev/Darklord"
+var cache_root := ""
 var actor_glb_template := "/home/gamedev/darklord-dgi/exports/%s.glb"
 var weapon_glb_template := "/home/gamedev/darklord-dgi/exports/weapon-%s.glb"
 var material_params_path := "/home/gamedev/darklord-dgi/material-params.json"
@@ -39,6 +41,7 @@ var active_attack: Node
 var material_params: Dictionary = {}
 var current_actor_index := 2
 var speed_index := 1
+var fps_label: Label
 var status_label: Label
 var camera: Camera3D
 var animation_select: OptionButton
@@ -52,6 +55,17 @@ var orbit_center := Vector3(0.6,0.9,0)
 
 
 func _ready() -> void:
+	cache_root = OS.get_environment("LUNEX_STUDIO_CACHE")
+	if cache_root.is_empty() and OS.has_feature("android"):
+		cache_root = ProjectSettings.globalize_path("user://studio-cache")
+	if not cache_root.is_empty():
+		source_root = cache_root.path_join("source")
+		actor_glb_template = cache_root.path_join("exports/%s.glb")
+		weapon_glb_template = cache_root.path_join("exports/weapon-%s.glb")
+		material_params_path = cache_root.path_join("material-params.json")
+		particle_index_path = cache_root.path_join("particle-index.json")
+		accessory_root = cache_root.path_join("exports/accessories")
+		attack_audio_path = source_root.path_join("Client/Assets/Resources/Sound/skill/FS_Atk_01.mp3")
 	_setup_world()
 	_setup_ui()
 	_load_material_params()
@@ -105,6 +119,9 @@ func _setup_world() -> void:
 	env.environment.ambient_light_energy = 0.75
 	add_child(env)
 
+func _process(_delta: float) -> void:
+	if fps_label != null: fps_label.text = "%d FPS" % Engine.get_frames_per_second()
+
 func _setup_ui() -> void:
 	var layer := CanvasLayer.new()
 	layer.name = "TrainingUI"
@@ -112,6 +129,9 @@ func _setup_ui() -> void:
 	var panel := PanelContainer.new()
 	panel.name = "StatusPanel"
 	layer.add_child(panel)
+	fps_label = Label.new()
+	layer.add_child(fps_label)
+	fps_label.position = Vector2(1100,16)
 	panel.position = Vector2(16, 16)
 	status_label = Label.new()
 	status_label.name = "StatusLabel"
@@ -200,7 +220,7 @@ func own_tree(node: Node, owner: Node) -> void:
 		own_tree(child, owner)
 
 func build_effect(payload: Dictionary) -> PackedScene:
-	var fx := VFX.build(payload, "/home/gamedev/Darklord")
+	var fx := VFX.build(payload, source_root)
 	if fx == null or VFX.emitter_count(fx) == 0:
 		if fx != null:
 			fx.free()
@@ -220,7 +240,7 @@ func _load_vfx() -> void:
 	if not FileAccess.file_exists(particle_index_path):
 		_set_status("Particle index not found: " + particle_index_path)
 		return
-	var records: Variant = JSON.parse_string(FileAccess.get_file_as_string(particle_index_path))
+	var records: Variant = JSON.parse_string(FileAccess.get_file_as_string(particle_index_path).replace("@CACHE@",cache_root))
 	if not records is Dictionary:
 		_set_status("Particle index JSON is invalid.")
 		return
@@ -288,7 +308,7 @@ func _load_actor(index: int) -> void:
 		_load_vfx()
 		melee_visual = combat.projectile_visual
 		combat.projectile_visual = null
-		var audio_base: String = "/home/gamedev/Darklord/Client/Assets/Resources/Sound/skill/" + CLASS_AUDIO[actor_id]
+		var audio_base: String = source_root.path_join("Client/Assets/Resources/Sound/skill/" + CLASS_AUDIO[actor_id])
 		if FileAccess.file_exists(audio_base + ".wav"):
 			combat.attack_audio = AudioStreamWAV.load_from_file(audio_base + ".wav")
 		else:
@@ -299,9 +319,9 @@ func _apply_restored_materials(actor_id: String, weapon_id: String) -> void:
 	if material_params.is_empty():
 		return
 	if material_params.has(actor_id) and material_params[actor_id].size() > 0:
-		DarklordMaterial.apply(actor, material_params[actor_id][0], "/home/gamedev/Darklord")
+		DarklordMaterial.apply(actor, material_params[actor_id][0], source_root)
 	if material_params.has(weapon_id) and material_params[weapon_id].size() > 0:
-		DarklordMaterial.apply(weapon, material_params[weapon_id][0], "/home/gamedev/Darklord")
+		DarklordMaterial.apply(weapon, material_params[weapon_id][0], source_root)
 
 func _create_target() -> void:
 	target = MeshInstance3D.new()
