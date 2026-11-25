@@ -8,6 +8,7 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json. Task cards: task
 - CAP03 [doing] Исправить родительские трансформации, активность и ориентацию мешей столицы (deps: CAP02)
 - CAP04 [todo] Восстановить terrain, воду, кристалл, эффекты и освещение (deps: CAP03)
 - CAP05 [todo] Редактируемые коллизии, навигация, герой и камера в городе (deps: CAP04)
+- CAPAPK [todo] Отдельный Android City Preview APK: четыре класса, джойстик, камера, FPS, пресеты графики (deps: CAP05)
 - CAP06 [todo] NPC и исходные точки размещения, диалоги и квестовые данные (deps: CAP05)
 - UI01 [todo] Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок (deps: F02)
 - UI02 [todo] Нативные HUD, авторизация, выбор класса, инвентарь и окна (deps: UI01)

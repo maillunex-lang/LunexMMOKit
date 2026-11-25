@@ -81,7 +81,7 @@
     "work": "Исправить родительские трансформации, активность и ориентацию мешей столицы",
     "accept": "Сравнение координат с Unity; повторный рендер без геометрических дефектов",
     "status": "doing",
-    "evidence": "ed5799b: isolated main terrain 247.7 x 249.0, height 20.49; ShaderMaterial bound, screenshot shows separated textured patches rather than continuous ground. Need inspect missing geometry and original terrain topology; no visual acceptance."
+    "evidence": "ed5799b/9c71581: V6, 320/328 размещений, 525 мешей, terrain shader bound; isolated terrain patches. 4 missing architecture bindings in cs_zhucheng_jz01.FBX, 3 unresolved other refs. Parent transforms partly recovered; visual acceptance failed. Next inspect exact FBX node/mesh mapping, source topology, active state and per-asset basis."
   },
   {
     "id": "CAP04",
@@ -120,6 +120,26 @@
     ],
     "work": "Редактируемые коллизии, навигация, герой и камера в городе",
     "accept": "Четыре класса ходят по городу, джойстик без tap-to-move, тесты коллизий",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CAPAPK",
+    "phase": "transfer",
+    "depends": [
+      "CAP05"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/DEMO.md"
+    ],
+    "scope": [
+      "client/",
+      "tools/",
+      "docs/"
+    ],
+    "work": "Отдельный Android City Preview APK: четыре класса, джойстик, камера, FPS, пресеты графики",
+    "accept": "Подписанный APK, проверка подписи и SHA256, доступная ссылка; установка и FPS на устройствах фиксируются отдельно после проверки пользователем",
     "status": "todo",
     "evidence": ""
   },
