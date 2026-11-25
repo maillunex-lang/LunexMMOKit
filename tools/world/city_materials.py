@@ -15,8 +15,9 @@ result={}
 for p in sorted(paths):
     try:
         m=next(d['Material'] for _,_,d in records(root/p) if 'Material' in d)
-        props=m['m_SavedProperties']; row=dict(shader=m.get('m_Shader'),floats={k:v for a in props.get('m_Floats',[]) for k,v in a.items()},colors={k:v for a in props.get('m_Colors',[]) for k,v in a.items()},textures={})
+        props=m['m_SavedProperties']; row=dict(shader=m.get('m_Shader'),floats={k:v for a in props.get('m_Floats',[]) if isinstance(a,dict) for k,v in a.items()},colors={k:v for a in props.get('m_Colors',[]) if isinstance(a,dict) for k,v in a.items()},textures={})
         for a in props.get('m_TexEnvs',[]):
+            if not isinstance(a,dict):continue
             for k,v in a.items():
                 ref=v.get('m_Texture',{});g=ref.get('guid')
                 if not g:continue
