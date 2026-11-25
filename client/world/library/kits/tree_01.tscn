@@ -43,29 +43,26 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_jmw6u"]
 size = Vector3(4.395238, 6.1834707, 3.758507)
 
-[node name="Kit_tree_01" type="Node3D" unique_id=990937180]
+[node name="Kit_tree_01" type="Node3D" unique_id=1833157645]
 metadata/kit_id = "tree_01"
 metadata/category = "tree"
 metadata/source_id = "cs_zhucheng_shu01"
 
-[node name="model" type="Node3D" parent="." unique_id=1972004624]
+[node name="Meshes" type="Node3D" parent="." unique_id=2030902813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015266697, 0)
 
-[node name="cs_zhucheng_shu01" type="Node3D" parent="model" unique_id=496136361]
-transform = Transform3D(-0.0065632947, -8.0377176e-19, 5.2384826e-26, -4.343224e-26, 7.8240575e-10, 0.006563294, 8.037718e-19, -0.006563294, 7.8240575e-10, 0, 0, 0)
-
-[node name="cs_zhucheng_touming" type="MeshInstance3D" parent="model/cs_zhucheng_shu01" unique_id=808263713]
-transform = Transform3D(1.222525, 0, 0, 0, 1.222525, 0, 0, 0, 1.222525, 9.306046, 64.05843, 733.0098)
+[node name="cs_zhucheng_touming" type="MeshInstance3D" parent="Meshes" unique_id=1923161631]
+transform = Transform3D(-0.008023792, -9.826311e-19, 6.404176e-26, -5.3097e-26, 9.565105e-10, 0.008023791, 9.826311e-19, -0.008023791, 9.565105e-10, -0.061078317, 4.8109593, -0.4204338)
 mesh = SubResource("ArrayMesh_5rtgu")
 surface_material_override/0 = SubResource("StandardMaterial3D_ipeuu")
 
-[node name="cs_zhucheng_putong" type="MeshInstance3D" parent="model/cs_zhucheng_shu01" unique_id=1403345112]
-transform = Transform3D(1.3959095, 0, 0, 0, 1.3959095, 0, 0, 0, 1, 0.51342773, 34.19397, -4.5474735e-13)
+[node name="cs_zhucheng_putong" type="MeshInstance3D" parent="Meshes" unique_id=597382022]
+transform = Transform3D(-0.009161766, -1.1219926e-18, 5.2384826e-26, -6.062748e-26, 1.0921677e-09, 0.006563294, 1.1219927e-18, -0.009161765, 7.8240575e-10, -0.0033697775, 2.6753556e-08, -0.22442508)
 mesh = SubResource("ArrayMesh_l1cdf")
 surface_material_override/0 = SubResource("StandardMaterial3D_ipeuu")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=18389660]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=83395730]
 
-[node name="@CollisionShape3D@24" type="CollisionShape3D" parent="Collision" unique_id=454960130]
+[node name="@CollisionShape3D@24" type="CollisionShape3D" parent="Collision" unique_id=420073041]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06107831, 3.0917354, -0.42043388)
 shape = SubResource("BoxShape3D_jmw6u")

@@ -142,7 +142,7 @@
     "work": "WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)",
     "accept": "Каталог ENVIRONMENT_LIBRARY; PackedScene-киты; новая столица с районами ТЗ; ландшафт/свет/коллизии; скриншоты в darklord-dgi/screens; без массовых локаций до визуальной приёмки",
     "status": "doing",
-    "evidence": "Texture audit: blue avenue strips were oversized water FBX (~400m) + empty kits. Fixed water PlaneMesh+Darklord water tex, sidewalks dm01, rebuilt 28 kits with embedded meshes/materials, crystal_fx from source. Screens refreshed. See TEXTURE_AUDIT_ETERNITY.md."
+    "evidence": "Beauty pass: textured gate/palace GLBs; jianzhu03 houses; drop walksurface; bridge off-avenue; plaza fountain monument; ProceduralSky; play smoke OK. Screens refreshed. Remaining: denser clutter, roof materials, device FPS (Xvfb≠Android)."
   },
   {
     "id": "CAPAPK",

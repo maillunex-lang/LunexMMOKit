@@ -17,17 +17,17 @@ uv1_scale = Vector3(4, 4, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_r1plq"]
 size = Vector3(28, 0.5, 18)
 
-[node name="Kit_water_01" type="Node3D" unique_id=1382057770]
+[node name="Kit_water_01" type="Node3D" unique_id=443880230]
 metadata/kit_id = "water_01"
 metadata/category = "water"
 metadata/source_id = "cs_yw_zhucheng_water+texture"
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1717945542]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=917778553]
 mesh = SubResource("PlaneMesh_nchtu")
 surface_material_override/0 = SubResource("StandardMaterial3D_1fksl")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1746286862]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=2109824239]
 
-[node name="@CollisionShape3D@6" type="CollisionShape3D" parent="Collision" unique_id=1615015655]
+[node name="@CollisionShape3D@6" type="CollisionShape3D" parent="Collision" unique_id=294251943]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
 shape = SubResource("BoxShape3D_r1plq")

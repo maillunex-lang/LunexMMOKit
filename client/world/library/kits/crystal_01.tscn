@@ -10,7 +10,7 @@ albedo_texture = ExtResource("1_rkon5")
 roughness = 0.28
 emission_enabled = true
 emission = Color(0.35, 0.55, 0.9, 1)
-emission_energy_multiplier = 0.85
+emission_energy_multiplier = 0.45
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4xmwx"]
 resource_name = "crystal_mesh_cs_zhucheng_shuijing022"
@@ -100,44 +100,41 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_0piak"]
 size = Vector3(7.0192757, 5.866189, 7.019274)
 
-[node name="Kit_crystal_01" type="Node3D" unique_id=1442074374]
+[node name="Kit_crystal_01" type="Node3D" unique_id=760295559]
 metadata/kit_id = "crystal_01"
 metadata/category = "crystal"
 metadata/source_id = "cs_zhucheng_shuijing"
 
-[node name="model" type="Node3D" parent="." unique_id=756982329]
+[node name="Meshes" type="Node3D" parent="." unique_id=586669880]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015202999, 0)
 
-[node name="cs_zhucheng_shuijing" type="Node3D" parent="model" unique_id=2091772053]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
-
-[node name="cs_zhucheng_shuijing02" type="MeshInstance3D" parent="model/cs_zhucheng_shuijing" unique_id=1362485598]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-07, -7.003546e-07, 2.9039252)
+[node name="cs_zhucheng_shuijing02" type="MeshInstance3D" parent="Meshes" unique_id=1802038213]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_4xmwx")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing01" type="MeshInstance3D" parent="model/cs_zhucheng_shuijing" unique_id=1013808100]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-07, -7.003546e-07, 2.9039252)
+[node name="cs_zhucheng_shuijing01" type="MeshInstance3D" parent="Meshes" unique_id=1177661718]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_hlxy8")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing04" type="MeshInstance3D" parent="model/cs_zhucheng_shuijing" unique_id=1068713158]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63643396, -0.5769675, 2.2209303)
+[node name="cs_zhucheng_shuijing04" type="MeshInstance3D" parent="Meshes" unique_id=486504659]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.63643396, 2.2209303, 0.5769675)
 mesh = SubResource("ArrayMesh_nsne3")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing2" type="MeshInstance3D" parent="model/cs_zhucheng_shuijing" unique_id=1773918015]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-07, -7.003546e-07, 2.9039252)
+[node name="cs_zhucheng_shuijing2" type="MeshInstance3D" parent="Meshes" unique_id=140127739]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_msppt")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing03" type="MeshInstance3D" parent="model/cs_zhucheng_shuijing" unique_id=1029090160]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-07, -7.003546e-07, 2.9039252)
+[node name="cs_zhucheng_shuijing03" type="MeshInstance3D" parent="Meshes" unique_id=1250890522]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_e37fy")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=340085916]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=109358008]
 
-[node name="@CollisionShape3D@23" type="CollisionShape3D" parent="Collision" unique_id=1554504448]
+[node name="@CollisionShape3D@23" type="CollisionShape3D" parent="Collision" unique_id=2088961679]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9330945, 0)
 shape = SubResource("BoxShape3D_0piak")

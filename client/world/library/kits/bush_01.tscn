@@ -43,29 +43,26 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_6hemi"]
 size = Vector3(4.1339006, 2.5038483, 4.675393)
 
-[node name="Kit_bush_01" type="Node3D" unique_id=737220527]
+[node name="Kit_bush_01" type="Node3D" unique_id=362762049]
 metadata/kit_id = "bush_01"
 metadata/category = "bush"
 metadata/source_id = "cs_zhucheng_guanmu01"
 
-[node name="model" type="Node3D" parent="." unique_id=556302277]
+[node name="Meshes" type="Node3D" parent="." unique_id=729534130]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0013216734, 0)
 
-[node name="cs_zhucheng_guanmu01" type="Node3D" parent="model" unique_id=1169855781]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
-
-[node name="cs_zhucheng_jianzhu02" type="MeshInstance3D" parent="model/cs_zhucheng_guanmu01" unique_id=1819470809]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.042419434, -0.056550503, 0.85466015)
+[node name="cs_zhucheng_jianzhu02" type="MeshInstance3D" parent="Meshes" unique_id=64072980]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.042419434, 0.85466015, 0.056550503)
 mesh = SubResource("ArrayMesh_avdri")
 surface_material_override/0 = SubResource("StandardMaterial3D_ofpg6")
 
-[node name="cs_zhucheng_jianzhu01" type="MeshInstance3D" parent="model/cs_zhucheng_guanmu01" unique_id=1896553276]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.042419434, -0.056550503, 0.85466015)
+[node name="cs_zhucheng_jianzhu01" type="MeshInstance3D" parent="Meshes" unique_id=4633628]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.042419434, 0.85466015, 0.056550503)
 mesh = SubResource("ArrayMesh_x6ldu")
 surface_material_override/0 = SubResource("StandardMaterial3D_ofpg6")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=268273454]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=404090780]
 
-[node name="@CollisionShape3D@26" type="CollisionShape3D" parent="Collision" unique_id=198564888]
+[node name="@CollisionShape3D@26" type="CollisionShape3D" parent="Collision" unique_id=1786628906]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.057165384, 1.2519242, 0.0026347637)
 shape = SubResource("BoxShape3D_6hemi")

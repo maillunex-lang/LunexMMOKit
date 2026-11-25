@@ -13,12 +13,13 @@ var KIT_DEFS := [
 	{"id": "arch_jz01", "category": "building", "mesh": "arch_jz01.glb", "tex": "build_jz01.png", "source": "cs_zhucheng_jz01"},
 	{"id": "arch_jz02", "category": "building", "mesh": "arch_jz02.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_jz02"},
 	{"id": "arch_jz03", "category": "building", "mesh": "arch_jz03.glb", "tex": "build_jz04.png", "source": "cs_zhucheng_jz03"},
-	{"id": "house_01", "category": "building", "mesh": "house_fangzi01.glb", "tex": "build_jz01.png", "source": "cs_zhucheng_fangzi01"},
-	{"id": "house_02", "category": "building", "mesh": "house_fangzi02.glb", "tex": "build_jz02.png", "source": "cs_zhucheng_fangzi02"},
-	{"id": "house_03", "category": "building", "mesh": "house_fangzi03.glb", "tex": "build_jz05.png", "source": "cs_zhucheng_fangzi03"},
-	{"id": "shop_01", "category": "building", "mesh": "shop_zawu01.glb", "tex": "build_jz04.png", "source": "cs_zhucheng_zawu01"},
-	{"id": "shop_04", "category": "building", "mesh": "shop_zawu04.glb", "tex": "build_jz05.png", "source": "cs_zhucheng_zawu04"},
-	{"id": "shop_07", "category": "building", "mesh": "shop_zawu07.glb", "tex": "build_jz02.png", "source": "cs_zhucheng_zawu07"},
+	# fangzi/zawu FBX UVs target cs_zhucheng_jianzhu03 atlas
+	{"id": "house_01", "category": "building", "mesh": "house_fangzi01.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_fangzi01"},
+	{"id": "house_02", "category": "building", "mesh": "house_fangzi02.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_fangzi02"},
+	{"id": "house_03", "category": "building", "mesh": "house_fangzi03.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_fangzi03"},
+	{"id": "shop_01", "category": "building", "mesh": "shop_zawu01.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_zawu01"},
+	{"id": "shop_04", "category": "building", "mesh": "shop_zawu04.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_zawu04"},
+	{"id": "shop_07", "category": "building", "mesh": "shop_zawu07.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_zawu07"},
 	{"id": "bridge_01", "category": "bridge", "mesh": "bridge_qiao.glb", "tex": "wall_qiang01.png", "source": "FB_14_qiao"},
 	{"id": "fountain_01", "category": "fountain", "mesh": "fountain_penquan.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_penquan"},
 	{"id": "statue_01", "category": "statue", "mesh": "statue_01.glb", "tex": "build_jz01.png", "source": "cs_zhucheng_diaoxiang01"},
@@ -61,7 +62,7 @@ func crystal_mat() -> StandardMaterial3D:
 	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	m.emission_enabled = true
 	m.emission = Color(0.35, 0.55, 0.9)
-	m.emission_energy_multiplier = 0.85
+	m.emission_energy_multiplier = 0.45
 	m.roughness = 0.28
 	m.cull_mode = BaseMaterial3D.CULL_DISABLED
 	return m
@@ -163,59 +164,74 @@ func build_mesh_kit(def: Dictionary) -> Dictionary:
 	root.name = "Kit_" + String(def.id)
 	self.root.add_child(root)
 	root.add_child(model)
-	# Drop imported local transforms that offset kits into the sky / far away.
-	model.position = Vector3.ZERO
-	model.rotation = Vector3.ZERO
-	model.scale = Vector3.ONE
-	for n in model.find_children("*", "Node3D", true, false):
-		# Keep relative hierarchy but zero extreme root-level FBX axis nodes later via bounds sit
-		pass
 	await process_frame
 	var special := String(def.get("special", ""))
-	var mat: Material = crystal_mat() if special == "crystal" else mat_tex(String(def.get("tex", "")))
+	var fallback: Material = crystal_mat() if special == "crystal" else mat_tex(String(def.get("tex", "")))
+	# Flatten: reparent MeshInstance3D under kit root with baked global pose (kills FBX float offsets).
+	var mesh_nodes: Array = model.find_children("*", "MeshInstance3D", true, false)
 	var mesh_count := 0
-	for mi in model.find_children("*", "MeshInstance3D", true, false):
+	var kept_tex := 0
+	var holder := Node3D.new()
+	holder.name = "Meshes"
+	root.add_child(holder)
+	for mi in mesh_nodes:
 		if mi.mesh == null:
 			continue
-		# Embed mesh + bake material onto surfaces (override alone was lost on some kits).
-		var mesh: Mesh = mi.mesh.duplicate()
+		var lname := String(mi.name).to_lower()
+		# Unity walksurfaces / shadow catchers are not render props — they floated as cyan decks.
+		if "walksurface" in lname or "yinying" in lname or "shadow" in lname:
+			print("DROP_UTIL ", def.id, " ", mi.name)
+			continue
+		var gt: Transform3D = mi.global_transform
+		var mesh: Mesh = mi.mesh.duplicate(true)
 		for i in range(mesh.get_surface_count()):
+			var existing: Material = null
 			if mesh is ArrayMesh:
-				(mesh as ArrayMesh).surface_set_material(i, mat)
-			mi.set_surface_override_material(i, mat)
-		mi.mesh = mesh
+				existing = (mesh as ArrayMesh).surface_get_material(i)
+			var use_mat: Material = fallback
+			if existing is BaseMaterial3D:
+				var bm := existing as BaseMaterial3D
+				if bm.albedo_texture != null:
+					use_mat = bm.duplicate()
+					kept_tex += 1
+			if mesh is ArrayMesh:
+				(mesh as ArrayMesh).surface_set_material(i, use_mat)
+		var copy := MeshInstance3D.new()
+		copy.name = String(mi.name)
+		copy.mesh = mesh
+		for i in range(mesh.get_surface_count()):
+			copy.set_surface_override_material(i, mesh.surface_get_material(i) if mesh is ArrayMesh else fallback)
+		holder.add_child(copy)
+		copy.global_transform = gt
 		mesh_count += 1
+	model.free()
 	if mesh_count == 0:
 		print("SKIP_EMPTY ", def.id)
 		root.free()
 		return {"id": def.id, "error": "no_mesh"}
 	await process_frame
-	# Bounds in kit space
 	var bounds := AABB()
 	var first := true
-	for mi in model.find_children("*", "MeshInstance3D", true, false):
-		if mi.mesh == null:
+	for mi2 in holder.find_children("*", "MeshInstance3D", true, false):
+		var b: AABB = mi2.global_transform * mi2.get_aabb()
+		# Drop extreme outlier pieces (corrupt FBX debris)
+		if b.size.length() > 200.0:
+			print("DROP_OUTLIER ", def.id, " ", mi2.name, " ", b.size)
+			mi2.queue_free()
 			continue
-		var b: AABB = mi.global_transform * mi.get_aabb()
 		bounds = b if first else bounds.merge(b)
 		first = false
+	await process_frame
 	if not first:
-		# Reject absurd kits (corrupt/oversized import)
-		if bounds.size.x > 120.0 or bounds.size.z > 120.0 or bounds.size.y > 80.0:
-			print("SKIP_HUGE ", def.id, " ", bounds.size)
-			# Still keep if building intentionally large (jz01) — clamp note
-			if bounds.size.x > 250.0 or bounds.size.z > 250.0:
-				root.free()
-				return {"id": def.id, "error": "huge", "size": [bounds.size.x, bounds.size.y, bounds.size.z]}
-		model.position.y -= bounds.position.y
+		holder.position.y -= bounds.position.y
 		await process_frame
 		bounds = AABB()
 		first = true
-		for mi2 in model.find_children("*", "MeshInstance3D", true, false):
-			if mi2.mesh == null:
+		for mi3 in holder.find_children("*", "MeshInstance3D", true, false):
+			if not is_instance_valid(mi3):
 				continue
-			var b2: AABB = mi2.global_transform * mi2.get_aabb()
-			bounds = b2 if first else bounds.merge(b2)
+			var b3: AABB = mi3.global_transform * mi3.get_aabb()
+			bounds = b3 if first else bounds.merge(b3)
 			first = false
 	var body := StaticBody3D.new()
 	body.name = "Collision"
@@ -235,7 +251,8 @@ func build_mesh_kit(def: Dictionary) -> Dictionary:
 	root.set_meta("source_id", String(def.source))
 	root.get_parent().remove_child(root)
 	_save(root, String(def.id))
-	return {"id": def.id, "category": def.category, "source": def.source, "meshes": mesh_count, "size": [bounds.size.x, bounds.size.y, bounds.size.z] if not first else []}
+	print("TEX_KEEP ", def.id, " ", kept_tex)
+	return {"id": def.id, "category": def.category, "source": def.source, "meshes": mesh_count, "kept_tex": kept_tex, "size": [bounds.size.x, bounds.size.y, bounds.size.z] if not first else []}
 
 func run():
 	DirAccess.make_dir_recursive_absolute("/home/gamedev/LunexMMOKit/client/world/library/kits")

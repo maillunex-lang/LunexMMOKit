@@ -23,49 +23,24 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_vdmsa"]
-resource_name = "bridge_qiao_FB_014_qiao_walksurface2"
-_surfaces = [{
-"aabb": AABB(-0.12728764, -0.052027564, -0.0060870363, 0.35315418, 0.10405513, 0.0060870363),
-"attribute_data": PackedByteArray("AACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAAAA="),
-"format": 34359742487,
-"index_count": 18,
-"index_data": PackedByteArray("AgAAAAEAAAACAAMABgAEAAUACQAHAAgADAAKAAsADwANAA4A"),
-"material": SubResource("StandardMaterial3D_wca2d"),
-"name": "material_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 16,
-"vertex_data": PackedByteArray("/KlbPtsaVT0AAAAA/KlbPtsaVb0AAAAAkujcvdsaVb0AAAAAkujcvdsaVT0AAAAAj0lnPtsaVb3Ddce7/KlbPtsaVb0AAAAA/KlbPtsaVT0AAAAA/KlbPtsaVT0AAAAAj0lnPtsaVT3Ddce7j0lnPtsaVb3Ddce7sVcCvtsaVT3Ddce7kujcvdsaVT0AAAAAkujcvdsaVb0AAAAAkujcvdsaVb0AAAAAsVcCvtsaVb3Ddce7sVcCvtsaVT3Ddce7/3//f////7//f/9/////v/9//3////+//3//f////7+trP9/////P62s/3////8/raz/f////z+trP9/////P62s/3////8/raz/f////z90Yf9/////P3Rh/3////8/dGH/f////z90Yf9/////P3Rh/3////8/dGH/f////z8=")
-}]
-blend_shape_mode = 0
+[sub_resource type="BoxShape3D" id="BoxShape3D_vdmsa"]
+size = Vector3(34.434162, 4.232108, 14.634859)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_eg5ue"]
-size = Vector3(35.33371, 4.232108, 14.634859)
-
-[node name="Kit_bridge_01" type="Node3D" unique_id=82041039]
+[node name="Kit_bridge_01" type="Node3D" unique_id=682491776]
 metadata/kit_id = "bridge_01"
 metadata/category = "bridge"
 metadata/source_id = "FB_14_qiao"
 
-[node name="model" type="Node3D" parent="." unique_id=1334854147]
+[node name="Meshes" type="Node3D" parent="." unique_id=1850509525]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0970159, 0)
 
-[node name="cs_binghu_yijiqiao01" type="Node3D" parent="model" unique_id=346402534]
-transform = Transform3D(100, 0, 0, 0, 0, 100, 0, -100, 0, -0.7467622, -1.1368684e-15, 3.9465942)
-
-[node name="FB_014_qiao" type="MeshInstance3D" parent="model/cs_binghu_yijiqiao01" unique_id=1526209174]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683715e-09, 0, 0.00019038084)
+[node name="FB_014_qiao" type="MeshInstance3D" parent="Meshes" unique_id=1967328837]
+transform = Transform3D(100, 0, 0, 0, 0, 100, 0, -100, 0, -0.7467627, 0.019038085, 3.9465942)
 mesh = SubResource("ArrayMesh_7g35h")
 surface_material_override/0 = SubResource("StandardMaterial3D_wca2d")
 
-[node name="FB_014_qiao_walksurface" type="MeshInstance3D" parent="model/cs_binghu_yijiqiao01" unique_id=342515324]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0017869186, -0.0072707175, 0.012654427)
-mesh = SubResource("ArrayMesh_vdmsa")
-surface_material_override/0 = SubResource("StandardMaterial3D_wca2d")
+[node name="Collision" type="StaticBody3D" parent="." unique_id=322329923]
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=276051329]
-
-[node name="@CollisionShape3D@19" type="CollisionShape3D" parent="Collision" unique_id=1548120069]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.012636, 2.116054, 4.711146)
-shape = SubResource("BoxShape3D_eg5ue")
+[node name="@CollisionShape3D@19" type="CollisionShape3D" parent="Collision" unique_id=541689202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.462409, 2.116054, 4.711146)
+shape = SubResource("BoxShape3D_vdmsa")

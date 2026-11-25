@@ -1,6 +1,6 @@
 [gd_scene format=4]
 
-[ext_resource type="Texture2D" path="res://world/library/textures/build_jz05.png" id="1_pd1pn"]
+[ext_resource type="Texture2D" path="res://world/library/textures/build_jz03.png" id="1_pd1pn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5swn"]
 albedo_texture = ExtResource("1_pd1pn")
@@ -26,21 +26,21 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_4koo1"]
 size = Vector3(6.2351756, 27.945316, 6.2345076)
 
-[node name="Kit_house_03" type="Node3D" unique_id=1250505526]
+[node name="Kit_house_03" type="Node3D" unique_id=421728859]
 metadata/kit_id = "house_03"
 metadata/category = "building"
 metadata/source_id = "cs_zhucheng_fangzi03"
 
-[node name="model" type="Node3D" parent="." unique_id=492223221]
+[node name="Meshes" type="Node3D" parent="." unique_id=996746440]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030689836, 0)
 
-[node name="cs_zhucheng_fangzi03" type="MeshInstance3D" parent="model" unique_id=897646204]
+[node name="cs_zhucheng_fangzi03" type="MeshInstance3D" parent="Meshes" unique_id=2133983397]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_7q40o")
 surface_material_override/0 = SubResource("StandardMaterial3D_m5swn")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=918715051]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=984840112]
 
-[node name="@CollisionShape3D@15" type="CollisionShape3D" parent="Collision" unique_id=301453950]
+[node name="@CollisionShape3D@15" type="CollisionShape3D" parent="Collision" unique_id=428783333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-06, 13.972658, 2.3841858e-07)
 shape = SubResource("BoxShape3D_4koo1")

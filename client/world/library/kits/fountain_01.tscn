@@ -43,29 +43,26 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_urfno"]
 size = Vector3(8.652145, 3.1000607, 8.652145)
 
-[node name="Kit_fountain_01" type="Node3D" unique_id=639163459]
+[node name="Kit_fountain_01" type="Node3D" unique_id=2136590467]
 metadata/kit_id = "fountain_01"
 metadata/category = "fountain"
 metadata/source_id = "cs_zhucheng_penquan"
 
-[node name="model" type="Node3D" parent="." unique_id=398122103]
+[node name="Meshes" type="Node3D" parent="." unique_id=1781070124]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.3169518, 0)
 
-[node name="cs_zhucheng_penquan" type="Node3D" parent="model" unique_id=533500903]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 4.3288183, 0)
-
-[node name="cs_zhucheng_penquan2" type="MeshInstance3D" parent="model/cs_zhucheng_penquan" unique_id=1562368252]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073487e-07, -6.855853e-08, 0.0123349)
+[node name="cs_zhucheng_penquan2" type="MeshInstance3D" parent="Meshes" unique_id=1499429949]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 1.9073487e-07, 4.341153, 6.855853e-08)
 mesh = SubResource("ArrayMesh_tmm8f")
 surface_material_override/0 = SubResource("StandardMaterial3D_dhkjs")
 
-[node name="cs_zhucheng_04" type="MeshInstance3D" parent="model/cs_zhucheng_penquan" unique_id=698024513]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073487e-07, -6.855853e-08, 0.0123349)
+[node name="cs_zhucheng_04" type="MeshInstance3D" parent="Meshes" unique_id=1520541192]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 1.9073487e-07, 4.341153, 6.855853e-08)
 mesh = SubResource("ArrayMesh_qplmq")
 surface_material_override/0 = SubResource("StandardMaterial3D_dhkjs")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1721198192]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=2113241834]
 
-[node name="@CollisionShape3D@20" type="CollisionShape3D" parent="Collision" unique_id=52190011]
+[node name="@CollisionShape3D@20" type="CollisionShape3D" parent="Collision" unique_id=704668651]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 1.5500304, 4.7683716e-07)
 shape = SubResource("BoxShape3D_urfno")

@@ -26,21 +26,21 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_xa08m"]
 size = Vector3(4.453697, 19.960941, 4.4532194)
 
-[node name="Kit_arch_jz03" type="Node3D" unique_id=852253935]
+[node name="Kit_arch_jz03" type="Node3D" unique_id=1161071613]
 metadata/kit_id = "arch_jz03"
 metadata/category = "building"
 metadata/source_id = "cs_zhucheng_jz03"
 
-[node name="model" type="Node3D" parent="." unique_id=1500374576]
+[node name="Meshes" type="Node3D" parent="." unique_id=1182500015]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02192131, 0)
 
-[node name="cs_zhucheng_jz03" type="MeshInstance3D" parent="model" unique_id=2108293283]
+[node name="cs_zhucheng_jz03" type="MeshInstance3D" parent="Meshes" unique_id=105446263]
 transform = Transform3D(0.0076454985, 0, 0, 0, 0, 0.0076454985, 0, -0.0076454985, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_bgndw")
 surface_material_override/0 = SubResource("StandardMaterial3D_wmm27")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=2133209115]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=2104116774]
 
-[node name="@CollisionShape3D@12" type="CollisionShape3D" parent="Collision" unique_id=1578016024]
+[node name="@CollisionShape3D@12" type="CollisionShape3D" parent="Collision" unique_id=1105796822]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33786e-06, 9.980471, 2.3841858e-07)
 shape = SubResource("BoxShape3D_xa08m")
