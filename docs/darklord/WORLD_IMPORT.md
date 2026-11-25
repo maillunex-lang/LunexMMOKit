@@ -10,3 +10,7 @@ No navigation or gameplay validation yet. CI unverified.
 Correction: pilot mesh-local X rotation PI restores arena visibility from original camera. Diagnostic directional light added (not original). Screenshot world-corrected-camera.png visually inspected: textured circular arena visible, sky/effects and lighting parity incomplete. Collision rotation follows navigation mesh; gameplay untested.
 
 Navigation follow-up: see `docs/darklord/NAVIGATION_FIX.md`. World arena navigation path queries now pass after reversing winding and waiting for map synchronization. Character travel still untested.
+
+## CAP03: итерация v3
+82cc4b4: v3, 320 экземпляров; 321 применение родительской трансформации включая кандидатов без меша; ширина bounds 1145.6 -> 602.2; рендер сохраняет дефекты ориентации и материалов.
+Следующее: проверить ориентацию каждого FBX и многослойный terrain, без универсального поворота PI.
