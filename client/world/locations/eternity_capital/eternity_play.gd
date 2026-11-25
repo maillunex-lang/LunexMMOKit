@@ -6,6 +6,7 @@ const QuestLogScript = preload("res://content/quests/quest_log.gd")
 const CombatDummyScript = preload("res://actors/combat_dummy.gd")
 const HeroKitScript = preload("res://content/heroes/hero_kit.gd")
 const HeroCombatScript = preload("res://actors/hero_combat.gd")
+const SkillFxScript = preload("res://content/vfx/skill_fx.gd")
 
 @export var actor_ids: PackedStringArray = ["10001", "20001", "30001", "40001"]
 @export var class_names: PackedStringArray = ["Воин", "Лучник", "Маг", "Ассасин"]
@@ -30,6 +31,7 @@ var interact_hint: Label
 var quest_log
 var hero_kit
 var hero_combat
+var skill_fx
 var skill_buttons: Array[Button] = []
 
 func _ready() -> void:
@@ -53,13 +55,26 @@ func _ready() -> void:
 	add_child(hero_combat)
 	hero_combat.hp_changed.connect(_on_vitals)
 	hero_combat.mp_changed.connect(_on_vitals)
+	skill_fx = SkillFxScript.new()
+	skill_fx.name = "SkillFx"
+	add_child(skill_fx)
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	_spawn_hero()
 	_spawn_shardlings()
 	_build_ui()
+	_ensure_nav()
 	_load_class(0)
 	_on_quest_ui("")
+
+func _ensure_nav() -> void:
+	var nav := NavigationRegion3D.new()
+	nav.name = "Navigation"
+	nav.set_script(load("res://world/location_navigation.gd"))
+	add_child(nav)
+	nav.set("center", Vector3(0, 0, -20))
+	nav.set("half_extent", 95.0)
+	nav.rebuild()
 
 func _spawn_hero() -> void:
 	hero = CharacterBody3D.new()
@@ -125,8 +140,13 @@ func _build_ui() -> void:
 	layer.add_child(quest_label)
 	interact_hint = Label.new()
 	interact_hint.position = Vector2(400, 620)
-	interact_hint.text = "E NPC  |  Space атака  |  1/2/3 умения  |  F портал"
+	interact_hint.text = "E NPC  |  G к цели (NavMesh)  |  Space атака  |  1/2/3  |  F портал"
 	layer.add_child(interact_hint)
+	var go := Button.new()
+	go.text = "К цели"
+	go.position = Vector2(1100, 16)
+	go.pressed.connect(_goto_quest_objective)
+	layer.add_child(go)
 	var row := HBoxContainer.new()
 	row.position = Vector2(16, 600)
 	layer.add_child(row)
@@ -180,6 +200,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("ui_accept") or (event is InputEventKey and event.pressed and event.keycode == KEY_E):
 		_try_interact()
+	elif event is InputEventKey and event.pressed and event.keycode == KEY_G:
+		_goto_quest_objective()
 	elif event is InputEventKey and event.pressed and event.keycode == KEY_F:
 		_try_portal()
 	elif event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
@@ -251,6 +273,39 @@ func _play_anim(name: String) -> void:
 	elif animator.has_animation("attack"):
 		animator.play("attack")
 
+func _goto_quest_objective() -> void:
+	if hero == null or quest_log == null:
+		return
+	var sid := _active_objective_stable_id()
+	if sid == "":
+		status_label.text = "Нет активной цели — возьми квест у стража"
+		return
+	var target := _find_stable(sid)
+	if target == null:
+		status_label.text = "Цель %s не на этой локации" % sid
+		return
+	if hero.has_method("navigate_to"):
+		hero.navigate_to(target.global_position)
+		status_label.text = "Автопуть → " + sid
+
+func _active_objective_stable_id() -> String:
+	for qid in quest_log.active.keys():
+		var prog: Dictionary = quest_log.active[qid]
+		for obj in prog.objectives:
+			if int(obj.have) < int(obj.need):
+				return String(obj.stable_id)
+	return ""
+
+func _find_stable(stable_id: String) -> Node3D:
+	var stack: Array = [self]
+	while stack.size():
+		var n: Node = stack.pop_back()
+		for c in n.get_children():
+			stack.append(c)
+			if c is Node3D and c.has_meta("stable_id") and String(c.get_meta("stable_id")) == stable_id:
+				return c
+	return null
+
 func _try_attack() -> void:
 	if hero == null or hero_combat == null:
 		return
@@ -259,9 +314,13 @@ func _try_attack() -> void:
 		status_label.text = "Атака: " + String(res.get("reason", "?"))
 		return
 	_play_anim("attack")
+	var col: Color = skill_fx.color_for_actor(String(actor_ids[current_index])) if skill_fx else Color.WHITE
 	if res.get("hit"):
+		var hit: Node3D = res.hit
+		skill_fx.spawn_hit(hit.global_position, col)
 		status_label.text = "Атака %d урона" % int(res.get("damage", 0))
 	else:
+		skill_fx.spawn_cast(hero.global_position, col)
 		status_label.text = "Промах (подойди ближе)"
 
 func _try_skill(slot: int) -> void:
@@ -273,7 +332,11 @@ func _try_skill(slot: int) -> void:
 		return
 	_play_anim(String(res.get("anim", "skill001")))
 	var label := String(res.get("label", "Умение"))
+	var col: Color = skill_fx.color_for_actor(String(actor_ids[current_index])) if skill_fx else Color.WHITE
+	skill_fx.spawn_cast(hero.global_position, col)
 	if res.get("hit"):
+		var hit: Node3D = res.hit
+		skill_fx.spawn_hit(hit.global_position, col, 1.3)
 		status_label.text = "%s — %d урона" % [label, int(res.get("damage", 0))]
 	else:
 		status_label.text = "%s — нет цели в радиусе" % label

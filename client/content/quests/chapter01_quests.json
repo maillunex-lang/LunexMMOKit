@@ -60,7 +60,7 @@
       "summary": "Портал на окраину стабилен. Пройди через него и осмотри Пепельный рубеж.",
       "giver_stable_id": "npc_questgiver_0",
       "turnin_stable_id": "npc_ashen_warden",
-      "next_quest_id": "",
+      "next_quest_id": "q_ch1_05_shard_ruins",
       "reward_xp": 100,
       "objectives": [
         {
@@ -74,6 +74,29 @@
           "stable_id": "npc_ashen_warden",
           "count": 1,
           "text": "Доложить Хранителю рубежа"
+        }
+      ]
+    },
+    {
+      "id": "q_ch1_05_shard_ruins",
+      "title": "Руины Осколка",
+      "summary": "Хранитель указывает на древние руины за рубежом. Найди учёного у кристалла.",
+      "giver_stable_id": "npc_ashen_warden",
+      "turnin_stable_id": "npc_shard_scholar",
+      "next_quest_id": "",
+      "reward_xp": 150,
+      "objectives": [
+        {
+          "type": "goto",
+          "stable_id": "portal_ruins_gate",
+          "count": 1,
+          "text": "Пройти в Руины Осколка"
+        },
+        {
+          "type": "talk",
+          "stable_id": "npc_shard_scholar",
+          "count": 1,
+          "text": "Поговорить с Хранителем знаний"
         }
       ]
     }
