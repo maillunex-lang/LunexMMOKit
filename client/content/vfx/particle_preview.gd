@@ -214,6 +214,7 @@ static func _load_mesh(path: String) -> Mesh:
 			var meshes := scene.find_children("*", "MeshInstance3D", true, false)
 			if meshes.size() > 0:
 				mesh = (meshes[0] as MeshInstance3D).mesh
+			scene.free()
 	MESH_CACHE[path] = mesh
 	return mesh
 
@@ -401,3 +402,9 @@ static func dispose(effect: Node) -> void:
 			particles.mesh = null
 			particles.material_override = null
 	effect.free()
+
+static func clear_cache() -> void:
+	for scene in SCENE_CACHE.values():
+		if is_instance_valid(scene): scene.free()
+	SCENE_CACHE.clear()
+	MESH_CACHE.clear()

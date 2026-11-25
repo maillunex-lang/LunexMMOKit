@@ -494,3 +494,8 @@ func _remove_accessory(kind: String) -> void:
 		actor.transform = Transform3D.IDENTITY
 	accessories.erase(kind)
 	model.queue_free()
+
+func _exit_tree() -> void:
+	VFX.clear_cache()
+	if is_instance_valid(weapon) and weapon.get_parent() == null:
+		weapon.free()
