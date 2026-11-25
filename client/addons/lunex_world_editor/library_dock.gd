@@ -7,6 +7,8 @@ var plugin: EditorPlugin
 @onready var _search: LineEdit = %Search
 @onready var _list: ItemList = %KitList
 @onready var _status: Label = %Status
+@onready var _preview: Label = %Preview
+@onready var _place_btn: Button = %PlaceBtn
 
 const KIT_DIR := "res://world/library/kits/"
 const StableIds = preload("res://core/stable_ids.gd")
@@ -20,6 +22,9 @@ func _ready() -> void:
 		_search.text_changed.connect(func(_t): _filter())
 	if _list:
 		_list.item_activated.connect(_on_item_activated)
+		_list.item_selected.connect(_on_item_selected)
+	if _place_btn:
+		_place_btn.pressed.connect(_on_place_pressed)
 
 func _refresh() -> void:
 	_kits = PackedStringArray()
@@ -84,13 +89,39 @@ func _filter() -> void:
 				_list.add_item(id)
 				_list.set_item_metadata(_list.item_count - 1, id)
 
-func _on_item_activated(index: int) -> void:
-	if plugin == null or _list.is_item_disabled(index):
+func _on_item_selected(index: int) -> void:
+	if _list.is_item_disabled(index):
 		return
+	var id := _selected_kit_id(index)
+	if id.is_empty():
+		return
+	if _preview:
+		_preview.text = "Кит: %s\nres://world/library/kits/%s.tscn\nPlace / двойной клик — в сцену (snap к земле)" % [id, id]
+
+func _on_place_pressed() -> void:
+	if _list == null:
+		return
+	var sel := _list.get_selected_items()
+	if sel.is_empty():
+		_status.text = "Выберите кит в списке"
+		return
+	_place_kit(_selected_kit_id(sel[0]))
+
+func _selected_kit_id(index: int) -> String:
+	if _list.is_item_disabled(index):
+		return ""
 	var id := String(_list.get_item_metadata(index))
 	if id.is_empty():
 		id = _list.get_item_text(index)
 	if id.begins_with("—"):
+		return ""
+	return id
+
+func _on_item_activated(index: int) -> void:
+	_place_kit(_selected_kit_id(index))
+
+func _place_kit(id: String) -> void:
+	if plugin == null or id.is_empty():
 		return
 	var path := KIT_DIR + id + ".tscn"
 	if not ResourceLoader.exists(path):

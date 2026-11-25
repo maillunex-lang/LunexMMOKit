@@ -1,7 +1,10 @@
 extends SceneTree
-## Chapter-1 third location: Shard Ruins (Руины Осколка). Own layout; Darklord kits.
+## Chapter-1 third location: Shard Ruins. FIX-004: writes *_generated.tscn by default.
 const KIT := "res://world/library/kits/"
-const OUT := "res://world/locations/shard_ruins/shard_ruins.tscn"
+const OUT_GENERATED := "res://world/locations/shard_ruins/shard_ruins_generated.tscn"
+const OUT_OWNER := "res://world/locations/shard_ruins/shard_ruins.tscn"
+const OUT := OUT_GENERATED
+const OwnerProtect = preload("res://world/owner_protect.gd")
 
 var _root: Node3D
 
@@ -28,11 +31,19 @@ func _own(n: Node, owner: Node) -> void:
 		_own(c, owner)
 
 func run():
-	DirAccess.make_dir_recursive_absolute("/home/gamedev/LunexMMOKit/client/world/locations/shard_ruins")
+	var force := "--force-overwrite" in OS.get_cmdline_user_args() or "--force-overwrite" in OS.get_cmdline_args()
+	if "--write-owner" in OS.get_cmdline_user_args() or "--write-owner" in OS.get_cmdline_args():
+		var gate: Dictionary = OwnerProtect.refuse_overwrite(OUT_OWNER, force)
+		if not bool(gate.get("ok", false)):
+			print("OWNER_PROTECT refuse ", gate.get("reason", "?"))
+			quit(2)
+			return
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://world/locations/shard_ruins"))
 	_root = Node3D.new()
 	_root.name = "ShardRuins"
 	_root.set_meta("location_id", "shard_ruins")
 	_root.set_meta("location_revision", 1)
+	_root.set_meta("generated", true)
 	root.add_child(_root)
 
 	for x in range(-2, 3):
@@ -108,6 +119,6 @@ func run():
 
 	var packed := PackedScene.new()
 	packed.pack(_root)
-	var err := ResourceSaver.save(packed, OUT)
-	print("RUINS_SAVE ", err, " ", OUT)
+	var err := ResourceSaver.save(packed, OUT_GENERATED)
+	print("RUINS_SAVE ", err, " ", OUT_GENERATED)
 	quit(0 if err == OK else 1)

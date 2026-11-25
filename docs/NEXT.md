@@ -1,5 +1,6 @@
 # Next
-Primary: AUDIT01 — close remaining partial FIX (004/006/007/010/011/012/014) then F03 CI APK path.
-Also doing: F03 toolchain/CI. Server scaffold present under server/ (F04 not started as roadmap doing until F03 done).
-Product goal: BETA01 Closed Beta 0.1.0 — docs/BETA_001.md
-Read: docs/tasks/AUDIT01.md, docs/AUDIT_001.md, docs/BETA_001.md, docs/VERSIONS.md
+Primary: AUDIT01 residuals + ready tasks toward beta.
+Ready now: WD02 — WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)
+F03/F04 done. Auth HTTP scaffold live on isolated compose.
+Product: BETA01 Closed Beta 0.1.0.
+Read: docs/tasks/AUDIT01.md, docs/AUDIT_001.md, docs/BETA_001.md, docs/tasks/WD02.md

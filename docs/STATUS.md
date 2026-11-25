@@ -1,10 +1,11 @@
 # Статус 25.11.2026
-Цель: **Closed Beta 0.1.0** (BETA-001). В фокусе AUDIT01 → F03/F04.
-## Сделано сегодня
-- Audit smokes: `ALL_AUDIT_SMOKES_OK` (integration + nav obstacle + session anti-dupe + go test).
-- Combat: урон на hit/projectile; GameSession на ashen/ruins; owner backup; GFX stub.
-- Server scaffold: `lunexd` `/health`, SQL init, compose без publish ports.
+Цель: **Closed Beta 0.1.0**. F03/F04 закрыты → дальше A01/N01 и остатки AUDIT.
+## Сделано
+- `POSTGRES_MIGRATE_OK` — изолированный `lunexmmokit-postgres` (не трогает lunex-devcore).
+- `AUTH_HTTP_OK` — register/login/character + 401 на мёртвый токен; health `database=ok`.
+- Debug APK `build/LunexCityPreview.apk` (~469MB) собран и подписан debug; install на устройство — у владельца.
+- Генераторы ashen/ruins → `*_generated.tscn`; editor Place + preview.
 ## Дальше
-Добить partial FIX; закрыть F03 (CI/versions); F04 Postgres migrate+health against compose; N01 auth.
+AUDIT residual (validator/DnD/CHAR); A01 герой-сеть; N01 полноценные сессии/reconnect.
 ## Не готово
-Онлайн-авторитет, APK релиз, FIX-014 visual.
+Онлайн-мир, FIX-014, релизный APK беты.

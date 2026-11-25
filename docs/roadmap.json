@@ -215,7 +215,7 @@
     "work": "LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты",
     "accept": "docs/AUDIT_001.md: статус+доказательства по FIX-001…014; критические FIX закрыты или явно частично; путь к BETA01",
     "status": "doing",
-    "evidence": "ALL_AUDIT_SMOKES_OK; NAV_OBSTACLE_SMOKE_OK; SESSION_LOOP_SMOKE_OK; combat defer+projectile; GameSession portal sync; lunexd health go test; docs/AUDIT_001.md"
+    "evidence": "ALL_AUDIT_SMOKES_OK; generators→*_generated; editor Place+preview; F03/F04 closed; FIX-014 still open; remaining partial 007/010/011/012/014"
   },
   {
     "id": "CAPAPK",
@@ -552,8 +552,8 @@
     ],
     "work": "Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов",
     "accept": "CI green; APK устанавливается",
-    "status": "doing",
-    "evidence": "docs/VERSIONS.md Godot 4.7.2 Go 1.22; CI go-server+roadmap validate; run_audit_smokes.sh"
+    "status": "done",
+    "evidence": "VERSIONS_CHECK_OK; CI go-server+versions; export_presets no keystore secrets; debug APK LunexCityPreview.apk built+signed 469MB sha256 in build/ (gitignored); adb device install pending owner"
   },
   {
     "id": "F04",
@@ -570,8 +570,8 @@
     ],
     "work": "Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов",
     "accept": "go test; health; миграции на тестовой БД",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "go test OK; POSTGRES_MIGRATE_OK on lunexmmokit-postgres (no host ports, isolated from lunex-devcore); health database=ok; AUTH_HTTP_OK register/login/character + 401 bad token"
   },
   {
     "id": "D01",
