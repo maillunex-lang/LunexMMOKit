@@ -4,27 +4,25 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_imkgb"]
 size = Vector2(20, 20)
-subdivide_width = 4
-subdivide_depth = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yh8b4"]
 albedo_texture = ExtResource("1_usjqc")
-roughness = 0.85
-uv1_scale = Vector3(8, 8, 8)
+roughness = 0.82
+uv1_scale = Vector3(8, 8, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d7jj0"]
 size = Vector3(20, 0.2, 20)
 
-[node name="Kit_ground_tile" type="Node3D" unique_id=1306590002]
+[node name="Kit_ground_tile" type="Node3D" unique_id=153657436]
 metadata/kit_id = "ground_tile"
 metadata/category = "terrain"
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=370869928]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1921890898]
 mesh = SubResource("PlaneMesh_imkgb")
 surface_material_override/0 = SubResource("StandardMaterial3D_yh8b4")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=829008784]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1048476020]
 
-[node name="@CollisionShape3D@2" type="CollisionShape3D" parent="Collision" unique_id=40657795]
+[node name="@CollisionShape3D@2" type="CollisionShape3D" parent="Collision" unique_id=1949137887]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("BoxShape3D_d7jj0")

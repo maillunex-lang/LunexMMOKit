@@ -3,9 +3,8 @@
 [ext_resource type="Texture2D" path="res://world/library/textures/build_jz03.png" id="1_qb5qk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kaach"]
-resource_name = "Material #251236943"
-emission_enabled = true
-emission_energy_multiplier = 0.0
+albedo_texture = ExtResource("1_qb5qk")
+roughness = 0.82
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bgwsm"]
 resource_name = "arch_jz02_cs_zhucheng_jz022"
@@ -24,28 +23,24 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a71p"]
-albedo_texture = ExtResource("1_qb5qk")
-roughness = 0.85
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xohsn"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_1a71p"]
 size = Vector3(8.984902, 8.987635, 8.942379)
 
-[node name="Kit_arch_jz02" type="Node3D" unique_id=1340819204]
+[node name="Kit_arch_jz02" type="Node3D" unique_id=20602374]
 metadata/kit_id = "arch_jz02"
 metadata/category = "building"
 metadata/source_id = "cs_zhucheng_jz02"
 
-[node name="model" type="Node3D" parent="." unique_id=1299425786]
+[node name="Meshes" type="Node3D" parent="." unique_id=1984641277]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.009011686, 0)
 
-[node name="cs_zhucheng_jz02" type="MeshInstance3D" parent="model" unique_id=1847302801]
+[node name="cs_zhucheng_jz02" type="MeshInstance3D" parent="Meshes" unique_id=849526699]
 transform = Transform3D(0.78598464, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_bgwsm")
-surface_material_override/0 = SubResource("StandardMaterial3D_1a71p")
+surface_material_override/0 = SubResource("StandardMaterial3D_kaach")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1876761313]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=79046377]
 
-[node name="@CollisionShape3D@11" type="CollisionShape3D" parent="Collision" unique_id=1810170069]
+[node name="@CollisionShape3D@11" type="CollisionShape3D" parent="Collision" unique_id=276753074]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.33786e-06, 4.4938173, -4.7683716e-07)
-shape = SubResource("BoxShape3D_xohsn")
+shape = SubResource("BoxShape3D_1a71p")

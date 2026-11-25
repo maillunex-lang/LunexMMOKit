@@ -1,50 +1,33 @@
 [gd_scene format=3]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqyy8"]
-resource_name = "material_0"
+[ext_resource type="Texture2D" path="res://world/library/textures/water_zhucheng.png" id="1_mylwn"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mylwn"]
-resource_name = "water_plane_cs_yw_zhucheng_water2"
-_surfaces = [{
-"aabb": AABB(-248.99641, -259.90985, 1.110508, 397.86578, 399.69995, 0.0028953552),
-"attribute_data": PackedByteArray(255, 255, 255, 229, 255, 255, 0, 0, 255, 255, 255, 229, 254, 255, 174, 176, 255, 255, 255, 229, 255, 127, 174, 176, 255, 255, 255, 229, 255, 127, 0, 0),
-"format": 34896613407,
-"index_count": 6,
-"index_data": PackedByteArray(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 3, 0),
-"material": SubResource("StandardMaterial3D_eqyy8"),
-"name": "material_0",
-"primitive": 3,
-"uv_scale": Vector4(7.25817, 5.25817, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(255, 255, 255, 255, 0, 0, 0, 128, 255, 255, 0, 0, 255, 255, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 255, 255, 0, 0, 0, 128, 84, 85, 170, 170, 84, 85, 170, 170, 84, 85, 170, 170, 84, 85, 170, 170)
-}]
-blend_shape_mode = 0
+[sub_resource type="PlaneMesh" id="PlaneMesh_nchtu"]
+size = Vector2(28, 18)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nchtu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1fksl"]
 transparency = 1
 cull_mode = 2
-albedo_color = Color(0.18, 0.4, 0.55, 0.7)
+albedo_color = Color(0.55, 0.7, 0.85, 0.72)
+albedo_texture = ExtResource("1_mylwn")
 metallic = 0.05
 roughness = 0.12
+uv1_scale = Vector3(4, 4, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1fksl"]
-size = Vector3(397.86578, 0.5, 399.69995)
+[sub_resource type="BoxShape3D" id="BoxShape3D_r1plq"]
+size = Vector3(28, 0.5, 18)
 
-[node name="Kit_water_01" type="Node3D" unique_id=196178461]
+[node name="Kit_water_01" type="Node3D" unique_id=822258768]
 metadata/kit_id = "water_01"
 metadata/category = "water"
-metadata/source_id = "cs_yw_zhucheng_water"
+metadata/source_id = "cs_yw_zhucheng_water+texture"
 
-[node name="model" type="Node3D" parent="." unique_id=684937425]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.09, 0)
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=2103053759]
+mesh = SubResource("PlaneMesh_nchtu")
+surface_material_override/0 = SubResource("StandardMaterial3D_1fksl")
 
-[node name="cs_yw_zhucheng_water" type="MeshInstance3D" parent="model" unique_id=898414163]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -123.559875, 18.979492, 124.72044)
-mesh = SubResource("ArrayMesh_mylwn")
-surface_material_override/0 = SubResource("StandardMaterial3D_nchtu")
+[node name="Collision" type="StaticBody3D" parent="." unique_id=565139969]
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=399705838]
-
-[node name="@CollisionShape3D@24" type="CollisionShape3D" parent="Collision" unique_id=847669197]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -173.62338, 0.25, 184.78032)
-shape = SubResource("BoxShape3D_1fksl")
+[node name="@CollisionShape3D@6" type="CollisionShape3D" parent="Collision" unique_id=191581026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+shape = SubResource("BoxShape3D_r1plq")

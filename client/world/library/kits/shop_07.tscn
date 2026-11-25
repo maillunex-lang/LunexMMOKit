@@ -1,11 +1,10 @@
 [gd_scene format=4]
 
-[ext_resource type="Texture2D" path="res://world/library/textures/build_jz02.png" id="1_fymbf"]
+[ext_resource type="Texture2D" path="res://world/library/textures/build_jz03.png" id="1_fymbf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3llwv"]
-resource_name = "Material #251236944"
-emission_enabled = true
-emission_energy_multiplier = 0.0
+albedo_texture = ExtResource("1_fymbf")
+roughness = 0.82
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_y1lb4"]
 resource_name = "shop_zawu07_cs_zhucheng_zawu072"
@@ -24,28 +23,24 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5dch"]
-albedo_texture = ExtResource("1_fymbf")
-roughness = 0.85
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ym5ra"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_y5dch"]
 size = Vector3(3.1451077, 1.4791902, 2.2268767)
 
-[node name="Kit_shop_07" type="Node3D" unique_id=2119388305]
+[node name="Kit_shop_07" type="Node3D" unique_id=732123290]
 metadata/kit_id = "shop_07"
 metadata/category = "building"
 metadata/source_id = "cs_zhucheng_zawu07"
 
-[node name="model" type="Node3D" parent="." unique_id=1952487550]
+[node name="Meshes" type="Node3D" parent="." unique_id=883655511]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.004314542, 0)
 
-[node name="cs_zhucheng_zawu07" type="MeshInstance3D" parent="model" unique_id=1342780245]
+[node name="cs_zhucheng_zawu07" type="MeshInstance3D" parent="Meshes" unique_id=827441548]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_y1lb4")
-surface_material_override/0 = SubResource("StandardMaterial3D_y5dch")
+surface_material_override/0 = SubResource("StandardMaterial3D_3llwv")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=216965641]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=525218308]
 
-[node name="@CollisionShape3D@18" type="CollisionShape3D" parent="Collision" unique_id=1785663248]
+[node name="@CollisionShape3D@18" type="CollisionShape3D" parent="Collision" unique_id=1439930420]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1525574e-07, 0.7395951, 0)
-shape = SubResource("BoxShape3D_ym5ra")
+shape = SubResource("BoxShape3D_y5dch")

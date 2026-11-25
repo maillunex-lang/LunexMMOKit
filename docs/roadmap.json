@@ -142,7 +142,7 @@
     "work": "WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)",
     "accept": "Каталог ENVIRONMENT_LIBRARY; PackedScene-киты; новая столица с районами ТЗ; ландшафт/свет/коллизии; скриншоты в darklord-dgi/screens; без массовых локаций до визуальной приёмки",
     "status": "doing",
-    "evidence": "ENVIRONMENT_LIBRARY.json (626 FBX). 27 PackedScene kits + textures. Hand-authored eternity_capital.tscn (districts: gate, avenue, plaza, crystal, palace, market, craft, quest, portals, park, water, skyline, art). Screens eternity-capital-birdseye/plaza/avenue/gate/water/playercam.png. CAPAPK blocked pending visual acceptance. Unity v1–v8 kept as archive."
+    "evidence": "Beauty pass: textured gate/palace GLBs; jianzhu03 houses; drop walksurface; bridge off-avenue; plaza fountain monument; ProceduralSky; play smoke OK. Screens refreshed. Remaining: denser clutter, roof materials, device FPS (Xvfb≠Android)."
   },
   {
     "id": "CAPAPK",

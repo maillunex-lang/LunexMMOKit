@@ -1,11 +1,10 @@
 [gd_scene format=4]
 
-[ext_resource type="Texture2D" path="res://world/library/textures/build_jz05.png" id="1_gp7dx"]
+[ext_resource type="Texture2D" path="res://world/library/textures/build_jz03.png" id="1_gp7dx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ouk4x"]
-resource_name = "Material #251236944"
-emission_enabled = true
-emission_energy_multiplier = 0.0
+albedo_texture = ExtResource("1_gp7dx")
+roughness = 0.82
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xfe4c"]
 resource_name = "shop_zawu04_cs_zhucheng_zawu042"
@@ -24,28 +23,24 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tujn"]
-albedo_texture = ExtResource("1_gp7dx")
-roughness = 0.85
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_dinry"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5tujn"]
 size = Vector3(1.6812134, 1.5996039, 1.7462082)
 
-[node name="Kit_shop_04" type="Node3D" unique_id=1073344894]
+[node name="Kit_shop_04" type="Node3D" unique_id=1624795166]
 metadata/kit_id = "shop_04"
 metadata/category = "building"
 metadata/source_id = "cs_zhucheng_zawu04"
 
-[node name="model" type="Node3D" parent="." unique_id=2116629238]
+[node name="Meshes" type="Node3D" parent="." unique_id=472692670]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.556511e-07, 0)
 
-[node name="cs_zhucheng_zawu04" type="MeshInstance3D" parent="model" unique_id=1714049330]
+[node name="cs_zhucheng_zawu04" type="MeshInstance3D" parent="Meshes" unique_id=1860012424]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xfe4c")
-surface_material_override/0 = SubResource("StandardMaterial3D_5tujn")
+surface_material_override/0 = SubResource("StandardMaterial3D_ouk4x")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1224593829]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=858972246]
 
-[node name="@CollisionShape3D@17" type="CollisionShape3D" parent="Collision" unique_id=955285531]
+[node name="@CollisionShape3D@17" type="CollisionShape3D" parent="Collision" unique_id=459429218]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.79980195, 0)
-shape = SubResource("BoxShape3D_dinry")
+shape = SubResource("BoxShape3D_5tujn")

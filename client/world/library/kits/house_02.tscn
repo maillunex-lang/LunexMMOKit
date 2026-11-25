@@ -1,11 +1,10 @@
 [gd_scene format=4]
 
-[ext_resource type="Texture2D" path="res://world/library/textures/build_jz02.png" id="1_vobrp"]
+[ext_resource type="Texture2D" path="res://world/library/textures/build_jz03.png" id="1_vobrp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4q2q"]
-resource_name = "Material #251236943"
-emission_enabled = true
-emission_energy_multiplier = 0.0
+albedo_texture = ExtResource("1_vobrp")
+roughness = 0.82
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qr3cc"]
 resource_name = "house_fangzi02_cs_zhucheng_fangzi022"
@@ -24,28 +23,24 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10egy"]
-albedo_texture = ExtResource("1_vobrp")
-roughness = 0.85
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_50emr"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_10egy"]
 size = Vector3(18.231049, 11.572135, 19.766289)
 
-[node name="Kit_house_02" type="Node3D" unique_id=978014683]
+[node name="Kit_house_02" type="Node3D" unique_id=1727074739]
 metadata/kit_id = "house_02"
 metadata/category = "building"
 metadata/source_id = "cs_zhucheng_fangzi02"
 
-[node name="model" type="Node3D" parent="." unique_id=921511231]
+[node name="Meshes" type="Node3D" parent="." unique_id=1510210127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027513504, 0)
 
-[node name="cs_zhucheng_fangzi02" type="MeshInstance3D" parent="model" unique_id=858097169]
+[node name="cs_zhucheng_fangzi02" type="MeshInstance3D" parent="Meshes" unique_id=2140078189]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_qr3cc")
-surface_material_override/0 = SubResource("StandardMaterial3D_10egy")
+surface_material_override/0 = SubResource("StandardMaterial3D_d4q2q")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=32248700]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=2069923657]
 
-[node name="@CollisionShape3D@14" type="CollisionShape3D" parent="Collision" unique_id=1270066358]
+[node name="@CollisionShape3D@14" type="CollisionShape3D" parent="Collision" unique_id=805941883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8146973e-06, 5.7860675, -0.04373169)
-shape = SubResource("BoxShape3D_50emr")
+shape = SubResource("BoxShape3D_10egy")
