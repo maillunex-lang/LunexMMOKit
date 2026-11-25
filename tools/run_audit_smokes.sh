@@ -14,6 +14,8 @@ echo "== session_loop_smoke =="
 "$GODOT" --path client --headless --script res://tests/session_loop_smoke.gd
 echo "== a01_hero_smoke =="
 "$GODOT" --path client --headless --script res://tests/a01_hero_smoke.gd
+echo "== char_attachment_smoke =="
+"$GODOT" --path client --headless --script res://tests/char_attachment_smoke.gd
 if command -v go >/dev/null || [[ -x "$ROOT/tools/sdk/go/bin/go" ]]; then
   export PATH="$ROOT/tools/sdk/go/bin:${PATH:-}"
   echo "== go test =="

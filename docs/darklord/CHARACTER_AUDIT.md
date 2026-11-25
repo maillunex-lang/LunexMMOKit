@@ -13,9 +13,10 @@ Source of truth: Unity Darklord under `/home/gamedev/Darklord` (read-only). Runt
 Sockets observed in GLB markers: `DM_R_Hand2`, `DM_L_Hand2`, `E_back2`/`E_back`, `Horse_E_back2`/`Horse_E_back`, `E_fire`. Unity `CActorObject.ChangeWeapon` resets weapon container local TRS to identity on the hand socket; assassin splits `DM_R_wuqi01`/`DM_L_wuqi01` with prefab child basis (body2 Z-180, body1 negative X scale).
 
 ## Baseline defects (not accepted)
-- Weapon grip screens (`*-stand-grip.png`): clipping into torso/hip for archer, mage, assassin; warrior grip framing incomplete. Dual-blade idle still offset per ASSEMBLY.md.
-- Hardcoded dual transforms in `client/actors/equipment.gd` (`_right_blade_transform` / `_left_blade_transform`) violate resource-driven Attachment System.
-- Wings/pets/mounts toggled in Studio; seat pose, wing scale, pet follow and rider sync not visually signed off. Mount fix screens exist (`mount-fix-*.png`) but per-anim/per-class matrix incomplete.
+- Hip Prop1/`DM_*_Hand2` false-socket fixed — weapons use `Bip001 R/L Hand` bones via AttachmentOffset.
+- Stand-tuned captures improve warrior/archer/mage fronts; assassin dual angles still wrong; attack grips partial.
+- Wings attach to `E_back2` marker (`equip_accessory`); portable captures often show white/untextured wing panels without material pack.
+- Pets/mounts: resources present; seat/follow/rider sync not signed off (CHAR04/05).
 - `rig_visual_verified: false` on all four export JSON manifests.
 - Body materials/shader adapted; costume part gaps (warrior waist) need audit CHAR06.
 
