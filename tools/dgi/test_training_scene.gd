@@ -48,6 +48,18 @@ func run() -> void:
 			print("missing class assets ",i)
 			quit(5)
 			return
+		var selector: OptionButton = scene.get("animation_select")
+		var expected: int = [24,29,23,28][i]
+		print("animations=",selector.item_count)
+		if selector.item_count != expected:
+			quit(6)
+			return
+		for j in range(selector.item_count):
+			scene.call("_preview_animation",j)
+			await process_frame
+		scene.call("_orbit",0.4)
+		scene.call("_zoom",-0.3)
+		scene.call("_reset_camera")
 		scene.call("launch_attack")
 		await create_timer(1.5).timeout
 		var hp: int = int(combat.get("hp"))

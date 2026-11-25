@@ -40,6 +40,11 @@ var current_actor_index := 2
 var speed_index := 1
 var status_label: Label
 var camera: Camera3D
+var animation_select: OptionButton
+var orbit_angle := 0.0
+var orbit_distance := 3.5
+var orbit_center := Vector3(0.6,0.9,0)
+
 
 func _ready() -> void:
 	_setup_world()
@@ -49,6 +54,13 @@ func _ready() -> void:
 	_load_actor(current_actor_index)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion and event.button_mask & MOUSE_BUTTON_MASK_RIGHT:
+		orbit_angle -= event.relative.x * 0.01
+		_update_camera()
+		return
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP: _zoom(-0.3)
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN: _zoom(0.3)
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
 	match event.keycode:
@@ -109,6 +121,19 @@ func _setup_ui() -> void:
 	_add_button(controls, "Класс ▶", _switch_actor.bind(1))
 	_add_button(controls, "Speed 1.0x", _cycle_speed.bind(1))
 	_add_button(controls, "Сброс", reset_training)
+	var studio := HBoxContainer.new()
+	layer.add_child(studio)
+	studio.position = Vector2(16,60)
+	animation_select = OptionButton.new()
+	animation_select.custom_minimum_size = Vector2(230,36)
+	studio.add_child(animation_select)
+	animation_select.item_selected.connect(_preview_animation)
+	_add_button(studio,"Пауза / пуск",_toggle_preview)
+	_add_button(studio,"Камера ◀",_orbit.bind(-0.4))
+	_add_button(studio,"Камера ▶",_orbit.bind(0.4))
+	_add_button(studio,"+",_zoom.bind(-0.3))
+	_add_button(studio,"−",_zoom.bind(0.3))
+	_add_button(studio,"Вид",_reset_camera)
 	var help := Label.new()
 	help.name = "Help"
 	layer.add_child(help)
@@ -232,6 +257,7 @@ func _load_actor(index: int) -> void:
 		_set_status("AnimationPlayer not found for actor " + actor_id)
 		return
 	animation_player = players[0] as AnimationPlayer
+	_refresh_animations()
 	_create_target()
 	if actor_id == "30001":
 		projectile_effect_suffix = "FS_W_attack001.prefab"
@@ -344,3 +370,42 @@ func _update_status(reason: String) -> void:
 func _set_status(text: String) -> void:
 	if status_label != null:
 		status_label.text = text
+
+func _refresh_animations() -> void:
+	animation_select.clear()
+	for clip in animation_player.get_animation_list():
+		animation_select.add_item(clip)
+	var idle := animation_player.get_animation_list().find("stand")
+	if idle >= 0:
+		animation_select.select(idle)
+		_preview_animation(idle)
+
+func _preview_animation(index: int) -> void:
+	if animation_player == null or index < 0 or index >= animation_select.item_count: return
+	if is_instance_valid(active_attack): active_attack.cancel()
+	var clip := animation_select.get_item_text(index)
+	animation_player.play(clip,-1,speed_options[speed_index])
+	_update_status(clip)
+
+func _toggle_preview() -> void:
+	if animation_player == null: return
+	if is_instance_valid(active_attack) and active_attack.active: return
+	if animation_player.is_playing(): animation_player.pause()
+	else: animation_player.play()
+
+func _orbit(delta: float) -> void:
+	orbit_angle += delta
+	_update_camera()
+
+func _zoom(delta: float) -> void:
+	orbit_distance = clampf(orbit_distance+delta,1.5,7.0)
+	_update_camera()
+
+func _reset_camera() -> void:
+	orbit_angle = 0.0
+	orbit_distance = 3.5
+	_update_camera()
+
+func _update_camera() -> void:
+	camera.position = orbit_center + Vector3(sin(orbit_angle)*orbit_distance,0.8,cos(orbit_angle)*orbit_distance)
+	camera.look_at(orbit_center)
