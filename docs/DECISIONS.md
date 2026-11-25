@@ -21,3 +21,6 @@
 
 ## DARKLORD-BASELINE-001
 User direction: Darklord source is baseline for all reusable content and mechanics; preserve explicit exception of dragon transformations. Supersedes invented class count and numerical defaults. Four classes confirmed; original values take precedence pending extraction and validation. Public repository contains inventories and code only, not original proprietary tables or assets. Source discrepancies must be recorded.
+
+## EDITOR-001 (approved)
+Full available Darklord transfer before custom redesign; native editable Godot scenes/resources and protected manual overrides are mandatory. See docs/EDITOR.md.

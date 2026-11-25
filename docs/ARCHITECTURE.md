@@ -11,3 +11,6 @@ shared: версионированные контракты данных. tools:
 
 ## Выбранный стек
 Go, PostgreSQL, HTTPS/WebSocket, Docker Compose для изолированной разработки. Go отсутствовал в PATH при первой проверке VPS; установку и версии закрепить в F03. Админка React/TypeScript на этапе O01. Не открывать порты и не менять действующие сервисы без согласования.
+
+## Native editor contract
+See [EDITOR-001](EDITOR.md). Server remains authoritative; editor data exports require validation.
