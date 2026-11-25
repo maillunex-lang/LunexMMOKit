@@ -7,22 +7,22 @@ size = Vector2(40, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lf5th"]
 albedo_texture = ExtResource("1_7t2iu")
-roughness = 0.85
+roughness = 0.82
 uv1_scale = Vector3(10, 10, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g3vs2"]
 size = Vector3(40, 0.2, 40)
 
-[node name="Kit_plaza_tile" type="Node3D" unique_id=1060210161]
+[node name="Kit_plaza_tile" type="Node3D" unique_id=979321419]
 metadata/kit_id = "plaza_tile"
 metadata/category = "plaza"
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=39525639]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=565212795]
 mesh = SubResource("PlaneMesh_r7u3o")
 surface_material_override/0 = SubResource("StandardMaterial3D_lf5th")
 
-[node name="@StaticBody3D@5" type="StaticBody3D" parent="." unique_id=1741434418]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=474738180]
 
-[node name="@CollisionShape3D@6" type="CollisionShape3D" parent="@StaticBody3D@5" unique_id=895046658]
+[node name="@CollisionShape3D@4" type="CollisionShape3D" parent="Collision" unique_id=924334943]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("BoxShape3D_g3vs2")

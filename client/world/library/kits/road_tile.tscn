@@ -7,22 +7,22 @@ size = Vector2(12, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yd2lp"]
 albedo_texture = ExtResource("1_qmwja")
-roughness = 0.85
+roughness = 0.82
 uv1_scale = Vector3(4, 6, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3ubw7"]
 size = Vector3(12, 0.2, 20)
 
-[node name="Kit_road_tile" type="Node3D" unique_id=942729999]
+[node name="Kit_road_tile" type="Node3D" unique_id=1438448085]
 metadata/kit_id = "road_tile"
 metadata/category = "road"
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=282830165]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1102479905]
 mesh = SubResource("PlaneMesh_nrqo5")
 surface_material_override/0 = SubResource("StandardMaterial3D_yd2lp")
 
-[node name="@StaticBody3D@3" type="StaticBody3D" parent="." unique_id=861925066]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=830533779]
 
-[node name="@CollisionShape3D@4" type="CollisionShape3D" parent="@StaticBody3D@3" unique_id=1065721443]
+[node name="@CollisionShape3D@3" type="CollisionShape3D" parent="Collision" unique_id=211991150]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("BoxShape3D_3ubw7")

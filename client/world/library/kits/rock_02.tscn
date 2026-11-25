@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" path="res://world/library/textures/splat_sand.png" id="1_0pmir"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pu1ug"]
-resource_name = "Material #1317"
-emission_enabled = true
+albedo_texture = ExtResource("1_0pmir")
+roughness = 0.82
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nnua8"]
 resource_name = "rock_02_cs_haitan_shitou022"
@@ -23,28 +23,24 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28n3b"]
-albedo_texture = ExtResource("1_0pmir")
-roughness = 0.85
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_wu72l"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_28n3b"]
 size = Vector3(15.279771, 5.843042, 20.124226)
 
-[node name="Kit_rock_02" type="Node3D" unique_id=2137139921]
+[node name="Kit_rock_02" type="Node3D" unique_id=323014984]
 metadata/kit_id = "rock_02"
 metadata/category = "rock"
 metadata/source_id = "cs_haitan_shitou02"
 
-[node name="model" type="Node3D" parent="." unique_id=322580197]
+[node name="model" type="Node3D" parent="." unique_id=1559380092]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46884, 0)
 
-[node name="cs_haitan_shitou02" type="MeshInstance3D" parent="model" unique_id=1530041783]
+[node name="cs_haitan_shitou02" type="MeshInstance3D" parent="model" unique_id=1157121133]
 transform = Transform3D(1.13545, 0, 0, 0, 0, 1.13545, 0, -1.13545, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_nnua8")
-surface_material_override/0 = SubResource("StandardMaterial3D_28n3b")
+surface_material_override/0 = SubResource("StandardMaterial3D_pu1ug")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1621435906]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1254892791]
 
-[node name="@CollisionShape3D@30" type="CollisionShape3D" parent="Collision" unique_id=639077541]
+[node name="@CollisionShape3D@29" type="CollisionShape3D" parent="Collision" unique_id=897399926]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.921521, 0)
-shape = SubResource("BoxShape3D_wu72l")
+shape = SubResource("BoxShape3D_28n3b")

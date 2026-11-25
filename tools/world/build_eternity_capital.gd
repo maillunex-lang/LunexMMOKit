@@ -63,6 +63,9 @@ func run():
 	var roads := district("02_Avenue")
 	for z in range(-4, 4):
 		inst("road_tile", roads, Vector3(0, 0.02, z * 20.0), 0.0)
+		# Sidewalks (textured stone) — replaces former “blue strips” which were oversized water mesh
+		inst("sidewalk_tile", roads, Vector3(-9.0, 0.03, z * 20.0), 0.0)
+		inst("sidewalk_tile", roads, Vector3(9.0, 0.03, z * 20.0), 0.0)
 
 	var plaza := district("03_CentralPlaza")
 	inst("plaza_tile", plaza, Vector3(0, 0.03, 0))
@@ -157,10 +160,13 @@ func run():
 	inst("fountain_01", park, Vector3(48, 0.05, 30), 0.0, Vector3(0.8, 0.8, 0.8))
 
 	var water := district("12_Water")
-	inst("water_01", water, Vector3(0, -0.4, -30), 0.0, Vector3(1.8, 1.0, 1.2))
-	inst("bridge_01", water, Vector3(0, 0.05, -30), 90.0, Vector3(1.2, 1.0, 1.2))
-	inst("rock_01", water, Vector3(-12, 0.05, -34), 10.0)
-	inst("rock_02", water, Vector3(12, 0.05, -26), -15.0)
+	# Contained pond south of plaza (kit is a 28x18 textured plane, not FBX ocean)
+	inst("water_01", water, Vector3(0, -0.15, -32), 0.0, Vector3(1.0, 1.0, 1.0))
+	inst("bridge_01", water, Vector3(0, 0.05, -32), 90.0, Vector3(1.0, 1.0, 1.0))
+	inst("rock_01", water, Vector3(-14, 0.05, -36), 10.0)
+	inst("rock_02", water, Vector3(14, 0.05, -28), -15.0)
+	inst("bush_01", water, Vector3(-16, 0.05, -30), 0.0)
+	inst("bush_01", water, Vector3(16, 0.05, -34), 40.0)
 
 	var far := district("13_Skyline")
 	inst("arch_jz01", far, Vector3(-70, 0.05, 40), 20.0, Vector3(1.5, 1.5, 1.5))
