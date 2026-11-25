@@ -191,7 +191,7 @@
     "work": "GAME-SLICE-001: вертикальный срез — квесты гл.1, бой, столица+окраина, порталы (ресурсы Darklord, не 1:1)",
     "accept": "eternity_play: 4 класса, квестовая цепочка talk/kill/goto по stable_id, осколочники, переход в ashen_outskirts; quest smoke OK; APK не блокирует",
     "status": "doing",
-    "evidence": "chapter01_quests.json; quest_log; combat_dummy; ashen_outskirts; eternity_play; test_quest_smoke OK"
+    "evidence": "classes_baseline.json from t_playerinfo/t_skill/t_effect; hero_combat hotbar; quests+ashen; HERO_SMOKE_OK; play smoke fixed"
   },
   {
     "id": "CAPAPK",

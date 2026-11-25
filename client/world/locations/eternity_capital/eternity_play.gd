@@ -1,9 +1,11 @@
 extends Node3D
-## Playable Eternity Capital: classes, quests (stable_id), light combat, portal to Ashen.
+## Playable Eternity Capital: 4 Darklord classes, skills from t_playerinfo/t_skill, quests, portal.
 const Equipment = preload("res://actors/equipment.gd")
 const DarklordMaterial = preload("res://content/shaders/darklord_material.gd")
 const QuestLogScript = preload("res://content/quests/quest_log.gd")
 const CombatDummyScript = preload("res://actors/combat_dummy.gd")
+const HeroKitScript = preload("res://content/heroes/hero_kit.gd")
+const HeroCombatScript = preload("res://actors/hero_combat.gd")
 
 @export var actor_ids: PackedStringArray = ["10001", "20001", "30001", "40001"]
 @export var class_names: PackedStringArray = ["Воин", "Лучник", "Маг", "Ассасин"]
@@ -23,9 +25,12 @@ var joystick
 var status_label: Label
 var fps_label: Label
 var quest_label: RichTextLabel
+var vitals_label: Label
 var interact_hint: Label
 var quest_log
-var _attack_cd := 0.0
+var hero_kit
+var hero_combat
+var skill_buttons: Array[Button] = []
 
 func _ready() -> void:
 	if FileAccess.file_exists(material_params_path):
@@ -41,6 +46,13 @@ func _ready() -> void:
 	quest_log.load_catalog()
 	quest_log.quest_updated.connect(_on_quest_ui)
 	quest_log.quest_completed.connect(func(id): status_label.text = "Квест завершён: " + id)
+	hero_kit = HeroKitScript.new()
+	hero_kit.load_data()
+	hero_combat = HeroCombatScript.new()
+	hero_combat.name = "HeroCombat"
+	add_child(hero_combat)
+	hero_combat.hp_changed.connect(_on_vitals)
+	hero_combat.mp_changed.connect(_on_vitals)
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	_spawn_hero()
@@ -74,7 +86,6 @@ func _spawn_hero() -> void:
 	camera.global_position = hero.global_position + Vector3(0, 5.5, 9)
 
 func _spawn_shardlings() -> void:
-	# East approach — kill objective for q_ch1_03
 	var positions := [Vector3(22, 0.05, 18), Vector3(26, 0.05, 20), Vector3(30, 0.05, 16), Vector3(24, 0.05, 24)]
 	for i in positions.size():
 		var mob := CharacterBody3D.new()
@@ -82,6 +93,7 @@ func _spawn_shardlings() -> void:
 		mob.name = "Shardling_%d" % i
 		mob.set("stable_id", "mob_shardling")
 		mob.set("display_name", "Осколочник")
+		mob.set("max_hp", 80)
 		add_child(mob)
 		mob.global_position = positions[i]
 		mob.died.connect(func(sid): quest_log.notify_kill(sid))
@@ -102,18 +114,21 @@ func _build_ui() -> void:
 	fps_label = Label.new()
 	fps_label.position = Vector2(16, 48)
 	layer.add_child(fps_label)
+	vitals_label = Label.new()
+	vitals_label.position = Vector2(16, 72)
+	layer.add_child(vitals_label)
 	quest_label = RichTextLabel.new()
-	quest_label.position = Vector2(16, 80)
-	quest_label.size = Vector2(420, 180)
+	quest_label.position = Vector2(16, 100)
+	quest_label.size = Vector2(420, 160)
 	quest_label.bbcode_enabled = true
 	quest_label.fit_content = true
 	layer.add_child(quest_label)
 	interact_hint = Label.new()
-	interact_hint.position = Vector2(480, 640)
-	interact_hint.text = "E — говорить / атака  |  F — портал"
+	interact_hint.position = Vector2(400, 620)
+	interact_hint.text = "E NPC  |  Space атака  |  1/2/3 умения  |  F портал"
 	layer.add_child(interact_hint)
 	var row := HBoxContainer.new()
-	row.position = Vector2(16, 640)
+	row.position = Vector2(16, 600)
 	layer.add_child(row)
 	for i in actor_ids.size():
 		var b := Button.new()
@@ -124,15 +139,41 @@ func _build_ui() -> void:
 	atk.text = "Атака"
 	atk.pressed.connect(_try_attack)
 	row.add_child(atk)
+	var skills := HBoxContainer.new()
+	skills.position = Vector2(16, 660)
+	layer.add_child(skills)
+	skill_buttons.clear()
+	for s in range(3):
+		var sb := Button.new()
+		sb.text = "Умение %d" % (s + 1)
+		sb.custom_minimum_size = Vector2(120, 40)
+		sb.pressed.connect(_try_skill.bind(s))
+		skills.add_child(sb)
+		skill_buttons.append(sb)
 
 func _on_quest_ui(_id: String) -> void:
 	if quest_label and quest_log:
 		quest_label.text = quest_log.tracker_text()
 
-func _process(delta: float) -> void:
+func _on_vitals(_a = 0, _b = 0) -> void:
+	if vitals_label and hero_combat:
+		vitals_label.text = "HP %d/%d  MP %d/%d" % [hero_combat.hp, hero_combat.max_hp, hero_combat.mp, hero_combat.max_mp]
+
+func _process(_delta: float) -> void:
 	if fps_label:
 		fps_label.text = "FPS %.0f" % Engine.get_frames_per_second()
-	_attack_cd = maxf(0.0, _attack_cd - delta)
+	for i in skill_buttons.size():
+		var left: float = hero_combat.cd_left(i) if hero_combat else 0.0
+		var bar: Array = hero_kit.hotbar(String(actor_ids[current_index])) if hero_kit else []
+		var label := "Умение %d" % (i + 1)
+		if i < bar.size():
+			label = String(bar[i].get("label", label))
+		if left > 0.05:
+			skill_buttons[i].text = "%s %.0f" % [label, left]
+			skill_buttons[i].disabled = true
+		else:
+			skill_buttons[i].text = label
+			skill_buttons[i].disabled = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if hero == null:
@@ -143,6 +184,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		_try_portal()
 	elif event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
 		_try_attack()
+	elif event is InputEventKey and event.pressed and event.keycode == KEY_1:
+		_try_skill(0)
+	elif event is InputEventKey and event.pressed and event.keycode == KEY_2:
+		_try_skill(1)
+	elif event is InputEventKey and event.pressed and event.keycode == KEY_3:
+		_try_skill(2)
 	if joystick and joystick.direction != Vector2.ZERO:
 		return
 	if event is InputEventKey:
@@ -152,9 +199,6 @@ func _nearest_with_meta(meta_key: String, radius: float = 3.5) -> Node3D:
 	var best: Node3D = null
 	var best_d := radius
 	var origin := hero.global_position
-	for n in get_tree().get_nodes_in_group("npc"):
-		pass
-	# Walk capital + local for meta stable_id
 	var stack: Array = [self]
 	while stack.size():
 		var n: Node = stack.pop_back()
@@ -175,13 +219,9 @@ func _try_interact() -> void:
 		status_label.text = "Рядом нет NPC"
 		return
 	var sid := String(npc.get_meta("stable_id"))
-	# Offer / progress talk objectives
 	var started: String = quest_log.offer_from_npc(sid)
 	quest_log.notify_talk(sid)
-	if started != "":
-		status_label.text = "Взят квест: " + started
-	else:
-		status_label.text = "Разговор: " + sid
+	status_label.text = ("Взят квест: " + started) if started != "" else ("Разговор: " + sid)
 	_on_quest_ui("")
 
 func _try_portal() -> void:
@@ -199,24 +239,44 @@ func _try_portal() -> void:
 		status_label.text = "Переход…"
 		get_tree().change_scene_to_file(scene_path)
 	else:
-		status_label.text = "Портал " + sid + " (сцена ещё не собрана)"
+		status_label.text = "Портал " + sid
+
+func _play_anim(name: String) -> void:
+	if animator == null:
+		return
+	if animator.has_animation(name):
+		animator.play(name)
+	elif name.begins_with("skill") and animator.has_animation("skill001"):
+		animator.play("skill001")
+	elif animator.has_animation("attack"):
+		animator.play("attack")
 
 func _try_attack() -> void:
-	if _attack_cd > 0.0 or hero == null:
+	if hero == null or hero_combat == null:
 		return
-	_attack_cd = 0.55
-	if animator and animator.has_animation("attack"):
-		animator.play("attack")
-	elif animator and animator.has_animation("skill"):
-		animator.play("skill")
-	var origin := hero.global_position
-	for c in get_children():
-		if c.has_method("apply_damage") and c is Node3D:
-			if origin.distance_to(c.global_position) <= 3.2:
-				c.apply_damage(18)
-				status_label.text = "Удар по " + String(c.get("display_name"))
-				return
-	status_label.text = "Промах"
+	var res: Dictionary = hero_combat.try_basic(hero.global_position, hero.rotation.y, get_tree())
+	if not res.get("ok", false):
+		status_label.text = "Атака: " + String(res.get("reason", "?"))
+		return
+	_play_anim("attack")
+	if res.get("hit"):
+		status_label.text = "Атака %d урона" % int(res.get("damage", 0))
+	else:
+		status_label.text = "Промах (подойди ближе)"
+
+func _try_skill(slot: int) -> void:
+	if hero == null or hero_combat == null:
+		return
+	var res: Dictionary = hero_combat.try_skill(slot, hero.global_position, get_tree())
+	if not res.get("ok", false):
+		status_label.text = "Умение: " + String(res.get("reason", "?"))
+		return
+	_play_anim(String(res.get("anim", "skill001")))
+	var label := String(res.get("label", "Умение"))
+	if res.get("hit"):
+		status_label.text = "%s — %d урона" % [label, int(res.get("damage", 0))]
+	else:
+		status_label.text = "%s — нет цели в радиусе" % label
 
 func _load_glb(path: String) -> Node3D:
 	if not FileAccess.file_exists(path):
@@ -252,4 +312,13 @@ func _load_class(index: int) -> void:
 		hero.set("animator", animator)
 		if animator.has_animation("stand"):
 			animator.play("stand")
-	status_label.text = "%s | Этернити — глава 1" % class_names[current_index]
+	hero_combat.setup(hero_kit, actor_id)
+	var cls: Dictionary = hero_kit.class_of(actor_id)
+	var src_name := String(cls.get("name_src", ""))
+	status_label.text = "%s (%s) | Этернити — умения из Darklord" % [class_names[current_index], src_name]
+	_on_vitals()
+	# Refresh skill button labels from hotbar
+	var bar: Array = hero_kit.hotbar(actor_id)
+	for i in skill_buttons.size():
+		if i < bar.size():
+			skill_buttons[i].text = String(bar[i].get("label", "Умение"))

@@ -6,6 +6,7 @@ LunexMMOKit / Осколки вечности. WORLD-DESIGN-002. WORLD-EDITOR-00
 - Столица densify + зелёный грунт `grass_zhucheng`, market tiles, leaf alpha.
 - WE03: спека + addon `lunex_world_editor`, owner-lock генераторов, stable_id.
 - Глава 1 квестов (talk/kill/goto), осколочники, портал → Пепельный рубеж.
-- `eternity_play` = main_scene; quest smoke + ashen location.
+- Герои: baseline из `t_playerinfo`/`t_skill`/`t_effect` → hotbar 1/2/3, HP/MP, CD/radius/урон.
+- Play smoke починен (был серый из‑за parse error).
 ## Дальше
-Расширить бой/навыки, больше локаций гл.1, NavMesh bake в play, серверные контракты. CAPAPK после приёмки.
+VFX/звуки умений из source pfx, автобой, больше локаций гл.1, NavMesh. CAPAPK после приёмки.

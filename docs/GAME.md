@@ -35,5 +35,6 @@ Darklord is the primary mechanical and content baseline. Four source classes; pr
 Готовый вертикальный срез без ожидания APK: механики/квесты/локации на ресурсах Darklord.
 - Столица `eternity_play` + окраина `ashen_outskirts`.
 - Глава 1 квестов (`content/quests/chapter01_quests.json`) со `stable_id`.
-- 4 класса, лёгкий бой (осколочники), порталы.
+- 4 класса с умениями из `t_playerinfo`/`t_skill`/`t_effect` (`content/heroes/classes_baseline.json`).
+- Лёгкий бой (осколочники), порталы.
 - Сюжет «Осколки вечности»; цепочки talk/kill/goto по форме Darklord, контент свой.
