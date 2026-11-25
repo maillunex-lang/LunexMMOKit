@@ -1,0 +1,2733 @@
+[gd_scene format=3]
+
+[node name="ImportedLayout" type="Node3D"]
+
+[node name="Object_193588" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "193588"
+
+[node name="Object_10248769" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "10248769"
+
+[node name="Object_20440815" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "20440815"
+
+[node name="Object_38683152" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "38683152"
+
+[node name="Object_41674001" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "41674001"
+
+[node name="Object_59573853" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "59573853"
+
+[node name="Object_61031730" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "61031730"
+
+[node name="Object_63501326" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "63501326"
+
+[node name="Object_65641096" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "65641096"
+
+[node name="Object_65709794" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "65709794"
+
+[node name="Object_68376525" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "68376525"
+
+[node name="Object_76304527" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "76304527"
+
+[node name="Object_79347956" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "79347956"
+
+[node name="Object_80277103" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "80277103"
+
+[node name="Object_89394899" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "89394899"
+
+[node name="Object_91391016" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "91391016"
+
+[node name="Object_93008685" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "93008685"
+
+[node name="Object_107591224" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "107591224"
+
+[node name="Object_108716933" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "108716933"
+
+[node name="Object_114532977" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "114532977"
+
+[node name="Object_120902886" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "120902886"
+
+[node name="Object_125030897" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "125030897"
+
+[node name="Object_128520364" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "128520364"
+
+[node name="Object_129620428" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "129620428"
+
+[node name="Object_135610720" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "135610720"
+
+[node name="Object_144974739" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "144974739"
+
+[node name="Object_146086834" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "146086834"
+
+[node name="Object_150590647" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "150590647"
+
+[node name="Object_153606630" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "153606630"
+
+[node name="Object_154523269" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "154523269"
+
+[node name="Object_168792422" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "168792422"
+
+[node name="Object_180012866" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "180012866"
+
+[node name="Object_195842154" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "195842154"
+
+[node name="Object_199639815" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "199639815"
+
+[node name="Object_205446178" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "205446178"
+
+[node name="Object_210966170" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "210966170"
+
+[node name="Object_212834778" type="Node3D" parent="."]
+position = Vector3(114, 73.5, -125.5)
+quaternion = Quaternion(0, -1, 0, -4.371139e-08)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Statue"
+metadata/source_id = "212834778"
+
+[node name="Object_217598383" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "217598383"
+
+[node name="Object_220438585" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "220438585"
+
+[node name="Object_229159446" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "229159446"
+
+[node name="Object_232682172" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "232682172"
+
+[node name="Object_233544604" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "233544604"
+
+[node name="Object_234029228" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "234029228"
+
+[node name="Object_239694120" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "239694120"
+
+[node name="Object_256207505" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "256207505"
+
+[node name="Object_256617388" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "256617388"
+
+[node name="Object_258190894" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "258190894"
+
+[node name="Object_259267671" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "259267671"
+
+[node name="Object_262074224" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "262074224"
+
+[node name="Object_268718831" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "268718831"
+
+[node name="Object_275894997" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "275894997"
+
+[node name="Object_291993830" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "291993830"
+
+[node name="Object_305092914" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "305092914"
+
+[node name="Object_306073756" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "306073756"
+
+[node name="Object_307257389" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "307257389"
+
+[node name="Object_331388969" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "331388969"
+
+[node name="Object_333170851" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "333170851"
+
+[node name="Object_343202947" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "343202947"
+
+[node name="Object_350034454" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "350034454"
+
+[node name="Object_350582673" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "350582673"
+
+[node name="Object_364503701" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "364503701"
+
+[node name="Object_366294550" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "366294550"
+
+[node name="Object_369524385" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "369524385"
+
+[node name="Object_381122678" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "381122678"
+
+[node name="Object_386905318" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "386905318"
+
+[node name="Object_391026948" type="Node3D" parent="."]
+position = Vector3(120.06936, 91.5, -87.05705)
+quaternion = Quaternion(-0.13238192, 0.85836864, 0.41170213, 0.27600673)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Directional light"
+metadata/source_id = "391026948"
+
+[node name="Object_395114106" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "395114106"
+
+[node name="Object_398443757" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "398443757"
+
+[node name="Object_408137835" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "408137835"
+
+[node name="Object_418096217" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "418096217"
+
+[node name="Object_418901620" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "418901620"
+
+[node name="Object_423416454" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "423416454"
+
+[node name="Object_427084194" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "427084194"
+
+[node name="Object_429282411" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "429282411"
+
+[node name="Object_429381868" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "429381868"
+
+[node name="Object_432199710" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "432199710"
+
+[node name="Object_436900290" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "436900290"
+
+[node name="Object_442151815" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "442151815"
+
+[node name="Object_446875611" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "446875611"
+
+[node name="Object_447137164" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "447137164"
+
+[node name="Object_458712244" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "458712244"
+
+[node name="Object_481471172" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "481471172"
+
+[node name="Object_486636697" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "486636697"
+
+[node name="Object_488193742" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "488193742"
+
+[node name="Object_489341429" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "489341429"
+
+[node name="Object_497236408" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "497236408"
+
+[node name="Object_505463594" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "505463594"
+
+[node name="Object_506880223" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "506880223"
+
+[node name="Object_507657079" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "507657079"
+
+[node name="Object_514835139" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "514835139"
+
+[node name="Object_527388599" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "527388599"
+
+[node name="Object_534558325" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "534558325"
+
+[node name="Object_545321999" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "545321999"
+
+[node name="Object_545877576" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "545877576"
+
+[node name="Object_555951834" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "555951834"
+
+[node name="Object_558380395" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "558380395"
+
+[node name="Object_562417382" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "562417382"
+
+[node name="Object_565474098" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "565474098"
+
+[node name="Object_567784197" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "567784197"
+
+[node name="Object_568004295" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "568004295"
+
+[node name="Object_587137795" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "587137795"
+
+[node name="Object_594012109" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "594012109"
+
+[node name="Object_620891179" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "620891179"
+
+[node name="Object_628064190" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "628064190"
+
+[node name="Object_639221438" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "639221438"
+
+[node name="Object_661779352" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "661779352"
+
+[node name="Object_669225601" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "669225601"
+
+[node name="Object_670460257" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "670460257"
+
+[node name="Object_685577451" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "685577451"
+
+[node name="Object_692180106" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "692180106"
+
+[node name="Object_693721048" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "693721048"
+
+[node name="Object_694099771" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "694099771"
+
+[node name="Object_710631308" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "710631308"
+
+[node name="Object_711440798" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "711440798"
+
+[node name="Object_733546355" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "733546355"
+
+[node name="Object_736135020" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "736135020"
+
+[node name="Object_737588876" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "737588876"
+
+[node name="Object_744467408" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "744467408"
+
+[node name="Object_751288155" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "751288155"
+
+[node name="Object_763184419" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "763184419"
+
+[node name="Object_764013522" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "764013522"
+
+[node name="Object_777278547" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "777278547"
+
+[node name="Object_781590868" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "781590868"
+
+[node name="Object_788900200" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "788900200"
+
+[node name="Object_790517660" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "790517660"
+
+[node name="Object_811459699" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "811459699"
+
+[node name="Object_824878975" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "824878975"
+
+[node name="Object_835492208" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "835492208"
+
+[node name="Object_845008672" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "845008672"
+
+[node name="Object_851629334" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "851629334"
+
+[node name="Object_855030271" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "855030271"
+
+[node name="Object_860718958" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "860718958"
+
+[node name="Object_884258563" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "884258563"
+
+[node name="Object_888262960" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "888262960"
+
+[node name="Object_890420731" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "890420731"
+
+[node name="Object_891380113" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "891380113"
+
+[node name="Object_904238065" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "904238065"
+
+[node name="Object_905893922" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "905893922"
+
+[node name="Object_906468212" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "906468212"
+
+[node name="Object_914195663" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "914195663"
+
+[node name="Object_916800200" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "916800200"
+
+[node name="Object_925372518" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "925372518"
+
+[node name="Object_948883292" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "948883292"
+
+[node name="Object_949087473" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "949087473"
+
+[node name="Object_950681849" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "950681849"
+
+[node name="Object_968377540" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "968377540"
+
+[node name="Object_1001936292" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1001936292"
+
+[node name="Object_1007206913" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1007206913"
+
+[node name="Object_1010450406" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1010450406"
+
+[node name="Object_1012938523" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1012938523"
+
+[node name="Object_1031957893" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1031957893"
+
+[node name="Object_1034462349" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1034462349"
+
+[node name="Object_1047049096" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1047049096"
+
+[node name="Object_1049675885" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1049675885"
+
+[node name="Object_1060234052" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1060234052"
+
+[node name="Object_1060801703" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1060801703"
+
+[node name="Object_1064607004" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1064607004"
+
+[node name="Object_1085825646" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1085825646"
+
+[node name="Object_1088055143" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1088055143"
+
+[node name="Object_1103510584" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1103510584"
+
+[node name="Object_1104229061" type="Node3D" parent="."]
+position = Vector3(17.341242, 34.861404, -26.712955)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "cs_yw_zhucheng"
+metadata/source_id = "1104229061"
+
+[node name="Object_1108803319" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1108803319"
+
+[node name="Object_1109787036" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1109787036"
+
+[node name="Object_1121607386" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1121607386"
+
+[node name="Object_1122987307" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1122987307"
+
+[node name="Object_1130210767" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1130210767"
+
+[node name="Object_1140798580" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1140798580"
+
+[node name="Object_1141095207" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1141095207"
+
+[node name="Object_1163418258" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1163418258"
+
+[node name="Object_1166477805" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1166477805"
+
+[node name="Object_1167023966" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1167023966"
+
+[node name="Object_1167164171" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1167164171"
+
+[node name="Object_1190447538" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1190447538"
+
+[node name="Object_1194151101" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1194151101"
+
+[node name="Object_1195037567" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1195037567"
+
+[node name="Object_1205534835" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1205534835"
+
+[node name="Object_1208187181" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1208187181"
+
+[node name="Object_1210949670" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1210949670"
+
+[node name="Object_1212780429" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1212780429"
+
+[node name="Object_1215671249" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1215671249"
+
+[node name="Object_1223902918" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1223902918"
+
+[node name="Object_1225908643" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1225908643"
+
+[node name="Object_1236406264" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1236406264"
+
+[node name="Object_1236946407" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1236946407"
+
+[node name="Object_1237806776" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1237806776"
+
+[node name="Object_1238894311" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1238894311"
+
+[node name="Object_1246147845" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1246147845"
+
+[node name="Object_1248118633" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1248118633"
+
+[node name="Object_1248370272" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1248370272"
+
+[node name="Object_1248424489" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1248424489"
+
+[node name="Object_1248791288" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1248791288"
+
+[node name="Object_1253335344" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1253335344"
+
+[node name="Object_1258952375" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1258952375"
+
+[node name="Object_1259320654" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1259320654"
+
+[node name="Object_1271523743" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1271523743"
+
+[node name="Object_1275646707" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1275646707"
+
+[node name="Object_1278055648" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1278055648"
+
+[node name="Object_1284492772" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1284492772"
+
+[node name="Object_1299872185" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1299872185"
+
+[node name="Object_1310387211" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1310387211"
+
+[node name="Object_1311024574" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1311024574"
+
+[node name="Object_1325585552" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1325585552"
+
+[node name="Object_1327032912" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1327032912"
+
+[node name="Object_1327980580" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1327980580"
+
+[node name="Object_1328103564" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1328103564"
+
+[node name="Object_1329398447" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1329398447"
+
+[node name="Object_1330095748" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1330095748"
+
+[node name="Object_1333212210" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1333212210"
+
+[node name="Object_1336963272" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1336963272"
+
+[node name="Object_1344429431" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1344429431"
+
+[node name="Object_1345700660" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1345700660"
+
+[node name="Object_1349386107" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1349386107"
+
+[node name="Object_1356449044" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1356449044"
+
+[node name="Object_1364809175" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1364809175"
+
+[node name="Object_1365160541" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1365160541"
+
+[node name="Object_1377689450" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1377689450"
+
+[node name="Object_1379721755" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1379721755"
+
+[node name="Object_1381667979" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1381667979"
+
+[node name="Object_1382784902" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1382784902"
+
+[node name="Object_1385127886" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1385127886"
+
+[node name="Object_1396119772" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1396119772"
+
+[node name="Object_1407814930" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1407814930"
+
+[node name="Object_1436201886" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1436201886"
+
+[node name="Object_1439830323" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1439830323"
+
+[node name="Object_1439971153" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1439971153"
+
+[node name="Object_1475882676" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1475882676"
+
+[node name="Object_1480269246" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1480269246"
+
+[node name="Object_1481562516" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1481562516"
+
+[node name="Object_1485655616" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1485655616"
+
+[node name="Object_1491452990" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1491452990"
+
+[node name="Object_1503036738" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1503036738"
+
+[node name="Object_1503915895" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1503915895"
+
+[node name="Object_1513176722" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1513176722"
+
+[node name="Object_1519929093" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1519929093"
+
+[node name="Object_1520084839" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1520084839"
+
+[node name="Object_1529760522" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1529760522"
+
+[node name="Object_1531586050" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1531586050"
+
+[node name="Object_1550818792" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1550818792"
+
+[node name="Object_1561411521" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1561411521"
+
+[node name="Object_1566572601" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1566572601"
+
+[node name="Object_1571259638" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1571259638"
+
+[node name="Object_1583871933" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1583871933"
+
+[node name="Object_1595691008" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1595691008"
+
+[node name="Object_1616717363" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1616717363"
+
+[node name="Object_1617867477" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1617867477"
+
+[node name="Object_1623024746" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1623024746"
+
+[node name="Object_1626669019" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1626669019"
+
+[node name="Object_1627782541" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1627782541"
+
+[node name="Object_1637466779" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1637466779"
+
+[node name="Object_1643469092" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1643469092"
+
+[node name="Object_1650183260" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1650183260"
+
+[node name="Object_1650977267" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1650977267"
+
+[node name="Object_1661667379" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1661667379"
+
+[node name="Object_1680960957" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1680960957"
+
+[node name="Object_1682290872" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1682290872"
+
+[node name="Object_1689011833" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1689011833"
+
+[node name="Object_1693418504" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1693418504"
+
+[node name="Object_1693598332" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1693598332"
+
+[node name="Object_1694264968" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1694264968"
+
+[node name="Object_1699604099" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1699604099"
+
+[node name="Object_1704687444" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1704687444"
+
+[node name="Object_1704840333" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1704840333"
+
+[node name="Object_1715266636" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1715266636"
+
+[node name="Object_1718872585" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1718872585"
+
+[node name="Object_1719988347" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1719988347"
+
+[node name="Object_1721559115" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1721559115"
+
+[node name="Object_1735191227" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1735191227"
+
+[node name="Object_1756541188" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1756541188"
+
+[node name="Object_1760038019" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1760038019"
+
+[node name="Object_1765936920" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1765936920"
+
+[node name="Object_1772724898" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1772724898"
+
+[node name="Object_1776098290" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1776098290"
+
+[node name="Object_1776674250" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1776674250"
+
+[node name="Object_1784773738" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1784773738"
+
+[node name="Object_1785904842" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1785904842"
+
+[node name="Object_1805833080" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1805833080"
+
+[node name="Object_1813232425" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1813232425"
+
+[node name="Object_1818136470" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1818136470"
+
+[node name="Object_1821490211" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1821490211"
+
+[node name="Object_1826652356" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1826652356"
+
+[node name="Object_1836940376" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1836940376"
+
+[node name="Object_1839811210" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1839811210"
+
+[node name="Object_1848776611" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1848776611"
+
+[node name="Object_1860071432" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1860071432"
+
+[node name="Object_1861644010" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1861644010"
+
+[node name="Object_1874973282" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1874973282"
+
+[node name="Object_1878441473" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1878441473"
+
+[node name="Object_1885686370" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1885686370"
+
+[node name="Object_1892903925" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1892903925"
+
+[node name="Object_1911123481" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1911123481"
+
+[node name="Object_1913299418" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1913299418"
+
+[node name="Object_1920363259" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1920363259"
+
+[node name="Object_1942531770" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1942531770"
+
+[node name="Object_1944381005" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1944381005"
+
+[node name="Object_1946516346" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1946516346"
+
+[node name="Object_1955752261" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1955752261"
+
+[node name="Object_1969039948" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1969039948"
+
+[node name="Object_1970601461" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1970601461"
+
+[node name="Object_1992197608" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1992197608"
+
+[node name="Object_1996706928" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "1996706928"
+
+[node name="Object_2013135287" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2013135287"
+
+[node name="Object_2014920138" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2014920138"
+
+[node name="Object_2016112674" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2016112674"
+
+[node name="Object_2019320339" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2019320339"
+
+[node name="Object_2030309760" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2030309760"
+
+[node name="Object_2031385576" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2031385576"
+
+[node name="Object_2042974451" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2042974451"
+
+[node name="Object_2044464383" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2044464383"
+
+[node name="Object_2050457240" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2050457240"
+
+[node name="Object_2052272062" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2052272062"
+
+[node name="Object_2061052627" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2061052627"
+
+[node name="Object_2075085927" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2075085927"
+
+[node name="Object_2079883889" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2079883889"
+
+[node name="Object_2081719677" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2081719677"
+
+[node name="Object_2084861756" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2084861756"
+
+[node name="Object_2088733765" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2088733765"
+
+[node name="Object_2089607946" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2089607946"
+
+[node name="Object_2092648924" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2092648924"
+
+[node name="Object_2094632968" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2094632968"
+
+[node name="Object_2102846404" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2102846404"
+
+[node name="Object_2107326120" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2107326120"
+
+[node name="Object_2107437291" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2107437291"
+
+[node name="Object_2107999188" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2107999188"
+
+[node name="Object_2112363268" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2112363268"
+
+[node name="Object_2113964531" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2113964531"
+
+[node name="Object_2133522372" type="Node3D" parent="."]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = ""
+metadata/source_id = "2133522372"
+
+[node name="Object_202837987" type="Node3D" parent="Object_1104229061"]
+position = Vector3(88.973366, 12.687721, -106.6367)
+quaternion = Quaternion(-0.009493867, 0.09477572, 0.09921299, 0.990497)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "light (1)"
+metadata/source_id = "202837987"
+
+[node name="Object_668508141" type="Node3D" parent="Object_1104229061"]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "effect"
+metadata/source_id = "668508141"
+
+[node name="Object_808836109" type="Node3D" parent="Object_212834778"]
+position = Vector3(-0.72, 0.849, 0.45)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = 1
+metadata/source_id = "808836109"
+
+[node name="Object_1001871714" type="Node3D" parent="Object_212834778"]
+position = Vector3(-10.24, 0.326, 0.38)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = 3
+metadata/source_id = "1001871714"
+
+[node name="Object_1050239339" type="Node3D" parent="Object_1104229061"]
+position = Vector3(-453.4, 0, 4.1)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "thing"
+metadata/source_id = "1050239339"
+
+[node name="Object_1175880984" type="Node3D" parent="Object_1104229061"]
+position = Vector3(-242.4, 0, 3)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "zb"
+metadata/source_id = "1175880984"
+
+[node name="Object_1226480106" type="Node3D" parent="Object_1104229061"]
+position = Vector3(18.20207, -12.364494, -20.67461)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "water"
+metadata/source_id = "1226480106"
+
+[node name="Object_1427837872" type="Node3D" parent="Object_1104229061"]
+position = Vector3(88.973366, 12.687721, -106.6367)
+quaternion = Quaternion(-0.009493867, 0.09477572, 0.09921299, 0.990497)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "light"
+metadata/source_id = "1427837872"
+
+[node name="Object_1602334128" type="Node3D" parent="Object_212834778"]
+position = Vector3(9.11, 0.3259964, 0.43)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = 2
+metadata/source_id = "1602334128"
+
+[node name="Object_1605060650" type="Node3D" parent="Object_1104229061"]
+position = Vector3(97.26876, 37.648598, -11.707043)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "jz"
+metadata/source_id = "1605060650"
+
+[node name="Object_1781983274" type="Node3D" parent="Object_1104229061"]
+position = Vector3(90.01711, 23.616623, -160.47597)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "dixing"
+metadata/source_id = "1781983274"
+
+[node name="Object_10163796" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(31.29, 25.02, 26.54)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (29)"
+metadata/source_id = "10163796"
+
+[node name="Object_41445633" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(36.11, 11.75, -32.67)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (12)"
+metadata/source_id = "41445633"
+
+[node name="Object_131222569" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(14.1, 31.02, -6.24)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (22)"
+metadata/source_id = "131222569"
+
+[node name="Object_151488669" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(83.61, 2.87, 49.24)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (5)"
+metadata/source_id = "151488669"
+
+[node name="Object_194137804" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(35.68, 20.01, -38.89)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (8)"
+metadata/source_id = "194137804"
+
+[node name="Object_229251013" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(-8.100048, 89.50002, 93.10007)
+quaternion = Quaternion(-0.059246767, -0.5411073, -0.69136125, 0.47509202)
+scale = Vector3(0.8000002, 0.8000002, 0.80000013)
+metadata/source_name = "sun light"
+metadata/source_id = "229251013"
+
+[node name="Object_249729095" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(13.75, 19.39, 48.33)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (6)"
+metadata/source_id = "249729095"
+
+[node name="Object_276458338" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(12.85, 14.79, 103.83)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (4)"
+metadata/source_id = "276458338"
+
+[node name="Object_311441677" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(45.21, 16.05, 83.87)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (15)"
+metadata/source_id = "311441677"
+
+[node name="Object_345981565" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(0.92, 27.61, 67.6)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (23)"
+metadata/source_id = "345981565"
+
+[node name="Object_356232419" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-8.100048, 89.50002, 93.10007)
+quaternion = Quaternion(-0.059246767, -0.5411073, -0.69136125, 0.47509202)
+scale = Vector3(0.8000002, 0.8000002, 0.80000013)
+metadata/source_name = "sun light"
+metadata/source_id = "356232419"
+
+[node name="Object_442342460" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(11.98, 34.22, 18.41)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (13)"
+metadata/source_id = "442342460"
+
+[node name="Object_484341036" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(12.85, 14.79, 103.83)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (4)"
+metadata/source_id = "484341036"
+
+[node name="Object_496676715" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(17.2, 91.99999, -102.9)
+quaternion = Quaternion(-0.36328757, -0.3946223, -0.2666034, 0.8007609)
+scale = Vector3(0.7999998, 0.79999995, 0.8)
+metadata/source_name = "sun light (2)"
+metadata/source_id = "496676715"
+
+[node name="Object_531414362" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(11.87, 19.43, 57.14)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (7)"
+metadata/source_id = "531414362"
+
+[node name="Object_578199808" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(61.85, 12.06, 82.47)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (1)"
+metadata/source_id = "578199808"
+
+[node name="Object_609138081" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-2.84, 27.22, 94.39)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (17)"
+metadata/source_id = "609138081"
+
+[node name="Object_644172761" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-34.2, 36.1, 28.2)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (25)"
+metadata/source_id = "644172761"
+
+[node name="Object_662863525" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(17.199997, 91.99999, -102.90001)
+quaternion = Quaternion(0.083111845, -0.9765239, -0.018095847, 0.19790427)
+scale = Vector3(0.7999999, 0.8, 0.8000002)
+metadata/source_name = "sun light (3)"
+metadata/source_id = "662863525"
+
+[node name="Object_699745735" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(12.77, 31.59, -41.81)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (9)"
+metadata/source_id = "699745735"
+
+[node name="Object_798647537" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(17.2, 91.99999, -102.9)
+quaternion = Quaternion(-0.36328757, -0.3946223, -0.2666034, 0.8007609)
+scale = Vector3(0.7999998, 0.79999995, 0.8)
+metadata/source_name = "sun light (2)"
+metadata/source_id = "798647537"
+
+[node name="Object_805807496" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(31.6, 21.45, 66.32)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (16)"
+metadata/source_id = "805807496"
+
+[node name="Object_926646497" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(39.21, 16.54, -32.28)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (11)"
+metadata/source_id = "926646497"
+
+[node name="Object_956058185" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(17.199997, 91.99999, -102.90001)
+quaternion = Quaternion(0.083111845, -0.9765239, -0.018095847, 0.19790427)
+scale = Vector3(0.7999999, 0.8, 0.8000002)
+metadata/source_name = "sun light (3)"
+metadata/source_id = "956058185"
+
+[node name="Object_961809460" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(17.199997, 91.99999, -102.90001)
+quaternion = Quaternion(0.0018517454, 0.41602653, -0.24326015, 0.87620944)
+scale = Vector3(0.8000005, 0.8, 0.80000037)
+metadata/source_name = "sun light (4)"
+metadata/source_id = "961809460"
+
+[node name="Object_1034284551" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-3.9, 33.2, -5.5)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (30)"
+metadata/source_id = "1034284551"
+
+[node name="Object_1036215805" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(13.75, 19.39, 48.33)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (6)"
+metadata/source_id = "1036215805"
+
+[node name="Object_1054575864" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(83.61, 2.87, 49.24)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (5)"
+metadata/source_id = "1054575864"
+
+[node name="Object_1084764202" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(55.98, 13.01, 88.04)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (2)"
+metadata/source_id = "1084764202"
+
+[node name="Object_1116360248" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(41.72, 15.39, 106.53)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (14)"
+metadata/source_id = "1116360248"
+
+[node name="Object_1164634561" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(18.77, 30.77, -23.93)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (21)"
+metadata/source_id = "1164634561"
+
+[node name="Object_1265449295" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(35.68, 20.01, -38.89)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (8)"
+metadata/source_id = "1265449295"
+
+[node name="Object_1276228823" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(61.9, 16.4, 43.4)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (28)"
+metadata/source_id = "1276228823"
+
+[node name="Object_1307504312" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-3.41, 28.48, 37.44)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light"
+metadata/source_id = "1307504312"
+
+[node name="Object_1332063230" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(36.11, 11.75, -32.67)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (12)"
+metadata/source_id = "1332063230"
+
+[node name="Object_1410493260" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(61.85, 12.06, 82.47)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (1)"
+metadata/source_id = "1410493260"
+
+[node name="Object_1466408222" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(11.87, 19.43, 57.14)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (7)"
+metadata/source_id = "1466408222"
+
+[node name="Object_1513753249" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(-3.41, 28.48, 37.44)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light"
+metadata/source_id = "1513753249"
+
+[node name="Object_1602205271" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(32.44, 27.53, -37.78)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (10)"
+metadata/source_id = "1602205271"
+
+[node name="Object_1616287859" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(39.21, 16.54, -32.28)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (11)"
+metadata/source_id = "1616287859"
+
+[node name="Object_1642351748" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(55.98, 13.01, 88.04)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (2)"
+metadata/source_id = "1642351748"
+
+[node name="Object_1650813956" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(9.37, 29.77, 28.89)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (19)"
+metadata/source_id = "1650813956"
+
+[node name="Object_1717716381" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(14.1, 14.35, 90.47)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (3)"
+metadata/source_id = "1717716381"
+
+[node name="Object_1737751751" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-1.92, 27.69, 80.26)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (24)"
+metadata/source_id = "1737751751"
+
+[node name="Object_1753441946" type="Node3D" parent="Object_1104229061/Object_1050239339"]
+position = Vector3(481.2443, 38.107346, -97.55697)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Bonfire"
+metadata/source_id = "1753441946"
+
+[node name="Object_1761463578" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(25.9, 29.97, -57.05)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (20)"
+metadata/source_id = "1761463578"
+
+[node name="Object_1817437574" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-11.4, 31.9, 18.8)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (27)"
+metadata/source_id = "1817437574"
+
+[node name="Object_1853278495" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(12.77, 31.59, -41.81)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (9)"
+metadata/source_id = "1853278495"
+
+[node name="Object_1949605831" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-28.1, 33.9, 51.4)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (18)"
+metadata/source_id = "1949605831"
+
+[node name="Object_2065601287" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(14.1, 14.35, 90.47)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (3)"
+metadata/source_id = "2065601287"
+
+[node name="Object_2068918074" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(32.44, 27.53, -37.78)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (10)"
+metadata/source_id = "2068918074"
+
+[node name="Object_2072710376" type="Node3D" parent="Object_1104229061/Object_1427837872"]
+position = Vector3(17.199997, 91.99999, -102.90001)
+quaternion = Quaternion(0.0018517454, 0.41602653, -0.24326015, 0.87620944)
+scale = Vector3(0.8000005, 0.8, 0.80000037)
+metadata/source_name = "sun light (4)"
+metadata/source_id = "2072710376"
+
+[node name="Object_2123690968" type="Node3D" parent="Object_1104229061/Object_202837987"]
+position = Vector3(-51.3, 40.2, 9.4)
+quaternion = Quaternion(0, 0, -3.6088745e-09, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Point light (26)"
+metadata/source_id = "2123690968"
