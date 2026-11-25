@@ -11,12 +11,18 @@ def resolve(g):
     matches=[p for p in index.get(g,[]) if p.is_file()]
     return matches[0] if len(matches)==1 else None
 paths={p for v in data.values() for r in v['renderers'] for m in r['materials'] for p in m['assets'] if p.endswith('.mat')}
+def normalize(value):
+    if isinstance(value,dict):
+        entries=value.get('data',[])
+        if isinstance(entries,dict):entries=[entries]
+        return [{e['first']['name']:e['second']} for e in entries if isinstance(e,dict) and 'first' in e and 'second' in e]
+    return value or []
 result={}
 for p in sorted(paths):
     try:
         m=next(d['Material'] for _,_,d in records(root/p) if 'Material' in d)
-        props=m['m_SavedProperties']; row=dict(shader=m.get('m_Shader'),floats={k:v for a in props.get('m_Floats',[]) if isinstance(a,dict) for k,v in a.items()},colors={k:v for a in props.get('m_Colors',[]) if isinstance(a,dict) for k,v in a.items()},textures={})
-        for a in props.get('m_TexEnvs',[]):
+        props=m['m_SavedProperties']; row=dict(shader=m.get('m_Shader'),floats={k:v for a in normalize(props.get('m_Floats',[])) if isinstance(a,dict) for k,v in a.items()},colors={k:v for a in normalize(props.get('m_Colors',[])) if isinstance(a,dict) for k,v in a.items()},textures={})
+        for a in normalize(props.get('m_TexEnvs',[])):
             if not isinstance(a,dict):continue
             for k,v in a.items():
                 ref=v.get('m_Texture',{});g=ref.get('guid')
