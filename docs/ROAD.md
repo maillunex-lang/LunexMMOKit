@@ -18,18 +18,18 @@ Read AGENTS.md and NEXT.md first.
 - UI02 [done] Нативные HUD, авторизация, выбор класса, инвентарь и окна
 - CHARACTER-AUDIT-001 [doing] Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity
 - CHAR02 [doing] Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity
-- CHAR03 [todo] Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом
+- CHAR03 [doing] Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом
 - CHAR04 [todo] Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом
 - CHAR05 [todo] Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания
 - CHAR06 [todo] Совместимость брони/шлемов/костюмов/оружия/крыльев без разрывов и деформаций
 - CHAR07 [todo] Синхронизация stand/walk/run/attack/skill/hit/death/mount с Unity hitTime и VFX/audio
-- CHAR08 [doing] Единый Attachment System: редактируемые ресурсы Position/Rotation/Scale/Socket/Class/IDs
+- CHAR08 [done] Единый Attachment System: редактируемые ресурсы Position/Rotation/Scale/Socket/Class/IDs
 - CHAR10 [todo] Матрица совместимости и контрольные скриншоты (front/back/side/45/closeups) через Xvfb
 - EDIT01 [todo] Визуальный редактор креплений в Character Studio / Asset Library
 - EDIT02 [todo] Проверка полного EDITOR-001 и переносимости контента
 - F03 [done] Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов
 - F04 [done] Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов
-- D01 [todo] Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены
+- D01 [done] Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены
 - D02 [todo] Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр; полный каталог механик, классов, статов, формул, прогрессии, квестов и экономики с исходными ID и конфликтами
 - D03 [todo] Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack
 - D04 [todo] Конвертер сцен, terrain, коллизий, навигации и размещения объектов

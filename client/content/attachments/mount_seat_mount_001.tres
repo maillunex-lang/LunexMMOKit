@@ -1,12 +1,16 @@
 [gd_resource type="Resource" script_class="AttachmentOffset" format=3]
 
-[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_l72ih"]
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1"]
 
 [resource]
-script = ExtResource("1_l72ih")
+script = ExtResource("1")
 attachment_id = "mount_seat_mount_001"
 kind = "mount_seat"
 equipment_id = "mount_001"
 socket = "Horse_E_back2"
-notes = "Rider seat default"
-source_unity = "CActorObject.ChangeWeapon / prefab child TRS"
+socket_mode = "marker"
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+notes = "Rider seat on mount marker; CHAR04 tune"
+source_unity = "Horse_E_back2 seat"

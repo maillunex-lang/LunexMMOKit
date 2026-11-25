@@ -320,7 +320,7 @@
     "work": "Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity",
     "accept": "Матрица дефектов по классам: скелет, материалы, ориентация, масштаб, анимации; контрольные скриншоты; без ложного done",
     "status": "doing",
-    "evidence": "40 multi-angle Xvfb shots in screens/character-audit/. Root cause: DM_*_Hand2 under Prop1 is hip rest; switched defaults to Bip001 R/L Hand bones. Grip pose still partial — needs AttachmentOffset XYZ via editor. Not accepted."
+    "evidence": "Matrix updated; CHAR_ATTACHMENT_SMOKE_OK; portable *-tuned-* + wing-audit screens. Hand-bone sockets OK; stand front warrior/archer/mage improved; assassin angles + attack + wing mats still partial. Not accepted."
   },
   {
     "id": "CHAR02",
@@ -342,7 +342,7 @@
     "work": "Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity",
     "accept": "Оружие не отрывается и не клипит в stand/attack; правая/левая рука независимы; overrides в ресурсах",
     "status": "doing",
-    "evidence": "Prop1/DM_R_Hand2 hip false-socket identified; bone hand attach restores sword to hand region. Palm/angle still wrong on close-ups — continue with resource offsets + Unity prefab compare."
+    "evidence": "Per-weapon AttachmentOffset .tres; archer L Hand; dual body1/2; smoke OK; stand-tuned captures. Assassin rotation + attack grips still need EDIT01."
   },
   {
     "id": "CHAR03",
@@ -361,8 +361,8 @@
     ],
     "work": "Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом",
     "accept": "Контрольные скриншоты крыльев на 4 классах; ресурсы крепления; дефекты исправлены или зафиксированы",
-    "status": "todo",
-    "evidence": ""
+    "status": "doing",
+    "evidence": "equip_accessory + wing marker E_back2; wing-audit screens×4; white/missing mats without material pack logged; mount clip pending"
   },
   {
     "id": "CHAR04",
@@ -464,8 +464,8 @@
     ],
     "work": "Единый Attachment System: редактируемые ресурсы Position/Rotation/Scale/Socket/Class/IDs",
     "accept": "Нет жёстких per-item поправок в игровом коде; общие и override ресурсы; runtime читает те же .tres",
-    "status": "doing",
-    "evidence": "AttachmentOffset + socket_mode bone|marker; 11 defaults; equipment uses BoneAttachment3D for weapons; Studio «Крепления» panel; dual TRS in resources. Grip fine-tune pending CHAR02/EDIT01."
+    "status": "done",
+    "evidence": "AttachmentOffset + socket_mode bone|marker; 11 defaults; equip_weapon+equip_accessory; Studio overrides; CHAR_ATTACHMENT_SMOKE_OK. Grip XYZ continues in CHAR02/EDIT01 via same resources."
   },
   {
     "id": "CHAR10",
@@ -588,8 +588,8 @@
     ],
     "work": "Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены",
     "accept": "Повторный индекс идентичен; отчет пропусков",
-    "status": "todo",
-    "evidence": "DGI-001: 1560 Lua источников, 20462 ресурса; 96 сцен, 21720 Transform; воспроизводимость полного индекса не проверена."
+    "status": "done",
+    "evidence": "tools/dgi/inventory_darklord.py; D01_VERIFY_OK identical index_sha256; 40256 files / 31718 guids; docs/darklord/D01_INVENTORY.json; full JSONL private under darklord-dgi"
   },
   {
     "id": "D02",

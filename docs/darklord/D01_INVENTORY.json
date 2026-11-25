@@ -1,0 +1,47 @@
+{
+  "status": "ok",
+  "index_sha256": "3c9f11149ef0c7c393e86ef86b34da8bca00a98801cc0e72d8de7868a0d505d6",
+  "file_count": 40256,
+  "total_bytes": 1741301665,
+  "guid_count": 31718,
+  "by_scope": {
+    "unity_meta": {
+      "count": 31718,
+      "bytes": 27313464,
+      "guids": 31718
+    },
+    "unity_prefabs": {
+      "count": 6371,
+      "bytes": 1498579918,
+      "guids": 0
+    },
+    "unity_scenes": {
+      "count": 143,
+      "bytes": 81606902,
+      "guids": 0
+    },
+    "client_xml": {
+      "count": 463,
+      "bytes": 1287553,
+      "guids": 0
+    },
+    "client_lua": {
+      "count": 580,
+      "bytes": 24616011,
+      "guids": 0
+    },
+    "server_lua": {
+      "count": 980,
+      "bytes": 107897299,
+      "guids": 0
+    },
+    "server_sql": {
+      "count": 1,
+      "bytes": 518,
+      "guids": 0
+    }
+  },
+  "gaps": [],
+  "index_path": "/home/gamedev/darklord-dgi/d01-index.jsonl",
+  "note": "Full JSONL stays under darklord-dgi (not copied into git). Re-run --verify for identical index_sha256."
+}

@@ -207,3 +207,63 @@ static func attach_dual(actor: Node3D, item: Node3D) -> Array[Node3D]:
 	for entry in handle.get("attachments", []):
 		out.append(entry.get("root"))
 	return out
+
+## Wing/pet/mount-seat via AttachmentOffset (CHAR03/CHAR08). Prefer marker sockets for back/seat.
+static func equip_accessory(actor: Node3D, item: Node3D, kind: String, equipment_id: String) -> Dictionary:
+	if actor == null or item == null or kind.is_empty() or equipment_id.is_empty():
+		return {}
+	var off = Library.load_offset(kind, equipment_id)
+	var socket_name := "E_back2"
+	var socket_mode := "marker"
+	var offset := Transform3D.IDENTITY
+	if off != null:
+		if String(off.socket) != "":
+			socket_name = String(off.socket)
+		if String(off.socket_mode) != "":
+			socket_mode = String(off.socket_mode)
+		offset = off.to_transform()
+	# Pets may have empty socket — parent beside actor root
+	if kind == "pet" and (off == null or String(off.socket) == ""):
+		var original := _detach(item)
+		actor.add_child(item)
+		item.transform = offset
+		return {
+			"mode": "accessory",
+			"kind": kind,
+			"equipment_id": equipment_id,
+			"bind": "actor",
+			"root": item,
+			"original_parent": original["parent"],
+			"original_transform": original["transform"],
+		}
+	var bound := _bind_to_socket(actor, socket_name, socket_mode, item, offset)
+	if bound.is_empty() and socket_mode == "marker":
+		# Fallbacks used in Studio
+		for alt in ["E_back2", "E_back", "Horse_E_back2", "Horse_E_back"]:
+			if alt == socket_name:
+				continue
+			bound = _bind_to_socket(actor, alt, "marker", item, offset)
+			if not bound.is_empty():
+				socket_name = alt
+				break
+	if bound.is_empty():
+		return {}
+	bound["mode"] = "accessory"
+	bound["kind"] = kind
+	bound["equipment_id"] = equipment_id
+	bound["socket"] = socket_name
+	return bound
+
+static func unequip_accessory(handle: Dictionary) -> bool:
+	if handle.is_empty():
+		return false
+	if String(handle.get("bind", "")) == "actor":
+		var root: Node3D = handle.get("root")
+		if root != null and is_instance_valid(root):
+			var parent := root.get_parent()
+			if parent != null:
+				parent.remove_child(root)
+			_restore(root, handle.get("original_parent"), handle.get("original_transform", Transform3D.IDENTITY))
+		return true
+	_unequip_bound(handle)
+	return true

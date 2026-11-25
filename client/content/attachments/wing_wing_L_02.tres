@@ -1,12 +1,16 @@
 [gd_resource type="Resource" script_class="AttachmentOffset" format=3]
 
-[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_n07i2"]
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1"]
 
 [resource]
-script = ExtResource("1_n07i2")
+script = ExtResource("1")
 attachment_id = "wing_wing_L_02"
 kind = "wing"
 equipment_id = "wing_L_02"
 socket = "E_back2"
-notes = "Default wing socket"
-source_unity = "CActorObject.ChangeWeapon / prefab child TRS"
+socket_mode = "marker"
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+notes = "Alt wing; same back socket"
+source_unity = "wing_L_02 prefab"

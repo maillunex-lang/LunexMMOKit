@@ -6,4 +6,8 @@
 Матрица дефектов по классам: скелет, материалы, ориентация, масштаб, анимации; контрольные скриншоты; без ложного done
 
 ## Evidence
-Grip/mount baseline screens reviewed: weapon clipping on 20001/30001/40001; warrior waist gap; mount_001 seat prototype present; Attachment System started (CHAR08). Not accepted.
+- Matrix: `docs/darklord/CHARACTER_MATRIX.md` (honest partials)
+- Portable smoke: `CHAR_ATTACHMENT_SMOKE_OK bone_sockets+wings+resources`
+- Tuned captures: `screens/character-audit/*-tuned-*.png` + `screens/wing-audit/`
+- Hip Prop1 false-socket fixed earlier; weapons on hand bones; grip XYZ still provisional (EDIT01)
+- Not fully accepted — attack/wing materials/assassin angles remain

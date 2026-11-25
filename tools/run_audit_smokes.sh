@@ -24,6 +24,8 @@ echo "== ui01_theme_smoke =="
 "$GODOT" --path client --headless --script res://tests/ui01_theme_smoke.gd
 echo "== ui02_darklord_skin_smoke =="
 "$GODOT" --path client --headless --script res://tests/ui02_darklord_skin_smoke.gd
+echo "== char_attachment_smoke =="
+"$GODOT" --path client --headless --script res://tests/char_attachment_smoke.gd
 if command -v go >/dev/null || [[ -x "$ROOT/tools/sdk/go/bin/go" ]]; then
   export PATH="$ROOT/tools/sdk/go/bin:${PATH:-}"
   echo "== go test =="
