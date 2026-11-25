@@ -38,6 +38,6 @@ func run():
 	print("CITY_SIZE ",bounds.size)
 	await process_frame
 	await RenderingServer.frame_post_draw
-	var err:=root.get_texture().get_image().save_png("/home/gamedev/darklord-dgi/screens/capital-architecture-v7.png")
+	var err:=root.get_texture().get_image().save_png("user://screens/capital-architecture-v7.png")
 	print("CAPTURE ",err)
 	quit(err)

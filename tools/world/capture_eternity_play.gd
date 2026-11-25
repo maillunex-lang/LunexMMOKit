@@ -1,7 +1,7 @@
 extends SceneTree
 ## Smoke capture of playable Eternity Capital (must wait for capital + camera).
 const SCENE := "res://world/locations/eternity_capital/eternity_play.tscn"
-const OUT := "/home/gamedev/darklord-dgi/screens/eternity-play-smoke.png"
+const OUT := "user://screens/eternity-play-smoke.png"
 
 func _initialize():
 	call_deferred("run")

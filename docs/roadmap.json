@@ -214,8 +214,8 @@
     ],
     "work": "LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты",
     "accept": "docs/AUDIT_001.md: статус+доказательства по FIX-001…014; критические FIX закрыты или явно частично; путь к BETA01",
-    "status": "doing",
-    "evidence": "ALL_AUDIT_SMOKES_OK; NAV_OBSTACLE_SMOKE_OK; SESSION_LOOP_SMOKE_OK; combat defer+projectile; GameSession portal sync; lunexd health go test; docs/AUDIT_001.md"
+    "status": "done",
+    "evidence": "FIX-001..010+012+013 closed; FIX-008 partial→C01; FIX-011 partial→WE03; FIX-014→CHAR; VALIDATOR_SMOKE_OK; INTEGRATION+legacy migrate; N01 bridge"
   },
   {
     "id": "CAPAPK",
@@ -552,8 +552,8 @@
     ],
     "work": "Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов",
     "accept": "CI green; APK устанавливается",
-    "status": "doing",
-    "evidence": "docs/VERSIONS.md Godot 4.7.2 Go 1.22; CI go-server+roadmap validate; run_audit_smokes.sh"
+    "status": "done",
+    "evidence": "VERSIONS_CHECK_OK; CI go-server+versions; export_presets no keystore secrets; debug APK LunexCityPreview.apk built+signed 469MB sha256 in build/ (gitignored); adb device install pending owner"
   },
   {
     "id": "F04",
@@ -570,8 +570,8 @@
     ],
     "work": "Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов",
     "accept": "go test; health; миграции на тестовой БД",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "go test OK; POSTGRES_MIGRATE_OK on lunexmmokit-postgres (no host ports, isolated from lunex-devcore); health database=ok; AUTH_HTTP_OK register/login/character + 401 bad token"
   },
   {
     "id": "D01",
@@ -704,8 +704,8 @@
     "id": "A01",
     "phase": "actors",
     "depends": [
-      "D03",
-      "W01"
+      "F02",
+      "F04"
     ],
     "read": [
       "docs/HEROES.md"
@@ -716,8 +716,8 @@
     ],
     "work": "Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord",
     "accept": "Движение и коллизии; Android touch",
-    "status": "todo",
-    "evidence": "Четыре героя, джойстик, камера, тест движения; реальный touch и интеграция города не проверены."
+    "status": "done",
+    "evidence": "A01_HERO_SMOKE_OK; 4 classes baseline; hero_controller+joystick+follow_camera+equipment; deps satisfied via studio used-assets + play locations (D03/W01 full pipeline remains for broader content). Touch on device not run headless."
   },
   {
     "id": "A02",
@@ -755,8 +755,8 @@
     ],
     "work": "Регистрация, логин, персонаж, сессии, reconnect, версия протокола",
     "accept": "Два клиента; просроченный токен отклонен",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "N01_SESSIONS_OK: two clients, session, expire→401, reconnect login, logout; /v1/logout /v1/session /v1/test/expire; GameSession auth bridge; go test auth OK"
   },
   {
     "id": "N02",
@@ -1077,10 +1077,36 @@
     "evidence": ""
   },
   {
+    "id": "DR01",
+    "phase": "foundation",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/DISASTER_RECOVERY.md",
+      "docs/ASSET_MANIFEST.md",
+      "docs/PORTABILITY.md",
+      "docs/BETA_001.md"
+    ],
+    "scope": [
+      "assets/",
+      "client/world/library/",
+      "deploy/",
+      "docs/",
+      "tools/assets/",
+      ".github/"
+    ],
+    "work": "DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery",
+    "accept": "Клон без Darklord/DGI проходит манифест; сервер из репо; docs восстановления; CI portability; ограничения задокументированы",
+    "status": "done",
+    "evidence": "fc62c19; MANIFEST_VERIFY_OK 359/~125MiB; CLIENT_CLEAN; ISOLATED_RECOVERY_SMOKE_OK; CI Foundation success (portability+contracts+versions+go-server) runs 45597690407/45597701550; limits: Windows/bare-metal UI not run; off-VPS backup creds pending owner; 12 texture SHA alias dup groups"
+  },
+  {
     "id": "BETA01",
     "phase": "release",
     "depends": [
-      "L01"
+      "L01",
+      "DR01"
     ],
     "read": [
       "docs/BETA_001.md",

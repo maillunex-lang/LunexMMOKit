@@ -18,6 +18,6 @@ func run():
 		first=false
 	rows.sort_custom(func(a,b): return a.height>b.height)
 	var out={"count":rows.size(),"bounds":{"center":[bounds.get_center().x,bounds.get_center().y,bounds.get_center().z],"size":[bounds.size.x,bounds.size.y,bounds.size.z]},"tallest":rows.slice(0,mini(15,rows.size()))}
-	FileAccess.open("/home/gamedev/darklord-dgi/city-bounds-v7.json",FileAccess.WRITE).store_string(JSON.stringify(out, "\t"))
+	FileAccess.open("user://dgi/city-bounds-v7.json",FileAccess.WRITE).store_string(JSON.stringify(out, "\t"))
 	print("MESHES ",rows.size()," BOUNDS ",bounds)
 	quit(0)

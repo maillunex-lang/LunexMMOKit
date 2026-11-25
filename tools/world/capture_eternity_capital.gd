@@ -1,7 +1,7 @@
 extends SceneTree
 ## WORLD-DESIGN-002 acceptance captures for Eternity Capital.
 const SCENE := "res://world/locations/eternity_capital/eternity_capital.tscn"
-const OUT := "/home/gamedev/darklord-dgi/screens/"
+const OUT := "user://screens/"
 
 func _initialize():
 	call_deferred("run")

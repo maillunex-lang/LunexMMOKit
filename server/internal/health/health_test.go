@@ -7,7 +7,8 @@ import (
 	"testing"
 )
 
-func TestHandle(t *testing.T) {
+func TestHandleNoDB(t *testing.T) {
+	DB = nil
 	req := httptest.NewRequest(http.MethodGet, "/health", nil)
 	rr := httptest.NewRecorder()
 	Handle(rr, req)
@@ -18,7 +19,7 @@ func TestHandle(t *testing.T) {
 	if err := json.Unmarshal(rr.Body.Bytes(), &body); err != nil {
 		t.Fatal(err)
 	}
-	if !body.OK || body.Service != "lunexd" {
+	if !body.OK || body.Service != "lunexd" || body.Database != "skipped" {
 		t.Fatalf("unexpected body %#v", body)
 	}
 }

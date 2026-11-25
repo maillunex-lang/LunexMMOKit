@@ -15,6 +15,6 @@ func capture():
 
 	await process_frame
 	await RenderingServer.frame_post_draw
-	var err := root.get_texture().get_image().save_png("/home/gamedev/darklord-dgi/screens/world-corrected-camera.png")
+	var err := root.get_texture().get_image().save_png("user://screens/world-corrected-camera.png")
 	print("CAPTURE ",err)
 	quit(err)

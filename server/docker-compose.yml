@@ -1,29 +1,46 @@
-# Isolated local stack for F04. Does NOT publish host ports by default
-# (avoids colliding with other VPS services). Attach via compose network only.
+# Isolated LunexMMOKit stack. Project name: lunexmmokit
+# Does NOT touch lunex-devcore / rockbogini / other VPS compose projects.
+# No host port publish — verify via `docker compose -p lunexmmokit exec`.
+name: lunexmmokit
+
 services:
   postgres:
     image: postgres:16-alpine
+    container_name: lunexmmokit-postgres
     environment:
       POSTGRES_USER: lunex
       POSTGRES_PASSWORD: lunex_dev_only
       POSTGRES_DB: lunex
     volumes:
-      - lunex_pg:/var/lib/postgresql/data
+      - lunexmmokit_pg:/var/lib/postgresql/data
       - ./migrations/001_init.sql:/docker-entrypoint-initdb.d/001_init.sql:ro
-    # no ports: section — intentional
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U lunex -d lunex"]
       interval: 5s
       timeout: 3s
-      retries: 10
-    networks: [lunex_net]
+      retries: 12
+    networks: [lunexmmokit_net]
 
-  # Optional: run migrate/psql tools on the same network.
-  # lunexd currently binds on host loopback in dev; wire DB in N01.
+  lunexd:
+    image: golang:1.22-alpine
+    container_name: lunexmmokit-lunexd
+    working_dir: /src
+    volumes:
+      - ./:/src
+    environment:
+      LUNEX_DATABASE_URL: postgres://lunex:lunex_dev_only@postgres:5432/lunex?sslmode=disable
+      LUNEX_LISTEN: 0.0.0.0:18080
+    command: ["sh", "-c", "go test ./... && go run ./cmd/lunexd -addr $${LUNEX_LISTEN}"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [lunexmmokit_net]
+    # no ports — curl via: docker compose -p lunexmmokit exec lunexd wget -qO- http://127.0.0.1:18080/health
 
 networks:
-  lunex_net:
-    name: lunex_dev_net
+  lunexmmokit_net:
+    name: lunexmmokit_net
 
 volumes:
-  lunex_pg:
+  lunexmmokit_pg:
+    name: lunexmmokit_pg

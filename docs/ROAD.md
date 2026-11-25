@@ -1,7 +1,7 @@
 # Roadmap
-Read AGENTS.md and NEXT.md first. Machine source: roadmap.json. Task cards: tasks/.
+Read AGENTS.md and NEXT.md first. Machine source: roadmap.json.
 
-**Product goal: Closed Beta 0.1.0 (BETA01).** CAPAPK = internal smoke only.
+**Product: Closed Beta 0.1.0 (BETA01).**
 
 - F01 [done] Initial Godot skeleton (deps: )
 - F02 [done] Module layout and static CI (deps: F01)
@@ -13,7 +13,7 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json. Task cards: task
 - WD02 [doing] WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity) (deps: CAP05)
 - WE03 [todo] WORLD-EDITOR-003: Lunex World Editor (Godot 4 EditorPlugin) — библиотека китов, drag-drop, transform, snap, материалы, NPC/порталы/spawn со stable_id, коллизии, bake NavMesh, валидаторы, Undo/Redo, owner overlay без overwrite генераторами (deps: F02, WD02)
 - GAME01 [doing] GAME-SLICE-001: клиентский прототип механик гл.1 (локальный) — ступень к онлайн-бете, не замена серверу (deps: WD02, F02)
-- AUDIT01 [doing] LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты (deps: F02)
+- AUDIT01 [done] LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты (deps: F02)
 - CAPAPK [blocked] [INTERNAL ONLY] Технический Android smoke APK города — НЕ конечная цель продукта (см. BETA01 Closed Beta 0.1.0) (deps: CAP05, WD02)
 - CAP06 [todo] NPC и исходные точки размещения, диалоги и квестовые данные (deps: CAP05)
 - UI01 [todo] Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок (deps: F02)
@@ -29,8 +29,8 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json. Task cards: task
 - CHAR10 [todo] Матрица совместимости и контрольные скриншоты (front/back/side/45/closeups) через Xvfb (deps: CHAR02, CHAR03, CHAR04, CHAR05)
 - EDIT01 [todo] Визуальный редактор креплений в Character Studio / Asset Library (deps: F02, CHAR08)
 - EDIT02 [todo] Проверка полного EDITOR-001 и переносимости контента (deps: CAP06, UI02, EDIT01, WE03)
-- F03 [doing] Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов (deps: F02)
-- F04 [todo] Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов (deps: F03)
+- F03 [done] Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов (deps: F02)
+- F04 [done] Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов (deps: F03)
 - D01 [todo] Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены (deps: F03)
 - D02 [todo] Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр; полный каталог механик, классов, статов, формул, прогрессии, квестов и экономики с исходными ID и конфликтами (deps: D01)
 - D03 [todo] Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack (deps: D02)
@@ -38,9 +38,9 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json. Task cards: task
 - D05 [todo] Конвертер VFX, аудио и событий клипов; ручные overrides (deps: D03)
 - W01 [todo] Протяженная тестовая зона, чанки, LOD, коллизии, навигация (deps: D04)
 - W02 [todo] Карта, миникарта, переходы, точки возрождения, безопасные зоны (deps: W01)
-- A01 [todo] Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord (deps: D03, W01)
+- A01 [done] Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord (deps: F02, F04)
 - A02 [todo] AnimationPlayer/Tree, события атаки, VFX, звук, прерывания (deps: A01, D05)
-- N01 [todo] Регистрация, логин, персонаж, сессии, reconnect, версия протокола (deps: F04, A01)
+- N01 [done] Регистрация, логин, персонаж, сессии, reconnect, версия протокола (deps: F04, A01)
 - N02 [todo] Авторитетное движение, AOI, снапшоты, интерполяция (deps: N01, W02)
 - C01 [todo] Серверный бой, цели, cooldown, ресурсы, урон, смерть (deps: N02, A02)
 - C02 [todo] Монстры, aggro, patrol, leash, respawn, loot, босс (deps: C01)
@@ -58,4 +58,5 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json. Task cards: task
 - P01 [todo] Профилирование Android, пресеты, LOD, пулы, чанки (deps: Q02)
 - P02 [todo] Нагрузочный тест, backup restore, безопасность, метрики (deps: M04, P01, R03, M03, O01)
 - L01 [todo] Пакет Closed Beta: подписанный APK, докачка контента, integrity, обновление клиента (deps: P02)
-- BETA01 [todo] Closed Beta 0.1.0 «Осколки вечности»: онлайн MMORPG готовая к закрытому тестированию реальными игроками (deps: L01)
+- DR01 [done] DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery (deps: F02)
+- BETA01 [todo] Closed Beta 0.1.0 «Осколки вечности»: онлайн MMORPG готовая к закрытому тестированию реальными игроками (deps: L01, DR01)

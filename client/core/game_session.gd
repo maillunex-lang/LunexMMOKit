@@ -25,9 +25,53 @@ var quest_progress: Dictionary = {}
 var unlocked_locations: Array = ["eternity_capital"]
 var current_location: String = "eternity_capital"
 var prototype_local := true ## true until authoritative server owns state
+## N01 / FIX-009: auth bridge (client cache of server session)
+var server_url: String = "http://127.0.0.1:18080"
+var auth_token: String = ""
+var account_id: int = 0
+var account_login: String = ""
+var character_id: int = 0
+var character_name: String = ""
+var protocol_version: int = 1
 
 func _ready() -> void:
 	load_from_disk()
+
+func apply_auth(res: Dictionary, login: String = "") -> void:
+	## Store login/register response fields for reconnect.
+	if login != "":
+		account_login = login
+	auth_token = String(res.get("token", auth_token))
+	account_id = int(res.get("account_id", account_id))
+	protocol_version = int(res.get("protocol_version", protocol_version))
+	if auth_token != "":
+		prototype_local = false
+	save_to_disk()
+	changed.emit()
+
+func apply_character(ch: Dictionary) -> void:
+	character_id = int(ch.get("id", character_id))
+	character_name = String(ch.get("name", character_name))
+	if ch.has("class_actor_id"):
+		class_actor_id = String(ch.get("class_actor_id"))
+	if ch.has("level"):
+		level = int(ch.get("level"))
+	if ch.has("location_id"):
+		current_location = String(ch.get("location_id"))
+	save_to_disk()
+	changed.emit()
+
+func clear_auth() -> void:
+	auth_token = ""
+	account_id = 0
+	character_id = 0
+	character_name = ""
+	prototype_local = true
+	save_to_disk()
+	changed.emit()
+
+func has_server_session() -> bool:
+	return auth_token != "" and account_id > 0
 
 func reset_new_character(actor_id: String, idx: int) -> void:
 	class_actor_id = actor_id
@@ -129,6 +173,13 @@ func save_to_disk() -> void:
 		"quest_progress": quest_progress,
 		"unlocked_locations": unlocked_locations,
 		"current_location": current_location,
+		"server_url": server_url,
+		"auth_token": auth_token,
+		"account_id": account_id,
+		"account_login": account_login,
+		"character_id": character_id,
+		"character_name": character_name,
+		"protocol_version": protocol_version,
 	}
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if f:
@@ -159,3 +210,10 @@ func load_from_disk() -> void:
 	unlocked_locations = d.get("unlocked_locations", unlocked_locations)
 	current_location = String(d.get("current_location", current_location))
 	prototype_local = bool(d.get("prototype_local", true))
+	server_url = String(d.get("server_url", server_url))
+	auth_token = String(d.get("auth_token", auth_token))
+	account_id = int(d.get("account_id", account_id))
+	account_login = String(d.get("account_login", account_login))
+	character_id = int(d.get("character_id", character_id))
+	character_name = String(d.get("character_name", character_name))
+	protocol_version = int(d.get("protocol_version", protocol_version))

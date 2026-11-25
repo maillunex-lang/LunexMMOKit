@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lunex.local/protocol/auth.schema.json",
+  "title": "Lunex auth protocol v1",
+  "description": "HTTP JSON contracts for register/login/characters. Server authoritative.",
+  "oneOf": [
+    {
+      "title": "RegisterRequest",
+      "type": "object",
+      "required": ["login", "password"],
+      "properties": {
+        "login": { "type": "string", "minLength": 3 },
+        "password": { "type": "string", "minLength": 6 }
+      }
+    },
+    {
+      "title": "LoginResponse",
+      "type": "object",
+      "required": ["ok", "token", "account_id", "protocol_version"],
+      "properties": {
+        "ok": { "type": "boolean" },
+        "token": { "type": "string" },
+        "account_id": { "type": "integer" },
+        "protocol_version": { "type": "integer", "const": 1 }
+      }
+    }
+  ]
+}

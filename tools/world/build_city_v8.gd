@@ -1,6 +1,6 @@
 extends SceneTree
 ## CAP04: add direct FBX placements (water, crystal mesh, walksurface) onto v7 capital.
-const BASE := "/home/gamedev/darklord-dgi/"
+const BASE := "user://dgi/" ## research-only; copy from LUNEX_DGI_ROOT outside git
 func read_json(path: String):
 	return JSON.parse_string(FileAccess.get_file_as_string(BASE + path))
 func glb_meshes(glb: String) -> Array:

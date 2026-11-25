@@ -3,7 +3,7 @@ extends SceneTree
 func _initialize():
 	call_deferred("run")
 func run():
-	var base := "/home/gamedev/darklord-dgi/"
+	var base := "user://dgi/"
 	var placements: Array = JSON.parse_string(FileAccess.get_file_as_string(base + "city-placements.json"))
 	var city: Node3D = load("res://world/imported/capital_geometry_v7.tscn").instantiate()
 	root.add_child(city)

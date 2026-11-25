@@ -46,6 +46,50 @@ static func duplicate_ids(src: Node, dst: Node) -> String:
 	var kind := _kind_from_prefix(kind_s)
 	return ensure_on_node(dst, kind, type_id)
 
+static func migrate_legacy_tree(root: Node) -> int:
+	## FIX-006: promote legacy `stable_id` → `instance_id` + `id_kind`; keep stable_id as alias.
+	var count := 0
+	count += _migrate_node(root)
+	for c in root.get_children():
+		count += migrate_legacy_tree(c)
+	return count
+
+static func _migrate_node(n: Node) -> int:
+	var changed := 0
+	var has_inst := n.has_meta(META_INSTANCE) and String(n.get_meta(META_INSTANCE)) != ""
+	var has_stable := n.has_meta(META_STABLE) and String(n.get_meta(META_STABLE)) != ""
+	if not has_inst and not has_stable:
+		return 0
+	if has_stable and not has_inst:
+		n.set_meta(META_INSTANCE, String(n.get_meta(META_STABLE)))
+		changed = 1
+	elif has_inst and not has_stable:
+		n.set_meta(META_STABLE, String(n.get_meta(META_INSTANCE)))
+		changed = 1
+	if not n.has_meta(META_KIND) or String(n.get_meta(META_KIND)) == "":
+		n.set_meta(META_KIND, _infer_kind_prefix(n))
+		changed = 1
+	if not n.has_meta(META_TYPE) or String(n.get_meta(META_TYPE)) == "":
+		var kit := String(n.get_meta("kit_id", ""))
+		if kit != "":
+			n.set_meta(META_TYPE, kit)
+			changed = 1
+	return changed
+
+static func _infer_kind_prefix(n: Node) -> String:
+	var nm := String(n.name).to_lower()
+	if nm.begins_with("portal") or n.has_meta("portal_id"):
+		return "portal"
+	if nm.contains("spawn") or n.has_meta("respawn_id"):
+		return "spawn"
+	if nm.begins_with("npc") or nm.begins_with("quest") or nm.begins_with("plaza") or String(n.get_meta("npc_role", "")) != "":
+		return "npc"
+	if n.has_meta("quest_id"):
+		return "qobj"
+	if n.has_meta("kit_id"):
+		return "inst"
+	return "inst"
+
 static func _prefix(kind: Kind) -> String:
 	match kind:
 		Kind.LOCATION: return "loc"

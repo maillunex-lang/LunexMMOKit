@@ -1,5 +1,4 @@
 # Next
-Primary: AUDIT01 — close remaining partial FIX (004/006/007/010/011/012/014) then F03 CI APK path.
-Also doing: F03 toolchain/CI. Server scaffold present under server/ (F04 not started as roadmap doing until F03 done).
-Product goal: BETA01 Closed Beta 0.1.0 — docs/BETA_001.md
-Read: docs/tasks/AUDIT01.md, docs/AUDIT_001.md, docs/BETA_001.md, docs/VERSIONS.md
+Primary: N02 when W02 ready; until then WE03 / WD02 visual accept / AUDIT residuals FIX-011·014 via CHAR.
+Product path: N01 done → combat C01 needs N02+A02. GAME01 local slice continues as prototype.
+Read: docs/BETA_001.md, docs/AUDIT_001.md, docs/ARCHITECTURE.md

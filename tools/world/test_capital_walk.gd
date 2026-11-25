@@ -1,6 +1,6 @@
 extends SceneTree
 ## CAP05: load capital play, verify collisions support 4-class spawn, walk without fall-through.
-const OUT := "/home/gamedev/darklord-dgi/screens/"
+const OUT := "user://screens/"
 func _initialize():
 	call_deferred("run")
 func run():

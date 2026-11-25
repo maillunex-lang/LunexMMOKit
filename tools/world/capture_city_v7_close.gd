@@ -46,12 +46,12 @@ func run():
 	print("CLOSE_SIZE ", bounds.size)
 	await process_frame
 	await RenderingServer.frame_post_draw
-	var err := root.get_texture().get_image().save_png("/home/gamedev/darklord-dgi/screens/capital-architecture-v7-close.png")
+	var err := root.get_texture().get_image().save_png("user://screens/capital-architecture-v7-close.png")
 	# Side angle
 	cam.position = center + Vector3(1.0, 0.35, 0.15).normalized() * dist
 	cam.look_at(center)
 	await process_frame
 	await RenderingServer.frame_post_draw
-	var err2 := root.get_texture().get_image().save_png("/home/gamedev/darklord-dgi/screens/capital-architecture-v7-side.png")
+	var err2 := root.get_texture().get_image().save_png("user://screens/capital-architecture-v7-side.png")
 	print("CAPTURE ", err, " ", err2)
 	quit(0 if err == OK and err2 == OK else 1)

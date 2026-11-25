@@ -23,3 +23,9 @@ Play scenes must not hardcode `/home/gamedev/...`. Training/studio tools may use
 
 ## Original Darklord
 Read-only on the build machine. Never publish. Absolute paths allowed only under `tools/` importers.
+
+## DISASTER-RECOVERY-001
+- Manifest: `docs/manifests/game_assets.json` (verify in CI `portability` job).
+- Deploy/backup: `deploy/`, `docs/DEPLOY_VPS.md`, `docs/BACKUP.md`, `docs/RESTORE.md`.
+- Isolated smoke: `tools/recovery/isolated_recovery_smoke.sh`.
+- See `docs/DISASTER_RECOVERY.md` for metrics and remaining limits.
