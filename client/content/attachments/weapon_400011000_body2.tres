@@ -6,8 +6,8 @@
 script = ExtResource("1_s7jif")
 attachment_id = "weapon_400011000_body2"
 equipment_id = "400011000"
-secondary_socket = "DM_L_Hand2"
+secondary_socket = "Bip001 L Hand"
 rotation_degrees = Vector3(0, 0, 180)
 child_name = "body2"
-notes = "Unity body2 ~Z180"
-source_unity = "CActorObject.ChangeWeapon / prefab child TRS"
+notes = "Right blade on R Hand"
+source_unity = "Prefer Bip001 hand bones; DM_*_Hand2 under Prop1 is hip rest"

@@ -6,5 +6,5 @@
 script = ExtResource("1_2nqqn")
 attachment_id = "weapon_300011000"
 equipment_id = "300011000"
-notes = "Unity identity on hand socket"
-source_unity = "CActorObject.ChangeWeapon / prefab child TRS"
+notes = "Bone hand; tune staff grip"
+source_unity = "Prefer Bip001 hand bones; DM_*_Hand2 under Prop1 is hip rest"

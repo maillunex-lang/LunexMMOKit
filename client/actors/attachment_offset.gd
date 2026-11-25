@@ -8,8 +8,9 @@ extends Resource
 @export var model_id: String = ""
 @export var equipment_id: String = ""
 @export var mount_id: String = ""
-@export var socket: String = "DM_R_Hand2"
+@export var socket: String = "Bip001 R Hand"
 @export var secondary_socket: String = "" ## left hand / dual
+@export_enum("bone", "marker") var socket_mode: String = "bone"
 @export var position: Vector3 = Vector3.ZERO
 @export var rotation_degrees: Vector3 = Vector3.ZERO
 @export var scale: Vector3 = Vector3.ONE

@@ -29,3 +29,6 @@ Xvfb + Godot Compatibility/llvmpipe. Angles: front, back, side, 45°, hand close
 
 ## Roadmap
 CHARACTER-AUDIT-001 → CHAR02..CHAR07 parallelizable after inventory; CHAR08 Attachment System; EDIT01 editor; CHAR10 matrix. CAPAPK must consume Attachment System for city preview heroes.
+
+## Socket finding (CHAR02/CHAR08)
+`DM_R_Hand2` / `DM_L_Hand2` live under `Bip001 Prop1` (animated Node3D). In stand they sit near the hip, not the palm — parenting weapons there makes swords float at the waist. Skeleton bones `Bip001 R Hand` / `Bip001 L Hand` are the correct runtime sockets. AttachmentOffset now has `socket_mode` (`bone`|`marker`); defaults use bones. Grip XYZ still needs visual tuning via Studio editor (EDIT01).

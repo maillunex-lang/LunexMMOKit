@@ -13,7 +13,7 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json. Task cards: task
 - UI01 [todo] Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок (deps: F02)
 - UI02 [todo] Нативные HUD, авторизация, выбор класса, инвентарь и окна (deps: UI01)
 - CHARACTER-AUDIT-001 [doing] Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity (deps: F02)
-- CHAR02 [todo] Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity (deps: CHARACTER-AUDIT-001)
+- CHAR02 [doing] Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity (deps: CHARACTER-AUDIT-001)
 - CHAR03 [todo] Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом (deps: CHARACTER-AUDIT-001)
 - CHAR04 [todo] Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом (deps: CHARACTER-AUDIT-001)
 - CHAR05 [todo] Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания (deps: CHARACTER-AUDIT-001)

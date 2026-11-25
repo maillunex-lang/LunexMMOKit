@@ -6,9 +6,9 @@
 script = ExtResource("1_e8op1")
 attachment_id = "weapon_400011000_body1"
 equipment_id = "400011000"
-socket = "DM_L_Hand2"
-secondary_socket = "DM_R_Hand2"
+socket = "Bip001 L Hand"
+secondary_socket = "Bip001 R Hand"
 scale = Vector3(-1, 1, 1)
 child_name = "body1"
-notes = "Unity body1 negative X scale"
-source_unity = "CActorObject.ChangeWeapon / prefab child TRS"
+notes = "Left blade on L Hand"
+source_unity = "Prefer Bip001 hand bones; DM_*_Hand2 under Prop1 is hip rest"

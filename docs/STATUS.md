@@ -6,7 +6,7 @@ LunexMMOKit / Осколки вечности. Полный перенос Darkl
 - Character Studio APK 0.1.2 собран; установка новой версии и FPS не подтверждены.
 - Пилот арены: 25/25 collision rays, navigation path, тесты движения 4 героев, виртуальный джойстик без tap-to-move.
 - Столица V7: 320 размещений, 526 мешей; per-mesh basis (hierarchy ±90° → identity; changdeng glb_basis); dm04 fallback exact; 3 jz01 mesh source_missing. Architecture without effects 602×77×358. Visual acceptance NOT passed.
-- Attachment System (CHAR08): AttachmentOffset .tres + library; equipment.gd без hardcoded dual TRS; Studio panel «Крепления» save/reset overrides.
+- Attachment System (CHAR08): AttachmentOffset .tres + library; socket_mode bone|marker; оружие на Bip001 R/L Hand (не Prop1/DM_*_Hand2); Studio «Крепления». Grip XYZ ещё не принят.
 ## Текущий этап
 Параллельно: CAP03 (город, визуальная приёмка) и CHARACTER-AUDIT-001 / CHAR08 (персонажи и крепления). CAP03 не закрыт: кристалл/эффекты → CAP04, splat islands, missing jz01 meshes.
 ## Очередь
