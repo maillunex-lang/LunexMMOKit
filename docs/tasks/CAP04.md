@@ -6,4 +6,4 @@
 Оставшиеся 8 экземпляров классифицированы и перенесены либо обоснованно исключены; визуальная проверка
 
 ## Evidence
-8/8 classified in city-cap04-classify.json. Placed water, crystal_mesh, walksurface in capital_geometry_v8. Water orientation fixed (flat). Effect spiral/VFX/lighting/splat polish pending.
+8/8 classified. Water/crystal/walksurface in v8; water flat. Editable lighting (capital_lighting.tscn, capital_day.tres), effect crystal polish (cap04_polish.gd), capital_city.tscn wrapper. Terrain splat shader retained from v6/v7. Screens capital-*-v8, capital-cap04-polish, capital-terrain-splat-v8. Fireworks/snow VFX deferred (not static mesh).

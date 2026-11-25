@@ -100,8 +100,8 @@
     ],
     "work": "Восстановить terrain, воду, кристалл, эффекты и освещение",
     "accept": "Оставшиеся 8 экземпляров классифицированы и перенесены либо обоснованно исключены; визуальная проверка",
-    "status": "doing",
-    "evidence": "Classified 8 missing placements (city-cap04-classify.json): include water+crystal_mesh+walksurface as direct FBX; exclude camera/empty/VFX. v8 build adds 3+7 meshes. Water double -90 fixed → flat AABB Y~0.001. Screens capital-water-crystal-v8.png capital-architecture-v8.png. Effect crystal spiral / lighting / terrain splat polish still open."
+    "status": "done",
+    "evidence": "8/8 classified (city-cap04-classify.json): water+crystal_mesh+walksurface placed in v8; 5 excluded with reasons. Water flat. Editable capital_lighting.tscn + capital_day.tres; cap04_polish effect emission; capital_city wrapper. Screens: capital-water-crystal-v8, capital-architecture-v8, capital-cap04-polish, capital-terrain-splat-v8. VFX fireworks/snow deferred as non-static."
   },
   {
     "id": "CAP05",
@@ -120,8 +120,8 @@
     ],
     "work": "Редактируемые коллизии, навигация, герой и камера в городе",
     "accept": "Четыре класса ходят по городу, джойстик без tap-to-move, тесты коллизий",
-    "status": "todo",
-    "evidence": ""
+    "status": "doing",
+    "evidence": "capital_play.tscn: collisions (spawn pad + walksurface/terrain trimesh), 4 classes, joystick (no tap-to-move), follow camera, FPS HUD, flat nav region. test_capital_walk: SPAWN_HIT, ON_FLOOR, walk Δz≈3, Y stable, 4/4 classes. Screen capital-play-cap05.png."
   },
   {
     "id": "CAPAPK",

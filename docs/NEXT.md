@@ -1,3 +1,3 @@
 # Next
-Task: CAP04 — Восстановить terrain, воду, кристалл, эффекты и освещение
-Read: docs/tasks/CAP04.md, docs/EDITOR.md, docs/darklord/WORLD_IMPORT.md
+Task: CAP05 — Редактируемые коллизии, навигация, герой и камера в городе
+Read: docs/tasks/CAP05.md, docs/EDITOR.md, docs/darklord/WORLD_IMPORT.md

@@ -32,3 +32,6 @@ Per-mesh basis from Unity hierarchy axis vs GLB node rotation; no universal PI. 
 
 ## CAP03 closed / CAP04 start
 Coord compare v7: 320/320 placements within 1m of placement×parent expectation. Architecture close renders accepted for geometry orientation. CAP04: direct FBX water/crystal/walksurface in v8; water double -90 removed (now flat); 5 non-geometry placements excluded with reasons.
+
+## CAP04 close / CAP05 play
+Editable capital_lighting + capital_city + capital_play. CAP04 accept met (8/8 + visual). CAP05: collisions/joystick/4 classes verified by test_capital_walk (ON_FLOOR, walk stable).
