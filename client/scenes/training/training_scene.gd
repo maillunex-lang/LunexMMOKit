@@ -22,6 +22,9 @@ var impact_effect_suffix := "FS_hti.prefab"
 var attack_clip := "attack001"
 var attack_event_time := 0.5
 const CLASS_EVENTS = {"10001": ["hit",0.15], "20001": ["hit",0.30], "30001": ["projectile",0.50], "40001": ["hit",0.40]}
+const CLASS_FX = {"10001":"ZS_M_attack001.prefab","20001":"GJS_M_attack001.prefab","40001":"CK_W_attack001.prefab"}
+const CLASS_AUDIO = {"10001":"ZS_Atk_01","20001":"SS_Atk_01","40001":"assassinatorattack01"}
+var melee_visual: PackedScene
 const CLASS_NAMES = ["Воин","Лучник","Маг","Ассасин"]
 var speed_options := [0.5, 1.0, 1.5, 2.0]
 
@@ -172,6 +175,7 @@ func build_effect(payload: Dictionary) -> PackedScene:
 func _load_vfx() -> void:
 	combat.projectile_visual = null
 	combat.impact_visual = null
+	melee_visual = null
 	if not FileAccess.file_exists(particle_index_path):
 		_set_status("Particle index not found: " + particle_index_path)
 		return
@@ -230,12 +234,21 @@ func _load_actor(index: int) -> void:
 	animation_player = players[0] as AnimationPlayer
 	_create_target()
 	if actor_id == "30001":
+		projectile_effect_suffix = "FS_W_attack001.prefab"
+		impact_effect_suffix = "FS_hti.prefab"
 		_load_vfx()
 		combat.attack_audio = AudioStreamMP3.load_from_file(attack_audio_path)
 	else:
+		projectile_effect_suffix = CLASS_FX[actor_id]
+		impact_effect_suffix = "fx_beiji02.prefab"
+		_load_vfx()
+		melee_visual = combat.projectile_visual
 		combat.projectile_visual = null
-		combat.impact_visual = null
-		combat.attack_audio = null
+		var audio_base: String = "/home/gamedev/Darklord/Client/Assets/Resources/Sound/skill/" + CLASS_AUDIO[actor_id]
+		if FileAccess.file_exists(audio_base + ".wav"):
+			combat.attack_audio = AudioStreamWAV.load_from_file(audio_base + ".wav")
+		else:
+			combat.attack_audio = AudioStreamMP3.load_from_file(audio_base + ".mp3")
 	_update_status("готов")
 
 func _apply_restored_materials(actor_id: String, weapon_id: String) -> void:
@@ -284,6 +297,12 @@ func launch_attack() -> void:
 	if not active_attack.begin(animation_player, attack_clip, [{"kind": event[0], "time": event[1]}], speed_options[speed_index]):
 		_set_status("Animation clip not found: " + attack_clip)
 		return
+	if event[0] == "hit":
+		combat.play_attack_sound()
+		if melee_visual != null:
+			var fx := melee_visual.instantiate() as Node3D
+			actor.add_child(fx)
+			get_tree().create_timer(1.5).timeout.connect(fx.queue_free)
 	_update_status("attack")
 
 func reset_training() -> void:

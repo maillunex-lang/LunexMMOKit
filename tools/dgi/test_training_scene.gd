@@ -44,6 +44,10 @@ func run() -> void:
 		if scene.get("animation_player")==null or scene.get("equipment_handle").is_empty():
 			quit(4)
 			return
+		if combat.get("attack_audio")==null or combat.get("impact_visual")==null or (i!=2 and scene.get("melee_visual")==null):
+			print("missing class assets ",i)
+			quit(5)
+			return
 		scene.call("launch_attack")
 		await create_timer(1.5).timeout
 		var hp: int = int(combat.get("hp"))
