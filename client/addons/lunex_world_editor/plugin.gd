@@ -23,11 +23,13 @@ func _enter_tree() -> void:
 	add_tool_menu_item("Lunex: Bake Location NavigationMesh", _on_bake_nav)
 	add_tool_menu_item("Lunex: Validate Location", _on_validate)
 	add_tool_menu_item("Lunex: Write owner.lock", _on_write_lock)
+	add_tool_menu_item("Lunex: Duplicate Selected (new instance_id)", _on_duplicate_selected)
 
 func _exit_tree() -> void:
 	remove_tool_menu_item("Lunex: Bake Location NavigationMesh")
 	remove_tool_menu_item("Lunex: Validate Location")
 	remove_tool_menu_item("Lunex: Write owner.lock")
+	remove_tool_menu_item("Lunex: Duplicate Selected (new instance_id)")
 	if _dock:
 		remove_control_from_docks(_dock)
 		_dock.queue_free()
@@ -47,10 +49,21 @@ func _on_write_lock() -> void:
 		push_warning("Save the scene before writing owner.lock")
 		return
 	var abs := ProjectSettings.globalize_path(path)
+	# FIX-004: timestamped backup before locking / further generator risk
+	var bak_dir := abs.get_base_dir().path_join("backups")
+	DirAccess.make_dir_recursive_absolute(bak_dir)
+	var stamp := Time.get_datetime_string_from_system().replace(":", "").replace(" ", "_")
+	var bak := bak_dir.path_join(abs.get_file().get_basename() + "_" + stamp + ".tscn")
+	var src := FileAccess.get_file_as_bytes(abs)
+	if src.size() > 0:
+		var out := FileAccess.open(bak, FileAccess.WRITE)
+		if out:
+			out.store_buffer(src)
+			print("Lunex World Editor: backup ", bak)
 	var lock := abs.get_basename() + ".owner.lock"
 	var f := FileAccess.open(lock, FileAccess.WRITE)
 	if f:
-		f.store_string("owner_edited=true\nscene=%s\n" % path)
+		f.store_string("owner_edited=true\nscene=%s\nbackup=%s\n" % [path, bak])
 		print("Lunex World Editor: wrote ", lock)
 
 func _on_bake_nav() -> void:
@@ -143,6 +156,45 @@ func _on_validate() -> void:
 				var line := String(issue.get("code", "?")) + ": " + String(issue.get("msg", issue.get("node", "")))
 				_issues_panel.add_item(line)
 	print("Lunex World Editor validation: ", JSON.stringify(report))
+
+func _on_duplicate_selected() -> void:
+	## FIX-006: copy keeps type_id, mints new instance_id.
+	const StableIds = preload("res://core/stable_ids.gd")
+	var sel := get_editor_interface().get_selection().get_selected_nodes()
+	var root := get_edited_location_root()
+	if root == null or sel.is_empty():
+		push_warning("Select a Node3D under the location root")
+		return
+	var src := sel[0] as Node3D
+	if src == null:
+		return
+	var dup := src.duplicate() as Node3D
+	dup.name = String(src.name) + "_copy"
+	# Clear then assign new ids
+	if dup.has_meta("instance_id"):
+		dup.remove_meta("instance_id")
+	if dup.has_meta("stable_id"):
+		dup.remove_meta("stable_id")
+	StableIds.duplicate_ids(src, dup)
+	var ur := get_undo_redo()
+	ur.create_action("Duplicate with new instance_id")
+	ur.add_do_method(self, "_do_add_dup", root, dup)
+	ur.add_undo_method(self, "_do_remove_dup", root, dup)
+	ur.add_do_reference(dup)
+	ur.commit_action()
+
+func _do_add_dup(root: Node3D, n: Node3D) -> void:
+	if n.get_parent() != root:
+		if n.get_parent():
+			n.get_parent().remove_child(n)
+		root.add_child(n)
+	n.owner = root
+	n.position += Vector3(2, 0, 0)
+	root.set_meta("owner_edited", true)
+
+func _do_remove_dup(root: Node3D, n: Node3D) -> void:
+	if n.get_parent() == root:
+		root.remove_child(n)
 
 func _on_issue_activated(index: int) -> void:
 	if index < 0 or index >= _last_issues.size():

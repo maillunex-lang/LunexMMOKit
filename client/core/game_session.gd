@@ -63,24 +63,41 @@ func set_class(actor_id: String, idx: int) -> void:
 func sync_quest_log(log_node: Node) -> void:
 	if log_node == null:
 		return
-	if "active" in log_node:
-		active_quests = (log_node.active as Dictionary).duplicate(true)
-	if "completed" in log_node:
-		var c = log_node.completed
-		if c is Array:
-			completed_quests = c.duplicate()
-		elif c is Dictionary:
-			completed_quests = c.keys()
+	if log_node.has_method("export_state"):
+		var st: Dictionary = log_node.export_state()
+		active_quests = st.get("active", {}).duplicate(true)
+		completed_quests = st.get("completed", [])
+		xp = int(st.get("xp", xp))
+	else:
+		if "active" in log_node:
+			active_quests = (log_node.active as Dictionary).duplicate(true)
+		if "completed" in log_node:
+			var c = log_node.completed
+			if c is PackedStringArray or c is Array:
+				completed_quests = []
+				for id in c:
+					completed_quests.append(String(id))
+		if "xp" in log_node:
+			xp = int(log_node.xp)
 	save_to_disk()
 	changed.emit()
 
 func apply_to_quest_log(log_node: Node) -> void:
 	if log_node == null:
 		return
+	if log_node.has_method("import_state"):
+		log_node.import_state({
+			"active": active_quests,
+			"completed": completed_quests,
+			"xp": xp,
+		})
+		return
 	if "active" in log_node:
 		log_node.active = active_quests.duplicate(true)
-	if "completed" in log_node and log_node.completed is Array:
-		log_node.completed = completed_quests.duplicate()
+	if "completed" in log_node:
+		log_node.completed = PackedStringArray(completed_quests)
+	if "xp" in log_node:
+		log_node.xp = xp
 
 func travel_to(location_id: String) -> void:
 	var prev := current_location

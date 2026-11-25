@@ -1,0 +1,29 @@
+# Isolated local stack for F04. Does NOT publish host ports by default
+# (avoids colliding with other VPS services). Attach via compose network only.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: lunex
+      POSTGRES_PASSWORD: lunex_dev_only
+      POSTGRES_DB: lunex
+    volumes:
+      - lunex_pg:/var/lib/postgresql/data
+      - ./migrations/001_init.sql:/docker-entrypoint-initdb.d/001_init.sql:ro
+    # no ports: section — intentional
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lunex -d lunex"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks: [lunex_net]
+
+  # Optional: run migrate/psql tools on the same network.
+  # lunexd currently binds on host loopback in dev; wire DB in N01.
+
+networks:
+  lunex_net:
+    name: lunex_dev_net
+
+volumes:
+  lunex_pg:

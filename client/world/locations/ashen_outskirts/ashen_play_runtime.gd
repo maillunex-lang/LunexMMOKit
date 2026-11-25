@@ -1,13 +1,12 @@
 extends Node3D
 ## Ashen Outskirts: warden quests, portals to capital / shard ruins, NavMesh auto-path.
+## Uses GameSession (FIX-009). LOCAL PROTOTYPE until server authority.
 
 const QuestLogScript = preload("res://content/quests/quest_log.gd")
 
 var hero: CharacterBody3D
 var camera: Camera3D
-var joystick
-var status_label: Label
-var quest_label: RichTextLabel
+var hud
 var quest_log
 
 func _ready() -> void:
@@ -19,10 +18,13 @@ func _ready() -> void:
 	quest_log = QuestLogScript.new()
 	add_child(quest_log)
 	quest_log.load_catalog()
+	GameSession.apply_to_quest_log(quest_log)
+	GameSession.travel_to("ashen_outskirts")
 	await get_tree().physics_frame
 	_spawn_hero()
 	_build_ui()
 	_ensure_nav()
+	_refresh_quest()
 
 func _ensure_nav() -> void:
 	var nav := NavigationRegion3D.new()
@@ -64,56 +66,52 @@ func _spawn_hero() -> void:
 func _build_ui() -> void:
 	var layer := CanvasLayer.new()
 	add_child(layer)
-	joystick = load("res://ui/controls/virtual_joystick.tscn").instantiate()
-	layer.add_child(joystick)
-	joystick.position = Vector2(48, -220)
-	joystick.size = Vector2(160, 160)
-	joystick.direction_changed.connect(func(d): if hero: hero.set_direction(d))
-	status_label = Label.new()
-	status_label.position = Vector2(16, 16)
-	status_label.text = "Пепельный рубеж — E NPC, G к цели, R руины, F столица"
-	layer.add_child(status_label)
-	quest_label = RichTextLabel.new()
-	quest_label.position = Vector2(16, 48)
-	quest_label.size = Vector2(400, 120)
-	quest_label.bbcode_enabled = true
-	layer.add_child(quest_label)
+	hud = load("res://ui/hud/game_hud.tscn").instantiate()
+	layer.add_child(hud)
+	hud.joystick_moved.connect(func(d): if hero: hero.set_direction(d))
+	hud.interact_pressed.connect(_talk_warden)
+	hud.goto_pressed.connect(_goto_objective)
+	hud.portal_pressed.connect(_enter_ruins)
+	hud.set_status("Пепельный рубеж · ПРОТОТИП · " + LunexAssets.status_line())
 	var row := HBoxContainer.new()
-	row.position = Vector2(16, 640)
+	row.position = Vector2(200, 16)
 	layer.add_child(row)
 	var back := Button.new()
 	back.text = "Столица"
-	back.pressed.connect(func(): get_tree().change_scene_to_file("res://world/locations/eternity_capital/eternity_play.tscn"))
+	back.pressed.connect(_to_capital)
 	row.add_child(back)
 	var ruins := Button.new()
 	ruins.text = "Руины"
-	ruins.pressed.connect(func(): get_tree().change_scene_to_file("res://world/locations/shard_ruins/ruins_play.tscn"))
+	ruins.pressed.connect(_enter_ruins)
 	row.add_child(ruins)
+
+func _refresh_quest() -> void:
+	if hud and quest_log:
+		hud.set_quest(quest_log.tracker_text())
+	GameSession.sync_quest_log(quest_log)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if hero == null:
 		return
-	if event is InputEventKey and event.pressed and event.keycode == KEY_E:
-		_talk_warden()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_G:
-		_goto_objective()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_R:
-		_enter_ruins()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_F:
-		get_tree().change_scene_to_file("res://world/locations/eternity_capital/eternity_play.tscn")
-	if joystick and joystick.direction != Vector2.ZERO:
+	if event is InputEventKey and event.pressed:
+		match event.keycode:
+			KEY_E: _talk_warden()
+			KEY_G: _goto_objective()
+			KEY_R: _enter_ruins()
+			KEY_F: _to_capital()
+	if hud and hud.joystick and hud.joystick.direction != Vector2.ZERO:
 		return
 	hero.set_direction(Vector2(Input.get_axis("ui_left", "ui_right"), Input.get_axis("ui_up", "ui_down")))
 
 func _talk_warden() -> void:
 	var warden := get_node_or_null("AshenOutskirts/AshenWarden") as Node3D
 	if warden == null or hero.global_position.distance_to(warden.global_position) > 4.0:
-		status_label.text = "Подойди к Хранителю рубежа"
+		hud.set_status("Подойди к Хранителю рубежа")
 		return
 	var started: String = String(quest_log.offer_from_npc("npc_ashen_warden"))
 	quest_log.notify_talk("npc_ashen_warden")
-	status_label.text = ("Квест: " + started) if started != "" else "Хранитель: иди к Руинам Осколка (R)."
-	quest_label.text = quest_log.tracker_text()
+	hud.set_status(("Квест: " + started) if started != "" else "Хранитель: иди к Руинам Осколка")
+	_refresh_quest()
 
 func _goto_objective() -> void:
 	var warden := get_node_or_null("AshenOutskirts/AshenWarden") as Node3D
@@ -121,10 +119,19 @@ func _goto_objective() -> void:
 	var target: Node3D = ruins if ruins else warden
 	if target and hero.has_method("navigate_to"):
 		hero.navigate_to(target.global_position)
-		status_label.text = "Автопуть (NavMesh)"
+		hud.set_status("Автопуть (NavMesh)")
+
+func _persist_and_go(scene: String, loc_id: String) -> void:
+	GameSession.sync_quest_log(quest_log)
+	GameSession.travel_to(loc_id)
+	get_tree().change_scene_to_file(scene)
+
+func _to_capital() -> void:
+	_persist_and_go("res://world/locations/eternity_capital/eternity_play.tscn", "eternity_capital")
 
 func _enter_ruins() -> void:
 	var portal := get_node_or_null("AshenOutskirts/Portal_RuinsGate") as Node3D
 	if portal:
 		quest_log.notify_goto("portal_ruins_gate")
-	get_tree().change_scene_to_file("res://world/locations/shard_ruins/ruins_play.tscn")
+		_refresh_quest()
+	_persist_and_go("res://world/locations/shard_ruins/ruins_play.tscn", "shard_ruins")

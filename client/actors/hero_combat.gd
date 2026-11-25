@@ -58,7 +58,7 @@ func heal_full() -> void:
 	hp_changed.emit(hp, max_hp)
 	mp_changed.emit(mp, max_mp)
 
-func try_basic(origin: Vector3, facing_yaw: float, tree: SceneTree) -> Dictionary:
+func try_basic(origin: Vector3, facing_yaw: float, tree: SceneTree, apply_now: bool = false) -> Dictionary:
 	if _gcd > 0.0 or _basic_cd > 0.0 or kit == null:
 		return {"ok": false, "reason": "cd"}
 	var sk: Dictionary = kit.basic(actor_id)
@@ -66,12 +66,14 @@ func try_basic(origin: Vector3, facing_yaw: float, tree: SceneTree) -> Dictionar
 		return {"ok": false, "reason": "no_skill"}
 	var dmg := int(sk.get("slice_damage", atk))
 	var rng := float(sk.get("slice_range", 3.0))
-	var hit := _hit_nearest(origin, rng, dmg, tree)
+	var hit := find_nearest_target(origin, rng, tree)
+	if apply_now and hit:
+		apply_hit(hit, dmg)
 	_basic_cd = maxf(0.35, float(sk.get("cd_ms", 0)) / 1000.0)
 	_gcd = 0.35
-	return {"ok": true, "skill": sk, "hit": hit, "damage": dmg, "anim": "attack"}
+	return {"ok": true, "skill": sk, "hit": hit, "damage": dmg, "anim": "attack", "applied": apply_now}
 
-func try_skill(slot: int, origin: Vector3, tree: SceneTree) -> Dictionary:
+func try_skill(slot: int, origin: Vector3, tree: SceneTree, apply_now: bool = false) -> Dictionary:
 	if kit == null or slot < 0 or slot > 2:
 		return {"ok": false, "reason": "bad_slot"}
 	if _gcd > 0.0 or _cd_left[slot] > 0.0:
@@ -86,17 +88,28 @@ func try_skill(slot: int, origin: Vector3, tree: SceneTree) -> Dictionary:
 		return {"ok": false, "reason": "mp"}
 	var dmg := int(sk.get("slice_damage", atk))
 	var rng := float(sk.get("slice_range", sk.get("min_dis", 3.0)))
-	var hit := _hit_nearest(origin, rng, dmg, tree)
+	var hit := find_nearest_target(origin, rng, tree)
 	if cost > 0:
 		mp = maxi(0, mp - cost)
 		mp_changed.emit(mp, max_mp)
 	_cd_left[slot] = float(sk.get("cd_ms", 6000)) / 1000.0
 	_gcd = 0.45
 	skill_used.emit(slot, int(sk.get("id", 0)))
+	if apply_now and hit:
+		apply_hit(hit, dmg)
 	var anim := "skill00%d" % (slot + 1)
-	return {"ok": true, "skill": sk, "hit": hit, "damage": dmg, "anim": anim, "label": String(sk.get("label", ""))}
+	return {"ok": true, "skill": sk, "hit": hit, "damage": dmg, "anim": anim, "label": String(sk.get("label", "")), "applied": apply_now}
 
-func _hit_nearest(origin: Vector3, rng: float, dmg: int, tree: SceneTree) -> Node:
+func apply_hit(target: Node, dmg: int) -> bool:
+	## Called on timeline hit / projectile arrive (FIX-008). LOCAL PROTOTYPE until C01.
+	if target == null or not is_instance_valid(target):
+		return false
+	if target.has_method("apply_damage"):
+		target.apply_damage(dmg)
+		return true
+	return false
+
+func find_nearest_target(origin: Vector3, rng: float, tree: SceneTree) -> Node:
 	var best: Node = null
 	var best_d := rng
 	for n in tree.get_nodes_in_group("hostile"):
@@ -105,7 +118,6 @@ func _hit_nearest(origin: Vector3, rng: float, dmg: int, tree: SceneTree) -> Nod
 			if d <= best_d:
 				best_d = d
 				best = n
-	# fallback: any CharacterBody with apply_damage under current scene
 	if best == null:
 		var root := tree.current_scene
 		if root:
@@ -115,6 +127,4 @@ func _hit_nearest(origin: Vector3, rng: float, dmg: int, tree: SceneTree) -> Nod
 					if d2 <= best_d:
 						best_d = d2
 						best = c
-	if best:
-		best.apply_damage(dmg)
 	return best

@@ -1,27 +1,33 @@
 extends Node3D
-## Shard Ruins playable wrapper.
+## Shard Ruins playable wrapper. GameSession persists across portals (FIX-009).
 
 const QuestLogScript = preload("res://content/quests/quest_log.gd")
 
 var hero: CharacterBody3D
 var camera: Camera3D
-var joystick
-var status_label: Label
+var hud
 var quest_log
 
 func _ready() -> void:
 	if not has_node("ShardRuins"):
-		var loc: Node3D = load("res://world/locations/shard_ruins/shard_ruins.tscn").instantiate()
-		loc.name = "ShardRuins"
-		add_child(loc)
-		move_child(loc, 0)
+		var path := "res://world/locations/shard_ruins/shard_ruins.tscn"
+		if ResourceLoader.exists(path):
+			var loc: Node3D = load(path).instantiate()
+			loc.name = "ShardRuins"
+			add_child(loc)
+			move_child(loc, 0)
 	quest_log = QuestLogScript.new()
 	add_child(quest_log)
 	quest_log.load_catalog()
+	GameSession.apply_to_quest_log(quest_log)
+	GameSession.travel_to("shard_ruins")
 	await get_tree().physics_frame
 	_spawn_hero()
 	_build_ui()
 	_ensure_nav()
+	if hud:
+		hud.set_quest(quest_log.tracker_text())
+		hud.set_status("Руины Осколка · ПРОТОТИП")
 
 func _ensure_nav() -> void:
 	var nav := NavigationRegion3D.new()
@@ -63,41 +69,49 @@ func _spawn_hero() -> void:
 func _build_ui() -> void:
 	var layer := CanvasLayer.new()
 	add_child(layer)
-	joystick = load("res://ui/controls/virtual_joystick.tscn").instantiate()
-	layer.add_child(joystick)
-	joystick.position = Vector2(48, -220)
-	joystick.size = Vector2(160, 160)
-	joystick.direction_changed.connect(func(d): if hero: hero.set_direction(d))
-	status_label = Label.new()
-	status_label.position = Vector2(16, 16)
-	status_label.text = "Руины Осколка — E учёный, G к цели, F выход"
-	layer.add_child(status_label)
+	hud = load("res://ui/hud/game_hud.tscn").instantiate()
+	layer.add_child(hud)
+	hud.joystick_moved.connect(func(d): if hero: hero.set_direction(d))
+	hud.interact_pressed.connect(_talk_scholar)
+	hud.goto_pressed.connect(func():
+		var scholar := get_node_or_null("ShardRuins/ShardScholar") as Node3D
+		if scholar and hero.has_method("navigate_to"):
+			hero.navigate_to(scholar.global_position)
+			hud.set_status("Автопуть к учёному"))
+	hud.portal_pressed.connect(_to_ashen)
 	var back := Button.new()
 	back.text = "К Пепельному рубежу"
-	back.position = Vector2(16, 640)
-	back.pressed.connect(func(): get_tree().change_scene_to_file("res://world/locations/ashen_outskirts/ashen_play.tscn"))
+	back.position = Vector2(200, 16)
+	back.pressed.connect(_to_ashen)
 	layer.add_child(back)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if hero == null:
 		return
-	if event is InputEventKey and event.pressed and event.keycode == KEY_E:
-		_talk_scholar()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_G:
-		var scholar := get_node_or_null("ShardRuins/ShardScholar") as Node3D
-		if scholar and hero.has_method("navigate_to"):
-			hero.navigate_to(scholar.global_position)
-			status_label.text = "Автопуть к учёному (NavMesh)"
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_F:
-		get_tree().change_scene_to_file("res://world/locations/ashen_outskirts/ashen_play.tscn")
-	if joystick and joystick.direction != Vector2.ZERO:
+	if event is InputEventKey and event.pressed:
+		match event.keycode:
+			KEY_E: _talk_scholar()
+			KEY_G:
+				var scholar := get_node_or_null("ShardRuins/ShardScholar") as Node3D
+				if scholar and hero.has_method("navigate_to"):
+					hero.navigate_to(scholar.global_position)
+			KEY_F: _to_ashen()
+	if hud and hud.joystick and hud.joystick.direction != Vector2.ZERO:
 		return
 	hero.set_direction(Vector2(Input.get_axis("ui_left", "ui_right"), Input.get_axis("ui_up", "ui_down")))
 
 func _talk_scholar() -> void:
 	var scholar := get_node_or_null("ShardRuins/ShardScholar") as Node3D
 	if scholar == null or hero.global_position.distance_to(scholar.global_position) > 4.0:
-		status_label.text = "Подойди к Хранителю знаний"
+		hud.set_status("Подойди к Хранителю знаний")
 		return
+	var started: String = String(quest_log.offer_from_npc("npc_shard_scholar"))
 	quest_log.notify_talk("npc_shard_scholar")
-	status_label.text = "Учёный: осколок здесь ещё дышит. Запиши показания."
+	hud.set_status(("Квест: " + started) if started != "" else "Учёный выслушал тебя")
+	hud.set_quest(quest_log.tracker_text())
+	GameSession.sync_quest_log(quest_log)
+
+func _to_ashen() -> void:
+	GameSession.sync_quest_log(quest_log)
+	GameSession.travel_to("ashen_outskirts")
+	get_tree().change_scene_to_file("res://world/locations/ashen_outskirts/ashen_play.tscn")

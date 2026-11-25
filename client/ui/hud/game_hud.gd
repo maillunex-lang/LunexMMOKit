@@ -23,6 +23,8 @@ signal joystick_moved(dir: Vector2)
 @onready var btn_goto: Button = %BtnGoto
 @onready var settings_btn: Button = %SettingsBtn
 
+var gfx_preset := 1 ## 0 Low 1 Med 2 High 3 Max
+
 func _ready() -> void:
 	btn_attack.pressed.connect(func(): attack_pressed.emit())
 	btn_skill0.pressed.connect(func(): skill_pressed.emit(0))
@@ -31,9 +33,29 @@ func _ready() -> void:
 	btn_interact.pressed.connect(func(): interact_pressed.emit())
 	btn_portal.pressed.connect(func(): portal_pressed.emit())
 	btn_goto.pressed.connect(func(): goto_pressed.emit())
-	settings_btn.pressed.connect(func(): graphics_pressed.emit())
+	settings_btn.pressed.connect(_cycle_graphics)
 	if joystick and joystick.has_signal("direction_changed"):
 		joystick.direction_changed.connect(func(d): joystick_moved.emit(d))
+	_apply_graphics(gfx_preset)
+
+func _cycle_graphics() -> void:
+	gfx_preset = (gfx_preset + 1) % 4
+	_apply_graphics(gfx_preset)
+	graphics_pressed.emit()
+
+func _apply_graphics(preset: int) -> void:
+	## FIX-010 / P01 stub — real LOD/particle caps land in P01. Xvfb FPS ≠ Android.
+	var names: PackedStringArray = ["Low", "Med", "High", "Max"]
+	var scales: Array[float] = [0.6, 0.8, 1.0, 1.0]
+	var shadows_on: Array[bool] = [false, false, true, true]
+	var scale: float = scales[preset]
+	var shadows: bool = shadows_on[preset]
+	if is_inside_tree():
+		get_tree().root.content_scale_factor = scale
+	settings_btn.text = "GFX " + names[preset]
+	ProjectSettings.set_setting("lunex/graphics_preset", names[preset])
+	ProjectSettings.set_setting("lunex/shadows_enabled", shadows)
+	set_status("Графика: %s (stub; Android профили — P01)" % names[preset])
 
 func set_vitals(hp: int, max_hp: int, mp: int, max_mp: int) -> void:
 	hp_label.text = "HP %d/%d" % [hp, max_hp]
