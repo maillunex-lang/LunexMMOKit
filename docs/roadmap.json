@@ -81,7 +81,7 @@
     "work": "Исправить родительские трансформации, активность и ориентацию мешей столицы",
     "accept": "Сравнение координат с Unity; повторный рендер без геометрических дефектов",
     "status": "doing",
-    "evidence": "ed5799b/9c71581: V6, 320/328 размещений, 525 мешей, terrain shader bound; isolated terrain patches. 4 missing architecture bindings in cs_zhucheng_jz01.FBX, 3 unresolved other refs. Parent transforms partly recovered; visual acceptance failed. Next inspect exact FBX node/mesh mapping, source topology, active state and per-asset basis."
+    "evidence": "v7 build: per-mesh basis (identity when hierarchy has FBX ±90° X; glb_basis only for changdeng01). dm04 review→exact via dedicated FBX fallback; jianzhu01/02_a/02_b source_missing (absent from jz01.FBX binary). 320 placements, 526 mesh instances, architecture bounds without effects 602×77×358; full bounds height still 587 (crystal CAP04). Screens capital-architecture-v7.png capital-terrain-v7.png under Xvfb. Terrain Y-up extents OK but splat still island patches. Visual acceptance NOT passed; crystal/effects/lighting remain CAP04."
   },
   {
     "id": "CAP04",
@@ -131,14 +131,15 @@
     ],
     "read": [
       "docs/EDITOR.md",
-      "docs/DEMO.md"
+      "docs/DEMO.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
     ],
     "scope": [
       "client/",
       "tools/",
       "docs/"
     ],
-    "work": "Отдельный Android City Preview APK: четыре класса, джойстик, камера, FPS, пресеты графики",
+    "work": "Отдельный Android City Preview APK: четыре класса, джойстик, камера, FPS, пресеты графики; оружие/крылья/маунты через Attachment System",
     "accept": "Подписанный APK, проверка подписи и SHA256, доступная ссылка; установка и FPS на устройствах фиксируются отдельно после проверки пользователем",
     "status": "todo",
     "evidence": ""
@@ -204,24 +205,218 @@
     "evidence": ""
   },
   {
-    "id": "EDIT01",
+    "id": "CHARACTER-AUDIT-001",
     "phase": "transfer",
     "depends": [
       "F02"
     ],
     "read": [
       "docs/EDITOR.md",
-      "docs/darklord/WORLD_IMPORT.md"
+      "docs/HEROES.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
     ],
     "scope": [
-      "tools/world/",
-      "client/world/",
+      "client/actors/",
+      "client/scenes/",
+      "client/content/attachments/",
+      "tools/dgi/",
       "docs/"
     ],
-    "work": "Визуальный редактор креплений оружия и аксессуаров",
-    "accept": "Gizmo XYZ, вращение, масштаб, независимые руки, сохранение overrides без изменения оригинала",
+    "work": "Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity",
+    "accept": "Матрица дефектов по классам: скелет, материалы, ориентация, масштаб, анимации; контрольные скриншоты; без ложного done",
+    "status": "doing",
+    "evidence": "Grip/mount baseline screens reviewed: weapon clipping on 20001/30001/40001; warrior waist gap; mount_001 seat prototype present; offsets moved to AttachmentOffset resources (CHAR08). Editor panel wired in Studio. Not accepted."
+  },
+  {
+    "id": "CHAR02",
+    "phase": "transfer",
+    "depends": [
+      "CHARACTER-AUDIT-001"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md",
+      "docs/darklord/ATTACHMENTS.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/content/attachments/",
+      "tools/dgi/",
+      "docs/"
+    ],
+    "work": "Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity",
+    "accept": "Оружие не отрывается и не клипит в stand/attack; правая/левая рука независимы; overrides в ресурсах",
     "status": "todo",
     "evidence": ""
+  },
+  {
+    "id": "CHAR03",
+    "phase": "transfer",
+    "depends": [
+      "CHARACTER-AUDIT-001"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/content/attachments/",
+      "docs/"
+    ],
+    "work": "Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом",
+    "accept": "Контрольные скриншоты крыльев на 4 классах; ресурсы крепления; дефекты исправлены или зафиксированы",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CHAR04",
+    "phase": "transfer",
+    "depends": [
+      "CHARACTER-AUDIT-001"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/content/attachments/",
+      "docs/"
+    ],
+    "work": "Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом",
+    "accept": "Все доступные маунты × 4 класса без зависания/проваливания; seat offsets в ресурсах",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CHAR05",
+    "phase": "transfer",
+    "depends": [
+      "CHARACTER-AUDIT-001"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/content/attachments/",
+      "docs/"
+    ],
+    "work": "Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания",
+    "accept": "Питомцы корректно следуют; матрица совместимости; ресурсы offsets",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CHAR06",
+    "phase": "transfer",
+    "depends": [
+      "CHAR02",
+      "CHAR03"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/content/attachments/",
+      "docs/"
+    ],
+    "work": "Совместимость брони/шлемов/костюмов/оружия/крыльев без разрывов и деформаций",
+    "accept": "Представительские комбинации проверены скриншотами; дефекты в отчёте или исправлены",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CHAR07",
+    "phase": "transfer",
+    "depends": [
+      "CHARACTER-AUDIT-001"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md",
+      "docs/darklord/ATTACHMENTS.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/combat/",
+      "tools/dgi/",
+      "docs/"
+    ],
+    "work": "Синхронизация stand/walk/run/attack/skill/hit/death/mount с Unity hitTime и VFX/audio",
+    "accept": "Тайминги из исходных XML/DamageCell; тесты без произвольных констант; визуальные кадры удара",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CHAR08",
+    "phase": "transfer",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/content/attachments/",
+      "docs/"
+    ],
+    "work": "Единый Attachment System: редактируемые ресурсы Position/Rotation/Scale/Socket/Class/IDs",
+    "accept": "Нет жёстких per-item поправок в игровом коде; общие и override ресурсы; runtime читает те же .tres",
+    "status": "doing",
+    "evidence": "AttachmentOffset + AttachmentLibrary; 11 default .tres; equipment.gd and training accessories read resources; Studio «Крепления» panel save/reset to user:// overrides. Dual blade TRS no longer hardcoded in game code."
+  },
+  {
+    "id": "CHAR10",
+    "phase": "transfer",
+    "depends": [
+      "CHAR02",
+      "CHAR03",
+      "CHAR04",
+      "CHAR05"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md"
+    ],
+    "scope": [
+      "tools/dgi/",
+      "docs/",
+      "client/scenes/"
+    ],
+    "work": "Матрица совместимости и контрольные скриншоты (front/back/side/45/closeups) через Xvfb",
+    "accept": "Матрица в docs; скриншоты на VPS; визуальный просмотр подтверждён; CAPAPK использует проверенный набор",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "EDIT01",
+    "phase": "transfer",
+    "depends": [
+      "F02",
+      "CHAR08"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/CHARACTER_AUDIT.md",
+      "docs/HEROES.md"
+    ],
+    "scope": [
+      "client/actors/",
+      "client/scenes/",
+      "client/content/attachments/",
+      "docs/"
+    ],
+    "work": "Визуальный редактор креплений в Character Studio / Asset Library",
+    "accept": "Выбор героя/оружия/крыльев/питомца/маунта; орбита камеры; play/pause анимаций; XYZ pos/rot/scale; независимые руки; посадка всадника; save/reset в AttachmentOffset ресурсы; те же ресурсы использует runtime",
+    "status": "todo",
+    "evidence": "Panel wired in Character Studio; full Asset Library gizmo UX pending CHAR08/EDIT01 acceptance."
   },
   {
     "id": "EDIT02",

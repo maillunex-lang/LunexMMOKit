@@ -5,12 +5,11 @@ LunexMMOKit / Осколки вечности. Полный перенос Darkl
 - DGI: 1560 Lua источников, 20462 ресурса, 4 класса, 600 уровней, 104 клипа; формулы, оружие, аксессуары, VFX и аудио в прототипе.
 - Character Studio APK 0.1.2 собран; установка новой версии и FPS не подтверждены.
 - Пилот арены: 25/25 collision rays, navigation path, тесты движения 4 героев, виртуальный джойстик без tap-to-move.
-- Столица: 328 исходных размещений, 50 GLB, 20 материалов, 22 текстуры, 145/152 точных mesh bindings. V6: 320 размещений, 525 мешей. Сцены на VPS, сборщики в GitHub.
-- UI, NPC, квесты: исходники обнаружены, перенос не завершён.
-## Текущий этап CAP03
-V3 учитывает родительские трансформации; V4/V5 альтернативные ориентации не приняты; V6 добавляет RGB splat shader. Кристальный эффект высотой 587.86 и тени исключены только из диагностического рендера. Изолированный terrain 247.7 x 249.0 отображает отдельные текстурированные участки. Визуальная приёмка не пройдена.
-Следующее: четыре mesh binding в cs_zhucheng_jz01.FBX (jianzhu02_b, dm04, jianzhu01, jianzhu02_a), три unresolved refs, исходная топология, активность, локальные базисы. Не применять универсальный поворот без доказательств.
+- Столица V7: 320 размещений, 526 мешей; per-mesh basis (hierarchy ±90° → identity; changdeng glb_basis); dm04 fallback exact; 3 jz01 mesh source_missing. Architecture without effects 602×77×358. Visual acceptance NOT passed.
+- Attachment System (CHAR08): AttachmentOffset .tres + library; equipment.gd без hardcoded dual TRS; Studio panel «Крепления» save/reset overrides.
+## Текущий этап
+Параллельно: CAP03 (город, визуальная приёмка) и CHARACTER-AUDIT-001 / CHAR08 (персонажи и крепления). CAP03 не закрыт: кристалл/эффекты → CAP04, splat islands, missing jz01 meshes.
 ## Очередь
-CAP03 -> CAP04 -> CAP05 -> CAPAPK -> CAP06. Далее UI01/UI02, EDIT01/EDIT02, F03/F04 и остальные исходные этапы по зависимостям. CAPAPK отдельная тестовая сборка города, не готовая MMO.
+CAP03 -> CAP04 -> CAP05 -> CAPAPK -> CAP06. Параллельно CHARACTER-AUDIT-001 → CHAR02..CHAR07, CHAR08 → EDIT01, CHAR10. CAPAPK должен использовать Attachment System.
 ## Проверки
-CAP01/02 завершены как диагностика, не визуальная приёмка. Полные задачи остаются открыты. CI последних коммитов не подтверждён. История диагностики: docs/darklord/WORLD_IMPORT.md и docs/tasks/CAP03.md.
+CAP01/02 диагностика завершена. CAP03 v7 screens на VPS (Xvfb). CI последних коммитов проверить после push. Оригиналы Darklord не удалялись.

@@ -26,3 +26,6 @@ b3cfd65: v6 terrain shader uses original RGB control and 3 splat textures, tilin
 
 ## Isolated terrain
 ed5799b: isolated main terrain 247.7 x 249.0, height 20.49; ShaderMaterial bound, screenshot shows separated textured patches rather than continuous ground. Need inspect missing geometry and original terrain topology; no visual acceptance.
+
+## CAP03 v7
+Per-mesh basis from Unity hierarchy axis vs GLB node rotation; no universal PI. dm04 rebound from dedicated FBX. jianzhu01/02_a/02_b absent from jz01.FBX binary (source_missing). Architecture diagnostic height 77 without effects; crystal still 587 full bounds. Visual acceptance not passed.

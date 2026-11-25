@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AttachmentOffset" format=3]
+
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_8sw4b"]
+
+[resource]
+script = ExtResource("1_8sw4b")
+attachment_id = "mount_seat_mount_002"
+kind = "mount_seat"
+equipment_id = "mount_002"
+socket = "Horse_E_back2"
+notes = "Rider seat default"
+source_unity = "CActorObject.ChangeWeapon / prefab child TRS"

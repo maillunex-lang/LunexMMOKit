@@ -1,5 +1,7 @@
 extends Node3D
 const Accessory = preload("res://actors/accessory_preview.gd")
+const AttachmentEditorPanel = preload("res://ui/attachment_editor_panel.gd")
+const AttachmentLibrary = preload("res://actors/attachment_library.gd")
 const DarklordMaterial = preload("res://content/shaders/darklord_material.gd")
 const Equipment = preload("res://actors/equipment.gd")
 const VFX = preload("res://content/vfx/particle_preview.gd")
@@ -52,6 +54,7 @@ var accessory_root := "/home/gamedev/darklord-dgi/exports/accessories"
 var orbit_angle := 0.0
 var orbit_distance := 3.5
 var orbit_center := Vector3(0.6,0.9,0)
+var attachment_panel: VBoxContainer
 
 
 func _ready() -> void:
@@ -162,9 +165,17 @@ func _setup_ui() -> void:
 	_add_button(studio,"+",_zoom.bind(-0.3))
 	_add_button(studio,"−",_zoom.bind(0.3))
 	_add_button(studio,"Вид",_reset_camera)
+	_add_button(studio,"Крепления",_toggle_attachment_editor)
 	var extras := HBoxContainer.new()
 	layer.add_child(extras)
 	extras.position = Vector2(16,105)
+	attachment_panel = AttachmentEditorPanel.new()
+	attachment_panel.name = "AttachmentEditor"
+	attachment_panel.visible = false
+	attachment_panel.position = Vector2(920, 140)
+	attachment_panel.custom_minimum_size = Vector2(340, 420)
+	layer.add_child(attachment_panel)
+
 	var fps_select := OptionButton.new()
 	for limit in [30,60,90,120]: fps_select.add_item("%d FPS" % limit,limit)
 	fps_select.select(1)
@@ -193,6 +204,35 @@ func _add_button(parent: Container, text: String, action: Callable) -> Button:
 	button.pressed.connect(action)
 	parent.add_child(button)
 	return button
+
+func _toggle_attachment_editor() -> void:
+	if attachment_panel == null:
+		return
+	attachment_panel.visible = not attachment_panel.visible
+	if attachment_panel.visible:
+		_sync_attachment_editor()
+
+func _sync_attachment_editor() -> void:
+	if attachment_panel == null or not attachment_panel.visible:
+		return
+	var actor_id: String = String(actor_ids[current_actor_index])
+	var weapon_id: String = String(weapon_ids[actor_id])
+	# Prefer editing an equipped accessory when selected; otherwise base weapon.
+	for kind in ["wing", "pet", "mount"]:
+		if accessories.has(kind):
+			var idx: int = accessory_selectors[kind].selected
+			if idx > 0:
+				var equipment_id: String = ACCESSORY_NAMES[kind][idx - 1]
+				var edit_kind: String = "mount_seat" if kind == "mount" else String(kind)
+				attachment_panel.set_context(edit_kind, equipment_id, actor_id)
+				if kind == "mount":
+					attachment_panel.bind_node(actor)
+				elif kind == "wing" or kind == "pet":
+					attachment_panel.bind_node(accessories[kind])
+				return
+	attachment_panel.set_context("weapon", weapon_id, actor_id)
+	if weapon != null and is_instance_valid(weapon):
+		attachment_panel.bind_node(weapon)
 
 func _setup_combat() -> void:
 	combat = TrainingCombat.new()
@@ -476,11 +516,17 @@ func _select_accessory(index: int, kind: String) -> void:
 		_set_status("Не найден аксессуар: "+kind)
 		return
 	if kind == "wing":
-		var marker := Accessory.socket(actor,["E_back2","E_back"])
+		var wing_id: String = ACCESSORY_NAMES["wing"][index-1]
+		var wing_off = AttachmentLibrary.load_offset("wing", wing_id)
+		var wing_sockets: Array = ["E_back2","E_back"]
+		if wing_off != null and String(wing_off.socket) != "":
+			wing_sockets = [String(wing_off.socket), "E_back2", "E_back"]
+		var marker := Accessory.socket(actor, wing_sockets)
 		if marker == null:
 			model.free()
 			return
 		marker.add_child(model)
+		model.transform = wing_off.to_transform() if wing_off != null else Transform3D.IDENTITY
 		for mesh in model.find_children("*","MeshInstance3D",true,false):
 			if "glow" in String(mesh.name).to_lower():
 				if index == 2:
@@ -496,16 +542,23 @@ func _select_accessory(index: int, kind: String) -> void:
 					else: mesh.hide()
 				else: mesh.hide()
 	elif kind == "pet":
+		var pet_id: String = ACCESSORY_NAMES["pet"][index-1]
+		var pet_off = AttachmentLibrary.load_offset("pet", pet_id)
 		add_child(model)
-		model.position = Vector3(-0.8,0,0)
+		model.transform = pet_off.to_transform() if pet_off != null else Transform3D(Basis.IDENTITY, Vector3(-0.8,0,0))
 	elif kind == "mount":
-		var seat := Accessory.socket(model,["Horse_E_back2","Horse_E_back"])
+		var mount_id: String = ACCESSORY_NAMES["mount"][index-1]
+		var seat_off = AttachmentLibrary.load_offset("mount_seat", mount_id)
+		var seat_sockets: Array = ["Horse_E_back2","Horse_E_back"]
+		if seat_off != null and String(seat_off.socket) != "":
+			seat_sockets = [String(seat_off.socket), "Horse_E_back2", "Horse_E_back"]
+		var seat := Accessory.socket(model, seat_sockets)
 		if seat == null:
 			model.free()
 			return
 		add_child(model)
 		actor.reparent(seat,false)
-		actor.transform = Transform3D.IDENTITY
+		actor.transform = seat_off.to_transform() if seat_off != null else Transform3D.IDENTITY
 	else:
 		model.free()
 		return

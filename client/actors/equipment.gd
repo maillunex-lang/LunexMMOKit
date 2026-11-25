@@ -1,33 +1,36 @@
 extends RefCounted
 
-## Darklord base weapon attachment specifications.
-## Source rule: CActorObject.ChangeWeapon parents the selected weapon container
-## to the hand socket and then sets local position, rotation and scale to identity.
-## Assassin is the only base class that splits DM_R_wuqi01 and DM_L_wuqi01.
+const Library = preload("res://actors/attachment_library.gd")
 
-static func _right_blade_transform() -> Transform3D:
-	return Transform3D(Basis(Quaternion(0.0000009685756, -0.00000028312215, 1.0, -0.000000043711115)), Vector3.ZERO)
-
-static func _left_blade_transform() -> Transform3D:
-	return Transform3D(Basis.from_scale(Vector3(-1.0, 1.0000004, 1.0000001)), Vector3.ZERO)
+## Darklord weapon attachment runtime.
+## Offsets come from AttachmentOffset resources (res://content/attachments + user overrides).
+## Unity rule: CActorObject.ChangeWeapon parents the weapon container to the hand socket
+## and resets local TRS to identity for single weapons; assassin splits body2/body1.
 
 static func darklord_base_weapon_spec(weapon_id: String) -> Dictionary:
-	match weapon_id:
-		"100011000":
+	var single = Library.load_offset("weapon", weapon_id)
+	if weapon_id == "400011000":
+		var right = Library.load_offset("weapon", weapon_id, "", "body2")
+		var left = Library.load_offset("weapon", weapon_id, "", "body1")
+		if right == null or left == null:
+			return {}
+		return {
+			"mode": "dual",
+			"right_marker": right.socket if right.socket != "" else "DM_R_Hand2",
+			"left_marker": left.socket if left.socket != "" else "DM_L_Hand2",
+			"right_children": {"body2": right.to_transform()},
+			"left_children": {"body1": left.to_transform()},
+		}
+	if single == null:
+		# Safe fallback matching Unity identity-on-socket for known singles.
+		if weapon_id in ["100011000", "200011000", "300011000"]:
 			return {"mode": "single", "marker": "DM_R_Hand2"}
-		"200011000":
-			return {"mode": "single", "marker": "DM_R_Hand2"}
-		"300011000":
-			return {"mode": "single", "marker": "DM_R_Hand2"}
-		"400011000":
-			return {
-				"mode": "dual",
-				"right_marker": "DM_R_Hand2",
-				"left_marker": "DM_L_Hand2",
-				"right_children": {"body2": _right_blade_transform()},
-				"left_children": {"body1": _left_blade_transform()},
-			}
-	return {}
+		return {}
+	return {
+		"mode": "single",
+		"marker": single.socket if single.socket != "" else "DM_R_Hand2",
+		"offset": single.to_transform(),
+	}
 
 static func find_unique_marker(actor: Node3D, marker_name: String) -> Node3D:
 	var nodes := actor.find_children(marker_name, "Node3D", true, false)
@@ -63,7 +66,7 @@ static func _equip_single(actor: Node3D, item: Node3D, spec: Dictionary) -> Dict
 		return {}
 	var original := _detach(item)
 	marker.add_child(item)
-	item.transform = Transform3D.IDENTITY
+	item.transform = spec.get("offset", Transform3D.IDENTITY)
 	return {
 		"mode": "single",
 		"weapon_id": String(spec.get("weapon_id", "")),

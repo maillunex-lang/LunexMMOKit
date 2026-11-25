@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttachmentOffset" format=3]
+
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_e8op1"]
+
+[resource]
+script = ExtResource("1_e8op1")
+attachment_id = "weapon_400011000_body1"
+equipment_id = "400011000"
+socket = "DM_L_Hand2"
+secondary_socket = "DM_R_Hand2"
+scale = Vector3(-1, 1, 1)
+child_name = "body1"
+notes = "Unity body1 negative X scale"
+source_unity = "CActorObject.ChangeWeapon / prefab child TRS"

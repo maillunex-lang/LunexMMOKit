@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AttachmentOffset" format=3]
+
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_4bo8t"]
+
+[resource]
+script = ExtResource("1_4bo8t")
+attachment_id = "pet_XN_pet_02"
+kind = "pet"
+equipment_id = "XN_pet_02"
+socket = ""
+position = Vector3(1.2, 0, 0)
+notes = "Beside actor pending follow"
+source_unity = "CActorObject.ChangeWeapon / prefab child TRS"

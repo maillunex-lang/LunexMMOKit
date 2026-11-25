@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AttachmentOffset" format=3]
+
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_2nqqn"]
+
+[resource]
+script = ExtResource("1_2nqqn")
+attachment_id = "weapon_300011000"
+equipment_id = "300011000"
+notes = "Unity identity on hand socket"
+source_unity = "CActorObject.ChangeWeapon / prefab child TRS"

@@ -1,9 +1,9 @@
 # EDIT01
 
-Визуальный редактор креплений оружия и аксессуаров
+Визуальный редактор креплений в Character Studio / Asset Library
 
 ## Acceptance
-Gizmo XYZ, вращение, масштаб, независимые руки, сохранение overrides без изменения оригинала
+Выбор героя/оружия/крыльев/питомца/маунта; орбита камеры; play/pause анимаций; XYZ pos/rot/scale; независимые руки; посадка всадника; save/reset в AttachmentOffset ресурсы; те же ресурсы использует runtime
 
 ## Evidence
-Pending
+Depends CHAR08. Studio panel `attachment_editor_panel.gd` wired via «Крепления»; save/reset to user:// overrides. Full gizmo/Asset Library UX pending.
