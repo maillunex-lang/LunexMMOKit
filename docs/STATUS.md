@@ -14,3 +14,6 @@ CAP03: восстановить родительские трансформац�
 
 ## CAP03: последняя итерация
 82cc4b4: v3, 320 экземпляров; 321 применение родительской трансформации включая кандидатов без меша; ширина bounds 1145.6 -> 602.2; рендер сохраняет дефекты ориентации и материалов.
+
+## CAP03 orientation diagnostics
+a326765: 145 exact bindings: 71 identity, 64 X -90 degrees, 10 other rotations. v4 no correction and v5 imported local transform both render but bounds height 587.9/823.9; neither accepted. v3 retained. Next inspect source mesh vertices and Unity local basis per asset, active state, terrain.
