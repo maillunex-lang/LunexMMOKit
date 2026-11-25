@@ -35,7 +35,7 @@ var actor: Node3D
 var weapon: Node3D
 var animation_player: AnimationPlayer
 var equipment_handle: Dictionary = {}
-var target: MeshInstance3D
+var target: Node3D
 var combat: Node3D
 var active_attack: Node
 var material_params: Dictionary = {}
@@ -60,7 +60,7 @@ func _ready() -> void:
 		var bundled := ProjectSettings.globalize_path("res://../assets/studio")
 		if FileAccess.file_exists(bundled.path_join("manifest.json")): cache_root = bundled
 	if cache_root.is_empty() and OS.has_feature("android"):
-		cache_root = ProjectSettings.globalize_path("user://studio-cache")
+		cache_root = ProjectSettings.globalize_path("user://studio-cache-v2")
 	if not cache_root.is_empty():
 		source_root = cache_root.path_join("source")
 		actor_glb_template = cache_root.path_join("exports/%s.glb")
@@ -165,6 +165,12 @@ func _setup_ui() -> void:
 	var extras := HBoxContainer.new()
 	layer.add_child(extras)
 	extras.position = Vector2(16,105)
+	var fps_select := OptionButton.new()
+	for limit in [30,60,90,120]: fps_select.add_item("%d FPS" % limit,limit)
+	fps_select.select(1)
+	Engine.max_fps = 60
+	fps_select.item_selected.connect(func(i): Engine.max_fps = fps_select.get_item_id(i))
+	extras.add_child(fps_select)
 	for kind in ["wing","pet","mount"]:
 		var selector := OptionButton.new()
 		selector.custom_minimum_size = Vector2(180,44)
@@ -177,6 +183,7 @@ func _setup_ui() -> void:
 	help.name = "Help"
 	layer.add_child(help)
 	help.position = Vector2(16, 618)
+	help.visible = not OS.has_feature("android")
 	help.text = "Space — attack | ←/→ — class | ↑/↓ — speed | R — reset"
 
 func _add_button(parent: Container, text: String, action: Callable) -> Button:
@@ -327,16 +334,15 @@ func _apply_restored_materials(actor_id: String, weapon_id: String) -> void:
 		DarklordMaterial.apply(weapon, material_params[weapon_id][0], source_root)
 
 func _create_target() -> void:
-	target = MeshInstance3D.new()
+	target = Accessory.load_model(cache_root.path_join("exports/training-monster.glb"))
+	if target == null:
+		target = MeshInstance3D.new()
+		target.mesh = CapsuleMesh.new()
 	target.name = "TrainingTarget"
-	var capsule := CapsuleMesh.new()
-	target.mesh = capsule
-	var material := StandardMaterial3D.new()
-	material.albedo_color = Color(0.72, 0.75, 0.78)
-	target.material_override = material
+	Accessory.idle(target)
 	add_child(target)
 	var marker := _attack_origin()
-	target.global_position = marker.global_position + Vector3(1.2, 0.0, 0.0)
+	target.global_position = actor.global_position + Vector3(1.2, 0.0, 0.0)
 	combat.origin = marker
 	combat.target = target
 
@@ -426,6 +432,11 @@ func _preview_animation(index: int) -> void:
 	if is_instance_valid(active_attack): active_attack.cancel()
 	var clip := animation_select.get_item_text(index)
 	animation_player.play(clip,-1,speed_options[speed_index])
+	if accessories.has("mount"):
+		var mount: Node3D = accessories["mount"]
+		for player in mount.find_children("*","AnimationPlayer",true,false):
+			var ride_clip := "run" if clip == "mount_run" else "stand"
+			if player.has_animation(ride_clip): player.play(ride_clip,-1,speed_options[speed_index])
 	_update_status(clip)
 
 func _toggle_preview() -> void:
@@ -444,7 +455,7 @@ func _zoom(delta: float) -> void:
 
 func _reset_camera() -> void:
 	orbit_angle = 0.0
-	orbit_distance = 3.5
+	orbit_distance = 5.5 if accessories.has("mount") else 3.5
 	_update_camera()
 
 func _update_camera() -> void:
@@ -470,6 +481,20 @@ func _select_accessory(index: int, kind: String) -> void:
 			model.free()
 			return
 		marker.add_child(model)
+		for mesh in model.find_children("*","MeshInstance3D",true,false):
+			if "glow" in String(mesh.name).to_lower():
+				if index == 2:
+					var img := Image.load_from_file(accessory_root.path_join("wing-glow.png"))
+					if img != null and not img.is_empty():
+						var mat := StandardMaterial3D.new()
+						mat.albedo_texture = ImageTexture.create_from_image(img)
+						mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+						mat.alpha_scissor_threshold = 0.5
+						mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+						mat.cull_mode = BaseMaterial3D.CULL_DISABLED
+						mesh.material_override = mat
+					else: mesh.hide()
+				else: mesh.hide()
 	elif kind == "pet":
 		add_child(model)
 		model.position = Vector3(-0.8,0,0)
@@ -481,6 +506,13 @@ func _select_accessory(index: int, kind: String) -> void:
 		add_child(model)
 		actor.reparent(seat,false)
 		actor.transform = Transform3D.IDENTITY
+		var ride := animation_player.get_animation_list().find("mount_stand")
+		if ride >= 0:
+			animation_select.select(ride)
+			_preview_animation(ride)
+		orbit_distance = 5.5
+		orbit_center.y = 1.6
+		_update_camera()
 	else:
 		model.free()
 		return
@@ -495,7 +527,11 @@ func _remove_accessory(kind: String) -> void:
 	if kind == "mount" and is_instance_valid(actor):
 		actor.reparent(self,false)
 		actor.transform = Transform3D.IDENTITY
+		_refresh_animations()
+		orbit_center.y = 0.9
+		_reset_camera()
 	accessories.erase(kind)
+	if kind == "mount": _reset_camera()
 	model.queue_free()
 
 func _exit_tree() -> void:

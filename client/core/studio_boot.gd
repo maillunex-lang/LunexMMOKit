@@ -4,7 +4,7 @@ var label: Label
 var progress: ProgressBar
 var request: HTTPRequest
 var base_url := ""
-var cache_root := "user://studio-cache"
+var cache_root := "user://studio-cache-v2"
 func _ready():
 	var box := VBoxContainer.new()
 	add_child(box)

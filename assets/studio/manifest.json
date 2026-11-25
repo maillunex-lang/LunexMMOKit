@@ -360,6 +360,16 @@
       "path": "source/Client/Assets/Resources/Sound/skill/assassinatorattack01.mp3",
       "size": 8160,
       "sha256": "aac3a93d9b0cdbe088e4f0f4b36570efa92db9019a68f3f89d4fe246167d10f7"
+    },
+    {
+      "path": "exports/training-monster.glb",
+      "size": 368120,
+      "sha256": "966b6e155b6f3de49db0c6b6a93b9a244cb326207971a3b909792aad0ded6170"
+    },
+    {
+      "path": "exports/accessories/wing-glow.png",
+      "size": 224793,
+      "sha256": "e9f09e4e819913a7eba301fa74d70b5d021c356e462d75decdbaa4258a9ff1bd"
     }
   ]
 }
