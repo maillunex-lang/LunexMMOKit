@@ -1,10 +1,11 @@
 extends SceneTree
 ## WORLD-DESIGN-002: rebuild kits with embedded meshes + Darklord textures.
 ## Fixes: (1) water FBX was ~400m blue plane; (2) many kits packed without MeshInstance owners.
-const MESH_DIR := "/home/gamedev/LunexMMOKit/client/world/library/meshes/"
+const MESH_DIR := "res://world/library/meshes/"
 const TEX_DIR := "res://world/library/textures/"
 const KIT_DIR := "res://world/library/kits/"
-const OUT_META := "/home/gamedev/darklord-dgi/environment-kits.json"
+## Import-only meta dump; override with LUNEX_DGI_ROOT for local research machines.
+const OUT_META := "user://environment-kits.json"
 
 var KIT_DEFS := [
 	{"id": "gate_main", "category": "gate", "mesh": "gate_main.glb", "tex": "build_jz03.png", "source": "cs_yw_xsc_chengmengqian02"},
@@ -273,7 +274,7 @@ func build_mesh_kit(def: Dictionary) -> Dictionary:
 	return {"id": def.id, "category": def.category, "source": def.source, "meshes": mesh_count, "kept_tex": kept_tex, "size": [bounds.size.x, bounds.size.y, bounds.size.z] if not first else []}
 
 func run():
-	DirAccess.make_dir_recursive_absolute("/home/gamedev/LunexMMOKit/client/world/library/kits")
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://world/library/kits"))
 	# Import new water textures
 	await process_frame
 	# Capital grass (cs_zhucheng_dm01) — old splat_grass was sand and read as “no textures”.

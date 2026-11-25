@@ -1,0 +1,42 @@
+# Production-ish compose for a NEW VPS. Bind only loopback or put behind reverse proxy.
+# Does not use hard-coded current VPS IP.
+name: lunexmmokit
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lunex}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-lunex}
+    volumes:
+      - lunex_pg:/var/lib/postgresql/data
+      - ../server/migrations/001_init.sql:/docker-entrypoint-initdb.d/001_init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-lunex} -d ${POSTGRES_DB:-lunex}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [lunex]
+
+  lunexd:
+    build:
+      context: ../server
+      dockerfile: ../deploy/Dockerfile.lunexd
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      LUNEX_DATABASE_URL: postgres://${POSTGRES_USER:-lunex}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-lunex}?sslmode=disable
+      LUNEX_LISTEN: 0.0.0.0:18080
+    # Prefer reverse proxy; expose loopback only if needed:
+    # ports: ["127.0.0.1:18080:18080"]
+    networks: [lunex]
+
+networks:
+  lunex:
+
+volumes:
+  lunex_pg:

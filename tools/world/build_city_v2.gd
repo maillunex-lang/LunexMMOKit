@@ -1,5 +1,5 @@
 extends SceneTree
-const BASE="/home/gamedev/darklord-dgi/"
+const BASE="user://dgi/" ## research archive; require LUNEX_DGI_ROOT offline copy
 var meshes := {}
 var materials := {}
 func read_json(path: String):

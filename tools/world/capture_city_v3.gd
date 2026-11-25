@@ -33,6 +33,6 @@ func run():
 	print("CITY_BOUNDS ",bounds)
 	await process_frame
 	await RenderingServer.frame_post_draw
-	var err:=root.get_texture().get_image().save_png("/home/gamedev/darklord-dgi/screens/capital-overview-v3.png")
+	var err:=root.get_texture().get_image().save_png("user://screens/capital-overview-v3.png")
 	print("CAPTURE ",err)
 	quit(err)

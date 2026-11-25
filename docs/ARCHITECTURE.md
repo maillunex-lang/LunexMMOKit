@@ -4,7 +4,7 @@
 Клиент: отображение, ввод, VFX/SFX. Локальный slice — прототип до N02/C01, не продукт.
 
 Игровые данные отделены от логики. Исходники Darklord — только чтение (импорт-инструменты).
-Адаптированные runtime-ассеты: `res://` / `assets/studio` / `user://` cache + manifest (не абсолютные пути VPS в runtime).
+Адаптированные runtime-ассеты: `res://` / `assets/studio` / `client/world/library` / `user://` cache + `docs/manifests/game_assets.json` (не абсолютные пути VPS в runtime). DR: `docs/DISASTER_RECOVERY.md`.
 
 ## Модули
 client/core: жизненный цикл, AssetPaths, GameSession; world: зоны; actors; combat (визуал поверх серверных событий); network; ui (мобильный HUD .tscn); content.

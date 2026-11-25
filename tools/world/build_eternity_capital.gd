@@ -52,7 +52,9 @@ func _spawn_npc(parent: Node3D, pos: Vector3, yaw: float, npc_name: String) -> v
 	var body := Node3D.new()
 	body.name = "Visual"
 	npc.add_child(body)
-	var glb_path := "/home/gamedev/darklord-dgi/exports/10001.glb"
+	var glb_path := ProjectSettings.globalize_path("res://../assets/studio/exports/10001.glb")
+	if not FileAccess.file_exists(glb_path):
+		glb_path = OS.get_environment("LUNEX_STUDIO_CACHE").path_join("exports/10001.glb")
 	var loaded := false
 	if FileAccess.file_exists(glb_path):
 		var doc := GLTFDocument.new()

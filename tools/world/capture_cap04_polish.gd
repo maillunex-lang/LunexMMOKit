@@ -1,6 +1,6 @@
 extends SceneTree
 ## CAP04 visual check: water + crystal mesh + effect crystal + terrain under editable lighting.
-const OUT := "/home/gamedev/darklord-dgi/screens/"
+const OUT := "user://screens/"
 func _initialize():
 	call_deferred("run")
 func run():

@@ -2530,7 +2530,7 @@
           }
         ],
         "mesh_source": "Client/Assets/AssetsRaw/Effect/mesh_2018/bingzhu_mesh.FBX",
-        "mesh_glb": "/home/gamedev/darklord-dgi/exports/meshes/bingzhu_mesh.glb",
+        "mesh_glb": "exports/meshes/bingzhu_mesh.glb",
         "transform_id": 4198753165756320,
         "parent_transform_id": 4256278004814740,
         "path": "FS_W_attack001/bingzhu_mesh"
@@ -5808,7 +5808,7 @@
         "lengthScale": 2.0,
         "velocityScale": 0.0,
         "mesh_source": "Client/Assets/AssetsRaw/Effect/Models/luoshitou.FBX",
-        "mesh_glb": "/home/gamedev/darklord-dgi/exports/meshes/luoshitou.glb",
+        "mesh_glb": "exports/meshes/luoshitou.glb",
         "transform_id": 4908964794270220,
         "parent_transform_id": 4557860446029956,
         "path": "FS_hti/glow/fs_suibing (3)",

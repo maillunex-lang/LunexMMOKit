@@ -9,7 +9,7 @@ jobs:
       - run: bash -n tests/smoke.sh
       - run: test -f client/project.godot && test -f client/scenes/main.tscn
       - run: python3 tools/roadmap.py validate
-      - run: test -f docs/BETA_001.md && test -f docs/AUDIT_001.md
+      - run: test -f docs/BETA_001.md && test -f docs/AUDIT_001.md && test -f docs/DISASTER_RECOVERY.md
 
   go-server:
     runs-on: ubuntu-latest
@@ -31,9 +31,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: bash tools/check_versions.sh || true
       - run: test -f docs/VERSIONS.md && test -f client/export_presets.cfg
       - run: '! grep -Eiq "keystore/password|BEGIN PRIVATE" client/export_presets.cfg'
 
-  # Godot headless smokes when Godot is available on the runner image (optional).
-  # Self-hosted VPS runs these via tools/run_audit_smokes.sh
+  portability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify game asset manifest
+        run: python3 tools/assets/verify_game_manifest.py
+      - name: No forbidden runtime VPS trees in client
+        run: |
+          if grep -RInE '/home/gamedev/(Darklord|darklord-dgi|lunex-asset-library)' client --include='*.gd' --include='*.tscn' --include='*.json'; then
+            echo "FAIL forbidden paths"; exit 1
+          fi
+      - name: No secrets / player dumps
+        run: |
+          ! git ls-files | grep -E '\.(keystore|sql\.gz|dump|env)$' || (echo FAIL tracked secrets; exit 1)
+          test ! -f .env
+      - name: DR docs present
+        run: |
+          test -f docs/INSTALL_WINDOWS.md
+          test -f docs/DEPLOY_VPS.md
+          test -f docs/BACKUP.md
+          test -f docs/RESTORE.md
+          test -f docs/ASSET_MANIFEST.md
+      - name: Library meshes present (used env kits)
+        run: test "$(find client/world/library/meshes -name '*.glb' | wc -l)" -ge 20

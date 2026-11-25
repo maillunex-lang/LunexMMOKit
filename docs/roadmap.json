@@ -1077,10 +1077,36 @@
     "evidence": ""
   },
   {
+    "id": "DR01",
+    "phase": "foundation",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/DISASTER_RECOVERY.md",
+      "docs/ASSET_MANIFEST.md",
+      "docs/PORTABILITY.md",
+      "docs/BETA_001.md"
+    ],
+    "scope": [
+      "assets/",
+      "client/world/library/",
+      "deploy/",
+      "docs/",
+      "tools/assets/",
+      ".github/"
+    ],
+    "work": "DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery",
+    "accept": "Клон без Darklord/DGI проходит манифест; сервер из репо; docs восстановления; CI portability; ограничения задокументированы",
+    "status": "doing",
+    "evidence": "2026-11-25: manifest 359/~125MiB verify OK; 33+ library GLB; CLIENT_CLEAN; deploy/backup/restore; ISOLATED_RECOVERY_SMOKE_OK; CI portability job added; Windows/bare-metal VPS UI not run here; external backup credentials pending owner"
+  },
+  {
     "id": "BETA01",
     "phase": "release",
     "depends": [
-      "L01"
+      "L01",
+      "DR01"
     ],
     "read": [
       "docs/BETA_001.md",

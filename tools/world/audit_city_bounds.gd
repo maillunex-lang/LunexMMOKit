@@ -11,7 +11,7 @@ func run():
 		var b:AABB=m.global_transform*m.get_aabb()
 		rows.append({"node":str(city.get_path_to(m)),"asset":p.get_meta("source_asset",""),"height":b.size.y,"min_y":b.position.y,"max_y":b.end.y,"visible":m.is_visible_in_tree()})
 	rows.sort_custom(func(a,b):return a.height>b.height)
-	var f:=FileAccess.open("/home/gamedev/darklord-dgi/city-bounds-v6.json",FileAccess.WRITE)
+	var f:=FileAccess.open("user://dgi/city-bounds-v6.json",FileAccess.WRITE)
 	f.store_string(JSON.stringify(rows,"  "))
 	for r in rows.slice(0,12):print(r)
 	print("MESH_COUNT ",rows.size())

@@ -2,25 +2,40 @@
 .env
 *.keystore
 *.apk
-*.glb
 *.fbx
 assets_private/
-!assets/studio/**/*.glb
-
 client/studio_payload.zip
 build/
 __pycache__/
 *.pyc
 
-# Archive Unity capital dumps (too large for GitHub; keep local)
+# Unconverted FBX stay out of git (tools import only)
+*.fbx
+
+# Runtime GLB: allow used game libraries; ignore accidental dumps elsewhere
+*.glb
+!assets/studio/**/*.glb
+!client/world/library/meshes/*.glb
+!client/world/library/meshes/**/*.glb
+!client/world/models/**/*.glb
+!client/content/runtime/**/*.glb
+
+# Archive Unity capital dumps (too large; keep local only)
 client/world/imported/capital_geometry_v*.tscn
 client/world/imported/capital_geometry_preview.tscn
 
-# Local owner confirmation / locks may be machine-specific; keep locks if needed
 *.force_overwrite_confirm
-
-# Editor backups
 *.tmp
 *~
 *.bak
 tools/sdk/
+
+# Local backups / encrypted dumps (never public player DB)
+backups/
+*.sql.gz
+*.sql.enc
+*.dump
+*.dump.enc
+
+# Owner scene backups (local)
+**/backups/

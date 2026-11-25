@@ -1,6 +1,4 @@
 # Next
-Primary: AUDIT01 residuals + ready tasks toward beta.
-Ready now: WD02 — WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)
-F03/F04 done. Auth HTTP scaffold live on isolated compose.
-Product: BETA01 Closed Beta 0.1.0.
-Read: docs/tasks/AUDIT01.md, docs/AUDIT_001.md, docs/BETA_001.md, docs/tasks/WD02.md
+Primary: DR01 — DISASTER-RECOVERY-001 (blocks BETA01). Await green CI portability, then mark DR01 done with documented limits.
+Also: AUDIT01 residuals → A01 → N01 → BETA01 path.
+Read: docs/tasks/DR01.md, docs/DISASTER_RECOVERY.md, docs/ASSET_MANIFEST.md, docs/BETA_001.md

@@ -7,8 +7,17 @@ Do not treat a plan as implemented. Never mark done without evidence. Update tas
 End goal is **Closed Beta 0.1.0 «Осколки вечности»** — online authoritative MMORPG (Go + PostgreSQL + Godot Android). See docs/BETA_001.md.
 City Preview APK is internal smoke only, not the ship target. Do not stop after a demo scene.
 
+## Disaster recovery (permanent — DISASTER-RECOVERY-001)
+- One game, one repo (`LunexMMOKit`), one used-asset library inside the repo. No extra full project copies on disk.
+- GitHub must contain everything needed to develop, edit in Godot on Windows, run server, migrate DB schema, and build APK for **our** game.
+- Never commit original Darklord / full DGI / full Lunex Asset Library / secrets / player DB dumps / signing keys.
+- Runtime must not require `/home/gamedev/Darklord`, `darklord-dgi`, or `lunex-asset-library`. Import tools may use `LUNEX_DARKLORD_ROOT` / `LUNEX_DGI_ROOT`.
+- When adding content: adapt → dedupe SHA256 → add to project → update `docs/manifests/game_assets.json` → commit/push → CI.
+- Player DB backups are encrypted and stored **off** the current VPS (`docs/BACKUP.md`). DR docs: `docs/DISASTER_RECOVERY.md`.
+- `DR01` blocks `BETA01`.
+
 ## Active priority
-While AUDIT01 is open, prefer architectural fixes over mass new locations/content. Keep LUNEX-AUDIT-001 (docs/AUDIT_001.md) in force.
+While AUDIT01 / DR01 are open, prefer portability and architecture over mass new locations. Keep LUNEX-AUDIT-001 in force.
 
 All content tasks must satisfy docs/EDITOR.md (EDITOR-001). Do not replace native editable scenes with runtime-only construction. Preserve manual edits on reimport.
 

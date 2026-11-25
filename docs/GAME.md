@@ -30,6 +30,9 @@ Darklord is the primary mechanical and content baseline. Four source classes; pr
 City Preview APK больше не является конечным результатом (допускаются только внутренние smoke-сборки).
 Стек: Godot 4 клиент + авторитетный Go/PostgreSQL/WebSocket сервер. См. `docs/BETA_001.md`.
 
+## DISASTER-RECOVERY-001 — обязательный блокер беты
+Репозиторий должен переживать потерю текущего VPS: used-assets в git, манифест, deploy/backup, Windows Godot. См. `docs/DISASTER_RECOVERY.md`. Задача `DR01`.
+
 ## WORLD-DESIGN-002 — утверждено
 Собственный игровой мир на оригинальных ресурсах Darklord. Не требуется 1:1 перенос Unity-локаций. Сначала красивая столица и визуальная приёмка, затем ≥3 боевые локации к бете.
 
