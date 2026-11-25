@@ -60,6 +60,19 @@ func run() -> void:
 		scene.call("_orbit",0.4)
 		scene.call("_zoom",-0.3)
 		scene.call("_reset_camera")
+		for kind in ["wing","pet","mount"]:
+			scene.call("_toggle_accessory",kind)
+			await process_frame
+			if not scene.get("accessories").has(kind):
+				print("accessory failed ",i," ",kind)
+				quit(7)
+				return
+		for kind in ["mount","pet","wing"]:
+			scene.call("_toggle_accessory",kind)
+			await process_frame
+		if not scene.get("accessories").is_empty():
+			quit(8)
+			return
 		scene.call("launch_attack")
 		await create_timer(1.5).timeout
 		var hp: int = int(combat.get("hp"))

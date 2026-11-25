@@ -1,4 +1,5 @@
 extends Node3D
+const Accessory = preload("res://actors/accessory_preview.gd")
 const DarklordMaterial = preload("res://content/shaders/darklord_material.gd")
 const Equipment = preload("res://actors/equipment.gd")
 const VFX = preload("res://content/vfx/particle_preview.gd")
@@ -41,6 +42,8 @@ var speed_index := 1
 var status_label: Label
 var camera: Camera3D
 var animation_select: OptionButton
+var accessories: Dictionary = {}
+var accessory_root := "/home/gamedev/darklord-dgi/exports/accessories"
 var orbit_angle := 0.0
 var orbit_distance := 3.5
 var orbit_center := Vector3(0.6,0.9,0)
@@ -134,6 +137,12 @@ func _setup_ui() -> void:
 	_add_button(studio,"+",_zoom.bind(-0.3))
 	_add_button(studio,"−",_zoom.bind(0.3))
 	_add_button(studio,"Вид",_reset_camera)
+	var extras := HBoxContainer.new()
+	layer.add_child(extras)
+	extras.position = Vector2(16,105)
+	_add_button(extras,"Крылья",_toggle_accessory.bind("wing"))
+	_add_button(extras,"Питомец",_toggle_accessory.bind("pet"))
+	_add_button(extras,"Маунт",_toggle_accessory.bind("mount"))
 	var help := Label.new()
 	help.name = "Help"
 	layer.add_child(help)
@@ -215,6 +224,7 @@ func _load_vfx() -> void:
 			combat.impact_visual = build_effect(records[key])
 
 func _clear_actor() -> void:
+	for kind in accessories.keys(): _remove_accessory(kind)
 	if combat != null:
 		for child in combat.get_children(): child.queue_free()
 		combat.hp = 100
@@ -409,3 +419,45 @@ func _reset_camera() -> void:
 func _update_camera() -> void:
 	camera.position = orbit_center + Vector3(sin(orbit_angle)*orbit_distance,0.8,cos(orbit_angle)*orbit_distance)
 	camera.look_at(orbit_center)
+
+func _toggle_accessory(kind: String) -> void:
+	if accessories.has(kind):
+		_remove_accessory(kind)
+		return
+	if actor == null: return
+	var model := Accessory.load_model(accessory_root.path_join(kind+".glb"))
+	if model == null:
+		_set_status("Не найден аксессуар: "+kind)
+		return
+	if kind == "wing":
+		var marker := Accessory.socket(actor,["E_back2","E_back"])
+		if marker == null:
+			model.free()
+			return
+		marker.add_child(model)
+	elif kind == "pet":
+		add_child(model)
+		model.position = Vector3(-0.8,0,0)
+	elif kind == "mount":
+		var seat := Accessory.socket(model,["Horse_E_back2","Horse_E_back"])
+		if seat == null:
+			model.free()
+			return
+		add_child(model)
+		actor.reparent(seat,false)
+		actor.transform = Transform3D.IDENTITY
+	else:
+		model.free()
+		return
+	accessories[kind] = model
+	Accessory.idle(model)
+	_update_status(kind)
+
+func _remove_accessory(kind: String) -> void:
+	if not accessories.has(kind): return
+	var model: Node3D = accessories[kind]
+	if kind == "mount" and is_instance_valid(actor):
+		actor.reparent(self,false)
+		actor.transform = Transform3D.IDENTITY
+	accessories.erase(kind)
+	model.queue_free()
