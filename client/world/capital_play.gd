@@ -6,10 +6,11 @@ const DarklordMaterial = preload("res://content/shaders/darklord_material.gd")
 @export var actor_ids: PackedStringArray = ["10001", "20001", "30001", "40001"]
 @export var class_names: PackedStringArray = ["Воин", "Лучник", "Маг", "Ассасин"]
 @export var spawn_hint := Vector3(90, 120, -140)
-@export var actor_glb_template := "/home/gamedev/darklord-dgi/exports/%s.glb"
-@export var weapon_glb_template := "/home/gamedev/darklord-dgi/exports/weapon-%s.glb"
-@export var source_root := "/home/gamedev/Darklord"
-@export var material_params_path := "/home/gamedev/darklord-dgi/material-params.json"
+## FIX-002: resolved via LunexAssets at runtime (no VPS absolutes).
+@export var actor_glb_template := ""
+@export var weapon_glb_template := ""
+@export var source_root := ""
+@export var material_params_path := ""
 
 var weapon_ids := {
 	"10001": "100011000",
@@ -47,8 +48,14 @@ func _ready() -> void:
 	_load_class(0)
 
 func _load_materials() -> void:
-	if FileAccess.file_exists(material_params_path):
-		material_params = JSON.parse_string(FileAccess.get_file_as_string(material_params_path))
+	if LunexAssets:
+		LunexAssets.refresh()
+		source_root = LunexAssets.source_root
+		material_params_path = LunexAssets.material_params_path()
+	if material_params_path != "" and FileAccess.file_exists(material_params_path):
+		var parsed = JSON.parse_string(FileAccess.get_file_as_string(material_params_path))
+		if parsed is Dictionary:
+			material_params = parsed
 
 func _ensure_city() -> void:
 	if has_node("CapitalCity"):
@@ -211,16 +218,18 @@ func _load_class(index: int) -> void:
 	animator = null
 	var actor_id := String(actor_ids[current_index])
 	var weapon_id := String(weapon_ids.get(actor_id, actor_id))
-	visual = _load_glb(actor_glb_template % actor_id)
+	var actor_path := LunexAssets.actor_glb(actor_id) if LunexAssets else (actor_glb_template % actor_id)
+	visual = _load_glb(actor_path)
 	if visual == null:
 		_set_status("нет модели " + actor_id)
 		return
 	hero.add_child(visual)
 	visual.position = Vector3.ZERO
 	hero.set("visual", visual)
-	if material_params.has(actor_id) and material_params[actor_id].size() > 0:
+	if material_params.has(actor_id) and material_params[actor_id].size() > 0 and source_root != "":
 		DarklordMaterial.apply(visual, material_params[actor_id][0], source_root)
-	var weapon := _load_glb(weapon_glb_template % weapon_id)
+	var weapon_path := LunexAssets.weapon_glb(weapon_id) if LunexAssets else (weapon_glb_template % weapon_id)
+	var weapon := _load_glb(weapon_path)
 	if weapon:
 		if material_params.has(weapon_id) and material_params[weapon_id].size() > 0:
 			DarklordMaterial.apply(weapon, material_params[weapon_id][0], source_root)

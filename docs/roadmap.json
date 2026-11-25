@@ -188,10 +188,34 @@
       "client/actors/",
       "docs/"
     ],
-    "work": "GAME-SLICE-001: вертикальный срез — квесты гл.1, бой, столица+окраина, порталы (ресурсы Darklord, не 1:1)",
-    "accept": "eternity_play: 4 класса, квестовая цепочка talk/kill/goto по stable_id, осколочники, переход в ashen_outskirts; quest smoke OK; APK не блокирует",
+    "work": "GAME-SLICE-001: клиентский прототип механик гл.1 (локальный) — ступень к онлайн-бете, не замена серверу",
+    "accept": "eternity_play: 4 класса, квесты talk/kill/goto, осколочники, ashen+ruins stubs; явно помечено prototype до N02/C01",
     "status": "doing",
-    "evidence": "classes_baseline.json from t_playerinfo/t_skill/t_effect; hero_combat hotbar; quests+ashen; HERO_SMOKE_OK; play smoke fixed"
+    "evidence": "classes_baseline.json; hero_combat; quests+ashen; HERO_SMOKE_OK; play smoke fixed; BETA-001: slice feeds online beta, not end product"
+  },
+  {
+    "id": "AUDIT01",
+    "phase": "foundation",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/AUDIT_001.md",
+      "docs/BETA_001.md",
+      "docs/EDITOR.md",
+      "docs/PORTABILITY.md",
+      "docs/ARCHITECTURE.md"
+    ],
+    "scope": [
+      "client/",
+      "tools/",
+      "docs/",
+      "tests/"
+    ],
+    "work": "LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты",
+    "accept": "docs/AUDIT_001.md: статус+доказательства по FIX-001…014; критические FIX закрыты или явно частично; путь к BETA01",
+    "status": "doing",
+    "evidence": "Branch cursor/lunex-audit-001-1cd3; WIP d5590dc; verification table in AUDIT_001.md; implementing B–F"
   },
   {
     "id": "CAPAPK",
@@ -210,10 +234,10 @@
       "tools/",
       "docs/"
     ],
-    "work": "Отдельный Android City Preview APK: четыре класса, джойстик, камера, FPS, пресеты графики; оружие/крылья/маунты через Attachment System",
-    "accept": "Подписанный APK, проверка подписи и SHA256, доступная ссылка; установка и FPS на устройствах фиксируются отдельно после проверки пользователем",
+    "work": "[INTERNAL ONLY] Технический Android smoke APK города — НЕ конечная цель продукта (см. BETA01 Closed Beta 0.1.0)",
+    "accept": "Внутренний debug APK для smoke на устройстве владельца; не публиковать как релиз; продукт = BETA01",
     "status": "blocked",
-    "evidence": "Blocked by WORLD-DESIGN-002: City APK waits visual acceptance of new hand-authored capital (WD02), not Unity 1:1 v8 scene."
+    "evidence": "BETA-001: end goal replaced City Preview with Closed Beta 0.1.0. CAPAPK remains optional internal smoke after AUDIT01+WD02; not product ship."
   },
   {
     "id": "CAP06",
@@ -1047,8 +1071,32 @@
       ".github/",
       "tools/"
     ],
-    "work": "Подписанный APK, обновление пакетов, проверка лицензий",
-    "accept": "Установка, обновление, rollback, контроль хешей",
+    "work": "Пакет Closed Beta: подписанный APK, докачка контента, integrity, обновление клиента",
+    "accept": "Установка на Android ≥6ГБ; обновление/rollback; контроль хешей; без секретов в репо",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "BETA01",
+    "phase": "release",
+    "depends": [
+      "L01"
+    ],
+    "read": [
+      "docs/BETA_001.md",
+      "docs/GAME.md",
+      "docs/ARCHITECTURE.md",
+      "docs/PERFORMANCE.md"
+    ],
+    "scope": [
+      "client/",
+      "server/",
+      "shared/",
+      "docs/",
+      "tests/"
+    ],
+    "work": "Closed Beta 0.1.0 «Осколки вечности»: онлайн MMORPG готовая к закрытому тестированию реальными игроками",
+    "accept": "APK→регистрация→персонаж→обучение→глава1→бой→экип→другие игроки; progress persist; сервер авторитетен; нет блокеров главы 1 / дублей наград",
     "status": "todo",
     "evidence": ""
   }

@@ -1,7 +1,11 @@
 config_version=5
 [application]
 config/name="LunexMMOKit"
+config/description="Осколки вечности — Closed Beta target (BETA-001). Local slice is prototype until authoritative server."
 run/main_scene="res://world/locations/eternity_capital/eternity_play.tscn"
+[autoload]
+LunexAssets="*res://core/asset_paths.gd"
+GameSession="*res://core/game_session.gd"
 [editor_plugins]
 enabled=PackedStringArray("res://addons/lunex_world_editor/plugin.cfg")
 [display]
@@ -15,3 +19,9 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 
 textures/vram_compression/import_etc2_astc=true
+[lunex]
+studio_asset_url=""
+[layer_names]
+3d_physics/layer_1="world"
+3d_physics/layer_2="water"
+3d_physics/layer_3="characters"

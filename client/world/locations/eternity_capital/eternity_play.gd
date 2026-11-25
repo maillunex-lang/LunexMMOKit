@@ -1,5 +1,6 @@
 extends Node3D
-## Playable Eternity Capital: 4 Darklord classes, skills from t_playerinfo/t_skill, quests, portal.
+## Playable Eternity Capital: 4 Darklord classes, skills, quests, portal.
+## LOCAL PROTOTYPE until authoritative server (BETA-001 / C01). Paths via LunexAssets (FIX-002).
 const Equipment = preload("res://actors/equipment.gd")
 const DarklordMaterial = preload("res://content/shaders/darklord_material.gd")
 const QuestLogScript = preload("res://content/quests/quest_log.gd")
@@ -7,47 +8,55 @@ const CombatDummyScript = preload("res://actors/combat_dummy.gd")
 const HeroKitScript = preload("res://content/heroes/hero_kit.gd")
 const HeroCombatScript = preload("res://actors/hero_combat.gd")
 const SkillFxScript = preload("res://content/vfx/skill_fx.gd")
+const CombatRuntimeScript = preload("res://combat/combat_runtime.gd")
 
 @export var actor_ids: PackedStringArray = ["10001", "20001", "30001", "40001"]
 @export var class_names: PackedStringArray = ["Воин", "Лучник", "Маг", "Ассасин"]
-@export var actor_glb_template := "/home/gamedev/darklord-dgi/exports/%s.glb"
-@export var weapon_glb_template := "/home/gamedev/darklord-dgi/exports/weapon-%s.glb"
-@export var source_root := "/home/gamedev/Darklord"
-@export var material_params_path := "/home/gamedev/darklord-dgi/material-params.json"
 
 var weapon_ids := {"10001": "100011000", "20001": "200011000", "30001": "300011000", "40001": "400011000"}
 var current_index := 0
 var material_params: Dictionary = {}
+var source_root := ""
 var hero: CharacterBody3D
 var visual: Node3D
 var animator: AnimationPlayer
 var camera: Camera3D
-var joystick
+var hud
 var status_label: Label
 var fps_label: Label
-var quest_label: RichTextLabel
-var vitals_label: Label
-var interact_hint: Label
 var quest_log
 var hero_kit
 var hero_combat
 var skill_fx
+var combat_runtime
 var skill_buttons: Array[Button] = []
 
 func _ready() -> void:
-	if FileAccess.file_exists(material_params_path):
-		material_params = JSON.parse_string(FileAccess.get_file_as_string(material_params_path))
+	LunexAssets.refresh()
+	source_root = LunexAssets.source_root
+	var mp := LunexAssets.material_params_path()
+	if mp != "" and FileAccess.file_exists(mp):
+		var parsed = JSON.parse_string(FileAccess.get_file_as_string(mp))
+		if parsed is Dictionary:
+			material_params = parsed
 	if not has_node("EternityCapital"):
-		var city: Node3D = load("res://world/locations/eternity_capital/eternity_capital.tscn").instantiate()
-		city.name = "EternityCapital"
-		add_child(city)
-		move_child(city, 0)
+		var city_path := "res://world/locations/eternity_capital/eternity_capital.tscn"
+		if not ResourceLoader.exists(city_path):
+			city_path = "res://world/locations/eternity_capital/eternity_capital_generated.tscn"
+		if ResourceLoader.exists(city_path):
+			var city: Node3D = load(city_path).instantiate()
+			city.name = "EternityCapital"
+			add_child(city)
+			move_child(city, 0)
 	quest_log = QuestLogScript.new()
 	quest_log.name = "QuestLog"
 	add_child(quest_log)
 	quest_log.load_catalog()
+	GameSession.apply_to_quest_log(quest_log)
 	quest_log.quest_updated.connect(_on_quest_ui)
-	quest_log.quest_completed.connect(func(id): status_label.text = "Квест завершён: " + id)
+	quest_log.quest_completed.connect(func(id):
+		if hud: hud.set_status("Квест завершён: " + id)
+		GameSession.sync_quest_log(quest_log))
 	hero_kit = HeroKitScript.new()
 	hero_kit.load_data()
 	hero_combat = HeroCombatScript.new()
@@ -58,14 +67,20 @@ func _ready() -> void:
 	skill_fx = SkillFxScript.new()
 	skill_fx.name = "SkillFx"
 	add_child(skill_fx)
+	combat_runtime = CombatRuntimeScript.new()
+	combat_runtime.name = "CombatRuntime"
+	add_child(combat_runtime)
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	_spawn_hero()
 	_spawn_shardlings()
 	_build_ui()
 	_ensure_nav()
-	_load_class(0)
+	var start_idx := int(GameSession.class_index)
+	_load_class(start_idx)
 	_on_quest_ui("")
+	if hud:
+		hud.set_status("ПРОТОТИП (локально) · " + LunexAssets.status_line())
 
 func _ensure_nav() -> void:
 	var nav := NavigationRegion3D.new()
@@ -117,102 +132,77 @@ func _build_ui() -> void:
 	var layer := CanvasLayer.new()
 	layer.name = "HUD"
 	add_child(layer)
-	joystick = load("res://ui/controls/virtual_joystick.tscn").instantiate()
-	layer.add_child(joystick)
-	joystick.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
-	joystick.position = Vector2(48, -220)
-	joystick.size = Vector2(160, 160)
-	joystick.direction_changed.connect(func(d): if hero: hero.set_direction(d))
-	status_label = Label.new()
-	status_label.position = Vector2(16, 16)
-	layer.add_child(status_label)
+	hud = load("res://ui/hud/game_hud.tscn").instantiate()
+	layer.add_child(hud)
+	hud.joystick_moved.connect(func(d): if hero: hero.set_direction(d))
+	hud.attack_pressed.connect(_try_attack)
+	hud.skill_pressed.connect(_try_skill)
+	hud.interact_pressed.connect(_try_interact)
+	hud.portal_pressed.connect(_try_portal)
+	hud.goto_pressed.connect(_goto_quest_objective)
+	hud.graphics_pressed.connect(func():
+		hud.set_status("Графика: пресеты Low/Med/High/Max — в P01"))
+	status_label = hud.status
 	fps_label = Label.new()
-	fps_label.position = Vector2(16, 48)
+	fps_label.position = Vector2(16, 88)
 	layer.add_child(fps_label)
-	vitals_label = Label.new()
-	vitals_label.position = Vector2(16, 72)
-	layer.add_child(vitals_label)
-	quest_label = RichTextLabel.new()
-	quest_label.position = Vector2(16, 100)
-	quest_label.size = Vector2(420, 160)
-	quest_label.bbcode_enabled = true
-	quest_label.fit_content = true
-	layer.add_child(quest_label)
-	interact_hint = Label.new()
-	interact_hint.position = Vector2(400, 620)
-	interact_hint.text = "E NPC  |  G к цели (NavMesh)  |  Space атака  |  1/2/3  |  F портал"
-	layer.add_child(interact_hint)
-	var go := Button.new()
-	go.text = "К цели"
-	go.position = Vector2(1100, 16)
-	go.pressed.connect(_goto_quest_objective)
-	layer.add_child(go)
 	var row := HBoxContainer.new()
-	row.position = Vector2(16, 600)
+	row.position = Vector2(200, 16)
 	layer.add_child(row)
 	for i in actor_ids.size():
 		var b := Button.new()
 		b.text = class_names[i]
 		b.pressed.connect(_load_class.bind(i))
 		row.add_child(b)
-	var atk := Button.new()
-	atk.text = "Атака"
-	atk.pressed.connect(_try_attack)
-	row.add_child(atk)
-	var skills := HBoxContainer.new()
-	skills.position = Vector2(16, 660)
-	layer.add_child(skills)
-	skill_buttons.clear()
-	for s in range(3):
-		var sb := Button.new()
-		sb.text = "Умение %d" % (s + 1)
-		sb.custom_minimum_size = Vector2(120, 40)
-		sb.pressed.connect(_try_skill.bind(s))
-		skills.add_child(sb)
-		skill_buttons.append(sb)
+	skill_buttons = [hud.btn_skill0, hud.btn_skill1, hud.btn_skill2]
 
 func _on_quest_ui(_id: String) -> void:
-	if quest_label and quest_log:
-		quest_label.text = quest_log.tracker_text()
+	if hud and quest_log:
+		hud.set_quest(quest_log.tracker_text())
+	GameSession.sync_quest_log(quest_log)
 
 func _on_vitals(_a = 0, _b = 0) -> void:
-	if vitals_label and hero_combat:
-		vitals_label.text = "HP %d/%d  MP %d/%d" % [hero_combat.hp, hero_combat.max_hp, hero_combat.mp, hero_combat.max_mp]
+	if hud and hero_combat:
+		hud.set_vitals(hero_combat.hp, hero_combat.max_hp, hero_combat.mp, hero_combat.max_mp)
+		GameSession.set_vitals(hero_combat.hp, hero_combat.max_hp, hero_combat.mp, hero_combat.max_mp)
 
 func _process(_delta: float) -> void:
 	if fps_label:
-		fps_label.text = "FPS %.0f" % Engine.get_frames_per_second()
-	for i in skill_buttons.size():
-		var left: float = hero_combat.cd_left(i) if hero_combat else 0.0
-		var bar: Array = hero_kit.hotbar(String(actor_ids[current_index])) if hero_kit else []
+		fps_label.text = "FPS %.0f (Xvfb≠Android)" % Engine.get_frames_per_second()
+	if hero_combat == null or hero_kit == null:
+		return
+	var labels := PackedStringArray()
+	var bar: Array = hero_kit.hotbar(String(actor_ids[current_index]))
+	for i in 3:
 		var label := "Умение %d" % (i + 1)
 		if i < bar.size():
 			label = String(bar[i].get("label", label))
+		var left: float = hero_combat.cd_left(i)
 		if left > 0.05:
-			skill_buttons[i].text = "%s %.0f" % [label, left]
-			skill_buttons[i].disabled = true
+			labels.append("%s %.0f" % [label, left])
+			if i < skill_buttons.size():
+				skill_buttons[i].disabled = true
 		else:
-			skill_buttons[i].text = label
-			skill_buttons[i].disabled = false
+			labels.append(label)
+			if i < skill_buttons.size():
+				skill_buttons[i].disabled = false
+	if hud:
+		hud.set_skill_labels(labels)
 
 func _unhandled_input(event: InputEvent) -> void:
+	## Keyboard is optional shortcut; HUD buttons are primary (FIX-010).
 	if hero == null:
 		return
-	if event.is_action_pressed("ui_accept") or (event is InputEventKey and event.pressed and event.keycode == KEY_E):
-		_try_interact()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_G:
-		_goto_quest_objective()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_F:
-		_try_portal()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-		_try_attack()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_1:
-		_try_skill(0)
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_2:
-		_try_skill(1)
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_3:
-		_try_skill(2)
-	if joystick and joystick.direction != Vector2.ZERO:
+	if event is InputEventKey and event.pressed:
+		match event.keycode:
+			KEY_E: _try_interact()
+			KEY_G: _goto_quest_objective()
+			KEY_F: _try_portal()
+			KEY_SPACE: _try_attack()
+			KEY_1: _try_skill(0)
+			KEY_2: _try_skill(1)
+			KEY_3: _try_skill(2)
+	if hud and hud.joystick and hud.joystick.direction != Vector2.ZERO:
 		return
 	if event is InputEventKey:
 		hero.set_direction(Vector2(Input.get_axis("ui_left", "ui_right"), Input.get_axis("ui_up", "ui_down")))
@@ -235,33 +225,45 @@ func _nearest_with_meta(meta_key: String, radius: float = 3.5) -> Node3D:
 						best = c
 	return best
 
+func _set_status(t: String) -> void:
+	if hud:
+		hud.set_status(t)
+	elif status_label:
+		status_label.text = t
+
 func _try_interact() -> void:
 	var npc := _nearest_with_meta("npc", 4.0)
 	if npc == null:
-		status_label.text = "Рядом нет NPC"
+		_set_status("Рядом нет NPC")
 		return
 	var sid := String(npc.get_meta("stable_id"))
 	var started: String = quest_log.offer_from_npc(sid)
 	quest_log.notify_talk(sid)
-	status_label.text = ("Взят квест: " + started) if started != "" else ("Разговор: " + sid)
+	_set_status(("Взят квест: " + started) if started != "" else ("Разговор: " + sid))
+	GameSession.sync_quest_log(quest_log)
 	_on_quest_ui("")
 
 func _try_portal() -> void:
 	var portal := _nearest_with_meta("portal", 5.0)
 	if portal == null:
-		status_label.text = "Рядом нет портала"
+		_set_status("Рядом нет портала")
 		return
 	var sid := String(portal.get_meta("stable_id"))
 	quest_log.notify_goto(sid)
 	_on_quest_ui("")
+	var loc := String(portal.get_meta("target_location", ""))
 	var scene_path := String(portal.get_meta("target_scene", ""))
-	if scene_path == "" and String(portal.get_meta("target_location", "")) == "ashen_outskirts":
+	if scene_path == "" and loc == "ashen_outskirts":
 		scene_path = "res://world/locations/ashen_outskirts/ashen_play.tscn"
+	if scene_path == "" and loc == "shard_ruins":
+		scene_path = "res://world/locations/shard_ruins/ruins_play.tscn"
 	if scene_path != "" and ResourceLoader.exists(scene_path):
-		status_label.text = "Переход…"
+		_set_status("Переход…")
+		GameSession.sync_quest_log(quest_log)
+		GameSession.travel_to(loc if loc != "" else scene_path.get_file().get_basename())
 		get_tree().change_scene_to_file(scene_path)
 	else:
-		status_label.text = "Портал " + sid
+		_set_status("Портал " + sid)
 
 func _play_anim(name: String) -> void:
 	if animator == null:
@@ -278,15 +280,15 @@ func _goto_quest_objective() -> void:
 		return
 	var sid := _active_objective_stable_id()
 	if sid == "":
-		status_label.text = "Нет активной цели — возьми квест у стража"
+		_set_status("Нет активной цели — возьми квест у стража")
 		return
 	var target := _find_stable(sid)
 	if target == null:
-		status_label.text = "Цель %s не на этой локации" % sid
+		_set_status("Цель %s не на этой локации" % sid)
 		return
 	if hero.has_method("navigate_to"):
 		hero.navigate_to(target.global_position)
-		status_label.text = "Автопуть → " + sid
+		_set_status("Автопуть → " + sid)
 
 func _active_objective_stable_id() -> String:
 	for qid in quest_log.active.keys():
@@ -307,46 +309,39 @@ func _find_stable(stable_id: String) -> Node3D:
 	return null
 
 func _try_attack() -> void:
-	if hero == null or hero_combat == null:
+	if hero == null or combat_runtime == null:
 		return
-	var res: Dictionary = hero_combat.try_basic(hero.global_position, hero.rotation.y, get_tree())
+	combat_runtime.actor_id = String(actor_ids[current_index])
+	combat_runtime.setup(hero_combat, animator, skill_fx)
+	var res: Dictionary = combat_runtime.try_basic(hero.global_position, hero.rotation.y, get_tree())
 	if not res.get("ok", false):
-		status_label.text = "Атака: " + String(res.get("reason", "?"))
+		_set_status("Атака: " + String(res.get("reason", "?")))
 		return
-	_play_anim("attack")
-	var col: Color = skill_fx.color_for_actor(String(actor_ids[current_index])) if skill_fx else Color.WHITE
-	if res.get("hit"):
-		var hit: Node3D = res.hit
-		skill_fx.spawn_hit(hit.global_position, col)
-		status_label.text = "Атака %d урона" % int(res.get("damage", 0))
-	else:
-		skill_fx.spawn_cast(hero.global_position, col)
-		status_label.text = "Промах (подойди ближе)"
+	_set_status("Атака %d" % int(res.get("damage", 0)) if res.get("hit") else "Промах")
 
 func _try_skill(slot: int) -> void:
-	if hero == null or hero_combat == null:
+	if hero == null or combat_runtime == null:
 		return
-	var res: Dictionary = hero_combat.try_skill(slot, hero.global_position, get_tree())
+	combat_runtime.actor_id = String(actor_ids[current_index])
+	combat_runtime.setup(hero_combat, animator, skill_fx)
+	var res: Dictionary = combat_runtime.try_skill(slot, hero.global_position, get_tree())
 	if not res.get("ok", false):
-		status_label.text = "Умение: " + String(res.get("reason", "?"))
+		_set_status("Умение: " + String(res.get("reason", "?")))
 		return
-	_play_anim(String(res.get("anim", "skill001")))
-	var label := String(res.get("label", "Умение"))
-	var col: Color = skill_fx.color_for_actor(String(actor_ids[current_index])) if skill_fx else Color.WHITE
-	skill_fx.spawn_cast(hero.global_position, col)
-	if res.get("hit"):
-		var hit: Node3D = res.hit
-		skill_fx.spawn_hit(hit.global_position, col, 1.3)
-		status_label.text = "%s — %d урона" % [label, int(res.get("damage", 0))]
-	else:
-		status_label.text = "%s — нет цели в радиусе" % label
+	_set_status("%s — %d" % [String(res.get("label", "Умение")), int(res.get("damage", 0))])
 
 func _load_glb(path: String) -> Node3D:
-	if not FileAccess.file_exists(path):
+	if path.is_empty():
+		return null
+	var abs_path := path
+	if path.begins_with("res://"):
+		abs_path = ProjectSettings.globalize_path(path)
+	if not FileAccess.file_exists(abs_path) and not FileAccess.file_exists(path):
 		return null
 	var doc := GLTFDocument.new()
 	var state := GLTFState.new()
-	if doc.append_from_file(path, state) != OK:
+	var load_path := path if FileAccess.file_exists(path) else abs_path
+	if doc.append_from_file(load_path, state) != OK:
 		return null
 	return doc.generate_scene(state) as Node3D
 
@@ -356,17 +351,17 @@ func _load_class(index: int) -> void:
 		visual.queue_free()
 	var actor_id := String(actor_ids[current_index])
 	var weapon_id := String(weapon_ids[actor_id])
-	visual = _load_glb(actor_glb_template % actor_id)
+	visual = _load_glb(LunexAssets.actor_glb(actor_id))
 	if visual == null:
-		status_label.text = "нет модели " + actor_id
+		_set_status("нет модели " + actor_id + " · " + LunexAssets.status_line())
 		return
 	hero.add_child(visual)
 	hero.set("visual", visual)
-	if material_params.has(actor_id) and material_params[actor_id].size() > 0:
+	if material_params.has(actor_id) and material_params[actor_id].size() > 0 and source_root != "":
 		DarklordMaterial.apply(visual, material_params[actor_id][0], source_root)
-	var weapon := _load_glb(weapon_glb_template % weapon_id)
+	var weapon := _load_glb(LunexAssets.weapon_glb(weapon_id))
 	if weapon:
-		if material_params.has(weapon_id) and material_params[weapon_id].size() > 0:
+		if material_params.has(weapon_id) and material_params[weapon_id].size() > 0 and source_root != "":
 			DarklordMaterial.apply(weapon, material_params[weapon_id][0], source_root)
 		Equipment.equip_weapon(visual, weapon, weapon_id)
 	var players := visual.find_children("*", "AnimationPlayer", true, false)
@@ -376,12 +371,11 @@ func _load_class(index: int) -> void:
 		if animator.has_animation("stand"):
 			animator.play("stand")
 	hero_combat.setup(hero_kit, actor_id)
+	combat_runtime.setup(hero_combat, animator, skill_fx)
+	combat_runtime.actor_id = actor_id
+	GameSession.set_class(actor_id, current_index)
+	GameSession.set_vitals(hero_combat.hp, hero_combat.max_hp, hero_combat.mp, hero_combat.max_mp)
 	var cls: Dictionary = hero_kit.class_of(actor_id)
 	var src_name := String(cls.get("name_src", ""))
-	status_label.text = "%s (%s) | Этернити — умения из Darklord" % [class_names[current_index], src_name]
+	_set_status("%s (%s) | ПРОТОТИП · Darklord skills" % [class_names[current_index], src_name])
 	_on_vitals()
-	# Refresh skill button labels from hotbar
-	var bar: Array = hero_kit.hotbar(actor_id)
-	for i in skill_buttons.size():
-		if i < bar.size():
-			skill_buttons[i].text = String(bar[i].get("label", "Умение"))

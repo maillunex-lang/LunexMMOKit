@@ -10,3 +10,16 @@ assets_private/
 client/studio_payload.zip
 build/
 __pycache__/
+*.pyc
+
+# Archive Unity capital dumps (too large for GitHub; keep local)
+client/world/imported/capital_geometry_v*.tscn
+client/world/imported/capital_geometry_preview.tscn
+
+# Local owner confirmation / locks may be machine-specific; keep locks if needed
+*.force_overwrite_confirm
+
+# Editor backups
+*.tmp
+*~
+*.bak

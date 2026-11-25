@@ -1,17 +1,24 @@
 extends CharacterBody3D
-## Manual joystick + optional NavigationAgent3D auto-path (NavMesh, not fixed waypoints).
+## Manual joystick + NavigationAgent3D auto-path. Joystick cancels auto-path. No tap-to-move.
+## Stuck detection repaths. Positions remain client-predicted until server authority (N02).
 
 @export var speed := 3.0
 @export var turn_speed := 12.0
 @export var visual: Node3D
 @export var animator: AnimationPlayer
 @export var camera: Camera3D
+@export var stuck_seconds := 1.25
+@export var stuck_distance := 0.35
 
 var direction := Vector2.ZERO
 var auto_pathing := false
 var _agent: NavigationAgent3D
+var _nav_target := Vector3.ZERO
+var _stuck_timer := 0.0
+var _stuck_anchor := Vector3.ZERO
 
 func _ready() -> void:
+	add_to_group("player_hero")
 	_agent = NavigationAgent3D.new()
 	_agent.name = "NavigationAgent3D"
 	_agent.path_desired_distance = 0.6
@@ -22,7 +29,6 @@ func _ready() -> void:
 func set_direction(value: Vector2) -> void:
 	direction = value.limit_length()
 	if direction.length() > 0.05:
-		# Manual input cancels auto-path.
 		auto_pathing = false
 
 func navigate_to(world_pos: Vector3) -> void:
@@ -30,6 +36,9 @@ func navigate_to(world_pos: Vector3) -> void:
 		return
 	auto_pathing = true
 	direction = Vector2.ZERO
+	_nav_target = world_pos
+	_stuck_timer = 0.0
+	_stuck_anchor = global_position
 	_agent.set_target_position(world_pos)
 
 func stop_navigation() -> void:
@@ -48,6 +57,16 @@ func _physics_process(delta: float) -> void:
 			to.y = 0
 			if to.length() > 0.05:
 				movement = to.normalized()
+			# Stuck detection → repath
+			if global_position.distance_to(_stuck_anchor) < stuck_distance:
+				_stuck_timer += delta
+				if _stuck_timer >= stuck_seconds:
+					_agent.set_target_position(_nav_target)
+					_stuck_timer = 0.0
+					_stuck_anchor = global_position
+			else:
+				_stuck_timer = 0.0
+				_stuck_anchor = global_position
 	else:
 		var forward := Vector3(0, 0, -1)
 		var right := Vector3.RIGHT

@@ -1,6 +1,6 @@
 @tool
 extends VBoxContainer
-## Kit library dock: search + list of PackedScene kits for drag placement.
+## Kit library dock: categories, search, place with instance Undo/Redo (FIX-003/006/011).
 
 var plugin: EditorPlugin
 
@@ -9,8 +9,10 @@ var plugin: EditorPlugin
 @onready var _status: Label = %Status
 
 const KIT_DIR := "res://world/library/kits/"
+const StableIds = preload("res://core/stable_ids.gd")
 
 var _kits: PackedStringArray = []
+var _categories: Dictionary = {} ## category -> Array[String]
 
 func _ready() -> void:
 	_refresh()
@@ -21,6 +23,7 @@ func _ready() -> void:
 
 func _refresh() -> void:
 	_kits = PackedStringArray()
+	_categories.clear()
 	var dir := DirAccess.open(KIT_DIR)
 	if dir == null:
 		_status.text = "No kits at " + KIT_DIR
@@ -29,12 +32,35 @@ func _refresh() -> void:
 	var f := dir.get_next()
 	while f != "":
 		if f.ends_with(".tscn"):
-			_kits.append(f.get_basename())
+			var id := f.get_basename()
+			_kits.append(id)
+			var cat := _category_of(id)
+			if not _categories.has(cat):
+				_categories[cat] = []
+			_categories[cat].append(id)
 		f = dir.get_next()
 	dir.list_dir_end()
 	_kits.sort()
 	_filter()
-	_status.text = "%d kits" % _kits.size()
+	_status.text = "%d kits / %d categories" % [_kits.size(), _categories.size()]
+
+func _category_of(id: String) -> String:
+	var lower := id.to_lower()
+	if lower.begins_with("npc") or lower.contains("guard") or lower.contains("vendor"):
+		return "NPC"
+	if lower.contains("portal") or lower.contains("gate"):
+		return "Portals"
+	if lower.contains("spawn"):
+		return "Spawns"
+	if lower.contains("tree") or lower.contains("bush") or lower.contains("rock") or lower.contains("grass"):
+		return "Nature"
+	if lower.contains("stall") or lower.contains("market") or lower.contains("barrel") or lower.contains("crate"):
+		return "Props"
+	if lower.contains("building") or lower.contains("wall") or lower.contains("house") or lower.contains("tower"):
+		return "Buildings"
+	if lower.contains("road") or lower.contains("tile") or lower.contains("ground") or lower.contains("bridge"):
+		return "Ground"
+	return "Misc"
 
 func _filter() -> void:
 	if _list == null:
@@ -43,14 +69,29 @@ func _filter() -> void:
 	var q := ""
 	if _search:
 		q = _search.text.strip_edges().to_lower()
-	for id in _kits:
-		if q == "" or q in id.to_lower():
-			_list.add_item(id)
+	var keys: Array = _categories.keys()
+	keys.sort()
+	for cat in keys:
+		var any := false
+		var items: Array = _categories[cat]
+		items.sort()
+		for id in items:
+			if q == "" or q in id.to_lower() or q in String(cat).to_lower():
+				if not any:
+					_list.add_item("— " + String(cat) + " —")
+					_list.set_item_disabled(_list.item_count - 1, true)
+					any = true
+				_list.add_item(id)
+				_list.set_item_metadata(_list.item_count - 1, id)
 
 func _on_item_activated(index: int) -> void:
-	if plugin == null:
+	if plugin == null or _list.is_item_disabled(index):
 		return
-	var id := _list.get_item_text(index)
+	var id := String(_list.get_item_metadata(index))
+	if id.is_empty():
+		id = _list.get_item_text(index)
+	if id.begins_with("—"):
+		return
 	var path := KIT_DIR + id + ".tscn"
 	if not ResourceLoader.exists(path):
 		_status.text = "Missing " + path
@@ -59,31 +100,46 @@ func _on_item_activated(index: int) -> void:
 	if root == null:
 		_status.text = "Open a location .tscn first"
 		return
-	var ur: EditorUndoRedoManager = plugin.get_undo_redo()
 	var packed: PackedScene = load(path)
-	ur.create_action("Place kit " + id)
-	ur.add_do_method(self, "_do_place", root, packed, id)
-	ur.add_undo_method(self, "_undo_place_by_name", root, id)
-	ur.commit_action()
-
-func _do_place(root: Node3D, packed: PackedScene, id: String) -> void:
 	var n: Node3D = packed.instantiate()
 	n.name = id + "_" + str(Time.get_ticks_msec())
 	n.set_meta("kit_id", id)
-	n.set_meta("stable_id", "%s_%d" % [id, Time.get_unix_time_from_system()])
 	n.set_meta("editable", true)
-	root.add_child(n)
-	n.owner = root
+	StableIds.ensure_on_node(n, StableIds.Kind.INSTANCE, id)
 	n.position = Vector3(0, 0.05, 0)
-	_snap_to_ground(n)
-	root.set_meta("owner_edited", true)
-	_status.text = "Placed " + n.name
+	var ur: EditorUndoRedoManager = plugin.get_undo_redo()
+	ur.create_action("Place kit " + id)
+	ur.add_do_method(self, "_do_add", root, n)
+	ur.add_undo_method(self, "_do_remove", root, n)
+	ur.add_do_reference(n) ## keep instance alive across undo/redo
+	ur.commit_action()
 
-func _undo_place_by_name(root: Node3D, id_prefix: String) -> void:
-	for c in root.get_children():
-		if String(c.name).begins_with(id_prefix + "_"):
-			c.queue_free()
-			return
+func _do_add(root: Node3D, n: Node3D) -> void:
+	if n.get_parent() != root:
+		if n.get_parent():
+			n.get_parent().remove_child(n)
+		root.add_child(n)
+	n.owner = root
+	_snap_to_ground(n)
+	_mark_owner(root)
+	_status.text = "Placed %s (%s)" % [n.name, String(n.get_meta("instance_id", ""))]
+
+func _do_remove(root: Node3D, n: Node3D) -> void:
+	if n.get_parent() == root:
+		root.remove_child(n)
+	_mark_owner(root)
+	_status.text = "Removed " + n.name
+
+func _mark_owner(root: Node3D) -> void:
+	root.set_meta("owner_edited", true)
+	# Touch sidecar lock so generators refuse overwrite (FIX-004).
+	var path := root.scene_file_path
+	if path != "" and path.begins_with("res://"):
+		var abs := ProjectSettings.globalize_path(path)
+		var lock := abs.get_basename() + ".owner.lock"
+		var f := FileAccess.open(lock, FileAccess.WRITE)
+		if f:
+			f.store_string("owner_edited=true\nupdated=%s\n" % Time.get_datetime_string_from_system())
 
 func _snap_to_ground(n: Node3D) -> void:
 	var space := n.get_world_3d().direct_space_state if n.get_world_3d() else null
