@@ -1,6 +1,6 @@
 extends SceneTree
-## Portable CHARACTER-AUDIT / CHAR03 captures via LunexAssets (no hardcoded VPS paths required).
-## OUT dir: LUNEX_CHAR_CAPTURE_OUT or /home/gamedev/darklord-dgi/screens/character-audit/
+## Portable CHARACTER-AUDIT / CHAR03 captures via LunexAssets.
+## OUT dir: require LUNEX_CHAR_CAPTURE_OUT (absolute). No VPS defaults in client/.
 
 const Equipment = preload("res://actors/equipment.gd")
 
@@ -35,7 +35,9 @@ func run() -> void:
 		return
 	var out := OS.get_environment("LUNEX_CHAR_CAPTURE_OUT").strip_edges()
 	if out.is_empty():
-		out = "/home/gamedev/darklord-dgi/screens/character-audit/"
+		print("CAPTURE_FAIL set LUNEX_CHAR_CAPTURE_OUT to an absolute output directory")
+		quit(1)
+		return
 	if not out.ends_with("/"):
 		out += "/"
 	DirAccess.make_dir_recursive_absolute(out)
