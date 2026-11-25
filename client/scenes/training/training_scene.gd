@@ -506,19 +506,22 @@ func _select_accessory(index: int, kind: String) -> void:
 		add_child(model)
 		actor.reparent(seat,false)
 		actor.transform = Transform3D.IDENTITY
-		var ride := animation_player.get_animation_list().find("mount_stand")
-		if ride >= 0:
-			animation_select.select(ride)
-			_preview_animation(ride)
-		orbit_distance = 5.5
-		orbit_center.y = 1.6
-		_update_camera()
 	else:
 		model.free()
 		return
 	accessories[kind] = model
 	accessory_selectors[kind].select(index)
 	Accessory.idle(model)
+	if kind == "mount":
+		var ride := animation_player.get_animation_list().find("mount_stand")
+		if ride >= 0:
+			animation_select.select(ride)
+			animation_player.play("mount_stand", -1.0, speed_options[speed_index])
+			animation_player.advance(0.0)
+		orbit_angle = 0.65
+		orbit_distance = 5.5
+		orbit_center.y = 1.6
+		_update_camera()
 	_update_status(kind)
 
 func _remove_accessory(kind: String) -> void:
