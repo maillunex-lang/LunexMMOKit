@@ -1,0 +1,113 @@
+{
+  "status": "ok",
+  "source": "/home/gamedev/darklord-dgi/catalog.sqlite",
+  "mechanics_by_kind": {
+    "attribute": 21,
+    "class": 4,
+    "constant": 7,
+    "equipment": 5382,
+    "level": 600,
+    "level_unlock": 3,
+    "peak_level": 1000,
+    "skill": 1122,
+    "unlock": 349
+  },
+  "link_review": {
+    "missing_client_action": 31,
+    "missing_client_model": 383,
+    "missing_client_skill": 22,
+    "typed_effect_requires_dispatch": 269
+  },
+  "classes": [
+    {
+      "id": "1",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "1000000",
+        "1005001",
+        "1006001"
+      ]
+    },
+    {
+      "id": "2",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "2000000",
+        "2005001"
+      ]
+    },
+    {
+      "id": "3",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "3000000",
+        "3004001"
+      ]
+    },
+    {
+      "id": "4",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "4000000",
+        "4005001",
+        "4006001"
+      ]
+    }
+  ],
+  "dangling_total": 705,
+  "dangling_sample_count": 200,
+  "integrity": "ok",
+  "fixtures": [
+    "tests/fixtures/d02/classes.json",
+    "tests/fixtures/d02/dangling_refs.json",
+    "tests/fixtures/d02/coverage.json"
+  ],
+  "prior_reports": {
+    "dgi-report.json": {
+      "bytes": 1708,
+      "keys": [
+        "sources",
+        "failures",
+        "links",
+        "integrity",
+        "assets",
+        "xml",
+        "code_refs"
+      ]
+    },
+    "dgi002-report.json": {
+      "bytes": 1050,
+      "keys": [
+        "mechanics",
+        "review",
+        "classes",
+        "integrity"
+      ]
+    },
+    "dgi003-report.json": {
+      "bytes": 2414,
+      "keys": [
+        "models",
+        "models_with_folder_mesh",
+        "models_with_prefab_mesh",
+        "refs",
+        "prefab_refs",
+        "integrity",
+        "exports",
+        "missing_by_field",
+        "original_unresolved"
+      ]
+    },
+    "dgi004-report.json": {
+      "bytes": 2114,
+      "keys": [
+        "attachments",
+        "events",
+        "accessories",
+        "review",
+        "integrity"
+      ]
+    }
+  },
+  "gaps": []
+}

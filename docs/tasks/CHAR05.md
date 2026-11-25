@@ -6,4 +6,6 @@
 Питомцы корректно следуют; матрица совместимости; ресурсы offsets
 
 ## Evidence
-Pending
+- `pet_follow.gd` + `pet_XN_pet_*.tres` lateral offsets
+- `CHAR_MOUNT_PET_SMOKE_OK` follow moves with actor for 4 classes
+- VFX/scale polish and ground collision still open

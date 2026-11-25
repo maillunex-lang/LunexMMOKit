@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T11:32:54Z",
+  "generated_at": "2026-11-25T11:40:16Z",
   "product": "Осколки вечности",
   "note": "Used game resources only. Original Darklord / full DGI / full asset library are NOT included.",
-  "count": 359,
-  "total_bytes": 130663310,
+  "count": 360,
+  "total_bytes": 130668575,
   "duplicate_sha256_groups": 12,
   "duplicates": [
     {
@@ -1176,11 +1176,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:3b2f34a7de26:equipment.gd",
+      "id": "asset:6243ceaef7d9:equipment.gd",
       "category": "actors",
       "path": "client/actors/equipment.gd",
-      "size": 9503,
-      "sha256": "3b2f34a7de260361eaa4a721471116e81cbae76582676cc342819de607c6a4d0",
+      "size": 11855,
+      "sha256": "6243ceaef7d9bd4b557d6f9ef902438e6d5c2dfffeea9bdcb05cb84aa171894d",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1246,6 +1246,19 @@
       "path": "client/actors/hero_controller.gd.uid",
       "size": 20,
       "sha256": "51f4bde348f1149716505cc50c4ab02b6f29c7b3b88486979b17c56bccaf21d3",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "actors",
+      "license_status": "project"
+    },
+    {
+      "id": "asset:ba2a54427768:pet_follow.gd",
+      "category": "actors",
+      "path": "client/actors/pet_follow.gd",
+      "size": 715,
+      "sha256": "ba2a544277685766ff0fc10a2e0969192eba9ff52442adb5be3070f7d9f3a6af",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1995,11 +2008,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:e3ec7fc6a88f:attachment_editor_panel.gd",
+      "id": "asset:55816c1d4cdd:attachment_editor_panel.gd",
       "category": "ui",
       "path": "client/ui/attachment_editor_panel.gd",
-      "size": 5263,
-      "sha256": "e3ec7fc6a88f78730b1bcab83da4ff5564cfac7a38710c996818439082dddfb6",
+      "size": 7461,
+      "sha256": "55816c1d4cdd69c9f166c9acb408a3540f126605ea2298e77d4941ce542f5cea",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",

@@ -1,0 +1,211 @@
+{
+  "dangling_total": 705,
+  "sample": [
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814083",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100021"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814084",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100021"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814085",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100021"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814086",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100021"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814087",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100021"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814088",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100021"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814089",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100021"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "10814091",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880110002"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110205015",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100001"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110205016",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100001"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110205017",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100001"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110205018",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100001"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110205019",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100001"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110205020",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100001"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110206015",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100002"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110206016",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100002"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110206017",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100002"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110206018",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100002"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110206019",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100002"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110206020",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100002"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110207015",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100027"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110207016",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100027"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110207017",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100027"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110207018",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100027"
+    },
+    {
+      "side": "client",
+      "name": "t_monster.lua.txt",
+      "id": "110207019",
+      "field": "modelId",
+      "target": "t_model.lua.txt",
+      "target_id": "880100027"
+    }
+  ],
+  "link_review": {
+    "missing_client_action": 31,
+    "missing_client_model": 383,
+    "missing_client_skill": 22,
+    "typed_effect_requires_dispatch": 269
+  }
+}

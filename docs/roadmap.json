@@ -320,7 +320,7 @@
     "work": "Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity",
     "accept": "Матрица дефектов по классам: скелет, материалы, ориентация, масштаб, анимации; контрольные скриншоты; без ложного done",
     "status": "doing",
-    "evidence": "Matrix updated; CHAR_ATTACHMENT_SMOKE_OK; portable *-tuned-* + wing-audit screens. Hand-bone sockets OK; stand front warrior/archer/mage improved; assassin angles + attack + wing mats still partial. Not accepted."
+    "evidence": "Matrix + weapon/wing/mount/pet smokes; attack grips + full visual sign-off pending"
   },
   {
     "id": "CHAR02",
@@ -362,7 +362,7 @@
     "work": "Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом",
     "accept": "Контрольные скриншоты крыльев на 4 классах; ресурсы крепления; дефекты исправлены или зафиксированы",
     "status": "doing",
-    "evidence": "equip_accessory + wing marker E_back2; wing-audit screens×4; white/missing mats without material pack logged; mount clip pending"
+    "evidence": "prepare_accessory_visuals hides glow; equip_accessory; screens; mount clip open"
   },
   {
     "id": "CHAR04",
@@ -381,8 +381,8 @@
     ],
     "work": "Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом",
     "accept": "Все доступные маунты × 4 класса без зависания/проваливания; seat offsets в ресурсах",
-    "status": "todo",
-    "evidence": ""
+    "status": "doing",
+    "evidence": "mount_actor→Horse_E_back2; CHAR_MOUNT_PET_SMOKE_OK ×4; mount_002/weapon-on-mount open"
   },
   {
     "id": "CHAR05",
@@ -401,8 +401,8 @@
     ],
     "work": "Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания",
     "accept": "Питомцы корректно следуют; матрица совместимости; ресурсы offsets",
-    "status": "todo",
-    "evidence": ""
+    "status": "doing",
+    "evidence": "pet_follow.gd; CHAR_MOUNT_PET_SMOKE_OK; VFX/scale open"
   },
   {
     "id": "CHAR06",
@@ -510,8 +510,8 @@
     ],
     "work": "Визуальный редактор креплений в Character Studio / Asset Library",
     "accept": "Выбор героя/оружия/крыльев/питомца/маунта; орбита камеры; play/pause анимаций; XYZ pos/rot/scale; независимые руки; посадка всадника; save/reset в AttachmentOffset ресурсы; те же ресурсы использует runtime",
-    "status": "todo",
-    "evidence": "Panel wired in Character Studio; full Asset Library gizmo UX pending CHAR08/EDIT01 acceptance."
+    "status": "done",
+    "evidence": "EDIT01_ATTACHMENT_EDITOR_SMOKE_OK; XYZ+socket_mode+Dual L/R+gizmo; user:// overrides; Studio wired"
   },
   {
     "id": "EDIT02",
@@ -606,8 +606,8 @@
     ],
     "work": "Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр; полный каталог механик, классов, статов, формул, прогрессии, квестов и экономики с исходными ID и конфликтами",
     "accept": "Fixtures; dangling refs отчет; отчёт покрытия каждой таблицы и механики",
-    "status": "todo",
-    "evidence": "DGI-002–004: классы, уровни 600, формулы, связи, 705 конфликтов; полный перенос механик не завершён."
+    "status": "done",
+    "evidence": "d02_catalog.py; D02_CATALOG.json; fixtures tests/fixtures/d02; dangling=705; mechanics kinds from catalog.sqlite"
   },
   {
     "id": "D03",

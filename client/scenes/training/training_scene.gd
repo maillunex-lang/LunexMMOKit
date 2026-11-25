@@ -531,52 +531,34 @@ func _select_accessory(index: int, kind: String) -> void:
 		return
 	if kind == "wing":
 		var wing_id: String = ACCESSORY_NAMES["wing"][index-1]
-		var wing_off = AttachmentLibrary.load_offset("wing", wing_id)
-		var wing_sockets: Array = ["E_back2","E_back"]
-		if wing_off != null and String(wing_off.socket) != "":
-			wing_sockets = [String(wing_off.socket), "E_back2", "E_back"]
-		var marker := Accessory.socket(actor, wing_sockets)
-		if marker == null:
+		Equipment.prepare_accessory_visuals(model, "wing", accessory_root, index == 2)
+		var wh := Equipment.equip_accessory(actor, model, "wing", wing_id)
+		if wh.is_empty():
 			model.free()
 			return
-		marker.add_child(model)
-		model.transform = wing_off.to_transform() if wing_off != null else Transform3D.IDENTITY
-		for mesh in model.find_children("*","MeshInstance3D",true,false):
-			if "glow" in String(mesh.name).to_lower():
-				if index == 2:
-					var img := Image.load_from_file(accessory_root.path_join("wing-glow.png"))
-					if img != null and not img.is_empty():
-						var mat := StandardMaterial3D.new()
-						mat.albedo_texture = ImageTexture.create_from_image(img)
-						mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
-						mat.alpha_scissor_threshold = 0.5
-						mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-						mat.cull_mode = BaseMaterial3D.CULL_DISABLED
-						mesh.material_override = mat
-					else: mesh.hide()
-				else: mesh.hide()
+		accessories[kind] = model
+		accessories[kind + "_handle"] = wh
 	elif kind == "pet":
 		var pet_id: String = ACCESSORY_NAMES["pet"][index-1]
 		var pet_off = AttachmentLibrary.load_offset("pet", pet_id)
-		add_child(model)
-		model.transform = pet_off.to_transform() if pet_off != null else Transform3D(Basis.IDENTITY, Vector3(-0.8,0,0))
+		var follow := preload("res://actors/pet_follow.gd").new()
+		add_child(follow)
+		follow.setup(actor, pet_off.to_transform().origin if pet_off else Vector3(1.2, 0, 0))
+		follow.add_child(model)
+		accessories[kind] = follow
+		accessories[kind + "_model"] = model
 	elif kind == "mount":
 		var mount_id: String = ACCESSORY_NAMES["mount"][index-1]
-		var seat_off = AttachmentLibrary.load_offset("mount_seat", mount_id)
-		var seat_sockets: Array = ["Horse_E_back2","Horse_E_back"]
-		if seat_off != null and String(seat_off.socket) != "":
-			seat_sockets = [String(seat_off.socket), "Horse_E_back2", "Horse_E_back"]
-		var seat := Accessory.socket(model, seat_sockets)
-		if seat == null:
+		add_child(model)
+		var mh := Equipment.mount_actor(model, actor, mount_id)
+		if mh.is_empty():
 			model.free()
 			return
-		add_child(model)
-		actor.reparent(seat,false)
-		actor.transform = seat_off.to_transform() if seat_off != null else Transform3D.IDENTITY
+		accessories[kind] = model
+		accessories[kind + "_handle"] = mh
 	else:
 		model.free()
 		return
-	accessories[kind] = model
 	accessory_selectors[kind].select(index)
 	Accessory.idle(model)
 	if kind == "mount":
@@ -590,16 +572,23 @@ func _select_accessory(index: int, kind: String) -> void:
 		orbit_center.y = 1.6
 		_update_camera()
 	_update_status(kind)
+	_sync_attachment_editor()
 
 func _remove_accessory(kind: String) -> void:
 	if not accessories.has(kind): return
 	var model: Node3D = accessories[kind]
-	if kind == "mount" and is_instance_valid(actor):
-		actor.reparent(self,false)
-		actor.transform = Transform3D.IDENTITY
-		_refresh_animations()
-		orbit_center.y = 0.9
-		_reset_camera()
+	if kind == "mount" and accessories.has("mount_handle"):
+		Equipment.dismount_actor(accessories["mount_handle"])
+		accessories.erase("mount_handle")
+		if is_instance_valid(actor):
+			_refresh_animations()
+			orbit_center.y = 0.9
+			_reset_camera()
+	elif kind == "wing" and accessories.has("wing_handle"):
+		Equipment.unequip_accessory(accessories["wing_handle"])
+		accessories.erase("wing_handle")
+	elif kind == "pet":
+		accessories.erase("pet_model")
 	accessories.erase(kind)
 	if kind == "mount": _reset_camera()
 	model.queue_free()

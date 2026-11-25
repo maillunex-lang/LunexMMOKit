@@ -6,8 +6,6 @@
 Контрольные скриншоты крыльев на 4 классах; ресурсы крепления; дефекты исправлены или зафиксированы
 
 ## Evidence
-- Resources: `wing_wing_L_01/02.tres` with `socket_mode=marker` on `E_back2`
-- Runtime: `Equipment.equip_accessory`
-- Smoke: wing→E_back2 on all 4 classes
-- Screens: `/home/gamedev/darklord-dgi/screens/wing-audit/{10001,20001,30001,40001}-wing-{back,close}.png`
-- Defects logged: missing/white wing materials without Darklord material pack in portable capture; scale/clip vs mount pending
+- `wing_*.tres` marker `E_back2`; `Equipment.equip_accessory` + `prepare_accessory_visuals` hides untextured glow
+- Studio/runtime share API; wing-audit screens ×4; `CHAR_MOUNT_PET_SMOKE_OK` visuals fixed
+- Clip vs mount / glow texture path still partial
