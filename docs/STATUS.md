@@ -17,3 +17,6 @@ CAP03: восстановить родительские трансформац�
 
 ## CAP03 orientation diagnostics
 a326765: 145 exact bindings: 71 identity, 64 X -90 degrees, 10 other rotations. v4 no correction and v5 imported local transform both render but bounds height 587.9/823.9; neither accepted. v3 retained. Next inspect source mesh vertices and Unity local basis per asset, active state, terrain.
+
+## Terrain prototype
+b3cfd65: v6 terrain shader uses original RGB control and 3 splat textures, tiling 20/40/20; Godot build and render pass, visual parity and orientation remain unverified. Next isolate terrain and outlier meshes.
