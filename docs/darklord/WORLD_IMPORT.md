@@ -8,3 +8,5 @@ Capture evidence on VPS: /home/gamedev/darklord-dgi/screens/world-original-camer
 No navigation or gameplay validation yet. CI unverified.
 
 Correction: pilot mesh-local X rotation PI restores arena visibility from original camera. Diagnostic directional light added (not original). Screenshot world-corrected-camera.png visually inspected: textured circular arena visible, sky/effects and lighting parity incomplete. Collision rotation follows navigation mesh; gameplay untested.
+
+Navigation follow-up: see `docs/darklord/NAVIGATION_FIX.md`. World arena navigation path queries now pass after reversing winding and waiting for map synchronization. Character travel still untested.
