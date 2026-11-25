@@ -1,0 +1,59 @@
+[gd_resource type="Theme" load_steps=5 format=3]
+
+[sub_resource type="StyleBoxFlat" id="panel"]
+bg_color = Color(0.12, 0.16, 0.22, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.55, 0.7, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="btn"]
+bg_color = Color(0.22, 0.38, 0.52, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="btn_hover"]
+bg_color = Color(0.3, 0.5, 0.68, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="btn_pressed"]
+bg_color = Color(0.16, 0.28, 0.4, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+
+[resource]
+default_font_size = 16
+Button/styles/normal = SubResource("btn")
+Button/styles/hover = SubResource("btn_hover")
+Button/styles/pressed = SubResource("btn_pressed")
+PanelContainer/styles/panel = SubResource("panel")
+RichTextLabel/colors/default_color = Color(0.92, 0.94, 0.96, 1)
+Label/colors/font_color = Color(0.92, 0.94, 0.96, 1)

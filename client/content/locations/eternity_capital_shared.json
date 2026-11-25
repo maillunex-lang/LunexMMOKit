@@ -1,0 +1,127 @@
+{
+  "location_id": "eternity_capital",
+  "location_revision": 1,
+  "markers": [
+    {
+      "stable_id": "npc_plazaguard_l",
+      "kind": "npc",
+      "npc_role": "quest",
+      "display_name": "PlazaGuard_L",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "PlazaGuard_L",
+      "position": {
+        "x": -4.0,
+        "y": 0.05,
+        "z": 4.0
+      },
+      "model_kit": "statue_01",
+      "dialog_id": "dlg_npc_plazaguard_l"
+    },
+    {
+      "stable_id": "npc_plazaguard_r",
+      "kind": "npc",
+      "npc_role": "quest",
+      "display_name": "PlazaGuard_R",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "PlazaGuard_R",
+      "position": {
+        "x": 4.0,
+        "y": 0.05,
+        "z": 4.0
+      },
+      "model_kit": "statue_01",
+      "dialog_id": "dlg_npc_plazaguard_r"
+    },
+    {
+      "stable_id": "npc_plazaelder",
+      "kind": "npc",
+      "npc_role": "quest",
+      "display_name": "PlazaElder",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "PlazaElder",
+      "position": {
+        "x": 0.0,
+        "y": 0.05,
+        "z": 8.0
+      },
+      "model_kit": "statue_01",
+      "dialog_id": "dlg_npc_plazaelder"
+    },
+    {
+      "stable_id": "npc_questgiver_0",
+      "kind": "npc",
+      "npc_role": "quest",
+      "display_name": "QuestGiver_0",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "QuestGiver_0",
+      "position": {
+        "x": -22.0,
+        "y": 0.05,
+        "z": 18.0
+      },
+      "model_kit": "statue_01",
+      "dialog_id": "dlg_npc_questgiver_0"
+    },
+    {
+      "stable_id": "npc_questgiver_1",
+      "kind": "npc",
+      "npc_role": "quest",
+      "display_name": "QuestGiver_1",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "QuestGiver_1",
+      "position": {
+        "x": -24.5,
+        "y": 0.05,
+        "z": 19.5
+      },
+      "model_kit": "statue_01",
+      "dialog_id": "dlg_npc_questgiver_1"
+    },
+    {
+      "stable_id": "npc_questgiver_2",
+      "kind": "npc",
+      "npc_role": "quest",
+      "display_name": "QuestGiver_2",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "QuestGiver_2",
+      "position": {
+        "x": -27.0,
+        "y": 0.05,
+        "z": 21.0
+      },
+      "model_kit": "statue_01",
+      "dialog_id": "dlg_npc_questgiver_2"
+    },
+    {
+      "stable_id": "portal_ashen_gate",
+      "kind": "portal",
+      "npc_role": "portal",
+      "display_name": "Portal_AshenGate",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "Portal_AshenGate",
+      "position": {
+        "x": 28.0,
+        "y": 0.05,
+        "z": 22.0
+      },
+      "model_kit": "crystal_01",
+      "dialog_id": ""
+    },
+    {
+      "stable_id": "spawn_eternity_capital",
+      "kind": "spawn",
+      "npc_role": "spawn",
+      "display_name": "PlayerSpawn",
+      "location_scene": "res://world/locations/eternity_capital/eternity_capital.tscn",
+      "node_name": "PlayerSpawn",
+      "position": {
+        "x": 0.0,
+        "y": 0.6,
+        "z": -58.0
+      },
+      "model_kit": "",
+      "dialog_id": ""
+    }
+  ],
+  "nav_mesh": "res://world/locations/eternity_capital/eternity_capital_nav.tres"
+}

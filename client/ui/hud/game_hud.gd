@@ -26,6 +26,8 @@ signal joystick_moved(dir: Vector2)
 var gfx_preset := 1 ## 0 Low 1 Med 2 High 3 Max
 
 func _ready() -> void:
+	if ResourceLoader.exists("res://ui/theme/lunex_theme.tres"):
+		theme = load("res://ui/theme/lunex_theme.tres")
 	btn_attack.pressed.connect(func(): attack_pressed.emit())
 	btn_skill0.pressed.connect(func(): skill_pressed.emit(0))
 	btn_skill1.pressed.connect(func(): skill_pressed.emit(1))

@@ -34,6 +34,37 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Place selected"
 
+[node name="MarkersRow" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="BtnNpc" type="Button" parent="MarkersRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+NPC"
+
+[node name="BtnPortal" type="Button" parent="MarkersRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+Portal"
+
+[node name="BtnSpawn" type="Button" parent="MarkersRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+Spawn"
+
+[node name="BtnMat" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Material override (selected)"
+
+[node name="BtnExport" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Export shared markers JSON"
+
 [node name="Status" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2

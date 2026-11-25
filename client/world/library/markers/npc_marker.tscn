@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[sub_resource type="CapsuleMesh" id="mesh"]
+radius = 0.35
+height = 1.6
+
+[sub_resource type="StandardMaterial3D" id="mat"]
+albedo_color = Color(0.3, 0.75, 1, 1)
+
+[sub_resource type="CapsuleShape3D" id="shape"]
+radius = 0.35
+height = 1.6
+
+[node name="NpcMarker" type="Node3D"]
+metadata/kit_id = "npc_marker"
+metadata/npc_role = "quest"
+metadata/editable = true
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+mesh = SubResource("mesh")
+surface_material_override/0 = SubResource("mat")
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("shape")

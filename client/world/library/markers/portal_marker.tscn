@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[sub_resource type="CylinderMesh" id="mesh"]
+top_radius = 0.8
+bottom_radius = 0.8
+height = 0.15
+
+[sub_resource type="StandardMaterial3D" id="mat"]
+albedo_color = Color(0.7, 0.35, 1, 0.85)
+transparency = 1
+
+[node name="PortalMarker" type="Node3D"]
+metadata/kit_id = "portal_marker"
+metadata/portal_id = ""
+metadata/editable = true
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+mesh = SubResource("mesh")
+surface_material_override/0 = SubResource("mat")

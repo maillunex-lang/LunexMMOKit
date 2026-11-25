@@ -13,7 +13,23 @@ echo "== nav_obstacle_smoke =="
 echo "== session_loop_smoke =="
 "$GODOT" --path client --headless --script res://tests/session_loop_smoke.gd
 echo "== a01_hero_smoke =="
+echo "== we03_editor_smoke =="
+"$GODOT" --path client --headless --script res://tests/we03_editor_smoke.gd
+echo "== cap06_npc_smoke =="
+"$GODOT" --path client --headless --script res://tests/cap06_npc_smoke.gd
+echo "== game01_slice_smoke =="
+"$GODOT" --path client --headless --script res://tests/game01_slice_smoke.gd
+echo "== ui01_theme_smoke =="
+"$GODOT" --path client --headless --script res://tests/ui01_theme_smoke.gd
 "$GODOT" --path client --headless --script res://tests/a01_hero_smoke.gd
+echo "== we03_editor_smoke =="
+"$GODOT" --path client --headless --script res://tests/we03_editor_smoke.gd
+echo "== cap06_npc_smoke =="
+"$GODOT" --path client --headless --script res://tests/cap06_npc_smoke.gd
+echo "== game01_slice_smoke =="
+"$GODOT" --path client --headless --script res://tests/game01_slice_smoke.gd
+echo "== ui01_theme_smoke =="
+"$GODOT" --path client --headless --script res://tests/ui01_theme_smoke.gd
 if command -v go >/dev/null || [[ -x "$ROOT/tools/sdk/go/bin/go" ]]; then
   export PATH="$ROOT/tools/sdk/go/bin:${PATH:-}"
   echo "== go test =="

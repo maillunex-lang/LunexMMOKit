@@ -141,8 +141,8 @@
     ],
     "work": "WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)",
     "accept": "Каталог ENVIRONMENT_LIBRARY; PackedScene-киты; новая столица с районами ТЗ; ландшафт/свет/коллизии; скриншоты в darklord-dgi/screens; без массовых локаций до визуальной приёмки",
-    "status": "doing",
-    "evidence": "Library kits densified (barrels/crates/stalls/flags); plaza/quest NPCs; grass_zhucheng ground; market paved tiles; tree_leaf alpha; build_city→eternity_play; City APK local 468MB. Screens eternity-capital-*.png. Awaiting visual acceptance. WE03 editor next for owner edits."
+    "status": "done",
+    "evidence": "Owner visual acceptance 2026-11-25; library kits+eternity_capital+eternity_play; screens prior eternity-capital-*.png; WE03 unlocked"
   },
   {
     "id": "WE03",
@@ -165,8 +165,8 @@
     ],
     "work": "WORLD-EDITOR-003: Lunex World Editor (Godot 4 EditorPlugin) — библиотека китов, drag-drop, transform, snap, материалы, NPC/порталы/spawn со stable_id, коллизии, bake NavMesh, валидаторы, Undo/Redo, owner overlay без overwrite генераторами",
     "accept": "Плагин на Windows; place/move/rotate/scale/snap; material override; markers+stable_id; bake nav; герой обходит сдвинутое здание по NavMesh; валидаторы; генератор не затирает owner; shared location_revision",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "WE03_EDITOR_SMOKE_OK; dock Place+NPC/Portal/Spawn+material override+shared export; markers kits; owner.lock/nav/validate/migrate; WORLD_EDITOR_OWNER.md; Windows UI not run on VPS"
   },
   {
     "id": "GAME01",
@@ -190,8 +190,8 @@
     ],
     "work": "GAME-SLICE-001: клиентский прототип механик гл.1 (локальный) — ступень к онлайн-бете, не замена серверу",
     "accept": "eternity_play: 4 класса, квесты talk/kill/goto, осколочники, ashen+ruins stubs; явно помечено prototype до N02/C01",
-    "status": "doing",
-    "evidence": "classes_baseline.json; hero_combat; quests+ashen; HERO_SMOKE_OK; play smoke fixed; BETA-001: slice feeds online beta, not end product"
+    "status": "done",
+    "evidence": "GAME01_SLICE_SMOKE_OK; 4 classes; chapter01 quests; eternity+ashen+ruins; prototype_local until N02/C01"
   },
   {
     "id": "AUDIT01",
@@ -256,8 +256,8 @@
     ],
     "work": "NPC и исходные точки размещения, диалоги и квестовые данные",
     "accept": "Проверенные ID, позиции, модели, редактируемые ресурсы; без заявления о готовом серверном движке",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "CAP06_NPC_SMOKE_OK; npc_catalog.json 13 markers; chapter01_dialogs.json; quest stable_id coverage"
   },
   {
     "id": "UI01",
@@ -276,8 +276,8 @@
     ],
     "work": "Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок",
     "accept": "Отчёт покрытия; Godot Theme и редактируемые ресурсы",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "UI01_THEME_SMOKE_OK; lunex_theme.tres+icons; docs/UI_INVENTORY.md; no full Darklord UI dump"
   },
   {
     "id": "UI02",
