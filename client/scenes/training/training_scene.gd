@@ -43,6 +43,8 @@ var status_label: Label
 var camera: Camera3D
 var animation_select: OptionButton
 var accessories: Dictionary = {}
+var accessory_selectors: Dictionary = {}
+const ACCESSORY_NAMES = {"wing":["wing_L_01","wing_L_02"],"pet":["XN_pet_01","XN_pet_02"],"mount":["mount_001","mount_002"]}
 var accessory_root := "/home/gamedev/darklord-dgi/exports/accessories"
 var orbit_angle := 0.0
 var orbit_distance := 3.5
@@ -118,7 +120,7 @@ func _setup_ui() -> void:
 	var controls := HBoxContainer.new()
 	controls.name = "Controls"
 	layer.add_child(controls)
-	controls.position = Vector2(16, 660)
+	controls.position = Vector2(16, 650)
 	_add_button(controls, "◀ Класс", _switch_actor.bind(-1))
 	_add_button(controls, "Атака", launch_attack)
 	_add_button(controls, "Класс ▶", _switch_actor.bind(1))
@@ -140,19 +142,24 @@ func _setup_ui() -> void:
 	var extras := HBoxContainer.new()
 	layer.add_child(extras)
 	extras.position = Vector2(16,105)
-	_add_button(extras,"Крылья",_toggle_accessory.bind("wing"))
-	_add_button(extras,"Питомец",_toggle_accessory.bind("pet"))
-	_add_button(extras,"Маунт",_toggle_accessory.bind("mount"))
+	for kind in ["wing","pet","mount"]:
+		var selector := OptionButton.new()
+		selector.custom_minimum_size = Vector2(180,44)
+		selector.add_item({"wing":"Без крыльев","pet":"Без питомца","mount":"Без маунта"}[kind])
+		for model_name in ACCESSORY_NAMES[kind]: selector.add_item(model_name)
+		extras.add_child(selector)
+		accessory_selectors[kind] = selector
+		selector.item_selected.connect(_select_accessory.bind(kind))
 	var help := Label.new()
 	help.name = "Help"
 	layer.add_child(help)
-	help.position = Vector2(16, 632)
+	help.position = Vector2(16, 618)
 	help.text = "Space — attack | ←/→ — class | ↑/↓ — speed | R — reset"
 
 func _add_button(parent: Container, text: String, action: Callable) -> Button:
 	var button := Button.new()
 	button.text = text
-	button.custom_minimum_size = Vector2(110, 34)
+	button.custom_minimum_size = Vector2(110, 44)
 	button.pressed.connect(action)
 	parent.add_child(button)
 	return button
@@ -225,6 +232,7 @@ func _load_vfx() -> void:
 
 func _clear_actor() -> void:
 	for kind in accessories.keys(): _remove_accessory(kind)
+	for selector in accessory_selectors.values(): selector.select(0)
 	if combat != null:
 		for child in combat.get_children(): child.queue_free()
 		combat.hp = 100
@@ -421,11 +429,15 @@ func _update_camera() -> void:
 	camera.look_at(orbit_center)
 
 func _toggle_accessory(kind: String) -> void:
-	if accessories.has(kind):
-		_remove_accessory(kind)
-		return
+	_select_accessory(0 if accessories.has(kind) else 1,kind)
+
+func _select_accessory(index: int, kind: String) -> void:
+	if not ACCESSORY_NAMES.has(kind) or index < 0 or index > ACCESSORY_NAMES[kind].size(): return
+	_remove_accessory(kind)
+	accessory_selectors[kind].select(0)
+	if index == 0: return
 	if actor == null: return
-	var model := Accessory.load_model(accessory_root.path_join(kind+".glb"))
+	var model := Accessory.load_model(accessory_root.path_join(kind+("-02" if index == 2 else "")+".glb"))
 	if model == null:
 		_set_status("Не найден аксессуар: "+kind)
 		return
@@ -450,6 +462,7 @@ func _toggle_accessory(kind: String) -> void:
 		model.free()
 		return
 	accessories[kind] = model
+	accessory_selectors[kind].select(index)
 	Accessory.idle(model)
 	_update_status(kind)
 

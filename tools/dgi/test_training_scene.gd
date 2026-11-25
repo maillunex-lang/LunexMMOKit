@@ -67,6 +67,13 @@ func run() -> void:
 				print("accessory failed ",i," ",kind)
 				quit(7)
 				return
+		for kind in ["wing","pet","mount"]:
+			scene.call("_select_accessory",2,kind)
+			await process_frame
+			if not scene.get("accessories").has(kind) or scene.get("accessory_selectors")[kind].selected != 2:
+				print("variant failed ",i," ",kind)
+				quit(9)
+				return
 		for kind in ["mount","pet","wing"]:
 			scene.call("_toggle_accessory",kind)
 			await process_frame
