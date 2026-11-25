@@ -1,0 +1,960 @@
+fileFormatVersion: 2
+guid: d6f005f10a77c6e4783d70ee498955e6
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hero_01.png
+    21300002: hero_02.png
+    21300004: hero_03.png
+    21300006: hero_04.png
+    21300008: hero_05.png
+    21300010: hero_06.png
+    21300012: hero_11.png
+    21300014: hero_12.png
+    21300016: hero_13.png
+    21300018: hero_14.png
+    21300020: hero_15.png
+    21300022: hero_16.png
+    21300024: ico_ZBsp01_1.png
+    21300026: skill_yx_bingdong_1.png
+    21300028: skill_yx_bingdong_2.png
+    21300030: skill_yx_bisha_1.png
+    21300032: skill_yx_bisha_2.png
+    21300034: skill_yx_dikang_1.png
+    21300036: skill_yx_dikang_2.png
+    21300038: skill_yx_fangyu_1.png
+    21300040: skill_yx_fangyu_2.png
+    21300042: skill_yx_fushi_1.png
+    21300044: skill_yx_fushi_2.png
+    21300046: skill_yx_jianti_1.png
+    21300048: skill_yx_jianti_2.png
+    21300050: skill_yx_jihanlingyu.png
+    21300052: skill_yx_jingji_1.png
+    21300054: skill_yx_jingji_2.png
+    21300056: skill_yx_jingzhun_1.png
+    21300058: skill_yx_jingzhun_2.png
+    21300060: skill_yx_leimingjuexing.png
+    21300062: skill_yx_liehuozhixin.png
+    21300064: skill_yx_minjie_1.png
+    21300066: skill_yx_minjie_2.png
+    21300068: skill_yx_pojia_1.png
+    21300070: skill_yx_pojia_2.png
+    21300072: skill_yx_qiangli_1.png
+    21300074: skill_yx_qiangli_2.png
+    21300076: skill_yx_xixie_1.png
+    21300078: skill_yx_xixie_2.png
+    21300080: skill_yx_yongzhan_1.png
+    21300082: skill_yx_yongzhan_2.png
+    21300084: skill_yx_zaisheng_1.png
+    21300086: skill_yx_zaisheng_2.png
+    21300088: skill_yx_zhiming_1.png
+    21300090: skill_yx_zhiming_2.png
+    21300092: skill_yx_jisudaji_1.png
+    21300094: skill_yx_jisudaji_2.png
+    21300096: skill_yx_ruodian_1.png
+    21300098: skill_yx_ruodian_2.png
+    21300100: skill_yx_anliuyongdong.png
+    21300102: skill_yx_anyingtux.png
+    21300104: skill_yx_aoshuhuixiang.png
+    21300106: skill_yx_fengkuangyaoji.png
+    21300108: skill_yx_jidifengbao.png
+    21300110: skill_yx_qiangpaojiaoxiangqu.png
+    21300112: skill_yx_shengguangjiejie.png
+    21300114: skill_yx_shifangwudi.png
+    21300116: skill_yx_yongshizhihun.png
+    21300118: skill_yx_lianyuqingsuan.png
+    21300120: skill_yx_shizheshengcun.png
+    21300122: skill_yx_shuangshengshuyu.png
+    21300124: skill_yx_xuezhichaoxi.png
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: 33
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: Android
+    maxTextureSize: 1024
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hero_01.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 16
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_02.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 88
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_03.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_04.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 232
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_05.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 304
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_06.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 376
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_11.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 448
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_12.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 448
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_13.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 448
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_14.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 448
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_15.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 448
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hero_16.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 448
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_anliuyongdong.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 448
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_anyingtux.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 520
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_aoshuhuixiang.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 520
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_bingdong_1.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 520
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_bingdong_2.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 520
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_bisha_1.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 520
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_bisha_2.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 520
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_dikang_1.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 520
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_dikang_2.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 592
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_fangyu_1.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 592
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_fangyu_2.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 592
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_fengkuangyaoji.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 592
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_fushi_1.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 592
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_fushi_2.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 592
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jianti_1.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 592
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jianti_2.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 664
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jidifengbao.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 664
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jihanlingyu.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 664
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jingji_1.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 664
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jingji_2.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 664
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jingzhun_1.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 664
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jingzhun_2.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 664
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jisudaji_1.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 736
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_jisudaji_2.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 736
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_leimingjuexing.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 736
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_lianyuqingsuan.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 736
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_liehuozhixin.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 736
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_minjie_1.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 736
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_minjie_2.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 736
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_pojia_1.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 808
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_pojia_2.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 808
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_qiangli_1.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 808
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_qiangli_2.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 808
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_qiangpaojiaoxiangqu.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 808
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_ruodian_1.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 808
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_ruodian_2.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 808
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_shengguangjiejie.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 880
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_shifangwudi.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 880
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_shizheshengcun.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 880
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_shuangshengshuyu.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 880
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_xixie_1.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 880
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_xixie_2.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 880
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_xuezhichaoxi.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 880
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_yongshizhihun.png
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 952
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_yongzhan_1.png
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 952
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_yongzhan_2.png
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 952
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_zaisheng_1.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 952
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_zaisheng_2.png
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 952
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_zhiming_1.png
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 952
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skill_yx_zhiming_2.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 952
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,25 +1,33 @@
-# UI01 — инвентаризация UI (используемый набор)
+# UI — оригинальный Darklord look (UI01/UI02)
 
-Полный каталог Darklord `Client/Assets/Resources/UI` (~142 MiB) **не** копируется в GitHub.
+## Принцип
+Меню, HUD, кнопки, рамки и иконки берутся из **оригинальных атласов Darklord**, не из процедурных заглушек.
 
-## Импортировано в LunexMMOKit (used)
-| Ресурс | Путь | Назначение |
-|---|---|---|
-| Theme | `client/ui/theme/lunex_theme.tres` | Панели/кнопки HUD |
-| Icons | `client/ui/theme/icons/*.png` | HP/MP/quest/attack + button fills |
-| HUD scene | `client/ui/hud/game_hud.tscn` | Мобильный HUD |
+Полный каталог `Client/Assets/Atlas` (~143 MiB) в GitHub **не** копируется. В репозитории — **используемый набор** для Closed Beta HUD/логин/классы/инвентарь.
 
-## Источники для будущего выборочного импорта (не в git)
-| Источник | Примечание |
+## Импортировано (`client/ui/darklord/`)
+| Атлас | Назначение |
 |---|---|
-| `Darklord/Client/Assets/Resources/UI/` | Атласы/рамки — брать только реально используемые |
-| `…/UI/NewFont/simhei.ttf` (~4.5 MiB) | Кандидат шрифта; лицензия/подмножество — отдельно |
-| `assets/studio` effects | Не UI; не смешивать с HUD |
+| UICommon / UICommon2 | Рамки окон, кнопки, табы, EXP |
+| UIMain / UIMain2 | Боевой HUD, джойстик, скиллы, сумка |
+| UIMainTips | Подсказки |
+| Login | Логин / выбор роли |
+| NewHP / FubenFight | Полосы HP/MP |
+| UISkill / skillicon | Иконки умений |
+| Item / ItemIco | Слоты/иконки предметов |
+| HeadIcons / HeroIco / Chapter / EquipIco | Портреты/экип (для окон) |
+| fonts/simhei.ttf + bitmap | CJK HUD-шрифт |
 
-## Покрытие
-- Theme + базовые иконки: **да** (UI01)
-- Полные оригинальные атласы Darklord: **нет** (запрет полного дампа)
-- Нативные окна инвентаря/логина: **UI02**
+Инструмент: `python3 tools/ui/import_darklord_ui.py` (читает только VPS Darklord; runtime использует `res://ui/darklord/...`).
 
-## Правило DR
-Новый UI-элемент → только used-файлы в `client/ui/` → манифест → commit/push.
+## Сцены
+| Сцена | Скин |
+|---|---|
+| `ui/hud/game_hud.tscn` | Darklord HP/MP/EXP, skill icons, joystick sprites |
+| `ui/menus/auth_panel.tscn` | Login atlas |
+| `ui/menus/class_select_panel.tscn` | font_role1..4 |
+| `ui/menus/inventory_panel.tscn` | frame1 + item slots |
+| `ui/theme/darklord_skin.gd` | Theme builder |
+
+## Не импортировано
+Prefabs Unity (~135 MiB), лишние Business/Arena атласы, полный ItemIco2–4 и т.п. — добавлять по мере появления окна в игре (правило DR).

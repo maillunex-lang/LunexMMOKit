@@ -277,7 +277,7 @@
     "work": "Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок",
     "accept": "Отчёт покрытия; Godot Theme и редактируемые ресурсы",
     "status": "done",
-    "evidence": "UI01_THEME_SMOKE_OK; lunex_theme.tres+icons; docs/UI_INVENTORY.md; no full Darklord UI dump"
+    "evidence": "UI01_THEME_SMOKE_OK; lunex_theme.tres+icons; docs/UI_INVENTORY.md; no full Darklord UI dump; original atlas import supersedes procedural icons"
   },
   {
     "id": "UI02",
@@ -296,8 +296,8 @@
     ],
     "work": "Нативные HUD, авторизация, выбор класса, инвентарь и окна",
     "accept": "Control сцены, anchors, русский текст, проверка landscape и ручного редактирования",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "UI02_DARKLORD_SKIN_SMOKE_OK; original atlases in client/ui/darklord (~23MiB used); HUD/auth/class/inventory skinned; joystick UIMain sprites"
   },
   {
     "id": "CHARACTER-AUDIT-001",

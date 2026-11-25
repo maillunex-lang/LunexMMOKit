@@ -134,6 +134,7 @@ func _build_ui() -> void:
 	add_child(layer)
 	hud = load("res://ui/hud/game_hud.tscn").instantiate()
 	layer.add_child(hud)
+
 	hud.joystick_moved.connect(func(d): if hero: hero.set_direction(d))
 	hud.attack_pressed.connect(_try_attack)
 	hud.skill_pressed.connect(_try_skill)
@@ -142,6 +143,8 @@ func _build_ui() -> void:
 	hud.goto_pressed.connect(_goto_quest_objective)
 	hud.graphics_pressed.connect(func():
 		hud.set_status("Графика: пресеты Low/Med/High/Max — в P01"))
+	if hud.has_signal("inventory_pressed"):
+		hud.inventory_pressed.connect(_on_inventory_pressed)
 	status_label = hud.status
 	fps_label = Label.new()
 	fps_label.position = Vector2(16, 88)
@@ -377,5 +380,19 @@ func _load_class(index: int) -> void:
 	GameSession.set_vitals(hero_combat.hp, hero_combat.max_hp, hero_combat.mp, hero_combat.max_mp)
 	var cls: Dictionary = hero_kit.class_of(actor_id)
 	var src_name := String(cls.get("name_src", ""))
+	var skin_keys := ["zhanshi", "gongjian", "fashi", "cike"]
+	if hud and hud.has_method("set_class_key"):
+		hud.set_class_key(skin_keys[current_index] if current_index < skin_keys.size() else "zhanshi")
 	_set_status("%s (%s) | ПРОТОТИП · Darklord skills" % [class_names[current_index], src_name])
 	_on_vitals()
+
+func _on_inventory_pressed() -> void:
+	var layer := get_node_or_null("HUD")
+	if layer == null:
+		return
+	var inv := layer.get_node_or_null("InventoryPanel")
+	if inv == null:
+		inv = load("res://ui/menus/inventory_panel.tscn").instantiate()
+		inv.name = "InventoryPanel"
+		layer.add_child(inv)
+	inv.visible = true

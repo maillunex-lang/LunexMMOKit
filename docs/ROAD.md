@@ -1,62 +1,60 @@
 # Roadmap
-Read AGENTS.md and NEXT.md first. Machine source: roadmap.json.
+Read AGENTS.md and NEXT.md first.
 
-**Product: Closed Beta 0.1.0 (BETA01).**
-
-- F01 [done] Initial Godot skeleton (deps: )
-- F02 [done] Module layout and static CI (deps: F01)
-- CAP01 [done] Инвентаризация столицы и исходных размещений (deps: F02)
-- CAP02 [done] Диагностическая сборка столицы и первый рендер (deps: CAP01)
-- CAP03 [done] Исправить родительские трансформации, активность и ориентацию мешей столицы (deps: CAP02)
-- CAP04 [done] Восстановить terrain, воду, кристалл, эффекты и освещение (deps: CAP03)
-- CAP05 [done] Редактируемые коллизии, навигация, герой и камера в городе (deps: CAP04)
-- WD02 [done] WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity) (deps: CAP05)
-- WE03 [done] WORLD-EDITOR-003: Lunex World Editor (Godot 4 EditorPlugin) — библиотека китов, drag-drop, transform, snap, материалы, NPC/порталы/spawn со stable_id, коллизии, bake NavMesh, валидаторы, Undo/Redo, owner overlay без overwrite генераторами (deps: F02, WD02)
-- GAME01 [done] GAME-SLICE-001: клиентский прототип механик гл.1 (локальный) — ступень к онлайн-бете, не замена серверу (deps: WD02, F02)
-- AUDIT01 [done] LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты (deps: F02)
-- CAPAPK [blocked] [INTERNAL ONLY] Технический Android smoke APK города — НЕ конечная цель продукта (см. BETA01 Closed Beta 0.1.0) (deps: CAP05, WD02)
-- CAP06 [done] NPC и исходные точки размещения, диалоги и квестовые данные (deps: CAP05)
-- UI01 [done] Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок (deps: F02)
-- UI02 [todo] Нативные HUD, авторизация, выбор класса, инвентарь и окна (deps: UI01)
-- CHARACTER-AUDIT-001 [doing] Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity (deps: F02)
-- CHAR02 [doing] Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity (deps: CHARACTER-AUDIT-001)
-- CHAR03 [todo] Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом (deps: CHARACTER-AUDIT-001)
-- CHAR04 [todo] Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом (deps: CHARACTER-AUDIT-001)
-- CHAR05 [todo] Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания (deps: CHARACTER-AUDIT-001)
-- CHAR06 [todo] Совместимость брони/шлемов/костюмов/оружия/крыльев без разрывов и деформаций (deps: CHAR02, CHAR03)
-- CHAR07 [todo] Синхронизация stand/walk/run/attack/skill/hit/death/mount с Unity hitTime и VFX/audio (deps: CHARACTER-AUDIT-001)
-- CHAR08 [doing] Единый Attachment System: редактируемые ресурсы Position/Rotation/Scale/Socket/Class/IDs (deps: F02)
-- CHAR10 [todo] Матрица совместимости и контрольные скриншоты (front/back/side/45/closeups) через Xvfb (deps: CHAR02, CHAR03, CHAR04, CHAR05)
-- EDIT01 [todo] Визуальный редактор креплений в Character Studio / Asset Library (deps: F02, CHAR08)
-- EDIT02 [todo] Проверка полного EDITOR-001 и переносимости контента (deps: CAP06, UI02, EDIT01, WE03)
-- F03 [done] Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов (deps: F02)
-- F04 [done] Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов (deps: F03)
-- D01 [todo] Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены (deps: F03)
-- D02 [todo] Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр; полный каталог механик, классов, статов, формул, прогрессии, квестов и экономики с исходными ID и конфликтами (deps: D01)
-- D03 [todo] Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack (deps: D02)
-- D04 [todo] Конвертер сцен, terrain, коллизий, навигации и размещения объектов (deps: D02)
-- D05 [todo] Конвертер VFX, аудио и событий клипов; ручные overrides (deps: D03)
-- W01 [todo] Протяженная тестовая зона, чанки, LOD, коллизии, навигация (deps: D04)
-- W02 [todo] Карта, миникарта, переходы, точки возрождения, безопасные зоны (deps: W01)
-- A01 [done] Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord (deps: F02, F04)
-- A02 [todo] AnimationPlayer/Tree, события атаки, VFX, звук, прерывания (deps: A01, D05)
-- N01 [done] Регистрация, логин, персонаж, сессии, reconnect, версия протокола (deps: F04, A01)
-- N02 [todo] Авторитетное движение, AOI, снапшоты, интерполяция (deps: N01, W02)
-- C01 [todo] Серверный бой, цели, cooldown, ресурсы, урон, смерть (deps: N02, A02)
-- C02 [todo] Монстры, aggro, patrol, leash, respawn, loot, босс (deps: C01)
-- C03 [todo] Автобой, автопуть, ручной приоритет, небесная форма (deps: C02)
-- Q01 [todo] Квестовый движок, NPC, диалоги, цели, награды (deps: C03)
-- Q02 [todo] Первая глава, обучение, город, маршрут, финальный босс (deps: Q01)
-- R01 [todo] Уровни, инвентарь, экипировка, характеристики, БМ; оригинальная кривая прогрессии и формулы Darklord (deps: Q02)
-- R02 [todo] Таланты, усиление, разбор, крылья, маунты, питомцы (deps: R01)
-- R03 [todo] Офлайн-прогресс, ежедневки, лимиты, серверное время (deps: R01)
-- M01 [todo] Чат, друзья, группы, гильдии (deps: R01)
-- M02 [todo] Подземелья, мировые боссы, распределение наград (deps: M01, C02)
-- M03 [todo] Аукцион, комиссии, журнал операций (deps: M01, R02)
-- M04 [todo] Арена, PvP зоны, рейтинг; межсервер позже (deps: M02)
-- O01 [todo] Админка RBAC, редактор данных, asset preview, audit log (deps: Q02)
-- P01 [todo] Профилирование Android, пресеты, LOD, пулы, чанки (deps: Q02)
-- P02 [todo] Нагрузочный тест, backup restore, безопасность, метрики (deps: M04, P01, R03, M03, O01)
-- L01 [todo] Пакет Closed Beta: подписанный APK, докачка контента, integrity, обновление клиента (deps: P02)
-- DR01 [done] DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery (deps: F02)
-- BETA01 [todo] Closed Beta 0.1.0 «Осколки вечности»: онлайн MMORPG готовая к закрытому тестированию реальными игроками (deps: L01, DR01)
+- F01 [done] Initial Godot skeleton
+- F02 [done] Module layout and static CI
+- CAP01 [done] Инвентаризация столицы и исходных размещений
+- CAP02 [done] Диагностическая сборка столицы и первый рендер
+- CAP03 [done] Исправить родительские трансформации, активность и ориентацию мешей столицы
+- CAP04 [done] Восстановить terrain, воду, кристалл, эффекты и освещение
+- CAP05 [done] Редактируемые коллизии, навигация, герой и камера в городе
+- WD02 [done] WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)
+- WE03 [done] WORLD-EDITOR-003: Lunex World Editor (Godot 4 EditorPlugin) — библиотека китов, drag-drop, transform, snap, материалы, NPC/порталы/spawn со stable_id, коллизии, bake NavMesh, валидаторы, Undo/Redo, owner overlay без overwrite генераторами
+- GAME01 [done] GAME-SLICE-001: клиентский прототип механик гл.1 (локальный) — ступень к онлайн-бете, не замена серверу
+- AUDIT01 [done] LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты
+- CAPAPK [blocked] [INTERNAL ONLY] Технический Android smoke APK города — НЕ конечная цель продукта (см. BETA01 Closed Beta 0.1.0)
+- CAP06 [done] NPC и исходные точки размещения, диалоги и квестовые данные
+- UI01 [done] Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок
+- UI02 [done] Нативные HUD, авторизация, выбор класса, инвентарь и окна
+- CHARACTER-AUDIT-001 [doing] Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity
+- CHAR02 [doing] Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity
+- CHAR03 [todo] Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом
+- CHAR04 [todo] Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом
+- CHAR05 [todo] Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания
+- CHAR06 [todo] Совместимость брони/шлемов/костюмов/оружия/крыльев без разрывов и деформаций
+- CHAR07 [todo] Синхронизация stand/walk/run/attack/skill/hit/death/mount с Unity hitTime и VFX/audio
+- CHAR08 [doing] Единый Attachment System: редактируемые ресурсы Position/Rotation/Scale/Socket/Class/IDs
+- CHAR10 [todo] Матрица совместимости и контрольные скриншоты (front/back/side/45/closeups) через Xvfb
+- EDIT01 [todo] Визуальный редактор креплений в Character Studio / Asset Library
+- EDIT02 [todo] Проверка полного EDITOR-001 и переносимости контента
+- F03 [done] Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов
+- F04 [done] Go сервер, конфиг, health, PostgreSQL миграции, локальный compose без публикации портов
+- D01 [todo] Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены
+- D02 [todo] Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр; полный каталог механик, классов, статов, формул, прогрессии, квестов и экономики с исходными ID и конфликтами
+- D03 [todo] Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack
+- D04 [todo] Конвертер сцен, terrain, коллизий, навигации и размещения объектов
+- D05 [todo] Конвертер VFX, аудио и событий клипов; ручные overrides
+- W01 [todo] Протяженная тестовая зона, чанки, LOD, коллизии, навигация
+- W02 [todo] Карта, миникарта, переходы, точки возрождения, безопасные зоны
+- A01 [done] Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord
+- A02 [todo] AnimationPlayer/Tree, события атаки, VFX, звук, прерывания
+- N01 [done] Регистрация, логин, персонаж, сессии, reconnect, версия протокола
+- N02 [todo] Авторитетное движение, AOI, снапшоты, интерполяция
+- C01 [todo] Серверный бой, цели, cooldown, ресурсы, урон, смерть
+- C02 [todo] Монстры, aggro, patrol, leash, respawn, loot, босс
+- C03 [todo] Автобой, автопуть, ручной приоритет, небесная форма
+- Q01 [todo] Квестовый движок, NPC, диалоги, цели, награды
+- Q02 [todo] Первая глава, обучение, город, маршрут, финальный босс
+- R01 [todo] Уровни, инвентарь, экипировка, характеристики, БМ; оригинальная кривая прогрессии и формулы Darklord
+- R02 [todo] Таланты, усиление, разбор, крылья, маунты, питомцы
+- R03 [todo] Офлайн-прогресс, ежедневки, лимиты, серверное время
+- M01 [todo] Чат, друзья, группы, гильдии
+- M02 [todo] Подземелья, мировые боссы, распределение наград
+- M03 [todo] Аукцион, комиссии, журнал операций
+- M04 [todo] Арена, PvP зоны, рейтинг; межсервер позже
+- O01 [todo] Админка RBAC, редактор данных, asset preview, audit log
+- P01 [todo] Профилирование Android, пресеты, LOD, пулы, чанки
+- P02 [todo] Нагрузочный тест, backup restore, безопасность, метрики
+- L01 [todo] Пакет Closed Beta: подписанный APK, докачка контента, integrity, обновление клиента
+- DR01 [done] DISASTER-RECOVERY-001: автономия от VPS — used-asset library в git, манифест+CI, deploy/backup/restore, изолированный recovery
+- BETA01 [todo] Closed Beta 0.1.0 «Осколки вечности»: онлайн MMORPG готовая к закрытому тестированию реальными игроками

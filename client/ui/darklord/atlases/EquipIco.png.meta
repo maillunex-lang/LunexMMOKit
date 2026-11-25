@@ -1,0 +1,2848 @@
+fileFormatVersion: 2
+guid: a4541c4626011324ea63d0084460274a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cike_M_wuqi_10.png
+    21300002: cike_M_wuqi_11.png
+    21300004: cike_M_wuqi_12.png
+    21300006: cike_M_wuqi_13.png
+    21300008: cike_M_wuqi_7.png
+    21300010: cike_M_wuqi_8.png
+    21300012: cike_M_wuqi_9.png
+    21300014: equip_feicui_1.png
+    21300016: equip_fengbao_1.png
+    21300018: equip_leiting_1.png
+    21300020: equip_pomo_1.png
+    21300022: equip_rongyan_1.png
+    21300024: equip_rongyan_2.png
+    21300026: equip_shenyu_2.png
+    21300028: equip_shilian_2.png
+    21300030: equip_xukong_1.png
+    21300032: equip_yongqi_1.png
+    21300034: equip_yongqi_2.png
+    21300036: fs_03.png
+    21300038: ico_ZBht01.png
+    21300040: ico_ZBht02.png
+    21300042: ico_ZBht03.png
+    21300044: ico_ZBht04.png
+    21300046: ico_ZBht05.png
+    21300048: ico_ZBht06.png
+    21300050: ico_ZBhw01.png
+    21300052: ico_ZBhw02.png
+    21300054: ico_ZBhw03.png
+    21300056: ico_ZBhw04.png
+    21300058: ico_ZBhw05.png
+    21300060: ico_ZBhw06.png
+    21300062: ico_ZBjz01.png
+    21300064: ico_ZBjz02.png
+    21300066: ico_ZBjz03.png
+    21300068: ico_ZBjz04.png
+    21300070: ico_ZBjz05.png
+    21300072: ico_ZBjz06.png
+    21300074: ico_ZBps01.png
+    21300076: ico_ZBps02.png
+    21300078: ico_ZBps03.png
+    21300080: ico_ZBps04.png
+    21300082: ico_ZBps05.png
+    21300084: ico_ZBps06.png
+    21300086: ico_ZBsp01_1.png
+    21300088: ico_ZBsp01_2.png
+    21300090: ico_ZBsp02_1.png
+    21300092: ico_ZBsp02_2.png
+    21300094: ico_ZBsp03_1.png
+    21300096: ico_ZBsp03_2.png
+    21300098: ico_ZBsp04_1.png
+    21300100: ico_ZBsp04_2.png
+    21300102: ico_ZBsp05_1.png
+    21300104: ico_ZBsp05_2.png
+    21300106: ico_ZBsp06_1.png
+    21300108: ico_ZBsp06_2.png
+    21300110: ico_ZBtk01.png
+    21300112: ico_ZBtk02.png
+    21300114: ico_ZBtk03.png
+    21300116: ico_ZBtk04.png
+    21300118: ico_ZBtk05.png
+    21300120: ico_ZBtk06.png
+    21300122: ico_ZBxl01.png
+    21300124: ico_ZBxl02.png
+    21300126: ico_ZBxl03.png
+    21300128: ico_ZBxl04.png
+    21300130: ico_ZBxl05.png
+    21300132: ico_ZBxl06.png
+    21300134: ico_ZBxz01.png
+    21300136: ico_ZBxz02.png
+    21300138: ico_ZBxz03.png
+    21300140: ico_ZBxz04.png
+    21300142: ico_ZBxz05.png
+    21300144: ico_ZBxz06.png
+    21300146: ico_ZByd01.png
+    21300148: ico_ZByd02.png
+    21300150: ico_ZByd03.png
+    21300152: ico_ZByd04.png
+    21300154: ico_ZByd05.png
+    21300156: ico_ZByd06.png
+    21300158: ico_ZByf01.png
+    21300160: ico_ZByf02.png
+    21300162: ico_ZByf03.png
+    21300164: ico_ZByf04.png
+    21300166: ico_ZByf05.png
+    21300168: ico_ZByf06.png
+    21300170: ico_didz.png
+    21300172: ico_dihw.png
+    21300174: ico_dijz.png
+    21300176: ico_dikz.png
+    21300178: ico_ditk.png
+    21300180: ico_diwq.png
+    21300182: ico_dixl.png
+    21300184: ico_dixz.png
+    21300186: ico_diyd.png
+    21300188: ico_diyf.png
+    21300190: ico_sqhs.png
+    21300192: ico_sqht.png
+    21300194: ico_sqjz.png
+    21300196: ico_sqps.png
+    21300198: ico_sqtk.png
+    21300200: ico_sqwq.png
+    21300202: ico_sqxl.png
+    21300204: ico_sqxz.png
+    21300206: ico_sqyd.png
+    21300208: ico_sqyf.png
+    21300210: ry_ckbs01.png
+    21300212: ry_ckhs01.png
+    21300214: ry_ckht01.png
+    21300216: ry_ckjz01.png
+    21300218: ry_ckps01.png
+    21300220: ry_cktk01.png
+    21300222: ry_ckxl01.png
+    21300224: ry_ckxz01.png
+    21300226: ry_ckyd01.png
+    21300228: ry_ckyf01.png
+    21300230: ry_zscj01.png
+    21300232: ry_zsht01.png
+    21300234: ry_zshw01.png
+    21300236: ry_zsjz01.png
+    21300238: ry_zsps01.png
+    21300240: ry_zstk01.png
+    21300242: ry_zsxl01.png
+    21300244: ry_zsxz01.png
+    21300246: ry_zsyd01.png
+    21300248: ry_zsyf01.png
+    21300250: sz_csxd0301.png
+    21300252: sz_csxd0302.png
+    21300254: sz_csxd0401.png
+    21300256: sz_csxd0402.png
+    21300258: sz_fxbz0301.png
+    21300260: sz_fxbz0302.png
+    21300262: sz_fxbz0401.png
+    21300264: sz_fxbz0402.png
+    21300266: sz_tmxr0301.png
+    21300268: sz_tmxr0302.png
+    21300270: sz_tmxr0401.png
+    21300272: sz_tmxr0402.png
+    21300274: zbdz_01.png
+    21300276: zbdz_02.png
+    21300278: zbdz_03.png
+    21300280: zbdz_04.png
+    21300282: zbdz_05.png
+    21300284: zbdz_06.png
+    21300286: zbdz_07.png
+    21300288: zbdz_08.png
+    21300290: zbhj_01.png
+    21300292: zbhj_02.png
+    21300294: zbhj_03.png
+    21300296: zbhj_04.png
+    21300298: zbhj_05.png
+    21300300: zbhj_06.png
+    21300302: zbhj_07.png
+    21300304: zbhj_08.png
+    21300306: zbhw_01.png
+    21300308: zbhw_02.png
+    21300310: zbhw_03.png
+    21300312: zbhw_04.png
+    21300314: zbhw_05.png
+    21300316: zbhw_06.png
+    21300318: zbhw_07.png
+    21300320: zbhw_08.png
+    21300322: zbjz_01.png
+    21300324: zbjz_02.png
+    21300326: zbjz_03.png
+    21300328: zbjz_04.png
+    21300330: zbjz_05.png
+    21300332: zbjz_06.png
+    21300334: zbjz_07.png
+    21300336: zbjz_08.png
+    21300338: zbtk_01.png
+    21300340: zbtk_02.png
+    21300342: zbtk_03.png
+    21300344: zbtk_04.png
+    21300346: zbtk_05.png
+    21300348: zbtk_06.png
+    21300350: zbtk_07.png
+    21300352: zbtk_08.png
+    21300354: zbwq_01.png
+    21300356: zbwq_02.png
+    21300358: zbwq_03.png
+    21300360: zbwq_04.png
+    21300362: zbwq_05.png
+    21300364: zbwq_06.png
+    21300366: zbwq_07.png
+    21300368: zbwq_08.png
+    21300370: zbxj_01.png
+    21300372: zbxj_02.png
+    21300374: zbxj_03.png
+    21300376: zbxj_04.png
+    21300378: zbxj_05.png
+    21300380: zbxj_06.png
+    21300382: zbxj_07.png
+    21300384: zbxj_08.png
+    21300386: zbxl_01.png
+    21300388: zbxl_02.png
+    21300390: zbxl_03.png
+    21300392: zbxl_04.png
+    21300394: zbxl_05.png
+    21300396: zbxl_06.png
+    21300398: zbxl_07.png
+    21300400: zbxl_08.png
+    21300402: zbxz_01.png
+    21300404: zbxz_02.png
+    21300406: zbxz_03.png
+    21300408: zbxz_04.png
+    21300410: zbxz_05.png
+    21300412: zbxz_06.png
+    21300414: zbxz_07.png
+    21300416: zbxz_08.png
+    21300418: zbyd_01.png
+    21300420: zbyd_02.png
+    21300422: zbyd_03.png
+    21300424: zbyd_04.png
+    21300426: zbyd_05.png
+    21300428: zbyd_06.png
+    21300430: zbyd_07.png
+    21300432: zbyd_08.png
+    21300434: zhanshi_M_wuqi_10.png
+    21300436: zhanshi_M_wuqi_11.png
+    21300438: zhanshi_M_wuqi_12.png
+    21300440: zhanshi_M_wuqi_13.png
+    21300442: zhanshi_M_wuqi_7.png
+    21300444: zhanshi_M_wuqi_8.png
+    21300446: zhanshi_M_wuqi_9.png
+    21300448: zbwq_00.png
+    21300450: zbwq_00a.png
+    21300452: zbwq_00b.png
+    21300454: zbwq_09.png
+    21300456: zbwq_10.png
+    21300458: zbwq_11.png
+    21300460: zbwq_12.png
+    21300462: zbwq_13.png
+    21300464: zbwq_14.png
+    21300466: zbwq_15.png
+    21300468: L_FS_01.png
+    21300470: L_FS_02.png
+    21300472: L_FS_03.png
+    21300474: L_FS_wuqi_01.png
+    21300476: L_FS_wuqi_02.png
+    21300478: L_FS_wuqi_03.png
+    21300480: L_ZS_01.png
+    21300482: L_ZS_02.png
+    21300484: L_ZS_03.png
+    21300486: L_ZS_wuqi_01.png
+    21300488: L_ZS_wuqi_02.png
+    21300490: L_ZS_wuqi_03.png
+    21300492: wing_L_01.png
+    21300494: wing_L_02.png
+    21300496: wing_L_03.png
+    21300498: ico_ZByf07.png
+    21300500: ico_ZByf08.png
+    21300502: ico_fsZByf01.png
+    21300504: ico_fsZByf02.png
+    21300506: ico_fsZByf03.png
+    21300508: ico_fsZByf04.png
+    21300510: ico_fsZByf05.png
+    21300512: ico_fsZByf06.png
+    21300514: ico_fsZByf07.png
+    21300516: ico_fsZByf08.png
+    21300518: fashiwuqi_01.png
+    21300520: fashiwuqi_02.png
+    21300522: fashiwuqi_03.png
+    21300524: fashiwuqi_04.png
+    21300526: fashiwuqi_05.png
+    21300528: fashiwuqi_06.png
+    21300530: fashiwuqi_07.png
+    21300532: fashiwuqi_08.png
+    21300534: molianzb_01.png
+    21300536: molianzb_02.png
+    21300538: molianzb_03.png
+    21300540: molianzb_04.png
+    21300542: moqiangzb_01.png
+    21300544: moqiangzb_02.png
+    21300546: moqiangzb_03.png
+    21300548: moqiangzb_04.png
+    21300550: shengdunzb_01.png
+    21300552: shengdunzb_02.png
+    21300554: shengdunzb_03.png
+    21300556: shengdunzb_04.png
+    21300558: wangguanzb_01.png
+    21300560: wangguanzb_02.png
+    21300562: wangguanzb_03.png
+    21300564: wangguanzb_04.png
+    21300566: zuoqizb_01.png
+    21300568: zuoqizb_02.png
+    21300570: zuoqizb_03.png
+    21300572: zuoqizb_04.png
+    21300574: fsryez.png
+    21300576: fsryhj.png
+    21300578: fsryhw.png
+    21300580: fsryjz.png
+    21300582: fsrytk.png
+    21300584: fsryxj.png
+    21300586: fsryxl.png
+    21300588: fsryxz.png
+    21300590: fsryyd.png
+    21300592: zsryez.png
+    21300594: zsryhj.png
+    21300596: zsryhw.png
+    21300598: zsryjz.png
+    21300600: zsrytk.png
+    21300602: zsryxj.png
+    21300604: zsryxl.png
+    21300606: zsryxz.png
+    21300608: zsryyd.png
+    21300610: EquipIco_0
+    21300612: L_FS_04.png
+    21300614: L_FS_05.png
+    21300616: L_FS_wuqi_04.png
+    21300618: L_FS_wuqi_05.png
+    21300620: L_ZS_04.png
+    21300622: L_ZS_05.png
+    21300624: L_ZS_wuqi_04.png
+    21300626: L_ZS_wuqi_05.png
+    21300628: L_FS_06.png
+    21300630: L_FS_wuqi_06.png
+    21300632: L_ZS_06.png
+    21300634: L_ZS_wuqi_06.png
+    21300636: L_FS_07.png
+    21300638: L_FS_wuqi_07.png
+    21300640: L_ZS_07.png
+    21300642: L_ZS_wuqi_07.png
+    21300644: L_FS_08.PNG
+    21300646: L_FS_wuqi_08.png
+    21300648: L_ZS_08.PNG
+    21300650: L_ZS_wuqi_08.PNG
+    21300652: L_FS_09.png
+    21300654: L_FS_wuqi_09.png
+    21300656: L_ZS_09.png
+    21300658: L_ZS_wuqi_09.png
+    21300660: ico_artifact1.png
+    21300662: ico_artifact2.png
+    21300664: ico_artifact3.png
+    21300666: ico_artifact4.png
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 33
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: L_FS_01.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_02.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_03.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_04.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_05.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_06.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_07.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_08.PNG
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_09.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_01.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_02.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_03.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_04.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_05.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_06.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_07.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_08.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_FS_wuqi_09.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_01.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_02.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_03.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_04.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_05.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_06.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_07.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_08.PNG
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_09.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_01.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_02.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_03.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_04.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_05.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_06.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_07.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_08.PNG
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: L_ZS_wuqi_09.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: fsryez.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: fsryjz.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: fsryxl.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_artifact1.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_artifact2.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_artifact3.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_artifact4.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_didz.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 44
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_dihw.png
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 151
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_dijz.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 195
+        width: 61
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_dikz.png
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 7
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_ditk.png
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 89
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_diwq.png
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 46
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_dixl.png
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 71
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_dixz.png
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 3
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_diyd.png
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 210
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_diyf.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 135
+        width: 69
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: molianzb_01.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: molianzb_02.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: molianzb_03.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: molianzb_04.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: moqiangzb_01.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: moqiangzb_02.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: moqiangzb_03.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: moqiangzb_04.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: shengdunzb_01.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: shengdunzb_02.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: shengdunzb_03.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: shengdunzb_04.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wangguanzb_01.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wangguanzb_02.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wangguanzb_03.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wangguanzb_04.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_01.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_02.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_03.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_04.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_05.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_06.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_07.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbdz_08.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_01.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_02.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_03.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_04.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_05.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_06.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_07.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhj_08.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_01.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_02.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_03.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_04.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_05.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_06.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_07.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbhw_08.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_01.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_02.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_03.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_04.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_05.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_06.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_07.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbjz_08.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_01.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_02.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_03.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_04.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_05.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_06.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_07.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbtk_08.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_00.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_00a.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_00b.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_01.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_02.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_03.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_04.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_05.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_06.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_07.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_08.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_09.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_10.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_11.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_12.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_13.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_14.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbwq_15.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_01.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_02.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_03.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_04.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_05.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_06.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_07.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxj_08.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_01.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_02.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_03.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_04.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_05.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_06.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_07.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxl_08.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_01.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_02.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_03.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_04.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_05.png
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_06.png
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_07.png
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbxz_08.png
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_01.png
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_02.png
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_03.png
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_04.png
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_05.png
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_06.png
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_07.png
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zbyd_08.png
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryez.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 36
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryhj.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 112
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryhw.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 188
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryjz.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 264
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsrytk.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 340
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryxj.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 416
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryxl.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 492
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryxz.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 568
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zsryyd.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 644
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zuoqizb_01.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 720
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zuoqizb_02.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 796
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zuoqizb_03.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 872
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zuoqizb_04.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 948
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

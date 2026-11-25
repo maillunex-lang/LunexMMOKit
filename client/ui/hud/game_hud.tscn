@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://ui/hud/game_hud.gd" id="1"]
-[ext_resource type="Script" path="res://ui/controls/virtual_joystick.gd" id="2"]
+[ext_resource type="PackedScene" path="res://ui/controls/virtual_joystick.tscn" id="2"]
 
 [node name="GameHud" type="Control"]
 layout_mode = 3
@@ -20,10 +20,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 mouse_filter = 2
 
 [node name="Root" type="Control" parent="SafeMargin"]
@@ -32,33 +32,79 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 
+[node name="TopFrame" type="TextureRect" parent="SafeMargin/Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 86.0
+grow_horizontal = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
 [node name="TopBar" type="HBoxContainer" parent="SafeMargin/Root"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 72.0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = -8.0
+offset_bottom = 92.0
 grow_horizontal = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 10
 
 [node name="Vitals" type="VBoxContainer" parent="SafeMargin/Root/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 2
 
 [node name="HpLabel" type="Label" parent="SafeMargin/Root/TopBar/Vitals"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 14
 text = "HP —"
+
+[node name="HpBar" type="TextureProgressBar" parent="SafeMargin/Root/TopBar/Vitals"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 16)
+layout_mode = 2
+max_value = 100.0
+value = 100.0
+nine_patch_stretch = true
 
 [node name="MpLabel" type="Label" parent="SafeMargin/Root/TopBar/Vitals"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 14
 text = "MP —"
 
-[node name="QuestTrack" type="RichTextLabel" parent="SafeMargin/Root/TopBar"]
+[node name="MpBar" type="TextureProgressBar" parent="SafeMargin/Root/TopBar/Vitals"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(280, 64)
+custom_minimum_size = Vector2(180, 14)
+layout_mode = 2
+max_value = 100.0
+value = 100.0
+nine_patch_stretch = true
+
+[node name="ExpBar" type="TextureProgressBar" parent="SafeMargin/Root/TopBar/Vitals"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 10)
+layout_mode = 2
+max_value = 100.0
+value = 20.0
+nine_patch_stretch = true
+
+[node name="QuestPanel" type="PanelContainer" parent="SafeMargin/Root/TopBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 70)
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="QuestTrack" type="RichTextLabel" parent="SafeMargin/Root/TopBar/QuestPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
@@ -68,22 +114,21 @@ text = "Квест"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 13
 text = "Статус"
 autowrap_mode = 2
 
-[node name="Joystick" type="Control" parent="SafeMargin/Root"]
+[node name="Joystick" parent="SafeMargin/Root" instance=ExtResource("2")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 160)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = -176.0
-offset_right = 168.0
-offset_bottom = -16.0
+offset_top = -188.0
+offset_right = 188.0
+offset_bottom = -8.0
 grow_vertical = 0
-script = ExtResource("2")
 
 [node name="ActionColumn" type="VBoxContainer" parent="SafeMargin/Root"]
 layout_mode = 1
@@ -92,58 +137,65 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -280.0
+offset_left = -210.0
+offset_top = -320.0
 offset_right = -8.0
-offset_bottom = -16.0
+offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/separation = 8
+theme_override_constants/separation = 6
 alignment = 2
 
 [node name="BtnInteract" type="Button" parent="SafeMargin/Root/ActionColumn"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 44)
+custom_minimum_size = Vector2(160, 40)
 layout_mode = 2
-text = "Говорить (E)"
+text = "Говорить"
 
 [node name="BtnPortal" type="Button" parent="SafeMargin/Root/ActionColumn"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 44)
+custom_minimum_size = Vector2(160, 40)
 layout_mode = 2
-text = "Портал (F)"
+text = "Портал"
 
 [node name="BtnGoto" type="Button" parent="SafeMargin/Root/ActionColumn"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 44)
+custom_minimum_size = Vector2(160, 40)
 layout_mode = 2
-text = "К цели (G)"
+text = "К цели"
+
+[node name="BtnBag" type="Button" parent="SafeMargin/Root/ActionColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+text = "Сумка"
 
 [node name="BtnAttack" type="Button" parent="SafeMargin/Root/ActionColumn"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 52)
+custom_minimum_size = Vector2(160, 64)
 layout_mode = 2
 text = "Атака"
 
 [node name="Skills" type="HBoxContainer" parent="SafeMargin/Root/ActionColumn"]
 layout_mode = 2
 theme_override_constants/separation = 8
+alignment = 2
 
 [node name="BtnSkill0" type="Button" parent="SafeMargin/Root/ActionColumn/Skills"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(56, 56)
 layout_mode = 2
 text = "1"
 
 [node name="BtnSkill1" type="Button" parent="SafeMargin/Root/ActionColumn/Skills"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(56, 56)
 layout_mode = 2
 text = "2"
 
 [node name="BtnSkill2" type="Button" parent="SafeMargin/Root/ActionColumn/Skills"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(56, 56)
 layout_mode = 2
 text = "3"
 
@@ -153,9 +205,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -120.0
-offset_top = 8.0
+offset_left = -118.0
+offset_top = 96.0
 offset_right = -8.0
-offset_bottom = 44.0
+offset_bottom = 136.0
 grow_horizontal = 0
-text = "Графика"
+text = "GFX"

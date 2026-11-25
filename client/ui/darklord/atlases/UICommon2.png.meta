@@ -1,0 +1,1309 @@
+fileFormatVersion: 2
+guid: 0cd8261063f195b4a9616ab5f1e58b43
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bg_xilian.png
+    21300002: icon_gou.png
+    21300004: icon_gou_bg.png
+    21300006: icon_lock.png
+    21300008: icon_unlock.png
+    21300010: icon_xilian.png
+    21300012: icon_add.png
+    21300014: icon_kuang .png
+    21300016: bg_kuang.png
+    21300018: bg1.png
+    21300020: bg2.png
+    21300022: btn_rename.png
+    21300024: icon_gonghui .png
+    21300026: bg_head.png
+    21300028: head_kuang.png
+    21300030: VIP.png
+    21300032: bg.png
+    21300034: bg3.png
+    21300036: btn_reward.png
+    21300038: img_lock.png
+    21300040: left_mark.png
+    21300042: mark.png
+    21300044: right_mark.png
+    21300046: back_discount.png
+    21300048: mark_Sale.png
+    21300050: mark_Spike.png
+    21300052: shibai_020.png
+    21300054: back.png
+    21300056: back1.png
+    21300058: back_item.png
+    21300060: back_set_price.png
+    21300062: item_bg.png
+    21300064: text_jifenpaihang.png
+    21300066: back_attr.png
+    21300068: back_title.png
+    21300070: line.png
+    21300072: back_touxian.png
+    21300074: back_num.png
+    21300076: text_zhongji.png
+    21300078: text_zhongji2.png
+    21300080: bg_dipan.png
+    21300082: icon_baoxiang.png
+    21300084: img_tucheng.png
+    21300086: tittle_ganenhuikui.png
+    21300088: tittle_lianxiao.png
+    21300090: tittle_lianxiao1.png
+    21300092: tittle_lx.png
+    21300094: mark_shuangbei01.png
+    21300096: mark_shuangbei02.png
+    21300098: Btn_dazao01.png
+    21300100: Btn_dazao02.png
+    21300102: Btn_dazao03.png
+    21300104: back_Sshangjianbian.png
+    21300106: back_Styneikuang1.png
+    21300108: back_Styneikuang2.png
+    21300110: back_Sxaijianbian_.png
+    21300112: back_activity.png
+    21300114: back_chat1.png
+    21300116: back_chat2.png
+    21300118: back_chat3.png
+    21300120: back_coin.png
+    21300122: back_coin_slot.png
+    21300124: back_dailyentry.png
+    21300126: back_equip.png
+    21300128: back_gongneng1.png
+    21300130: back_gouhuo1.png
+    21300132: back_gouhuo2.png
+    21300134: back_ico.png
+    21300136: back_level.png
+    21300138: back_level2.png
+    21300140: back_light1.png
+    21300142: back_name.png
+    21300144: back_name2.png
+    21300146: back_name2_light.png
+    21300148: back_name3.png
+    21300150: back_name4.png
+    21300152: back_number.png
+    21300154: back_page.png
+    21300156: back_page_mark.png
+    21300158: back_qizi.png
+    21300160: back_right.png
+    21300162: back_role.png
+    21300164: back_skillgot.png
+    21300166: back_state.png
+    21300168: back_top.png
+    21300170: back_vip.png
+    21300172: back_xialadikuang.png
+    21300174: back_xunbao.png
+    21300176: bar_exp.png
+    21300178: bar_exp2.png
+    21300180: bar_exp2_slot.png
+    21300182: bar_exp3.png
+    21300184: bar_exp3_slot.png
+    21300186: bar_exp4.png
+    21300188: bar_exp4_slot.png
+    21300190: bar_exp_slot.png
+    21300192: blank.png
+    21300194: btn_add.png
+    21300196: btn_black.png
+    21300198: btn_change.png
+    21300200: btn_chatcolor.png
+    21300202: btn_circle.png
+    21300204: btn_circle2_disable.png
+    21300206: btn_circle2_normal.png
+    21300208: btn_circle2_select.png
+    21300210: btn_circle3.png
+    21300212: btn_circle3_lock.png
+    21300214: btn_circle3_mark.png
+    21300216: btn_circle4.png
+    21300218: btn_circle_select.png
+    21300220: btn_close.png
+    21300222: btn_close2.png
+    21300224: btn_closes.png
+    21300226: btn_crystal.png
+    21300228: btn_edit.png
+    21300230: btn_expand.png
+    21300232: btn_find.png
+    21300234: btn_green.png
+    21300236: btn_guanzh1.png
+    21300238: btn_guanzhu.png
+    21300240: btn_guanzhu2.png
+    21300242: btn_help.png
+    21300244: btn_help1.png
+    21300246: btn_item.png
+    21300248: btn_mc.png
+    21300250: btn_number.png
+    21300252: btn_packup.png
+    21300254: btn_qianghua.png
+    21300256: btn_red.png
+    21300258: btn_selected1.png
+    21300260: btn_selected2.png
+    21300262: btn_selected_xiala.png
+    21300264: btn_set.png
+    21300266: btn_simil.png
+    21300268: btn_tuichu.png
+    21300270: btn_tuichu2.png
+    21300272: btn_unselected.png
+    21300274: btn_voite.png
+    21300276: btn_weekly.png
+    21300278: btn_xiao1.png
+    21300280: btn_xiao2.png
+    21300282: btn_yellow.png
+    21300284: chat_level.png
+    21300286: chat_talk.png
+    21300288: close.png
+    21300290: ditu01.png
+    21300292: frame1.png
+    21300294: frame10.png
+    21300296: frame11.png
+    21300298: frame12.png
+    21300300: frame13.png
+    21300302: frame14.png
+    21300304: frame15.png
+    21300306: frame16.png
+    21300308: frame17.png
+    21300310: frame18.png
+    21300312: frame19.png
+    21300314: frame2.png
+    21300316: frame20.png
+    21300318: frame3.png
+    21300320: frame4.png
+    21300322: frame6.png
+    21300324: frame7.png
+    21300326: frame8.png
+    21300328: frame_q0.png
+    21300330: frame_q0_back.png
+    21300332: frame_q1.png
+    21300334: frame_q2.png
+    21300336: frame_q3.png
+    21300338: frame_q4.png
+    21300340: frame_q5.png
+    21300342: frame_q6.png
+    21300344: frame_q7.png
+    21300346: guild_icon.png
+    21300348: ico_add.png
+    21300350: ico_add2.png
+    21300352: ico_add3.png
+    21300354: ico_arrow.png
+    21300356: ico_arrow2.png
+    21300358: ico_coin10.png
+    21300360: ico_coin12.png
+    21300362: ico_coin13.png
+    21300364: ico_coin14.png
+    21300366: ico_coin15.png
+    21300368: ico_coin16.png
+    21300370: ico_gift.png
+    21300372: ico_huang.png
+    21300374: ico_lock.png
+    21300376: ico_lock2.png
+    21300378: ico_lock3.png
+    21300380: ico_lock4.png
+    21300382: ico_mail.png
+    21300384: ico_mail_open.png
+    21300386: ico_page2_select.png
+    21300388: ico_red_mark.png
+    21300390: ico_star.png
+    21300392: ico_star_dark.png
+    21300394: ico_sub.png
+    21300396: ico_sub3.png
+    21300398: ico_up.png
+    21300400: ico_up2.png
+    21300402: ico_up3.png
+    21300404: ico_zuan.png
+    21300406: ico_zun.png
+    21300408: icon_Redbag_lingwan.png
+    21300410: icon_box_close.png
+    21300412: icon_box_get.png
+    21300414: icon_box_open.png
+    21300416: icon_deative.png
+    21300418: icon_fb.png
+    21300420: icon_gp.png
+    21300422: icon_infight.png
+    21300424: icon_link.png
+    21300426: icon_shop_1.png
+    21300428: icon_shop_2.png
+    21300430: icon_shop_3.png
+    21300432: icon_shop_4.png
+    21300434: icon_shop_5.png
+    21300436: icon_titlebg.png
+    21300438: line1.png
+    21300440: line2.png
+    21300442: line3.png
+    21300444: line4.png
+    21300446: line5.png
+    21300448: line6.png
+    21300450: line7.png
+    21300452: line8.png
+    21300454: mark_active.png
+    21300456: mark_best.png
+    21300458: mark_bind.png
+    21300460: mark_daily_got.png
+    21300462: mark_di.png
+    21300464: mark_do.png
+    21300466: mark_equip.png
+    21300468: mark_equip_select.png
+    21300470: mark_fashion_try.png
+    21300472: mark_fashion_wear.png
+    21300474: mark_fight.png
+    21300476: mark_fight2.png
+    21300478: mark_finish.png
+    21300480: mark_finish2.png
+    21300482: mark_god.png
+    21300484: mark_guard_1.png
+    21300486: mark_guard_2.png
+    21300488: mark_guard_3.png
+    21300490: mark_guard_4.png
+    21300492: mark_guard_5.png
+    21300494: mark_guide.png
+    21300496: mark_inactive.png
+    21300498: mark_info.png
+    21300500: mark_jueban.png
+    21300502: mark_loading.png
+    21300504: mark_monster.png
+    21300506: mark_next.png
+    21300508: mark_next2.png
+    21300510: mark_next3.png
+    21300512: mark_next4.png
+    21300514: mark_rare.png
+    21300516: mark_star.png
+    21300518: mark_star2.png
+    21300520: mark_tip.png
+    21300522: mark_tip2.png
+    21300524: mark_title_use.png
+    21300526: mark_title_vip.png
+    21300528: mark_type.png
+    21300530: mark_type_green.png
+    21300532: mark_type_red.png
+    21300534: mark_use.png
+    21300536: none.png
+    21300538: select1.png
+    21300540: select11.png
+    21300542: select2.png
+    21300544: select3.png
+    21300546: shenyou.png
+    21300548: tab11_normal.png
+    21300550: tab11_select.png
+    21300552: tab1_normal.png
+    21300554: tab1_select.png
+    21300556: talk.png
+    21300558: title_back1.png
+    21300560: title_back1_line.png
+    21300562: title_back2.png
+    21300564: title_back3.png
+    21300566: title_back3_line.png
+    21300568: title_back4.png
+    21300570: title_back6.png
+    21300572: title_back7.png
+    21300574: title_back8.png
+    21300576: title_dinghua.png
+    21300578: toggle1_back.png
+    21300580: toggle1_select.png
+    21300582: txt_btn_help.png
+    21300584: txt_btn_info.png
+    21300586: txt_power.png
+    21300588: txt_power2.png
+    21300590: txt_power_equip.png
+    21300592: txt_score.png
+    21300594: txt_skill.png
+    21300596: txt_vip.png
+    21300598: chat_chatcolor_btn.png
+    21300600: btn_sub.png
+    21300602: fame01.png
+    21300604: jindu.png
+    21300606: jindu1.png
+    21300608: back_bian4.png
+    21300610: tittle_dscj.png
+    21300612: tianshu01_back.png
+    21300614: tianshu02_back.png
+    21300616: tianshu03.png
+    21300618: tianshu04.png
+    21300620: ico_camp_14.png
+    21300622: ico_camp_15.png
+    21300624: ico_camp_16.png
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VIP.png
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 236
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back.png
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 322
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back1.png
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 276
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 1, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_attr.png
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 478
+        width: 141
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 120, y: 10, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_bian4.png
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 198
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_discount.png
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 436
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 10, z: 20, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_item.png
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 198
+        width: 228
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_num.png
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 464
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 5, z: 5, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_set_price.png
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 133
+        width: 57
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 15, z: 20, w: 15}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_title.png
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 241
+        width: 107
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_touxian.png
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 180
+        width: 233
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg.png
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 277
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 21, y: 0, z: 3, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg1.png
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 196
+        width: 190
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 80, y: 10, z: 80, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg2.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 76
+        width: 16
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg3.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 304
+        width: 258
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg_dipan.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 194
+        width: 241
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg_head.png
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 94
+        width: 106
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg_kuang.png
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 114
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bg_xilian.png
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 276
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 10, z: 5, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn_add.png
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 76
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn_chatcolor.png
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 231
+        width: 59
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn_rename.png
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 240
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn_reward.png
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 231
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn_sub.png
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 76
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: chat_chatcolor_btn.png
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 283
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: fame01.png
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 281
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: head_kuang.png
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 94
+        width: 106
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_camp_14.png
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 243
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_camp_15.png
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 243
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ico_camp_16.png
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 289
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_add.png
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 238
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_baoxiang.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 354
+        width: 292
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_gonghui .png
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 79
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_gou.png
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 81
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_gou_bg.png
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 488
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_kuang .png
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 102
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_lock.png
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 77
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_unlock.png
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 276
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_xilian.png
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 382
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img_lock.png
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 109
+        width: 179
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img_tucheng.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7
+        width: 301
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: item_bg.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 277
+        width: 242
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jindu.png
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 283
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jindu1.png
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 76
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 5, z: 5, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: left_mark.png
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 221
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: line.png
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 81
+        width: 78
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: mark.png
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 76
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: mark_Sale.png
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 79
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: mark_Spike.png
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 195
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: mark_shuangbei01.png
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 233
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: mark_shuangbei02.png
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 80
+        width: 83
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: right_mark.png
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 299
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: shibai_020.png
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 231
+        width: 86
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: text_jifenpaihang.png
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 79
+        width: 108
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: text_zhongji.png
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 362
+        width: 44
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 7, z: 10, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: text_zhongji2.png
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 283
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tianshu01_back.png
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 464
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 5, z: 5, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tianshu02_back.png
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 305
+        width: 379
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tianshu03.png
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 284
+        width: 70
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tianshu04.png
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 379
+        width: 113
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tittle_dscj.png
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 348
+        width: 108
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tittle_ganenhuikui.png
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 359
+        width: 558
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tittle_lianxiao.png
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 276
+        width: 275
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tittle_lianxiao1.png
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 14
+        width: 307
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tittle_lx.png
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 274
+        width: 106
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

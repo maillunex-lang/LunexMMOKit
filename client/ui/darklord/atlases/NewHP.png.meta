@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: 8220ebf4cfe91b5469eb1ee1ab15c5ae
+timeCreated: 1565007102
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: NewBoss_Fight_xuetiao_zhezhao (1).png
+    21300002: NewBoss_Fight_xuetiao_zhezhao (10).png
+    21300004: NewBoss_Fight_xuetiao_zhezhao (11).png
+    21300006: NewBoss_Fight_xuetiao_zhezhao (12).png
+    21300008: NewBoss_Fight_xuetiao_zhezhao (13).png
+    21300010: NewBoss_Fight_xuetiao_zhezhao (14).png
+    21300012: NewBoss_Fight_xuetiao_zhezhao (2).png
+    21300014: NewBoss_Fight_xuetiao_zhezhao (3).png
+    21300016: NewBoss_Fight_xuetiao_zhezhao (4).png
+    21300018: NewBoss_Fight_xuetiao_zhezhao (5).png
+    21300020: NewBoss_Fight_xuetiao_zhezhao (6).png
+    21300022: NewBoss_Fight_xuetiao_zhezhao (7).png
+    21300024: NewBoss_Fight_xuetiao_zhezhao (8).png
+    21300026: NewBoss_Fight_xuetiao_zhezhao (9).png
+    21300028: NewCommonHP_Green.png
+    21300030: NewCommonHP_Red.png
+    21300032: back_green.png
+    21300034: back_red.png
+    21300036: NewBoss_Land_head.png
+    21300038: frame_boss_icobg.png
+    21300040: frame_boss_tip.png
+    21300042: hpbar_1.png
+    21300044: hpbar_2.png
+    21300046: hpbar_3.png
+    21300048: hpbar_4.png
+    21300050: hpbar_5.png
+    21300052: hpbar_6.png
+    21300054: hpbar_bg.png
+    21300056: huobanshanghai.png
+    21300058: huangjinyiji.png
+    21300060: zhizunyiji.png
+    21300062: zuanshiyiji.png
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 1024
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 33
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NewBoss_Land_head.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 19
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: NewCommonHP_Green.png
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 139
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: NewCommonHP_Red.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 139
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_green.png
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 244
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 1, w: 2}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: back_red.png
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 246
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: frame_boss_icobg.png
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 147
+        width: 185
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: frame_boss_tip.png
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 107
+        width: 68
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hpbar_1.png
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 27
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 16, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hpbar_2.png
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 53
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 16, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hpbar_3.png
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 11
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 16, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hpbar_4.png
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 81
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 16, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hpbar_5.png
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 79
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 16, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hpbar_6.png
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 81
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 16, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hpbar_bg.png
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 221
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 0, z: 20, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: huangjinyiji.png
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 37
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: huobanshanghai.png
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 105
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zhizunyiji.png
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 137
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: zuanshiyiji.png
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 179
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
