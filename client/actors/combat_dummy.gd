@@ -13,6 +13,7 @@ func _ready() -> void:
 	hp = max_hp
 	set_meta("stable_id", stable_id)
 	set_meta("hostile", true)
+	add_to_group("hostile")
 	if not has_node("Visual"):
 		var mi := MeshInstance3D.new()
 		mi.name = "Visual"

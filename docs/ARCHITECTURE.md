@@ -1,16 +1,21 @@
-# Архитектура (предложение)
-Клиент Godot 4.7.2, Android landscape. Сервер авторитетный; язык и транспорт согласовать.
-Игровые данные отделены от логики. Исходники Darklord доступны только для чтения.
-Экспортированные ресурсы и их манифесты хранить отдельно от публичного репозитория.
+# Архитектура
+Клиент Godot 4.x, Android landscape (цель бета: устройства ≥6 ГБ ОЗУ).
+**Сервер авторитетный** (обязательно для Closed Beta 0.1.0): авторизация, позиции, бой, урон, HP, XP, предметы, валюта, квесты, лут, монстры, переходы локаций.
+Клиент: отображение, ввод, VFX/SFX. Локальный slice — прототип до N02/C01, не продукт.
+
+Игровые данные отделены от логики. Исходники Darklord — только чтение (импорт-инструменты).
+Адаптированные runtime-ассеты: `res://` / `assets/studio` / `user://` cache + manifest (не абсолютные пути VPS в runtime).
 
 ## Модули
-client/core: жизненный цикл; world: зоны и чанки; actors: сущности; combat: визуализация боя; network: транспорт; ui: интерфейс; content: загрузка данных.
-server: авторитетная симуляция, проверка команд, сохранение состояния. Предложение: Go, PostgreSQL, HTTPS и WebSocket; окончательное решение после проверки инфраструктуры.
-shared: версионированные контракты данных. tools: импорт ресурсов. tests: проверки.
-Клиент не определяет итоговый урон, награды и координаты других игроков. Сервер определяет видимость сущностей.
+client/core: жизненный цикл, AssetPaths, GameSession; world: зоны; actors; combat (визуал поверх серверных событий); network; ui (мобильный HUD .tscn); content.
+server: Go симуляция, PostgreSQL, HTTPS/WebSocket. shared: контракты. tools: импорт. tests: интеграционные сценарии.
+Админка: O01. Изолированный compose; не трогать чужие сервисы VPS.
 
 ## Выбранный стек
-Go, PostgreSQL, HTTPS/WebSocket, Docker Compose для изолированной разработки. Go отсутствовал в PATH при первой проверке VPS; установку и версии закрепить в F03. Админка React/TypeScript на этапе O01. Не открывать порты и не менять действующие сервисы без согласования.
+Go, PostgreSQL, HTTPS/WebSocket, Docker Compose. Версии закрепить в F03. Не публиковать порты без согласования.
 
 ## Native editor contract
-See [EDITOR-001](EDITOR.md). Server remains authoritative; editor data exports require validation.
+See [EDITOR-001](EDITOR.md). Owner edits на Windows в Godot; generated ≠ owner scenes. Server validates exported data.
+
+## Product
+See [BETA-001](BETA_001.md). End goal is online Closed Beta, not City Preview APK.

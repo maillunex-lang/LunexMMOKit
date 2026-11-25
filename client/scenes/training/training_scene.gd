@@ -15,13 +15,14 @@ var weapon_ids := {
 	"30001": "300011000",
 	"40001": "400011000",
 }
-var source_root := "/home/gamedev/Darklord"
+## FIX-002: defaults empty; resolved via LunexAssets / LUNEX_* env / assets/studio (no VPS absolutes).
+var source_root := ""
 var cache_root := ""
-var actor_glb_template := "/home/gamedev/darklord-dgi/exports/%s.glb"
-var weapon_glb_template := "/home/gamedev/darklord-dgi/exports/weapon-%s.glb"
-var material_params_path := "/home/gamedev/darklord-dgi/material-params.json"
-var particle_index_path := "/home/gamedev/darklord-dgi/particle-index.json"
-var attack_audio_path := "/home/gamedev/Darklord/Client/Assets/Resources/Sound/skill/FS_Atk_01.mp3"
+var actor_glb_template := ""
+var weapon_glb_template := ""
+var material_params_path := ""
+var particle_index_path := ""
+var attack_audio_path := ""
 var projectile_effect_suffix := "FS_W_attack001.prefab"
 var impact_effect_suffix := "FS_hti.prefab"
 var attack_clip := "attack001"
@@ -50,7 +51,7 @@ var animation_select: OptionButton
 var accessories: Dictionary = {}
 var accessory_selectors: Dictionary = {}
 const ACCESSORY_NAMES = {"wing":["wing_L_01","wing_L_02"],"pet":["XN_pet_01","XN_pet_02"],"mount":["mount_001","mount_002"]}
-var accessory_root := "/home/gamedev/darklord-dgi/exports/accessories"
+var accessory_root := ""
 var orbit_angle := 0.0
 var orbit_distance := 3.5
 var orbit_center := Vector3(0.6,0.9,0)
@@ -58,20 +59,33 @@ var attachment_panel: VBoxContainer
 
 
 func _ready() -> void:
-	cache_root = OS.get_environment("LUNEX_STUDIO_CACHE")
-	if cache_root.is_empty() and not OS.has_feature("android"):
-		var bundled := ProjectSettings.globalize_path("res://../assets/studio")
-		if FileAccess.file_exists(bundled.path_join("manifest.json")): cache_root = bundled
-	if cache_root.is_empty() and OS.has_feature("android"):
-		cache_root = ProjectSettings.globalize_path("user://studio-cache-v2")
-	if not cache_root.is_empty():
-		source_root = cache_root.path_join("source")
-		actor_glb_template = cache_root.path_join("exports/%s.glb")
-		weapon_glb_template = cache_root.path_join("exports/weapon-%s.glb")
-		material_params_path = cache_root.path_join("material-params.json")
-		particle_index_path = cache_root.path_join("particle-index.json")
-		accessory_root = cache_root.path_join("exports/accessories")
-		attack_audio_path = source_root.path_join("Client/Assets/Resources/Sound/skill/FS_Atk_01.mp3")
+	if LunexAssets:
+		LunexAssets.refresh()
+		cache_root = LunexAssets.cache_root
+		source_root = LunexAssets.source_root
+		if not cache_root.is_empty():
+			actor_glb_template = cache_root.path_join("exports/%s.glb")
+			weapon_glb_template = cache_root.path_join("exports/weapon-%s.glb")
+			material_params_path = LunexAssets.material_params_path()
+			particle_index_path = LunexAssets.particle_index_path()
+			accessory_root = LunexAssets.accessory_root()
+			attack_audio_path = source_root.path_join("Client/Assets/Resources/Sound/skill/FS_Atk_01.mp3") if source_root != "" else ""
+	else:
+		cache_root = OS.get_environment("LUNEX_STUDIO_CACHE")
+		if cache_root.is_empty() and not OS.has_feature("android"):
+			var bundled := ProjectSettings.globalize_path("res://../assets/studio")
+			if FileAccess.file_exists(bundled.path_join("manifest.json")):
+				cache_root = bundled
+		if cache_root.is_empty() and OS.has_feature("android"):
+			cache_root = ProjectSettings.globalize_path("user://studio-cache-v2")
+		if not cache_root.is_empty():
+			source_root = cache_root.path_join("source")
+			actor_glb_template = cache_root.path_join("exports/%s.glb")
+			weapon_glb_template = cache_root.path_join("exports/weapon-%s.glb")
+			material_params_path = cache_root.path_join("material-params.json")
+			particle_index_path = cache_root.path_join("particle-index.json")
+			accessory_root = cache_root.path_join("exports/accessories")
+			attack_audio_path = source_root.path_join("Client/Assets/Resources/Sound/skill/FS_Atk_01.mp3")
 	_setup_world()
 	_setup_ui()
 	_load_material_params()

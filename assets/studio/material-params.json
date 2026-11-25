@@ -1,1 +1,415 @@
-{"10001": [{"source": "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/Materials/ZS_M_01.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 0.0, "_EnableFlow": 0.0, "_FlowIntensity": 1.0, "_SpecIntensity": 2.9, "_SpecIntensity2": 2.7, "_SpecPower": 0.82, "_SpecPower2": 2.72, "_FlowAni": [0.0, 0.0, 0.0, 0.0], "_FlowColor": [1.0, 1.0, 1.0, 1.0], "_FlowScale": [1.0, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_MainTex": {"guid": "8a94e0afe53c95244aaed547228844b6", "paths": ["Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/ZS_M_01.tga"]}, "_RimRampTex": {"guid": "869a55df630a2b840976b9e9b32b0ce6", "paths": ["Client/Assets/AssetsRaw/Effect/Textures/mask/ramp_mask06.png"]}, "_SelfIlluTex": {"guid": "879b4ad4f9390704085f7459fd203649", "paths": ["Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/ZS_M_01_G.tga"]}, "_SpecTex": {"guid": "879b4ad4f9390704085f7459fd203649", "paths": ["Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/ZS_M_01_G.tga"]}}}], "20001": [{"source": "Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_01/Materials/GJS_M_01.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 0.0, "_EnableFlow": 0.0, "_FlowIntensity": 1.0, "_SpecIntensity": 2.7, "_SpecIntensity2": 3.5, "_SpecPower": 0.31, "_SpecPower2": 1.22, "_FlowAni": [0.0, 0.0, 0.0, 0.0], "_FlowColor": [1.0, 1.0, 1.0, 1.0], "_FlowScale": [1.0, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_MainTex": {"guid": "12eb04d7a4b666942b1f9dce6adc5dca", "paths": ["Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_01/GJS_M_01.tga"]}, "_RimRampTex": {"guid": "75c75cc9f5967004b80b788cd2190417", "paths": ["Client/Assets/AssetsRaw/Effect/Textures/wenli/RimRamp+.tga"]}, "_SpecTex": {"guid": "8b7a6410b1174304a9176614f195accd", "paths": ["Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_01/GJS_M_01_G.tga"]}}}], "30001": [{"source": "Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_01/Materials/FS_W_01.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 1.0, "_EnableFlow": 0.0, "_FlowIntensity": 1.0, "_SpecIntensity": 1.8, "_SpecIntensity2": 3.5, "_SpecPower": 0.39, "_SpecPower2": 1.22, "_FlowAni": [0.0, 0.0, 0.0, 0.0], "_FlowColor": [1.0, 1.0, 1.0, 1.0], "_FlowScale": [1.0, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_MainTex": {"guid": "2af7d2b0c913e1e4996f8cccf51587dc", "paths": ["Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_01/FS_W_01.tga"]}, "_SpecTex": {"guid": "8e626bddde6ab2942a75e934792d8229", "paths": ["Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_01/FS_W_01_G.tga"]}}}], "40001": [{"source": "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_01/Materials/CK_W_01.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 0.0, "_EnableFlow": 0.0, "_FlowIntensity": 1.0, "_SpecIntensity": 1.8, "_SpecIntensity2": 3.5, "_SpecPower": 0.39, "_SpecPower2": 1.22, "_FlowAni": [0.0, 0.0, 0.0, 0.0], "_FlowColor": [1.0, 1.0, 1.0, 1.0], "_FlowScale": [1.0, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_MainTex": {"guid": "a07ce6ce2eec6fc4f97b74a924a3f00c", "paths": ["Client/Assets/AssetsRaw/Animation/player/cike/CK_W_01/CK_W_01.tga"]}, "_SpecTex": {"guid": "4ff66178e29d86545aca4aea19b4bad5", "paths": ["Client/Assets/AssetsRaw/Animation/player/cike/CK_W_01/CK_W_01_G.tga"]}}}], "100011000": [{"source": "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_wuqi/ZS_M_wuqi_01/Materials/ZS_M_wuqi_01.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 0.0, "_EnableFlow": 0.0, "_FlowIntensity": 1.0, "_SpecIntensity": 0.77, "_SpecIntensity2": 0.47, "_SpecPower": 0.48, "_SpecPower2": 0.92, "_FlowAni": [0.0, 0.0, 0.0, 0.0], "_FlowColor": [1.0, 1.0, 1.0, 1.0], "_FlowScale": [1.0, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_MainTex": {"guid": "029290dd912e2ac4b9055367b8bea4b9", "paths": ["Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_wuqi/ZS_M_wuqi_01/ZS_M_wuqi_01.png"]}}}], "200011000": [{"source": "Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_wuqi/GJS_M_01_wuqi/Materials/GJS_M_01_wuqi.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 0.0, "_EnableFlow": 0.0, "_FlowIntensity": 1.0, "_SpecIntensity": 1.0, "_SpecIntensity2": 1.0, "_SpecPower": 1.0, "_SpecPower2": 1.0, "_FlowAni": [0.0, 0.0, 0.0, 0.0], "_FlowColor": [1.0, 1.0, 1.0, 1.0], "_FlowScale": [1.0, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_MainTex": {"guid": "793035032699176438e420e74252fefc", "paths": ["Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_wuqi/GJS_M_01_wuqi/GJS_M_01_wuqi.tga"]}}}], "300011000": [{"source": "Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_wuqi/FS_W_wuqi_01/Materials/FS_W_wuqi_01.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 0.0, "_EnableFlow": 0.0, "_FlowIntensity": 1.0, "_SpecIntensity": 1.9, "_SpecIntensity2": 1.2, "_SpecPower": 0.37, "_SpecPower2": 0.43, "_FlowAni": [0.0, 0.0, 0.0, 0.0], "_FlowColor": [1.0, 1.0, 1.0, 1.0], "_FlowScale": [1.0, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_MainTex": {"guid": "4550d8f36f157924f9af882f256cd331", "paths": ["Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_wuqi/FS_W_wuqi_01/FS_W_wuqi_01.png"]}, "_SpecTex": {"guid": "544943c602e5a9b4086feb806aab2a56", "paths": []}}}], "400011000": [{"source": "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_wuqi/CK_W_wuqi_01/Materials/CK_W_wuqi_01.mat", "params": {"_Cutout": 0.5, "_EnableCutout": 0.0, "_EnableFlow": 1.0, "_FlowIntensity": 0.5, "_SpecIntensity": 0.77, "_SpecIntensity2": 0.47, "_SpecPower": 0.48, "_SpecPower2": 0.92, "_FlowAni": [0.2, 0.1, 0.0, 0.0], "_FlowColor": [1.0, 0.7177484, 0.1102941, 1.0], "_FlowScale": [0.5, 1.0], "_FlowOffset": [0.0, 0.0]}, "textures": {"_FlowMaskTex": {"guid": "67d894aa11d74ac4399189cac57543cf", "paths": ["Client/Assets/AssetsRaw/Effect/Textures/mask/ramp_mask04.png"]}, "_FlowTex": {"guid": "4c9248d6d7a52734383f766853dc5b93", "paths": ["Client/Assets/AssetsRaw/Effect/Textures/wenli/wenli_0004.png"]}, "_MainTex": {"guid": "c261d8252f255cb4fa9393e9f51de94f", "paths": ["Client/Assets/AssetsRaw/Animation/player/cike/CK_W_wuqi/CK_W_wuqi_01/CK_W_wuqi_01.tga"]}, "_SpecTex": {"guid": "c261d8252f255cb4fa9393e9f51de94f", "paths": ["Client/Assets/AssetsRaw/Animation/player/cike/CK_W_wuqi/CK_W_wuqi_01/CK_W_wuqi_01.tga"]}}}, {"source": "Client/Assets/AssetsRaw/Effect/Textures/flare/Materials/flare04_01.mat", "params": {}, "textures": {}}]}
+{
+  "10001": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/Materials/ZS_M_01.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 0.0,
+        "_EnableFlow": 0.0,
+        "_FlowIntensity": 1.0,
+        "_SpecIntensity": 2.9,
+        "_SpecIntensity2": 2.7,
+        "_SpecPower": 0.82,
+        "_SpecPower2": 2.72,
+        "_FlowAni": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "_FlowScale": [
+          1.0,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_MainTex": {
+          "guid": "8a94e0afe53c95244aaed547228844b6",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/ZS_M_01.tga"
+          ]
+        },
+        "_RimRampTex": {
+          "guid": "869a55df630a2b840976b9e9b32b0ce6",
+          "paths": [
+            "Client/Assets/AssetsRaw/Effect/Textures/mask/ramp_mask06.png"
+          ]
+        },
+        "_SelfIlluTex": {
+          "guid": "879b4ad4f9390704085f7459fd203649",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/ZS_M_01_G.tga"
+          ]
+        },
+        "_SpecTex": {
+          "guid": "879b4ad4f9390704085f7459fd203649",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_01/ZS_M_01_G.tga"
+          ]
+        }
+      }
+    }
+  ],
+  "20001": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_01/Materials/GJS_M_01.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 0.0,
+        "_EnableFlow": 0.0,
+        "_FlowIntensity": 1.0,
+        "_SpecIntensity": 2.7,
+        "_SpecIntensity2": 3.5,
+        "_SpecPower": 0.31,
+        "_SpecPower2": 1.22,
+        "_FlowAni": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "_FlowScale": [
+          1.0,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_MainTex": {
+          "guid": "12eb04d7a4b666942b1f9dce6adc5dca",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_01/GJS_M_01.tga"
+          ]
+        },
+        "_RimRampTex": {
+          "guid": "75c75cc9f5967004b80b788cd2190417",
+          "paths": [
+            "Client/Assets/AssetsRaw/Effect/Textures/wenli/RimRamp+.tga"
+          ]
+        },
+        "_SpecTex": {
+          "guid": "8b7a6410b1174304a9176614f195accd",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_01/GJS_M_01_G.tga"
+          ]
+        }
+      }
+    }
+  ],
+  "30001": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_01/Materials/FS_W_01.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 1.0,
+        "_EnableFlow": 0.0,
+        "_FlowIntensity": 1.0,
+        "_SpecIntensity": 1.8,
+        "_SpecIntensity2": 3.5,
+        "_SpecPower": 0.39,
+        "_SpecPower2": 1.22,
+        "_FlowAni": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "_FlowScale": [
+          1.0,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_MainTex": {
+          "guid": "2af7d2b0c913e1e4996f8cccf51587dc",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_01/FS_W_01.tga"
+          ]
+        },
+        "_SpecTex": {
+          "guid": "8e626bddde6ab2942a75e934792d8229",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_01/FS_W_01_G.tga"
+          ]
+        }
+      }
+    }
+  ],
+  "40001": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_01/Materials/CK_W_01.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 0.0,
+        "_EnableFlow": 0.0,
+        "_FlowIntensity": 1.0,
+        "_SpecIntensity": 1.8,
+        "_SpecIntensity2": 3.5,
+        "_SpecPower": 0.39,
+        "_SpecPower2": 1.22,
+        "_FlowAni": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "_FlowScale": [
+          1.0,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_MainTex": {
+          "guid": "a07ce6ce2eec6fc4f97b74a924a3f00c",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_01/CK_W_01.tga"
+          ]
+        },
+        "_SpecTex": {
+          "guid": "4ff66178e29d86545aca4aea19b4bad5",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_01/CK_W_01_G.tga"
+          ]
+        }
+      }
+    }
+  ],
+  "100011000": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_wuqi/ZS_M_wuqi_01/Materials/ZS_M_wuqi_01.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 0.0,
+        "_EnableFlow": 0.0,
+        "_FlowIntensity": 1.0,
+        "_SpecIntensity": 0.77,
+        "_SpecIntensity2": 0.47,
+        "_SpecPower": 0.48,
+        "_SpecPower2": 0.92,
+        "_FlowAni": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "_FlowScale": [
+          1.0,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_MainTex": {
+          "guid": "029290dd912e2ac4b9055367b8bea4b9",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/zhanshi/ZS_M_wuqi/ZS_M_wuqi_01/ZS_M_wuqi_01.png"
+          ]
+        }
+      }
+    }
+  ],
+  "200011000": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_wuqi/GJS_M_01_wuqi/Materials/GJS_M_01_wuqi.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 0.0,
+        "_EnableFlow": 0.0,
+        "_FlowIntensity": 1.0,
+        "_SpecIntensity": 1.0,
+        "_SpecIntensity2": 1.0,
+        "_SpecPower": 1.0,
+        "_SpecPower2": 1.0,
+        "_FlowAni": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "_FlowScale": [
+          1.0,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_MainTex": {
+          "guid": "793035032699176438e420e74252fefc",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/GJS/GJS_M_wuqi/GJS_M_01_wuqi/GJS_M_01_wuqi.tga"
+          ]
+        }
+      }
+    }
+  ],
+  "300011000": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_wuqi/FS_W_wuqi_01/Materials/FS_W_wuqi_01.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 0.0,
+        "_EnableFlow": 0.0,
+        "_FlowIntensity": 1.0,
+        "_SpecIntensity": 1.9,
+        "_SpecIntensity2": 1.2,
+        "_SpecPower": 0.37,
+        "_SpecPower2": 0.43,
+        "_FlowAni": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "_FlowScale": [
+          1.0,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_MainTex": {
+          "guid": "4550d8f36f157924f9af882f256cd331",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/fashi/FS_W_wuqi/FS_W_wuqi_01/FS_W_wuqi_01.png"
+          ]
+        },
+        "_SpecTex": {
+          "guid": "544943c602e5a9b4086feb806aab2a56",
+          "paths": []
+        }
+      }
+    }
+  ],
+  "400011000": [
+    {
+      "source": "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_wuqi/CK_W_wuqi_01/Materials/CK_W_wuqi_01.mat",
+      "params": {
+        "_Cutout": 0.5,
+        "_EnableCutout": 0.0,
+        "_EnableFlow": 1.0,
+        "_FlowIntensity": 0.5,
+        "_SpecIntensity": 0.77,
+        "_SpecIntensity2": 0.47,
+        "_SpecPower": 0.48,
+        "_SpecPower2": 0.92,
+        "_FlowAni": [
+          0.2,
+          0.1,
+          0.0,
+          0.0
+        ],
+        "_FlowColor": [
+          1.0,
+          0.7177484,
+          0.1102941,
+          1.0
+        ],
+        "_FlowScale": [
+          0.5,
+          1.0
+        ],
+        "_FlowOffset": [
+          0.0,
+          0.0
+        ]
+      },
+      "textures": {
+        "_FlowMaskTex": {
+          "guid": "67d894aa11d74ac4399189cac57543cf",
+          "paths": [
+            "Client/Assets/AssetsRaw/Effect/Textures/mask/ramp_mask04.png"
+          ]
+        },
+        "_FlowTex": {
+          "guid": "4c9248d6d7a52734383f766853dc5b93",
+          "paths": [
+            "Client/Assets/AssetsRaw/Effect/Textures/wenli/wenli_0004.png"
+          ]
+        },
+        "_MainTex": {
+          "guid": "c261d8252f255cb4fa9393e9f51de94f",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_wuqi/CK_W_wuqi_01/CK_W_wuqi_01.tga"
+          ]
+        },
+        "_SpecTex": {
+          "guid": "c261d8252f255cb4fa9393e9f51de94f",
+          "paths": [
+            "Client/Assets/AssetsRaw/Animation/player/cike/CK_W_wuqi/CK_W_wuqi_01/CK_W_wuqi_01.tga"
+          ]
+        }
+      }
+    },
+    {
+      "source": "Client/Assets/AssetsRaw/Effect/Textures/flare/Materials/flare04_01.mat",
+      "params": {},
+      "textures": {}
+    }
+  ]
+}

@@ -87,16 +87,37 @@ func _try_turnin(stable_id: String) -> void:
 func _complete(quest_id: String) -> void:
 	if not active.has(quest_id):
 		return
+	# Anti-dupe: never grant reward twice for the same quest id (FIX-009).
+	if quest_id in completed:
+		active.erase(quest_id)
+		return
 	var q: Dictionary = catalog[quest_id]
-	xp += int(q.get("reward_xp", 0))
+	var reward := int(q.get("reward_xp", 0))
+	xp += reward
 	active.erase(quest_id)
-	if quest_id not in completed:
-		completed.append(quest_id)
+	completed.append(quest_id)
 	quest_completed.emit(quest_id)
 	var nxt := String(q.get("next_quest_id", ""))
 	if nxt != "" and catalog.has(nxt):
 		# Next becomes available from its giver; auto-start if same turn-in chain wants continuity
 		pass
+
+func has_completed(quest_id: String) -> bool:
+	return quest_id in completed
+
+func export_state() -> Dictionary:
+	return {
+		"active": active.duplicate(true),
+		"completed": Array(completed),
+		"xp": xp,
+	}
+
+func import_state(data: Dictionary) -> void:
+	active = data.get("active", {}).duplicate(true) if data.get("active") is Dictionary else {}
+	completed = PackedStringArray()
+	for id in data.get("completed", []):
+		completed.append(String(id))
+	xp = int(data.get("xp", xp))
 
 func tracker_text() -> String:
 	if active.is_empty():

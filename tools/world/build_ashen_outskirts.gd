@@ -63,10 +63,24 @@ func run():
 	portal.set_meta("stable_id", "portal_capital_return")
 	portal.set_meta("portal_id", "capital_return")
 	portal.set_meta("target_location", "eternity_capital")
+	portal.set_meta("target_scene", "res://world/locations/eternity_capital/eternity_play.tscn")
 	_root.add_child(portal)
 	portal.position = Vector3(0, 0.05, -16)
 	portal.owner = _root
 	inst("crystal_01", portal, Vector3(0, 0, 0), 0.0, Vector3(0.3, 0.5, 0.3))
+
+	# Forward portal → Shard Ruins
+	var ruins := Node3D.new()
+	ruins.name = "Portal_RuinsGate"
+	ruins.set_meta("stable_id", "portal_ruins_gate")
+	ruins.set_meta("portal_id", "ruins_gate")
+	ruins.set_meta("target_location", "shard_ruins")
+	ruins.set_meta("target_scene", "res://world/locations/shard_ruins/ruins_play.tscn")
+	_root.add_child(ruins)
+	ruins.position = Vector3(10, 0.05, 8)
+	ruins.owner = _root
+	inst("arch_jz02", _root, Vector3(10, 0.05, 8), 90.0, Vector3(0.65, 0.65, 0.65))
+	inst("crystal_01", ruins, Vector3(0, 0, 0), 0.0, Vector3(0.35, 0.55, 0.35))
 
 	var warden := Node3D.new()
 	warden.name = "AshenWarden"

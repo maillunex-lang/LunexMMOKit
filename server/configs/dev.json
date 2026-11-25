@@ -1,0 +1,6 @@
+{
+  "listen": "127.0.0.1:18080",
+  "postgres_url": "postgres://lunex:lunex_dev_only@postgres:5432/lunex?sslmode=disable",
+  "protocol_version": 1,
+  "note": "Scaffold only. Auth/AOI/combat land in N01–C01. Loopback listen; compose DB has no published ports."
+}

@@ -1,11 +1,10 @@
 # Статус 25.11.2026
-LunexMMOKit / Осколки вечности. WORLD-DESIGN-002. WORLD-EDITOR-003. GAME-SLICE-001.
-## В фокусе
-Готовый вертикальный срез игры: механики, квесты, локации на ресурсах Darklord (не 1:1). APK — позже.
-## Сделано
-- Столица densify + зелёный грунт `grass_zhucheng`, market tiles, leaf alpha.
-- WE03: спека + addon `lunex_world_editor`, owner-lock генераторов, stable_id.
-- Глава 1 квестов (talk/kill/goto), осколочники, портал → Пепельный рубеж.
-- `eternity_play` = main_scene; quest smoke + ashen location.
+Цель: **Closed Beta 0.1.0** (BETA-001). В фокусе AUDIT01 → F03/F04.
+## Сделано сегодня
+- Audit smokes: `ALL_AUDIT_SMOKES_OK` (integration + nav obstacle + session anti-dupe + go test).
+- Combat: урон на hit/projectile; GameSession на ashen/ruins; owner backup; GFX stub.
+- Server scaffold: `lunexd` `/health`, SQL init, compose без publish ports.
 ## Дальше
-Расширить бой/навыки, больше локаций гл.1, NavMesh bake в play, серверные контракты. CAPAPK после приёмки.
+Добить partial FIX; закрыть F03 (CI/versions); F04 Postgres migrate+health against compose; N01 auth.
+## Не готово
+Онлайн-авторитет, APK релиз, FIX-014 visual.

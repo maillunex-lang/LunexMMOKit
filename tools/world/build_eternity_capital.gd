@@ -1,7 +1,11 @@
 extends SceneTree
-## WORLD-DESIGN-002: beautiful hand-authored Eternity Capital (editable kit instances).
+## WORLD-DESIGN-002: kit-assembled capital. FIX-004: writes *_generated.tscn by default.
 const KIT := "res://world/library/kits/"
-const OUT := "res://world/locations/eternity_capital/eternity_capital.tscn"
+const OUT_GENERATED := "res://world/locations/eternity_capital/eternity_capital_generated.tscn"
+const OUT_OWNER := "res://world/locations/eternity_capital/eternity_capital.tscn"
+const OwnerProtect = preload("res://world/owner_protect.gd")
+## Legacy alias — generators must not target owner path without force+confirm.
+const OUT := OUT_GENERATED
 
 var _city: Node3D
 
@@ -73,29 +77,26 @@ func _spawn_npc(parent: Node3D, pos: Vector3, yaw: float, npc_name: String) -> v
 	_own(npc, _city)
 
 func run():
-	# WORLD-EDITOR-003: never clobber owner-edited capital without explicit force.
-	var out_abs := ProjectSettings.globalize_path(OUT)
-	var lock_path := out_abs.get_basename() + ".owner.lock"
+	# FIX-004: always bake generated; never touch owner scene without force+confirm.
 	var force := "--force-overwrite" in OS.get_cmdline_user_args() or "--force-overwrite" in OS.get_cmdline_args()
-	if FileAccess.file_exists(lock_path) and not force:
-		print("OWNER_LOCK refuse overwrite ", lock_path, " (pass --force-overwrite to bake generated)")
-		quit(2)
-		return
-	if FileAccess.file_exists(out_abs):
-		var existing := load(OUT) as PackedScene
-		if existing:
-			var probe: Node = existing.instantiate()
-			if probe and probe.has_meta("owner_edited") and bool(probe.get_meta("owner_edited")) and not force:
-				print("OWNER_EDITED refuse overwrite ", OUT)
-				probe.free()
-				quit(2)
-				return
-			if probe:
-				probe.free()
+	var target := OUT_GENERATED
+	if "--write-owner" in OS.get_cmdline_user_args() or "--write-owner" in OS.get_cmdline_args():
+		target = OUT_OWNER
+		var gate: Dictionary = OwnerProtect.refuse_overwrite(target, force)
+		if not bool(gate.get("ok", false)):
+			print("OWNER_PROTECT refuse ", gate.get("reason", "?"))
+			quit(2)
+			return
+	else:
+		# Also refuse if someone pointed OUT at locked owner by mistake
+		var owner_gate: Dictionary = OwnerProtect.refuse_overwrite(OUT_OWNER, false)
+		if not bool(owner_gate.get("ok", false)):
+			print("OWNER_PROTECT owner scene guarded: ", owner_gate.get("reason", ""))
 	_city = Node3D.new()
 	_city.name = "EternityCapital"
 	_city.set_meta("location_id", "eternity_capital")
 	_city.set_meta("location_revision", 1)
+	_city.set_meta("generated", true)
 	root.add_child(_city)
 
 	# --- Ground canvas ---
@@ -336,10 +337,11 @@ func run():
 	_city.add_child(spawn)
 	spawn.owner = _city
 
-	DirAccess.make_dir_recursive_absolute("/home/gamedev/LunexMMOKit/client/world/locations/eternity_capital")
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://world/locations/eternity_capital"))
 	var packed := PackedScene.new()
 	packed.pack(_city)
-	var err := ResourceSaver.save(packed, OUT)
+	var err := ResourceSaver.save(packed, OUT_GENERATED)
+	print("CAPITAL_TARGET ", OUT_GENERATED)
 	print("CAPITAL_SAVE ", err, " districts ", _city.get_child_count())
 	_city.free()
 	quit(0 if err == OK else 1)

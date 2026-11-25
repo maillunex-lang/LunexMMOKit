@@ -25,15 +25,24 @@
 Darklord is the primary mechanical and content baseline. Four source classes; prior provisional class count, level cap and skill slot limits superseded. Preserve original IDs, formulas and content after validation. No dragon transformations. External references guide improvements only.
 
 
+## BETA-001 — конечная цель (утверждено)
+**Closed Beta 0.1.0 «Осколки вечности»** — полноценная онлайн MMORPG для закрытого тестирования.
+City Preview APK больше не является конечным результатом (допускаются только внутренние smoke-сборки).
+Стек: Godot 4 клиент + авторитетный Go/PostgreSQL/WebSocket сервер. См. `docs/BETA_001.md`.
+
 ## WORLD-DESIGN-002 — утверждено
-Собственный игровой мир на оригинальных ресурсах Darklord. Не требуется 1:1 перенос Unity-локаций. Сначала одна красивая столица, затем визуальная приёмка, затем City APK и остальные локации.
+Собственный игровой мир на оригинальных ресурсах Darklord. Не требуется 1:1 перенос Unity-локаций. Сначала красивая столица и визуальная приёмка, затем ≥3 боевые локации к бете.
 
 ## WORLD-EDITOR-003 — в дорожной карте
 Нативный Godot EditorPlugin для ручного редактирования локаций владельцем. См. WORLD_EDITOR_003.md.
 
-## GAME-SLICE-001 — в работе
-Готовый вертикальный срез без ожидания APK: механики/квесты/локации на ресурсах Darklord.
-- Столица `eternity_play` + окраина `ashen_outskirts`.
+## LUNEX-AUDIT-001 — в работе
+Архитектурные FIX перед расширением контента. См. `docs/AUDIT_001.md`.
+
+## GAME-SLICE-001 — прототип клиента (не замена серверу)
+Локальный вертикальный срез механик для отладки до авторитетного сервера:
+- Столица `eternity_play` + окраина `ashen_outskirts` (+ stub ruins).
 - Глава 1 квестов (`content/quests/chapter01_quests.json`) со `stable_id`.
-- 4 класса, лёгкий бой (осколочники), порталы.
-- Сюжет «Осколки вечности»; цепочки talk/kill/goto по форме Darklord, контент свой.
+- 4 класса с умениями из `t_playerinfo`/`t_skill`/`t_effect`.
+- Локальный бой помечен как prototype до C01.
+- Сюжет «Осколки вечности»; механики по данным Darklord, локации свои.

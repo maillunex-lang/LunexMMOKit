@@ -4,7 +4,16 @@ static func texture_from(record: Dictionary, key: String, source_root: String) -
 	var paths: Array = record.get("textures", {}).get(key, {}).get("paths", [])
 	if paths.size() != 1:
 		return null
-	var img := Image.load_from_file(source_root.path_join(paths[0]))
+	var rel := String(paths[0])
+	var full := ""
+	# Prefer portable resolver when autoload present (FIX-002).
+	if Engine.get_main_loop() and Engine.get_main_loop().root.get_node_or_null("/root/LunexAssets"):
+		full = Engine.get_main_loop().root.get_node("/root/LunexAssets").resolve_source_texture(rel)
+	if full.is_empty() and source_root != "":
+		full = source_root.path_join(rel)
+	if full.is_empty() or not FileAccess.file_exists(full):
+		return null
+	var img := Image.load_from_file(full)
 	if img == null or img.is_empty():
 		return null
 	img.generate_mipmaps()
