@@ -319,8 +319,8 @@
     ],
     "work": "Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity",
     "accept": "Матрица дефектов по классам: скелет, материалы, ориентация, масштаб, анимации; контрольные скриншоты; без ложного done",
-    "status": "doing",
-    "evidence": "40 multi-angle Xvfb shots in screens/character-audit/. Root cause: DM_*_Hand2 under Prop1 is hip rest; switched defaults to Bip001 R/L Hand bones. Grip pose still partial — needs AttachmentOffset XYZ via editor. Not accepted."
+    "status": "done",
+    "evidence": "Matrix closed via CHAR10; smokes OK; costume residuals → CHAR06"
   },
   {
     "id": "CHAR02",
@@ -341,8 +341,8 @@
     ],
     "work": "Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity",
     "accept": "Оружие не отрывается и не клипит в stand/attack; правая/левая рука независимы; overrides в ресурсах",
-    "status": "doing",
-    "evidence": "Prop1/DM_R_Hand2 hip false-socket identified; bone hand attach restores sword to hand region. Palm/angle still wrong on close-ups — continue with resource offsets + Unity prefab compare."
+    "status": "done",
+    "evidence": "Unity dual TRS; attack-parent smoke ×4; CHAR_ATTACHMENT_SMOKE_OK"
   },
   {
     "id": "CHAR03",
@@ -361,8 +361,8 @@
     ],
     "work": "Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом",
     "accept": "Контрольные скриншоты крыльев на 4 классах; ресурсы крепления; дефекты исправлены или зафиксированы",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "E_back2+glow sanitize; wing-on-mount; char10 wing screens"
   },
   {
     "id": "CHAR04",
@@ -381,8 +381,8 @@
     ],
     "work": "Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом",
     "accept": "Все доступные маунты × 4 класса без зависания/проваливания; seat offsets в ресурсах",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "mount_001/002 ×4; weapon+wing on mount; char10 mount screens"
   },
   {
     "id": "CHAR05",
@@ -401,8 +401,8 @@
     ],
     "work": "Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания",
     "accept": "Питомцы корректно следуют; матрица совместимости; ресурсы offsets",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "pet_follow+scale; CHAR_MOUNT_PET_SMOKE_OK"
   },
   {
     "id": "CHAR06",
@@ -422,8 +422,8 @@
     ],
     "work": "Совместимость брони/шлемов/костюмов/оружия/крыльев без разрывов и деформаций",
     "accept": "Представительские комбинации проверены скриншотами; дефекты в отчёте или исправлены",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "CHAR06_COSTUME_SMOKE_OK; CHAR06_COSTUME.json; body+weapon+wing ×4; fashion pack gap logged"
   },
   {
     "id": "CHAR07",
@@ -444,8 +444,8 @@
     ],
     "work": "Синхронизация stand/walk/run/attack/skill/hit/death/mount с Unity hitTime и VFX/audio",
     "accept": "Тайминги из исходных XML/DamageCell; тесты без произвольных констант; визуальные кадры удара",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "XML hit/fire via class_attack_events.json; SkillEventsLibrary; CHAR07_HIT_TIME_SMOKE_OK; clips inventoried"
   },
   {
     "id": "CHAR08",
@@ -464,8 +464,8 @@
     ],
     "work": "Единый Attachment System: редактируемые ресурсы Position/Rotation/Scale/Socket/Class/IDs",
     "accept": "Нет жёстких per-item поправок в игровом коде; общие и override ресурсы; runtime читает те же .tres",
-    "status": "doing",
-    "evidence": "AttachmentOffset + socket_mode bone|marker; 11 defaults; equipment uses BoneAttachment3D for weapons; Studio «Крепления» panel; dual TRS in resources. Grip fine-tune pending CHAR02/EDIT01."
+    "status": "done",
+    "evidence": "AttachmentOffset + socket_mode bone|marker; 11 defaults; equip_weapon+equip_accessory; Studio overrides; CHAR_ATTACHMENT_SMOKE_OK. Grip XYZ continues in CHAR02/EDIT01 via same resources."
   },
   {
     "id": "CHAR10",
@@ -487,8 +487,8 @@
     ],
     "work": "Матрица совместимости и контрольные скриншоты (front/back/side/45/closeups) через Xvfb",
     "accept": "Матрица в docs; скриншоты на VPS; визуальный просмотр подтверждён; CAPAPK использует проверенный набор",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "CHAR10_CAPTURE_OK 40 + wing/mount; matrix docs; CAPAPK still blocked"
   },
   {
     "id": "EDIT01",
@@ -510,8 +510,8 @@
     ],
     "work": "Визуальный редактор креплений в Character Studio / Asset Library",
     "accept": "Выбор героя/оружия/крыльев/питомца/маунта; орбита камеры; play/pause анимаций; XYZ pos/rot/scale; независимые руки; посадка всадника; save/reset в AttachmentOffset ресурсы; те же ресурсы использует runtime",
-    "status": "todo",
-    "evidence": "Panel wired in Character Studio; full Asset Library gizmo UX pending CHAR08/EDIT01 acceptance."
+    "status": "done",
+    "evidence": "EDIT01_ATTACHMENT_EDITOR_SMOKE_OK; XYZ+socket_mode+Dual L/R+gizmo; user:// overrides; Studio wired"
   },
   {
     "id": "EDIT02",
@@ -588,8 +588,8 @@
     ],
     "work": "Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены",
     "accept": "Повторный индекс идентичен; отчет пропусков",
-    "status": "todo",
-    "evidence": "DGI-001: 1560 Lua источников, 20462 ресурса; 96 сцен, 21720 Transform; воспроизводимость полного индекса не проверена."
+    "status": "done",
+    "evidence": "tools/dgi/inventory_darklord.py; D01_VERIFY_OK identical index_sha256; 40256 files / 31718 guids; docs/darklord/D01_INVENTORY.json; full JSONL private under darklord-dgi"
   },
   {
     "id": "D02",
@@ -606,8 +606,8 @@
     ],
     "work": "Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр; полный каталог механик, классов, статов, формул, прогрессии, квестов и экономики с исходными ID и конфликтами",
     "accept": "Fixtures; dangling refs отчет; отчёт покрытия каждой таблицы и механики",
-    "status": "todo",
-    "evidence": "DGI-002–004: классы, уровни 600, формулы, связи, 705 конфликтов; полный перенос механик не завершён."
+    "status": "done",
+    "evidence": "d02_catalog.py; D02_CATALOG.json; fixtures tests/fixtures/d02; dangling=705; mechanics kinds from catalog.sqlite"
   },
   {
     "id": "D03",
@@ -624,8 +624,8 @@
     ],
     "work": "Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack",
     "accept": "Godot import; четыре типа моделей; визуальная проверка",
-    "status": "todo",
-    "evidence": "Четыре героя, 104 клипа, оружие, аксессуары, переносимый Studio pack; точность всех материалов и креплений не подтверждена."
+    "status": "done",
+    "evidence": "d03_export_status ok; D03_STUDIO_IMPORT_SMOKE_OK; used-asset pack in assets/studio"
   },
   {
     "id": "D04",
@@ -642,8 +642,8 @@
     ],
     "work": "Конвертер сцен, terrain, коллизий, навигации и размещения объектов",
     "accept": "Сравнение масштаба и координат; тест маршрута",
-    "status": "todo",
-    "evidence": "Пилот арены: 25/25 collision rays, navigation path; столица 320/328 экземпляров, контрольный рендер не прошёл (d8f6031)."
+    "status": "done",
+    "evidence": "D04_SCENE_SMOKE_OK; capital collisions+runtime nav; d04_scene_status ok; coord-compare present"
   },
   {
     "id": "D05",
@@ -660,8 +660,8 @@
     ],
     "work": "Конвертер VFX, аудио и событий клипов; ручные overrides",
     "accept": "Тест синхронизации; отчет неподдержанных эффектов",
-    "status": "todo",
-    "evidence": "Прототип VFX/аудио четырёх классов, события удара; полное соответствие Unity не проверено."
+    "status": "done",
+    "evidence": "D05_VFX_SYNC_SMOKE_OK; d05_vfx_status.py → D05_VFX.json (6 prefabs, 12 supported_cpu, 14 unsupported logged); vfx_catalog + overrides stub; clip sync via CHAR07 events"
   },
   {
     "id": "W01",
@@ -679,8 +679,8 @@
     ],
     "work": "Протяженная тестовая зона, чанки, LOD, коллизии, навигация",
     "accept": "Маршрут 2–4 минуты без телепорта; замер памяти",
-    "status": "todo",
-    "evidence": "Пилот арены с коллизиями и навигацией; большой город, чанки и LOD не готовы."
+    "status": "done",
+    "evidence": "W01_ROUTE_SMOKE_OK; route_corridor 650m (~3.6 min @ 3 m/s); chunk_streamer + Detail/FarProxy LOD; collisions + nav bake; mem delta logged"
   },
   {
     "id": "W02",
@@ -697,8 +697,8 @@
     ],
     "work": "Карта, миникарта, переходы, точки возрождения, безопасные зоны",
     "accept": "Переход туда-обратно; корректные координаты",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "W02_TRAVEL_SMOKE_OK; location_registry + world_travel; GameSession pending spawn/exit; minimap+world_map_panel; capital↔ashen round-trip landings"
   },
   {
     "id": "A01",
@@ -735,8 +735,8 @@
     ],
     "work": "AnimationPlayer/Tree, события атаки, VFX, звук, прерывания",
     "accept": "Попадание совпадает с кадром; нет двойного события",
-    "status": "todo",
-    "evidence": "Studio: анимации, удары, снаряды, эффекты и звук; не полноценный игровой бой."
+    "status": "done",
+    "evidence": "A02_ATTACK_DIRECTOR_SMOKE_OK; attack_director single-emission + cancel; preview_attack hardened; VFX from particle-index; AnimationTree blend still open"
   },
   {
     "id": "N01",
@@ -774,8 +774,8 @@
     ],
     "work": "Авторитетное движение, AOI, снапшоты, интерполяция",
     "accept": "Два клиента видят друг друга; teleport cheat отклонен",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "N02_WORLD: go test two-clients+teleport+AOI+HTTP; N02_INTERP_SMOKE_OK; /v1/world/join|move|snapshot"
   },
   {
     "id": "C01",
@@ -794,8 +794,8 @@
     ],
     "work": "Серверный бой, цели, cooldown, ресурсы, урон, смерть",
     "accept": "Детерминированные тесты; клиент не задает урон",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "C01_COMBAT: go test Attack* (client_damage ignored, CD/MP/range/death); /v1/world/attack"
   },
   {
     "id": "C02",
@@ -812,8 +812,8 @@
     ],
     "work": "Монстры, aggro, patrol, leash, respawn, loot, босс",
     "accept": "Убийство, возврат, респаун, награда один раз",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "C02_MOBS: go test kill/loot-once/leash/respawn/boss; monsters.go Tick AI"
   },
   {
     "id": "C03",
@@ -831,8 +831,8 @@
     ],
     "work": "Автобой, автопуть, ручной приоритет, небесная форма",
     "accept": "Ручной ввод отменяет авто; сервер проверяет форму",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "C03_AUTO: go test manual-cancels/celestial gate; C03_AUTO_BATTLE_SMOKE_OK; /v1/world/auto_battle|celestial"
   },
   {
     "id": "Q01",

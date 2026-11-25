@@ -1,0 +1,24 @@
+{
+  "status": "ok",
+  "scene": "client/world/route_corridor/route_play.tscn",
+  "route_length_m": 650,
+  "walk_speed_mps": 3.0,
+  "estimated_walk_minutes": 3.61,
+  "chunks": [
+    "capital_gate",
+    "ashen_mid",
+    "hunt_band",
+    "shard_approach"
+  ],
+  "features": [
+    "chunk_streamer",
+    "lod_detail_far",
+    "collisions",
+    "navigation_bake"
+  ],
+  "smoke": "client/tests/w01_route_smoke.gd",
+  "gaps": [
+    "not yet the full WD02 capital geometry as streamed mega-zone",
+    "Android device memory profile pending P01"
+  ]
+}

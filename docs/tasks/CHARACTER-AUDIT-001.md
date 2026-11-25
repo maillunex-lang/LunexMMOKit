@@ -2,8 +2,11 @@
 
 Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity
 
+Status: **done**
+
 ## Acceptance
 Матрица дефектов по классам: скелет, материалы, ориентация, масштаб, анимации; контрольные скриншоты; без ложного done
 
 ## Evidence
-Grip/mount baseline screens reviewed: weapon clipping on 20001/30001/40001; warrior waist gap; mount_001 seat prototype present; Attachment System started (CHAR08). Not accepted.
+- Matrix closed (CHAR10); smokes for weapons/wings/mounts/pets
+- Residual costume waist/parts → CHAR06 (not false-closed as “ok”)

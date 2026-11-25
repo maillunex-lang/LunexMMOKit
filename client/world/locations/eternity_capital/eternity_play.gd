@@ -112,7 +112,9 @@ func _spawn_hero() -> void:
 	camera.set("follow_offset", Vector3(0, 5.5, 9))
 	hero.set("camera", camera)
 	var spawn := get_node_or_null("EternityCapital/PlayerSpawn") as Node3D
-	hero.global_position = spawn.global_position if spawn else Vector3(0, 1, -60)
+	var default_spawn: Vector3 = spawn.global_position if spawn else Vector3(0, 1, -60)
+	hero.global_position = GameSession.consume_pending_spawn() if GameSession.pending_spawn_valid else default_spawn
+	GameSession.mark_safe_position("eternity_capital", hero.global_position)
 	camera.global_position = hero.global_position + Vector3(0, 5.5, 9)
 
 func _spawn_shardlings() -> void:
@@ -155,6 +157,21 @@ func _build_ui() -> void:
 		b.pressed.connect(_load_class.bind(i))
 		row.add_child(b)
 	skill_buttons = [hud.btn_skill0, hud.btn_skill1, hud.btn_skill2]
+	var minimap = load("res://ui/hud/minimap.gd").new()
+	minimap.name = "Minimap"
+	layer.add_child(minimap)
+	minimap.set_location("eternity_capital")
+	if hero:
+		minimap.update_hero(hero.global_position)
+	var map_btn := Button.new()
+	map_btn.text = "Карта"
+	map_btn.position = Vector2(16, 120)
+	layer.add_child(map_btn)
+	var map_panel = load("res://ui/hud/world_map_panel.gd").new()
+	map_panel.name = "WorldMapPanel"
+	layer.add_child(map_panel)
+	map_btn.pressed.connect(func():
+		map_panel.show_map("eternity_capital", hero.global_position if hero else Vector3.ZERO, GameSession.unlocked_locations))
 
 func _on_quest_ui(_id: String) -> void:
 	if hud and quest_log:
@@ -251,8 +268,12 @@ func _try_portal() -> void:
 	var sid := String(portal.get_meta("stable_id"))
 	quest_log.notify_goto(sid)
 	_on_quest_ui("")
-	var loc := String(portal.get_meta("target_location", ""))
+	var Travel = preload("res://world/world_travel.gd")
+	var prep: Dictionary = Travel.prepare_portal(GameSession, "eternity_capital", sid, hero.global_position)
 	var scene_path := String(portal.get_meta("target_scene", ""))
+	if scene_path == "" and bool(prep.get("ok", false)):
+		scene_path = String(prep.get("scene", ""))
+	var loc := String(portal.get_meta("target_location", ""))
 	if scene_path == "" and loc == "ashen_outskirts":
 		scene_path = "res://world/locations/ashen_outskirts/ashen_play.tscn"
 	if scene_path == "" and loc == "shard_ruins":
@@ -260,7 +281,8 @@ func _try_portal() -> void:
 	if scene_path != "" and ResourceLoader.exists(scene_path):
 		_set_status("Переход…")
 		GameSession.sync_quest_log(quest_log)
-		GameSession.travel_to(loc if loc != "" else scene_path.get_file().get_basename())
+		if not bool(prep.get("ok", false)):
+			GameSession.travel_to(loc if loc != "" else scene_path.get_file().get_basename())
 		get_tree().change_scene_to_file(scene_path)
 	else:
 		_set_status("Портал " + sid)

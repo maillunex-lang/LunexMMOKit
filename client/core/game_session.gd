@@ -24,6 +24,14 @@ var completed_quests: Array = []
 var quest_progress: Dictionary = {}
 var unlocked_locations: Array = ["eternity_capital"]
 var current_location: String = "eternity_capital"
+## W02: pending portal landing + last safe/exit coords (client presentation until N02)
+var pending_spawn: Vector3 = Vector3.ZERO
+var pending_spawn_valid := false
+var pending_from: String = ""
+var pending_portal_id: String = ""
+var exit_position: Vector3 = Vector3.ZERO
+var last_safe_location: String = "eternity_capital"
+var last_safe_position: Vector3 = Vector3(0, 1, -60)
 var prototype_local := true ## true until authoritative server owns state
 ## N01 / FIX-009: auth bridge (client cache of server session)
 var server_url: String = "http://127.0.0.1:18080"
@@ -152,9 +160,42 @@ func travel_to(location_id: String) -> void:
 	location_changed.emit(prev, location_id)
 	changed.emit()
 
+func set_pending_travel(target: String, landing: Vector3, from_id: String, exit_pos: Vector3, portal_id: String = "") -> void:
+	pending_spawn = landing
+	pending_spawn_valid = true
+	pending_from = from_id
+	pending_portal_id = portal_id
+	exit_position = exit_pos
+	if not unlocked_locations.has(target):
+		unlocked_locations.append(target)
+	save_to_disk()
+	changed.emit()
+
+func consume_pending_spawn() -> Vector3:
+	if pending_spawn_valid:
+		pending_spawn_valid = false
+		var p := pending_spawn
+		save_to_disk()
+		return p
+	const Registry = preload("res://world/location_registry.gd")
+	return Registry.spawn_point(current_location)
+
+func mark_safe_position(location_id: String, pos: Vector3) -> void:
+	last_safe_location = location_id
+	last_safe_position = pos
+	save_to_disk()
+
+func _vec3_to_arr(v: Vector3) -> Array:
+	return [v.x, v.y, v.z]
+
+func _arr_to_vec3(a: Variant, fallback: Vector3) -> Vector3:
+	if a is Array and a.size() >= 3:
+		return Vector3(float(a[0]), float(a[1]), float(a[2]))
+	return fallback
+
 func save_to_disk() -> void:
 	var data := {
-		"v": 1,
+		"v": 2,
 		"prototype_local": prototype_local,
 		"class_actor_id": class_actor_id,
 		"class_index": class_index,
@@ -173,6 +214,13 @@ func save_to_disk() -> void:
 		"quest_progress": quest_progress,
 		"unlocked_locations": unlocked_locations,
 		"current_location": current_location,
+		"pending_spawn": _vec3_to_arr(pending_spawn),
+		"pending_spawn_valid": pending_spawn_valid,
+		"pending_from": pending_from,
+		"pending_portal_id": pending_portal_id,
+		"exit_position": _vec3_to_arr(exit_position),
+		"last_safe_location": last_safe_location,
+		"last_safe_position": _vec3_to_arr(last_safe_position),
 		"server_url": server_url,
 		"auth_token": auth_token,
 		"account_id": account_id,
@@ -209,6 +257,13 @@ func load_from_disk() -> void:
 	quest_progress = d.get("quest_progress", {})
 	unlocked_locations = d.get("unlocked_locations", unlocked_locations)
 	current_location = String(d.get("current_location", current_location))
+	pending_spawn = _arr_to_vec3(d.get("pending_spawn", []), pending_spawn)
+	pending_spawn_valid = bool(d.get("pending_spawn_valid", false))
+	pending_from = String(d.get("pending_from", ""))
+	pending_portal_id = String(d.get("pending_portal_id", ""))
+	exit_position = _arr_to_vec3(d.get("exit_position", []), exit_position)
+	last_safe_location = String(d.get("last_safe_location", last_safe_location))
+	last_safe_position = _arr_to_vec3(d.get("last_safe_position", []), last_safe_position)
 	prototype_local = bool(d.get("prototype_local", true))
 	server_url = String(d.get("server_url", server_url))
 	auth_token = String(d.get("auth_token", auth_token))

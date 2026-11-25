@@ -1,0 +1,238 @@
+{
+  "status": "ok",
+  "prefab_count": 6,
+  "emitter_total": 26,
+  "supported_cpu": 12,
+  "unsupported_count": 14,
+  "unsupported_sample": [
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/GJS_M/GJS_M_attack001.prefab",
+      "emitter": "ef_fashi_shan",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/GJS_M/GJS_M_attack001.prefab",
+      "emitter": "baoqiquan (1)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/GJS_M/GJS_M_attack001.prefab",
+      "emitter": "ef_fashi_shan (2)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/GJS_M/GJS_M_attack001.prefab",
+      "emitter": "ef_fashi_shan (1)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/GJS_M/GJS_M_attack001.prefab",
+      "emitter": "baoqiquan (3)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/GJS_M/GJS_M_attack001.prefab",
+      "emitter": "baoqiquan (2)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/ZS_M/ZS_M_attack001.prefab",
+      "emitter": "daoguang_zhongjia03",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/ZS_M/ZS_M_attack001.prefab",
+      "emitter": "daoguang_zhongjia02",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/ZS_M/ZS_M_attack001.prefab",
+      "emitter": "daoguang_glow",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/ZS_M/ZS_M_attack001.prefab",
+      "emitter": "daoguang_gaoguag",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/CK_W/CK_W_attack001.prefab",
+      "emitter": "daoguang_zhongjia01 (3)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/CK_W/CK_W_attack001.prefab",
+      "emitter": "daoguang_zhongjia01 (1)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/CK_W/CK_W_attack001.prefab",
+      "emitter": "daoguang_glow (1)",
+      "status": "unsupported_mesh_missing_glb"
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/CK_W/CK_W_attack001.prefab",
+      "emitter": "daoguang_gaoguag (1)",
+      "status": "unsupported_mesh_missing_glb"
+    }
+  ],
+  "prefabs": [
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/FS_W/FS_W_attack001.prefab",
+      "emitters": 3,
+      "mesh_renderers": 1,
+      "emitter_status": [
+        {
+          "name": "lizi",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "dise",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "tw",
+          "status": "supported_cpu"
+        }
+      ]
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/hurt/FS_hti.prefab",
+      "emitters": 5,
+      "mesh_renderers": 0,
+      "emitter_status": [
+        {
+          "name": "bingqi (1)",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "lizi",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "glow (1)",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "fs_suibing (3)",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "glow",
+          "status": "supported_cpu"
+        }
+      ]
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/GJS_M/GJS_M_attack001.prefab",
+      "emitters": 7,
+      "mesh_renderers": 0,
+      "emitter_status": [
+        {
+          "name": "shanguang",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "ef_fashi_shan",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "baoqiquan (1)",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "ef_fashi_shan (2)",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "ef_fashi_shan (1)",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "baoqiquan (3)",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "baoqiquan (2)",
+          "status": "unsupported_mesh_missing_glb"
+        }
+      ]
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/ZS_M/ZS_M_attack001.prefab",
+      "emitters": 4,
+      "mesh_renderers": 0,
+      "emitter_status": [
+        {
+          "name": "daoguang_zhongjia03",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "daoguang_zhongjia02",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "daoguang_glow",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "daoguang_gaoguag",
+          "status": "unsupported_mesh_missing_glb"
+        }
+      ]
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/player/CK_W/CK_W_attack001.prefab",
+      "emitters": 4,
+      "mesh_renderers": 0,
+      "emitter_status": [
+        {
+          "name": "daoguang_zhongjia01 (3)",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "daoguang_zhongjia01 (1)",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "daoguang_glow (1)",
+          "status": "unsupported_mesh_missing_glb"
+        },
+        {
+          "name": "daoguang_gaoguag (1)",
+          "status": "unsupported_mesh_missing_glb"
+        }
+      ]
+    },
+    {
+      "prefab": "Client/Assets/Resources/Effect/skill/hurt/fx_beiji02.prefab",
+      "emitters": 3,
+      "mesh_renderers": 0,
+      "emitter_status": [
+        {
+          "name": "sanshe",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "glow",
+          "status": "supported_cpu"
+        },
+        {
+          "name": "glowbao",
+          "status": "supported_cpu"
+        }
+      ]
+    }
+  ],
+  "audio": {
+    "note": "Attack audio still resolved via training CLASS_AUDIO / file paths; full bank conversion pending",
+    "supported": "mp3_stream_playback"
+  },
+  "clip_events": {
+    "source": "client/content/combat/class_attack_events.json (CHAR07)",
+    "sync_test": "client/tests/d05_vfx_sync_smoke.gd"
+  },
+  "gaps": [
+    "unsupported_emitters_logged"
+  ]
+}

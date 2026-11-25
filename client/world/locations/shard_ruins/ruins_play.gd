@@ -64,7 +64,9 @@ func _spawn_hero() -> void:
 	camera.set("follow_offset", Vector3(0, 5.5, 9))
 	hero.set("camera", camera)
 	var spawn := get_node_or_null("ShardRuins/PlayerSpawn") as Node3D
-	hero.global_position = spawn.global_position if spawn else Vector3(0, 1, -14)
+	var default_spawn: Vector3 = spawn.global_position if spawn else Vector3(0, 1, -14)
+	hero.global_position = GameSession.consume_pending_spawn() if GameSession.pending_spawn_valid else default_spawn
+	GameSession.mark_safe_position("shard_ruins", hero.global_position)
 
 func _build_ui() -> void:
 	var layer := CanvasLayer.new()
@@ -113,5 +115,9 @@ func _talk_scholar() -> void:
 
 func _to_ashen() -> void:
 	GameSession.sync_quest_log(quest_log)
-	GameSession.travel_to("ashen_outskirts")
+	var Travel = preload("res://world/world_travel.gd")
+	if hero:
+		Travel.prepare_portal(GameSession, "shard_ruins", "portal_ashen_return", hero.global_position)
+	else:
+		GameSession.travel_to("ashen_outskirts")
 	get_tree().change_scene_to_file("res://world/locations/ashen_outskirts/ashen_play.tscn")

@@ -61,7 +61,9 @@ func _spawn_hero() -> void:
 	camera.set("follow_offset", Vector3(0, 5.5, 9))
 	hero.set("camera", camera)
 	var spawn := get_node_or_null("AshenOutskirts/PlayerSpawn") as Node3D
-	hero.global_position = spawn.global_position if spawn else Vector3(0, 1, -8)
+	var default_spawn: Vector3 = spawn.global_position if spawn else Vector3(0, 1, -8)
+	hero.global_position = GameSession.consume_pending_spawn() if GameSession.pending_spawn_valid else default_spawn
+	GameSession.mark_safe_position("ashen_outskirts", hero.global_position)
 
 func _build_ui() -> void:
 	var layer := CanvasLayer.new()
@@ -121,17 +123,21 @@ func _goto_objective() -> void:
 		hero.navigate_to(target.global_position)
 		hud.set_status("Автопуть (NavMesh)")
 
-func _persist_and_go(scene: String, loc_id: String) -> void:
+func _persist_and_go(scene: String, loc_id: String, portal_id: String = "") -> void:
 	GameSession.sync_quest_log(quest_log)
-	GameSession.travel_to(loc_id)
+	var Travel = preload("res://world/world_travel.gd")
+	if portal_id != "" and hero:
+		Travel.prepare_portal(GameSession, "ashen_outskirts", portal_id, hero.global_position)
+	else:
+		GameSession.travel_to(loc_id)
 	get_tree().change_scene_to_file(scene)
 
 func _to_capital() -> void:
-	_persist_and_go("res://world/locations/eternity_capital/eternity_play.tscn", "eternity_capital")
+	_persist_and_go("res://world/locations/eternity_capital/eternity_play.tscn", "eternity_capital", "portal_capital_return")
 
 func _enter_ruins() -> void:
 	var portal := get_node_or_null("AshenOutskirts/Portal_RuinsGate") as Node3D
 	if portal:
 		quest_log.notify_goto("portal_ruins_gate")
 		_refresh_quest()
-	_persist_and_go("res://world/locations/shard_ruins/ruins_play.tscn", "shard_ruins")
+	_persist_and_go("res://world/locations/shard_ruins/ruins_play.tscn", "shard_ruins", "portal_ruins_gate")

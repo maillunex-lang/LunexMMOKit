@@ -207,3 +207,131 @@ static func attach_dual(actor: Node3D, item: Node3D) -> Array[Node3D]:
 	for entry in handle.get("attachments", []):
 		out.append(entry.get("root"))
 	return out
+
+## Wing/pet/mount-seat via AttachmentOffset (CHAR03/CHAR08). Prefer marker sockets for back/seat.
+static func equip_accessory(actor: Node3D, item: Node3D, kind: String, equipment_id: String) -> Dictionary:
+	if actor == null or item == null or kind.is_empty() or equipment_id.is_empty():
+		return {}
+	var off = Library.load_offset(kind, equipment_id)
+	var socket_name := "E_back2"
+	var socket_mode := "marker"
+	var offset := Transform3D.IDENTITY
+	if off != null:
+		if String(off.socket) != "":
+			socket_name = String(off.socket)
+		if String(off.socket_mode) != "":
+			socket_mode = String(off.socket_mode)
+		offset = off.to_transform()
+	# Pets may have empty socket — parent beside actor root
+	if kind == "pet" and (off == null or String(off.socket) == ""):
+		var original := _detach(item)
+		actor.add_child(item)
+		item.transform = offset
+		return {
+			"mode": "accessory",
+			"kind": kind,
+			"equipment_id": equipment_id,
+			"bind": "actor",
+			"root": item,
+			"original_parent": original["parent"],
+			"original_transform": original["transform"],
+		}
+	var bound := _bind_to_socket(actor, socket_name, socket_mode, item, offset)
+	if bound.is_empty() and socket_mode == "marker":
+		# Fallbacks used in Studio
+		for alt in ["E_back2", "E_back", "Horse_E_back2", "Horse_E_back"]:
+			if alt == socket_name:
+				continue
+			bound = _bind_to_socket(actor, alt, "marker", item, offset)
+			if not bound.is_empty():
+				socket_name = alt
+				break
+	if bound.is_empty():
+		return {}
+	bound["mode"] = "accessory"
+	bound["kind"] = kind
+	bound["equipment_id"] = equipment_id
+	bound["socket"] = socket_name
+	return bound
+
+static func unequip_accessory(handle: Dictionary) -> bool:
+	if handle.is_empty():
+		return false
+	if String(handle.get("bind", "")) == "actor":
+		var root: Node3D = handle.get("root")
+		if root != null and is_instance_valid(root):
+			var parent := root.get_parent()
+			if parent != null:
+				parent.remove_child(root)
+			_restore(root, handle.get("original_parent"), handle.get("original_transform", Transform3D.IDENTITY))
+		return true
+	_unequip_bound(handle)
+	return true
+
+## CHAR04: seat actor on mount marker via mount_seat AttachmentOffset.
+static func mount_actor(mount: Node3D, actor: Node3D, mount_id: String) -> Dictionary:
+	if mount == null or actor == null or mount_id.is_empty():
+		return {}
+	var off = Library.load_offset("mount_seat", mount_id)
+	var socket_name := "Horse_E_back2"
+	var offset := Transform3D.IDENTITY
+	if off != null:
+		if String(off.socket) != "":
+			socket_name = String(off.socket)
+		offset = off.to_transform()
+	var seat := find_unique_marker(mount, socket_name)
+	if seat == null:
+		for alt in ["Horse_E_back2", "Horse_E_back", "E_back2", "E_back"]:
+			seat = find_unique_marker(mount, alt)
+			if seat != null:
+				socket_name = alt
+				break
+	if seat == null:
+		return {}
+	var original := _detach(actor)
+	seat.add_child(actor)
+	actor.transform = offset
+	return {
+		"mode": "mount_seat",
+		"mount_id": mount_id,
+		"socket": socket_name,
+		"bind": "marker",
+		"marker": seat,
+		"root": actor,
+		"mount": mount,
+		"original_parent": original["parent"],
+		"original_transform": original["transform"],
+	}
+
+static func dismount_actor(handle: Dictionary) -> bool:
+	if handle.is_empty() or String(handle.get("mode", "")) != "mount_seat":
+		return false
+	_unequip_bound(handle)
+	return true
+
+## CHAR03/05: hide untextured glow panels; optional glow PNG from accessory root.
+static func prepare_accessory_visuals(item: Node3D, kind: String, accessory_root: String = "", use_glow: bool = false) -> int:
+	if item == null:
+		return 0
+	var fixed := 0
+	for mesh in item.find_children("*", "MeshInstance3D", true, false):
+		var name_l := String(mesh.name).to_lower()
+		if "glow" in name_l:
+			if use_glow and not accessory_root.is_empty():
+				var glow_path := accessory_root.path_join("wing-glow.png")
+				if FileAccess.file_exists(glow_path):
+					var img := Image.load_from_file(glow_path)
+					if img != null and not img.is_empty():
+						var mat := StandardMaterial3D.new()
+						mat.albedo_texture = ImageTexture.create_from_image(img)
+						mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+						mat.alpha_scissor_threshold = 0.5
+						mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+						mat.cull_mode = BaseMaterial3D.CULL_DISABLED
+						mesh.material_override = mat
+						mesh.visible = true
+						fixed += 1
+						continue
+			mesh.visible = false
+			fixed += 1
+	return fixed

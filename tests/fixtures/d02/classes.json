@@ -1,0 +1,38 @@
+{
+  "classes": [
+    {
+      "id": "1",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "1000000",
+        "1005001",
+        "1006001"
+      ]
+    },
+    {
+      "id": "2",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "2000000",
+        "2005001"
+      ]
+    },
+    {
+      "id": "3",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "3000000",
+        "3004001"
+      ]
+    },
+    {
+      "id": "4",
+      "reachable_skills": 16,
+      "missing_roots": [
+        "4000000",
+        "4005001",
+        "4006001"
+      ]
+    }
+  ]
+}

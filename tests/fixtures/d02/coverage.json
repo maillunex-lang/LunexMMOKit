@@ -1,0 +1,28 @@
+{
+  "mechanics_by_kind": {
+    "attribute": 21,
+    "class": 4,
+    "constant": 7,
+    "equipment": 5382,
+    "level": 600,
+    "level_unlock": 3,
+    "peak_level": 1000,
+    "skill": 1122,
+    "unlock": 349
+  },
+  "sources": [
+    {
+      "side": "client",
+      "status": "ok",
+      "count": 580,
+      "rows": 228191
+    },
+    {
+      "side": "server",
+      "status": "ok",
+      "count": 980,
+      "rows": 230608
+    }
+  ],
+  "note": "Full mechanics require darklord-dgi/catalog.sqlite; fixtures are portable summaries."
+}

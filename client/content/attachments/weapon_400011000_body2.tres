@@ -1,13 +1,18 @@
 [gd_resource type="Resource" script_class="AttachmentOffset" format=3]
 
-[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_s7jif"]
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1"]
 
 [resource]
-script = ExtResource("1_s7jif")
+script = ExtResource("1")
 attachment_id = "weapon_400011000_body2"
+kind = "weapon"
 equipment_id = "400011000"
-secondary_socket = "Bip001 L Hand"
+model_id = "40001"
+socket = "Bip001 R Hand"
+socket_mode = "bone"
+position = Vector3(0, 0, 0)
 rotation_degrees = Vector3(0, 0, 180)
+scale = Vector3(1, 1, 1)
 child_name = "body2"
-notes = "Right blade on R Hand"
-source_unity = "Prefer Bip001 hand bones; DM_*_Hand2 under Prop1 is hip rest"
+notes = "Unity CK_W_wuqi_01_pre body2 local Z-180; hand container identity"
+source_unity = "CK_W_wuqi_01_pre.prefab body2 m_LocalRotation z≈1"

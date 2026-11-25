@@ -45,6 +45,28 @@ func reconnect(login: String, password: String) -> Dictionary:
 	res["session"] = sess
 	return res
 
+func world_join(name: String, class_actor_id: String, location: String, pos: Dictionary) -> Dictionary:
+	return _post("/v1/world/join", {
+		"name": name, "class_actor_id": class_actor_id, "location": location, "pos": pos,
+	})
+
+func world_move(pos: Dictionary, yaw: float, dt: float) -> Dictionary:
+	return _post("/v1/world/move", {"pos": pos, "yaw": yaw, "dt": dt})
+
+func world_snapshot() -> Dictionary:
+	return _req(HTTPClient.METHOD_GET, "/v1/world/snapshot", {})
+
+func world_attack(target_id: int, skill_id: String = "basic", client_damage: int = 0) -> Dictionary:
+	return _post("/v1/world/attack", {
+		"target_id": target_id, "skill_id": skill_id, "client_damage": client_damage,
+	})
+
+func world_auto_battle(enabled: bool) -> Dictionary:
+	return _post("/v1/world/auto_battle", {"enabled": enabled})
+
+func world_celestial() -> Dictionary:
+	return _post("/v1/world/celestial", {})
+
 func _post(path: String, body: Dictionary) -> Dictionary:
 	return _req(HTTPClient.METHOD_POST, path, body)
 

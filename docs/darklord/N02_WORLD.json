@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "package": "server/internal/world",
+  "endpoints": [
+    "/v1/world/join",
+    "/v1/world/move",
+    "/v1/world/snapshot",
+    "/v1/world/attack"
+  ],
+  "accept": {
+    "two_clients_visible": true,
+    "teleport_rejected": true,
+    "aoi_radius_m": 50,
+    "max_speed_mps": 6
+  },
+  "client": {
+    "interpolator": "client/network/entity_interpolator.gd",
+    "world_client": "client/network/world_client.gd"
+  },
+  "tests": [
+    "TestTwoClientsSeeEachOther",
+    "TestTeleportCheatRejected",
+    "TestHTTPTwoClientsSnapshotAndTeleport",
+    "N02_INTERP_SMOKE_OK"
+  ],
+  "gaps": [
+    "WebSocket push not yet; HTTP poll",
+    "nav-mesh server validation pending"
+  ]
+}

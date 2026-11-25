@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="AttachmentOffset" format=3]
 
-[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_5o4y4"]
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1"]
 
 [resource]
-script = ExtResource("1_5o4y4")
+script = ExtResource("1")
 attachment_id = "weapon_200011000"
+kind = "weapon"
 equipment_id = "200011000"
-notes = "Bone hand; bow may need L Hand override"
-source_unity = "Prefer Bip001 hand bones; DM_*_Hand2 under Prop1 is hip rest"
+model_id = "20001"
+socket = "Bip001 L Hand"
+socket_mode = "bone"
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1, 1, 1)
+notes = "Bow on L Hand; 90° Z aligns riser for Godot GLB vs Unity DM_L_Hand"
+source_unity = "Bow left-hand; Godot Z90 provisional from stand review"

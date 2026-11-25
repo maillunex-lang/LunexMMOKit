@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="AttachmentOffset" format=3]
 
-[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1_43we1"]
+[ext_resource type="Script" path="res://actors/attachment_offset.gd" id="1"]
 
 [resource]
-script = ExtResource("1_43we1")
+script = ExtResource("1")
 attachment_id = "weapon_100011000"
+kind = "weapon"
 equipment_id = "100011000"
-notes = "Bone hand; tune grip via editor"
-source_unity = "Prefer Bip001 hand bones; DM_*_Hand2 under Prop1 is hip rest"
+model_id = "10001"
+socket = "Bip001 R Hand"
+socket_mode = "bone"
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+notes = "Unity ChangeWeapon identity on hand; residual palm tune via EDIT01 overrides"
+source_unity = "CActorObject.ChangeWeapon identity"

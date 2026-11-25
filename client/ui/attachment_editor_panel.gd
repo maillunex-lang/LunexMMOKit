@@ -26,6 +26,9 @@ var scl_x: SpinBox
 var scl_y: SpinBox
 var scl_z: SpinBox
 var status: Label
+var socket_mode_opt: OptionButton
+var dual_btn: Button
+var gizmo: Node3D
 var _busy := false
 
 func _ready() -> void:
@@ -64,6 +67,11 @@ func _build() -> void:
 	_row("kind/eq", kind_edit, equipment_edit)
 	_row("class/child", class_edit, child_edit)
 	_row("socket", socket_edit)
+	socket_mode_opt = OptionButton.new()
+	socket_mode_opt.add_item("bone", 0)
+	socket_mode_opt.add_item("marker", 1)
+	socket_mode_opt.item_selected.connect(func(_i): _on_value_changed())
+	_row("mode", socket_mode_opt)
 	pos_x = _spin(-5, 5, 0.001, 0); pos_y = _spin(-5, 5, 0.001, 0); pos_z = _spin(-5, 5, 0.001, 0)
 	rot_x = _spin(-180, 180, 0.1, 0); rot_y = _spin(-180, 180, 0.1, 0); rot_z = _spin(-180, 180, 0.1, 0)
 	scl_x = _spin(-5, 5, 0.01, 1); scl_y = _spin(-5, 5, 0.01, 1); scl_z = _spin(-5, 5, 0.01, 1)
@@ -74,13 +82,15 @@ func _build() -> void:
 	var load_btn := Button.new(); load_btn.text = "Загрузить"; load_btn.pressed.connect(load_current)
 	var save_btn := Button.new(); save_btn.text = "Сохранить"; save_btn.pressed.connect(save_current)
 	var reset_btn := Button.new(); reset_btn.text = "Сброс"; reset_btn.pressed.connect(reset_current)
-	buttons.add_child(load_btn); buttons.add_child(save_btn); buttons.add_child(reset_btn)
+	dual_btn = Button.new(); dual_btn.text = "Dual L/R"; dual_btn.pressed.connect(_toggle_dual_child)
+	buttons.add_child(load_btn); buttons.add_child(save_btn); buttons.add_child(reset_btn); buttons.add_child(dual_btn)
 	add_child(buttons)
 	status = Label.new(); status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	add_child(status)
 
 func bind_node(node: Node3D) -> void:
 	target_node = node
+	_ensure_gizmo()
 
 func set_context(kind: String, equipment_id: String, class_id: String = "", child_name: String = "") -> void:
 	kind_edit.text = kind
@@ -102,6 +112,7 @@ func load_current() -> void:
 	else:
 		status.text = "Загружено: " + str(current.attachment_id)
 	socket_edit.text = str(current.socket)
+	socket_mode_opt.select(1 if String(current.socket_mode) == "marker" else 0)
 	pos_x.value = current.position.x; pos_y.value = current.position.y; pos_z.value = current.position.z
 	rot_x.value = current.rotation_degrees.x; rot_y.value = current.rotation_degrees.y; rot_z.value = current.rotation_degrees.z
 	scl_x.value = current.scale.x; scl_y.value = current.scale.y; scl_z.value = current.scale.z
@@ -115,6 +126,7 @@ func _on_value_changed(_v: float = 0.0) -> void:
 	current.rotation_degrees = Vector3(rot_x.value, rot_y.value, rot_z.value)
 	current.scale = Vector3(scl_x.value, scl_y.value, scl_z.value)
 	current.socket = socket_edit.text
+	current.socket_mode = "marker" if socket_mode_opt.selected == 1 else "bone"
 	current.kind = kind_edit.text
 	current.equipment_id = equipment_edit.text
 	current.class_id = class_edit.text
@@ -124,11 +136,56 @@ func _on_value_changed(_v: float = 0.0) -> void:
 func _apply_to_node() -> void:
 	if target_node != null and is_instance_valid(target_node) and current != null:
 		target_node.transform = current.to_transform()
+		_ensure_gizmo()
+
+func _toggle_dual_child() -> void:
+	## Independent hands: flip body1 ↔ body2 for dual blades (400011000).
+	var child := child_edit.text.strip_edges()
+	if child == "body1":
+		child_edit.text = "body2"
+	elif child == "body2":
+		child_edit.text = "body1"
+	else:
+		child_edit.text = "body2"
+		if equipment_edit.text.strip_edges() == "":
+			equipment_edit.text = "400011000"
+		if kind_edit.text.strip_edges() == "":
+			kind_edit.text = "weapon"
+	load_current()
+
+func _ensure_gizmo() -> void:
+	if target_node == null or not is_instance_valid(target_node):
+		return
+	if gizmo != null and is_instance_valid(gizmo):
+		if gizmo.get_parent() != target_node:
+			gizmo.reparent(target_node)
+		return
+	gizmo = Node3D.new()
+	gizmo.name = "AttachmentGizmo"
+	target_node.add_child(gizmo)
+	for axis_color in [[Vector3(0.25, 0, 0), Color(1, 0.2, 0.2)], [Vector3(0, 0.25, 0), Color(0.2, 1, 0.2)], [Vector3(0, 0, 0.25), Color(0.3, 0.5, 1)]]:
+		var mesh := MeshInstance3D.new()
+		var box := BoxMesh.new()
+		box.size = Vector3(0.02, 0.02, 0.02) + axis_color[0].abs() * 2.0
+		mesh.mesh = box
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = axis_color[1]
+		mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		mesh.material_override = mat
+		mesh.position = axis_color[0]
+		gizmo.add_child(mesh)
 
 func save_current() -> void:
 	_on_value_changed()
 	if current == null:
 		return
+	if String(current.attachment_id).is_empty():
+		var parts: PackedStringArray = [current.kind, current.equipment_id]
+		if String(current.class_id) != "":
+			parts.append(current.class_id)
+		if String(current.child_name) != "":
+			parts.append(current.child_name)
+		current.attachment_id = "_".join(parts)
 	var err := Library.save_override(current)
 	status.text = "Сохранено override" if err == OK else "Ошибка сохранения "+str(err)
 	if err == OK:

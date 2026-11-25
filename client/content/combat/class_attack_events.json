@@ -1,0 +1,86 @@
+{
+  "source": "SkillClassDisplayDesc.xml via skill_events",
+  "note": "Basic attack = first init_skill id per PlayerinfoConfig",
+  "classes": {
+    "10001": {
+      "playerinfo_id": "3",
+      "basic_skill_id": "3000001",
+      "events": [
+        {
+          "kind": "hit",
+          "time": 0.15,
+          "skill_id": "3000001",
+          "xml_tag": "damage",
+          "source": "SkillClassDisplayDesc.xml"
+        }
+      ],
+      "attack001": {
+        "kind": "hit",
+        "time": 0.15,
+        "skill_id": "3000001",
+        "xml_tag": "damage",
+        "source": "SkillClassDisplayDesc.xml"
+      }
+    },
+    "20001": {
+      "playerinfo_id": "2",
+      "basic_skill_id": "2000001",
+      "events": [
+        {
+          "kind": "hit",
+          "time": 0.3,
+          "skill_id": "2000001",
+          "xml_tag": "damage",
+          "source": "SkillClassDisplayDesc.xml"
+        }
+      ],
+      "attack001": {
+        "kind": "hit",
+        "time": 0.3,
+        "skill_id": "2000001",
+        "xml_tag": "damage",
+        "source": "SkillClassDisplayDesc.xml"
+      }
+    },
+    "30001": {
+      "playerinfo_id": "1",
+      "basic_skill_id": "1000001",
+      "events": [
+        {
+          "kind": "projectile",
+          "time": 0.5,
+          "skill_id": "1000001",
+          "xml_tag": "fireFlyAttack",
+          "source": "SkillClassDisplayDesc.xml"
+        }
+      ],
+      "attack001": {
+        "kind": "projectile",
+        "time": 0.5,
+        "skill_id": "1000001",
+        "xml_tag": "fireFlyAttack",
+        "source": "SkillClassDisplayDesc.xml"
+      }
+    },
+    "40001": {
+      "playerinfo_id": "4",
+      "basic_skill_id": "4000001",
+      "events": [
+        {
+          "kind": "hit",
+          "time": 0.4,
+          "skill_id": "4000001",
+          "xml_tag": "damage",
+          "source": "SkillClassDisplayDesc.xml"
+        }
+      ],
+      "attack001": {
+        "kind": "hit",
+        "time": 0.4,
+        "skill_id": "4000001",
+        "xml_tag": "damage",
+        "source": "SkillClassDisplayDesc.xml"
+      }
+    }
+  }
+}

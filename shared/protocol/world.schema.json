@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lunex.local/protocol/world.schema.json",
+  "title": "LunexN02World",
+  "description": "Authoritative world join/move/snapshot/attack (N02/C01)",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["pos"],
+      "properties": {
+        "name": { "type": "string" },
+        "class_actor_id": { "type": "string" },
+        "location": { "type": "string" },
+        "pos": {
+          "type": "object",
+          "required": ["x", "y", "z"],
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" },
+            "z": { "type": "number" }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": ["pos", "dt"],
+      "properties": {
+        "pos": { "type": "object" },
+        "yaw": { "type": "number" },
+        "dt": { "type": "number" }
+      }
+    },
+    {
+      "type": "object",
+      "required": ["target_id"],
+      "properties": {
+        "target_id": { "type": "integer" },
+        "skill_id": { "type": "string" },
+        "client_damage": { "type": "integer", "description": "Ignored by server (C01)" }
+      }
+    }
+  ]
+}

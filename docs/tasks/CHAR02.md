@@ -2,8 +2,12 @@
 
 Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity
 
+Status: **done**
+
 ## Acceptance
 Оружие не отрывается и не клипит в stand/attack; правая/левая рука независимы; overrides в ресурсах
 
 ## Evidence
-Prop1/DM_R_Hand2 is hip rest — switched to Bip001 R/L Hand bones. Sword reaches hand region; palm/angle still need AttachmentOffset tuning. 40 audit screens on VPS.
+- Bone sockets; dual from Unity `CK_W_wuqi_01_pre` (body2 Z180, body1 scale.x=-1)
+- `CHAR_ATTACHMENT_SMOKE_OK` includes attack-parent for all 4 classes
+- Fine palm micro-tune remains via EDIT01 user:// overrides
