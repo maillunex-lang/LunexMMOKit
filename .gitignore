@@ -6,3 +6,6 @@
 *.fbx
 assets_private/
 !assets/studio/**/*.glb
+
+client/studio_payload.zip
+build/

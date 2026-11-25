@@ -31,6 +31,41 @@ func install():
 	if Cache.verify(cache_root):
 		get_tree().change_scene_to_file("res://scenes/training/training.tscn")
 		return
+	if FileAccess.file_exists("res://studio_payload.zip"):
+		label.text = "Установка игровых ресурсов..."
+		var archive := ZIPReader.new()
+		if archive.open("res://studio_payload.zip") == OK:
+			var packed = JSON.parse_string(archive.read_file("manifest.json").get_string_from_utf8())
+			if packed is Dictionary and packed.get("files") is Array:
+				progress.max_value = packed.files.size()
+				for entry in packed.files:
+					var path := String(entry.get("path",""))
+					if not Cache.valid_path(path):
+						archive.close()
+						label.text = "Некорректный путь"
+						return
+					var target := cache_root.path_join(path)
+					if not Cache.verify_file(cache_root,entry):
+						DirAccess.make_dir_recursive_absolute(target.get_base_dir())
+						var out := FileAccess.open(target,FileAccess.WRITE)
+						if out == null:
+							archive.close()
+							label.text = "Ошибка записи"
+							return
+						out.store_buffer(archive.read_file(path))
+						out.close()
+					progress.value += 1
+					await get_tree().process_frame
+				var manifest_file := FileAccess.open(cache_root.path_join("manifest.json"),FileAccess.WRITE)
+				if manifest_file != null:
+					manifest_file.store_buffer(archive.read_file("manifest.json"))
+					manifest_file.close()
+			archive.close()
+			if Cache.verify(cache_root):
+				get_tree().change_scene_to_file("res://scenes/training/training.tscn")
+				return
+		label.text = "Ошибка встроенного пакета"
+		return
 	if not base_url.begins_with("https://"):
 		label.text = "Ресурсы отсутствуют. Сервер загрузки не настроен."
 		return
