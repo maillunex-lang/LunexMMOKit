@@ -27,7 +27,8 @@ var projectile_effect_suffix := "FS_W_attack001.prefab"
 var impact_effect_suffix := "FS_hti.prefab"
 var attack_clip := "attack001"
 var attack_event_time := 0.5
-const CLASS_EVENTS = {"10001": ["hit",0.15], "20001": ["hit",0.30], "30001": ["projectile",0.50], "40001": ["hit",0.40]}
+## CHAR07: hit/fire times from XML extract (content/combat/class_attack_events.json) — not magic constants.
+const SkillEventsLibrary = preload("res://combat/skill_events_library.gd")
 const CLASS_FX = {"10001":"ZS_M_attack001.prefab","20001":"GJS_M_attack001.prefab","40001":"CK_W_attack001.prefab"}
 const CLASS_AUDIO = {"10001":"ZS_Atk_01","20001":"SS_Atk_01","40001":"assassinatorattack01"}
 var melee_visual: PackedScene
@@ -420,11 +421,15 @@ func launch_attack() -> void:
 	add_child(active_attack)
 	active_attack.projectile.connect(combat.launch)
 	active_attack.impact.connect(combat.hit)
-	var event: Array = CLASS_EVENTS[actor_ids[current_actor_index]]
-	if not active_attack.begin(animation_player, attack_clip, [{"kind": event[0], "time": event[1]}], speed_options[speed_index]):
+	var actor_id: String = String(actor_ids[current_actor_index])
+	var timeline: Array = SkillEventsLibrary.attack001_timeline(actor_id)
+	if timeline.is_empty():
+		_set_status("Missing CHAR07 attack events for " + actor_id)
+		return
+	if not active_attack.begin(animation_player, attack_clip, timeline, speed_options[speed_index]):
 		_set_status("Animation clip not found: " + attack_clip)
 		return
-	if event[0] == "hit":
+	if String(timeline[0]["kind"]) == "hit":
 		combat.play_attack_sound()
 		if melee_visual != null:
 			var fx := melee_visual.instantiate() as Node3D

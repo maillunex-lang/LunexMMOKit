@@ -1,6 +1,5 @@
 # Next
-Primary: CHAR06 (armor/costume) then A02 / W02→N02 toward BETA01.
-CHAR02–05 + CHAR08/10 + EDIT01 + D01–D03 done on attachment/export path.
-Unlocked: D04 (scenes), CHAR07 (anim timing) after content needs.
-Product: W02→N02→C01 toward BETA01.
-Read: docs/darklord/CHARACTER_MATRIX.md, docs/darklord/D03.md, docs/BETA_001.md
+Primary: A02 (animation events/VFX) then W02→N02→C01 toward BETA01.
+CHAR06–07 + D04 done. Optional: fashion mesh pack for CHAR06 expansion; D05 VFX converter.
+Product path remains Closed Beta 0.1.0.
+Read: docs/darklord/CHAR06_COSTUME.json, docs/darklord/D04.md, docs/BETA_001.md

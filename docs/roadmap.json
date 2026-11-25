@@ -422,8 +422,8 @@
     ],
     "work": "Совместимость брони/шлемов/костюмов/оружия/крыльев без разрывов и деформаций",
     "accept": "Представительские комбинации проверены скриншотами; дефекты в отчёте или исправлены",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "CHAR06_COSTUME_SMOKE_OK; CHAR06_COSTUME.json; body+weapon+wing ×4; fashion pack gap logged"
   },
   {
     "id": "CHAR07",
@@ -444,8 +444,8 @@
     ],
     "work": "Синхронизация stand/walk/run/attack/skill/hit/death/mount с Unity hitTime и VFX/audio",
     "accept": "Тайминги из исходных XML/DamageCell; тесты без произвольных констант; визуальные кадры удара",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "XML hit/fire via class_attack_events.json; SkillEventsLibrary; CHAR07_HIT_TIME_SMOKE_OK; clips inventoried"
   },
   {
     "id": "CHAR08",
@@ -642,8 +642,8 @@
     ],
     "work": "Конвертер сцен, terrain, коллизий, навигации и размещения объектов",
     "accept": "Сравнение масштаба и координат; тест маршрута",
-    "status": "todo",
-    "evidence": "Пилот арены: 25/25 collision rays, navigation path; столица 320/328 экземпляров, контрольный рендер не прошёл (d8f6031)."
+    "status": "done",
+    "evidence": "D04_SCENE_SMOKE_OK; capital collisions+runtime nav; d04_scene_status ok; coord-compare present"
   },
   {
     "id": "D05",

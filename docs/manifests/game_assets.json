@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T11:45:31Z",
+  "generated_at": "2026-11-25T11:53:19Z",
   "product": "Осколки вечности",
   "note": "Used game resources only. Original Darklord / full DGI / full asset library are NOT included.",
-  "count": 360,
-  "total_bytes": 130668872,
+  "count": 363,
+  "total_bytes": 130674118,
   "duplicate_sha256_groups": 12,
   "duplicates": [
     {
@@ -1176,6 +1176,19 @@
       "license_status": "project"
     },
     {
+      "id": "asset:1c0d5b4b4721:costume_audit.gd",
+      "category": "actors",
+      "path": "client/actors/costume_audit.gd",
+      "size": 2236,
+      "sha256": "1c0d5b4b4721d1628d3c4c4f2b9d35f9cf24e310af91bb4d39208038f1c76a46",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "actors",
+      "license_status": "project"
+    },
+    {
       "id": "asset:6243ceaef7d9:equipment.gd",
       "category": "actors",
       "path": "client/actors/equipment.gd",
@@ -1475,6 +1488,19 @@
       "license_status": "project"
     },
     {
+      "id": "asset:41bf44262b30:skill_events_library.gd",
+      "category": "combat",
+      "path": "client/combat/skill_events_library.gd",
+      "size": 947,
+      "sha256": "41bf44262b3035c166ab73f14cc74ebfc3d940812d6e5e03b302e02be54ab512",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Darklord-adapted (not original project)",
+      "dependencies": [],
+      "purpose": "combat",
+      "license_status": "restricted_adapted_runtime"
+    },
+    {
       "id": "asset:5f87b974982b:skill_timeline.gd",
       "category": "combat",
       "path": "client/combat/skill_timeline.gd",
@@ -1636,6 +1662,19 @@
       "path": "client/content/attachments/wing_wing_L_02.tres",
       "size": 463,
       "sha256": "04097b161ccd50f82210c60baaf7ab4ec2042bc99ec61bc4f75cab8d690f3e49",
+      "version": 1,
+      "source": "lunex_authored",
+      "provenance": "Lunex",
+      "dependencies": [],
+      "purpose": "content",
+      "license_status": "project"
+    },
+    {
+      "id": "asset:f818ed40d8e3:class_attack_events.json",
+      "category": "game_data",
+      "path": "client/content/combat/class_attack_events.json",
+      "size": 2063,
+      "sha256": "f818ed40d8e3bd7e98eb87935b5aa6588945d4c1915dfc1f07ffec571edd978f",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",

@@ -1,0 +1,80 @@
+{
+  "classes": {
+    "10001": {
+      "inventory": {
+        "has_body_mesh": true,
+        "has_head_bone": true,
+        "has_l_hand": true,
+        "has_r_hand": true,
+        "mesh_count": 1,
+        "meshes": [
+          "body"
+        ],
+        "missing_mat_surfaces": 0,
+        "skinned": 1
+      },
+      "notes": "Base body+weapon+wing combo; discrete helmet/armor fashion GLBs not in studio pack",
+      "separate_fashion_meshes": false,
+      "weapon_overlap": 1.1024,
+      "wing_ok": true,
+      "wing_overlap": 22.8586
+    },
+    "20001": {
+      "inventory": {
+        "has_body_mesh": true,
+        "has_head_bone": true,
+        "has_l_hand": true,
+        "has_r_hand": true,
+        "mesh_count": 1,
+        "meshes": [
+          "body"
+        ],
+        "missing_mat_surfaces": 0,
+        "skinned": 1
+      },
+      "notes": "Base body+weapon+wing combo; discrete helmet/armor fashion GLBs not in studio pack",
+      "separate_fashion_meshes": false,
+      "weapon_overlap": 1.3799,
+      "wing_ok": true,
+      "wing_overlap": 22.8586
+    },
+    "30001": {
+      "inventory": {
+        "has_body_mesh": true,
+        "has_head_bone": true,
+        "has_l_hand": true,
+        "has_r_hand": true,
+        "mesh_count": 1,
+        "meshes": [
+          "body"
+        ],
+        "missing_mat_surfaces": 0,
+        "skinned": 1
+      },
+      "notes": "Base body+weapon+wing combo; discrete helmet/armor fashion GLBs not in studio pack",
+      "separate_fashion_meshes": false,
+      "weapon_overlap": 3.8677,
+      "wing_ok": true,
+      "wing_overlap": 8.6214
+    },
+    "40001": {
+      "inventory": {
+        "has_body_mesh": true,
+        "has_head_bone": true,
+        "has_l_hand": true,
+        "has_r_hand": true,
+        "mesh_count": 1,
+        "meshes": [
+          "body"
+        ],
+        "missing_mat_surfaces": 0,
+        "skinned": 1
+      },
+      "notes": "Base body+weapon+wing combo; discrete helmet/armor fashion GLBs not in studio pack",
+      "separate_fashion_meshes": false,
+      "weapon_overlap": 0.0,
+      "wing_ok": true,
+      "wing_overlap": 8.6214
+    }
+  }
+}

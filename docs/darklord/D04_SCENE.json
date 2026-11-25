@@ -1,0 +1,45 @@
+{
+  "status": "ok",
+  "capital": {
+    "path": "client/world/locations/eternity_capital/eternity_capital.tscn",
+    "bytes": 45263586,
+    "static_bodies": 318,
+    "collision_shapes": 318,
+    "nav_regions": 0,
+    "mesh_instances": 396
+  },
+  "play_scenes": {
+    "eternity_play": {
+      "exists": true,
+      "bytes": 232
+    },
+    "ashen_outskirts": {
+      "dir": true,
+      "scenes": [
+        "ashen_play.tscn",
+        "ashen_outskirts.tscn"
+      ]
+    },
+    "shard_ruins": {
+      "dir": true,
+      "scenes": [
+        "ruins_play.tscn"
+      ]
+    }
+  },
+  "coord_compare": {
+    "path": "docs/darklord/city-coord-compare-v7.json",
+    "keys": [
+      "checked",
+      "within_1m",
+      "within_5m",
+      "worst"
+    ]
+  },
+  "gaps": [],
+  "note": "Conversion tools live under tools/world/*; this stage verifies portable converted scenes + route prerequisites.",
+  "runtime_nav": {
+    "eternity_play_ensures_nav": true,
+    "location_navigation_gd": true
+  }
+}
