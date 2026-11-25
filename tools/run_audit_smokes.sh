@@ -20,6 +20,8 @@ echo "== char_mount_pet_smoke =="
 "$GODOT" --path client --headless --script res://tests/char_mount_pet_smoke.gd
 echo "== edit01_attachment_editor_smoke =="
 "$GODOT" --path client --headless --script res://tests/edit01_attachment_editor_smoke.gd
+echo "== d03_studio_import_smoke =="
+"$GODOT" --path client --headless --script res://tests/d03_studio_import_smoke.gd
 if command -v go >/dev/null || [[ -x "$ROOT/tools/sdk/go/bin/go" ]]; then
   export PATH="$ROOT/tools/sdk/go/bin:${PATH:-}"
   echo "== go test =="

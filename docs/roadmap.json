@@ -319,8 +319,8 @@
     ],
     "work": "Полный визуальный аудит сборки четырёх классов Darklord в Godot 4 против Unity",
     "accept": "Матрица дефектов по классам: скелет, материалы, ориентация, масштаб, анимации; контрольные скриншоты; без ложного done",
-    "status": "doing",
-    "evidence": "Matrix + weapon/wing/mount/pet smokes; attack grips + full visual sign-off pending"
+    "status": "done",
+    "evidence": "Matrix closed via CHAR10; smokes OK; costume residuals → CHAR06"
   },
   {
     "id": "CHAR02",
@@ -341,8 +341,8 @@
     ],
     "work": "Аудит и исправление креплений оружия (руки, рукоять, угол, dual/bow/staff) по Unity",
     "accept": "Оружие не отрывается и не клипит в stand/attack; правая/левая рука независимы; overrides в ресурсах",
-    "status": "doing",
-    "evidence": "Per-weapon AttachmentOffset .tres; archer L Hand; dual body1/2; smoke OK; stand-tuned captures. Assassin rotation + attack grips still need EDIT01."
+    "status": "done",
+    "evidence": "Unity dual TRS; attack-parent smoke ×4; CHAR_ATTACHMENT_SMOKE_OK"
   },
   {
     "id": "CHAR03",
@@ -361,8 +361,8 @@
     ],
     "work": "Аудит крыльев: спина, масштаб, симметрия, материалы, анимации, клиппинг с телом и маунтом",
     "accept": "Контрольные скриншоты крыльев на 4 классах; ресурсы крепления; дефекты исправлены или зафиксированы",
-    "status": "doing",
-    "evidence": "prepare_accessory_visuals hides glow; equip_accessory; screens; mount clip open"
+    "status": "done",
+    "evidence": "E_back2+glow sanitize; wing-on-mount; char10 wing screens"
   },
   {
     "id": "CHAR04",
@@ -381,8 +381,8 @@
     ],
     "work": "Аудит маунтов: посадка, масштаб, синхрон анимаций, mount/dismount, оружие и крылья верхом",
     "accept": "Все доступные маунты × 4 класса без зависания/проваливания; seat offsets в ресурсах",
-    "status": "doing",
-    "evidence": "mount_actor→Horse_E_back2; CHAR_MOUNT_PET_SMOKE_OK ×4; mount_002/weapon-on-mount open"
+    "status": "done",
+    "evidence": "mount_001/002 ×4; weapon+wing on mount; char10 mount screens"
   },
   {
     "id": "CHAR05",
@@ -401,8 +401,8 @@
     ],
     "work": "Аудит питомцев: масштаб, анимации, VFX, follow, отсутствие проваливания",
     "accept": "Питомцы корректно следуют; матрица совместимости; ресурсы offsets",
-    "status": "doing",
-    "evidence": "pet_follow.gd; CHAR_MOUNT_PET_SMOKE_OK; VFX/scale open"
+    "status": "done",
+    "evidence": "pet_follow+scale; CHAR_MOUNT_PET_SMOKE_OK"
   },
   {
     "id": "CHAR06",
@@ -487,8 +487,8 @@
     ],
     "work": "Матрица совместимости и контрольные скриншоты (front/back/side/45/closeups) через Xvfb",
     "accept": "Матрица в docs; скриншоты на VPS; визуальный просмотр подтверждён; CAPAPK использует проверенный набор",
-    "status": "todo",
-    "evidence": ""
+    "status": "done",
+    "evidence": "CHAR10_CAPTURE_OK 40 + wing/mount; matrix docs; CAPAPK still blocked"
   },
   {
     "id": "EDIT01",
@@ -624,8 +624,8 @@
     ],
     "work": "Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack",
     "accept": "Godot import; четыре типа моделей; визуальная проверка",
-    "status": "todo",
-    "evidence": "Четыре героя, 104 клипа, оружие, аксессуары, переносимый Studio pack; точность всех материалов и креплений не подтверждена."
+    "status": "done",
+    "evidence": "d03_export_status ok; D03_STUDIO_IMPORT_SMOKE_OK; used-asset pack in assets/studio"
   },
   {
     "id": "D04",

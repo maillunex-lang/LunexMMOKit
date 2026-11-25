@@ -10,9 +10,9 @@ equipment_id = "400011000"
 model_id = "40001"
 socket = "Bip001 L Hand"
 socket_mode = "bone"
-position = Vector3(0.04, -0.02, 0.03)
-rotation_degrees = Vector3(90, 0, 0)
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
 scale = Vector3(-1, 1, 1)
 child_name = "body1"
-notes = "Left blade; negative X scale from Unity; EDIT01 fine-tune"
-source_unity = "DM_L_wuqi01 / body1"
+notes = "Unity CK_W_wuqi_01_pre body1 negative X scale; near-identity quat"
+source_unity = "CK_W_wuqi_01_pre.prefab body1 m_LocalScale.x=-1"

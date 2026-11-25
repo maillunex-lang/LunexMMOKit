@@ -99,10 +99,23 @@ func run() -> void:
 				var player: AnimationPlayer = players[0]
 				for anim in player.get_animation_list():
 					var lower := String(anim).to_lower()
-					if "stand" in lower or "attack" in lower:
+					if "attack" in lower or "stand" in lower:
 						player.play(anim)
-						player.seek(0.15, true)
+						player.seek(0.35, true)
 						player.advance(0.0)
+						# CHAR02: weapon must stay bone-parented through attack pose
+						if mode == "single":
+							var bs: BoneAttachment3D = handle.get("bone_socket")
+							if bs == null or not is_instance_valid(bs) or item.get_parent() != bs:
+								fails.append("detach on anim " + String(pair[0]))
+						elif mode == "dual":
+							for entry in handle.get("attachments", []):
+								var root_n: Node3D = entry.get("root")
+								var bsd: BoneAttachment3D = entry.get("bone_socket")
+								if root_n == null or bsd == null or root_n.get_parent() != bsd:
+									fails.append("dual detach " + String(pair[0]))
+									break
+						print("OK ", pair[0], " attack-parent")
 						break
 			Equipment.unequip_weapon(handle)
 

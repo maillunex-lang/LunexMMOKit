@@ -543,8 +543,11 @@ func _select_accessory(index: int, kind: String) -> void:
 		var pet_off = AttachmentLibrary.load_offset("pet", pet_id)
 		var follow := preload("res://actors/pet_follow.gd").new()
 		add_child(follow)
-		follow.setup(actor, pet_off.to_transform().origin if pet_off else Vector3(1.2, 0, 0))
+		var po := pet_off.to_transform().origin if pet_off else Vector3(1.2, 0, 0)
+		var ps := pet_off.scale if pet_off else Vector3.ONE
+		follow.setup(actor, po, ps)
 		follow.add_child(model)
+		Accessory.idle(model)
 		accessories[kind] = follow
 		accessories[kind + "_model"] = model
 	elif kind == "mount":

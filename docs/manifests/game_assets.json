@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T11:40:16Z",
+  "generated_at": "2026-11-25T11:45:31Z",
   "product": "Осколки вечности",
   "note": "Used game resources only. Original Darklord / full DGI / full asset library are NOT included.",
   "count": 360,
-  "total_bytes": 130668575,
+  "total_bytes": 130668872,
   "duplicate_sha256_groups": 12,
   "duplicates": [
     {
@@ -1254,11 +1254,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:ba2a54427768:pet_follow.gd",
+      "id": "asset:0572f769a781:pet_follow.gd",
       "category": "actors",
       "path": "client/actors/pet_follow.gd",
-      "size": 715,
-      "sha256": "ba2a544277685766ff0fc10a2e0969192eba9ff52442adb5be3070f7d9f3a6af",
+      "size": 833,
+      "sha256": "0572f769a78146a9f2b19ccceb7c9be36a68bcc556b8614e12a3da8af2514798",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1501,11 +1501,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:9be88f288d0b:mount_seat_mount_001.tres",
+      "id": "asset:84611bd3097f:mount_seat_mount_001.tres",
       "category": "content",
       "path": "client/content/attachments/mount_seat_mount_001.tres",
-      "size": 496,
-      "sha256": "9be88f288d0b088fccce4f1d73cd6b1347f35392172a17e3d83c26e9ef2ba817",
+      "size": 489,
+      "sha256": "84611bd3097f2a3e74705df283d521f13d1bb105453f1a84858ee70a2a92361a",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1514,11 +1514,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:bd5d1284769f:mount_seat_mount_002.tres",
+      "id": "asset:3c885183833e:mount_seat_mount_002.tres",
       "category": "content",
       "path": "client/content/attachments/mount_seat_mount_002.tres",
-      "size": 466,
-      "sha256": "bd5d1284769f3f56996b99f0459b3bfaf3699b48cd44a336a60195835150e17a",
+      "size": 469,
+      "sha256": "3c885183833eea795bc3c65677ec3ad7b6040fbcea0293fa0ad83c7da8595f58",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1527,11 +1527,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:987c183a940f:pet_XN_pet_01.tres",
+      "id": "asset:fa0a63ad7b44:pet_XN_pet_01.tres",
       "category": "content",
       "path": "client/content/attachments/pet_XN_pet_01.tres",
-      "size": 413,
-      "sha256": "987c183a940fa4e5ec53008b763ab4438a665efe2755d20e3553e3fb37971795",
+      "size": 491,
+      "sha256": "fa0a63ad7b440a826d584e499ee29972314373cd7350880fad5ec3dc0ae1e0c8",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1540,11 +1540,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:bc89382352c6:pet_XN_pet_02.tres",
+      "id": "asset:3f0a47108b8b:pet_XN_pet_02.tres",
       "category": "content",
       "path": "client/content/attachments/pet_XN_pet_02.tres",
-      "size": 413,
-      "sha256": "bc89382352c6933dda198b386d44dc7130a4abbd2692859532c081b4bd7c0095",
+      "size": 469,
+      "sha256": "3f0a47108b8b68279418131c871a9d441907a6b399b514db5453ec18ace7a670",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1553,11 +1553,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:a7e8650e3088:weapon_100011000.tres",
+      "id": "asset:588ec3323d5e:weapon_100011000.tres",
       "category": "content",
       "path": "client/content/attachments/weapon_100011000.tres",
-      "size": 570,
-      "sha256": "a7e8650e3088a2d23553e93f04710ba9aedcf3ac2e78629ecad6ae81ba55852b",
+      "size": 558,
+      "sha256": "588ec3323d5e10ba4d61b31187dd23f6eb5532cd855e2d1da1765211913e4837",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1566,11 +1566,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:2f9e317f7e35:weapon_200011000.tres",
+      "id": "asset:2a793be82853:weapon_200011000.tres",
       "category": "content",
       "path": "client/content/attachments/weapon_200011000.tres",
-      "size": 545,
-      "sha256": "2f9e317f7e351fa0373b2cd1c8145a713ff69ce5bb3404bdeff99ed2148a4e5b",
+      "size": 570,
+      "sha256": "2a793be8285385f88006937f5731cc02c28aba00b6e6ead44f8dd0fd8c60e70f",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1579,11 +1579,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:9700a358847b:weapon_300011000.tres",
+      "id": "asset:dc8fdcc6f9a1:weapon_300011000.tres",
       "category": "content",
       "path": "client/content/attachments/weapon_300011000.tres",
-      "size": 545,
-      "sha256": "9700a358847b9991ab11238c5bee293d09e4989d9efdb54a0761cc457bda953c",
+      "size": 529,
+      "sha256": "dc8fdcc6f9a1e49fc8fea498c7c3a84f12fcc7aa9f9ee50c059c19b3ffb2d2ab",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1592,11 +1592,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:1c2055f82050:weapon_400011000_body1.tres",
+      "id": "asset:719d1921c2e9:weapon_400011000_body1.tres",
       "category": "content",
       "path": "client/content/attachments/weapon_400011000_body1.tres",
-      "size": 563,
-      "sha256": "1c2055f8205041614a796feefccb3ace9e3585ae638ee8f72d01be08478182ff",
+      "size": 588,
+      "sha256": "719d1921c2e9066c3f904ac8a16e7cad689674747135a7ec366824562b30f8bc",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1605,11 +1605,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:dfe3d371de98:weapon_400011000_body2.tres",
+      "id": "asset:56530f775f40:weapon_400011000_body2.tres",
       "category": "content",
       "path": "client/content/attachments/weapon_400011000_body2.tres",
-      "size": 567,
-      "sha256": "dfe3d371de9827a7e01aad62a17e8a2372dc7401c8c35648eef6dc558ef34329",
+      "size": 593,
+      "sha256": "56530f775f403849e2eadd3dfe73c3eb21fa4cad7d41606d53a9e992bec942c0",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1618,11 +1618,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:ba9408ce4f50:wing_wing_L_01.tres",
+      "id": "asset:a20099638a61:wing_wing_L_01.tres",
       "category": "content",
       "path": "client/content/attachments/wing_wing_L_01.tres",
-      "size": 527,
-      "sha256": "ba9408ce4f50acd541d7a507d7da5febcf0031f9f66808898b9931dbc5a5261c",
+      "size": 528,
+      "sha256": "a20099638a61d6eaaf9679f1c2d50d21e0fe9de86b3d9d0ef51c21db5c3922c4",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
