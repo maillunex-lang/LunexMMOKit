@@ -43,15 +43,22 @@ func run():
 
 	# --- Landscape ---
 	var land := district("01_Landscape")
-	for x in range(-5, 6):
-		for z in range(-6, 7):
+	for x in range(-6, 7):
+		for z in range(-7, 8):
 			# plaza hole
 			if abs(x) <= 1 and abs(z) <= 1:
 				continue
 			# road strip along Z at x=0
 			if x == 0 and z >= -4 and z <= 3:
 				continue
-			inst("ground_tile", land, Vector3(x * 20.0, 0.0, z * 20.0))
+			var g := inst("ground_tile", land, Vector3(x * 20.0, 0.0, z * 20.0))
+			# Soft height rings for silhouette (no floating props: buildings stay on y≈0 pads)
+			if g and (abs(x) >= 5 or abs(z) >= 6):
+				g.position.y = 0.35
+	# Outer cliff rocks for far plane
+	for i in range(10):
+		var ang := i * TAU / 10.0
+		inst(["rock_01", "rock_02"][i % 2], land, Vector3(cos(ang) * 110.0, 0.4, sin(ang) * 120.0), rad_to_deg(ang), Vector3(2.5, 2.0, 2.5))
 
 	var roads := district("02_Avenue")
 	for z in range(-4, 4):
@@ -169,34 +176,46 @@ func run():
 	env.name = "WorldEnvironment"
 	var e := Environment.new()
 	e.background_mode = Environment.BG_COLOR
-	e.background_color = Color(0.42, 0.58, 0.72)
+	e.background_mode = Environment.BG_COLOR
+	e.background_color = Color(0.55, 0.68, 0.82)
 	e.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	e.ambient_light_color = Color(0.72, 0.78, 0.88)
-	e.ambient_light_energy = 0.55
+	e.ambient_light_color = Color(0.78, 0.82, 0.9)
+	e.ambient_light_energy = 0.48
 	e.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	e.fog_enabled = true
-	e.fog_light_color = Color(0.55, 0.65, 0.75)
-	e.fog_density = 0.0012
+	e.fog_light_color = Color(0.62, 0.72, 0.82)
+	e.fog_density = 0.0018
+	e.fog_aerial_perspective = 0.35
 	e.glow_enabled = false
+	e.ssao_enabled = false
 	env.environment = e
 	art.add_child(env)
 	env.owner = _city
 	var sun := DirectionalLight3D.new()
 	sun.name = "Sun"
-	sun.rotation_degrees = Vector3(-42, -35, 0)
-	sun.light_energy = 1.05
-	sun.light_color = Color(1.0, 0.96, 0.9)
+	sun.rotation_degrees = Vector3(-38, -28, 0)
+	sun.light_energy = 0.95
+	sun.light_color = Color(1.0, 0.97, 0.92)
 	sun.shadow_enabled = true
+	sun.directional_shadow_max_distance = 280.0
 	art.add_child(sun)
 	sun.owner = _city
 	var fill := OmniLight3D.new()
 	fill.name = "CrystalFill"
-	fill.position = Vector3(0, 8, 0)
-	fill.light_color = Color(0.45, 0.7, 1.0)
-	fill.light_energy = 1.4
-	fill.omni_range = 28.0
+	fill.position = Vector3(0, 7, 0)
+	fill.light_color = Color(0.4, 0.65, 1.0)
+	fill.light_energy = 1.1
+	fill.omni_range = 24.0
 	art.add_child(fill)
 	fill.owner = _city
+	var gate_fill := OmniLight3D.new()
+	gate_fill.name = "GateFill"
+	gate_fill.position = Vector3(0, 6, -78)
+	gate_fill.light_color = Color(1.0, 0.85, 0.55)
+	gate_fill.light_energy = 0.9
+	gate_fill.omni_range = 22.0
+	art.add_child(gate_fill)
+	gate_fill.owner = _city
 
 	# Spawn marker
 	var spawn := Marker3D.new()
