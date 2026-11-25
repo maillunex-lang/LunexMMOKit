@@ -24,6 +24,208 @@
     "evidence": "f19d5b8; CI result unverified"
   },
   {
+    "id": "CAP01",
+    "phase": "transfer",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Инвентаризация столицы и исходных размещений",
+    "accept": "328 prefab placements, 50 GLB, отчёты материалов и mesh bindings",
+    "status": "done",
+    "evidence": "5e233ea, 42bee48, b428e55, ceb106d, 296fd7c; 145/152 точных mesh bindings"
+  },
+  {
+    "id": "CAP02",
+    "phase": "transfer",
+    "depends": [
+      "CAP01"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Диагностическая сборка столицы и первый рендер",
+    "accept": "Редактируемая сцена загружается; скриншот и дефекты зафиксированы",
+    "status": "done",
+    "evidence": "c327afe: 320/328, 69 мешей, 18 материалов; d8f6031: рендер выявил дефекты, визуальная приёмка НЕ пройдена"
+  },
+  {
+    "id": "CAP03",
+    "phase": "transfer",
+    "depends": [
+      "CAP02"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Исправить родительские трансформации, активность и ориентацию мешей столицы",
+    "accept": "Сравнение координат с Unity; повторный рендер без геометрических дефектов",
+    "status": "doing",
+    "evidence": "311 экземпляров в группах со смещениями; исправления ещё не внесены"
+  },
+  {
+    "id": "CAP04",
+    "phase": "transfer",
+    "depends": [
+      "CAP03"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Восстановить terrain, воду, кристалл, эффекты и освещение",
+    "accept": "Оставшиеся 8 экземпляров классифицированы и перенесены либо обоснованно исключены; визуальная проверка",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CAP05",
+    "phase": "transfer",
+    "depends": [
+      "CAP04"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Редактируемые коллизии, навигация, герой и камера в городе",
+    "accept": "Четыре класса ходят по городу, джойстик без tap-to-move, тесты коллизий",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "CAP06",
+    "phase": "transfer",
+    "depends": [
+      "CAP05"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "NPC и исходные точки размещения, диалоги и квестовые данные",
+    "accept": "Проверенные ID, позиции, модели, редактируемые ресурсы; без заявления о готовом серверном движке",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "UI01",
+    "phase": "transfer",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок",
+    "accept": "Отчёт покрытия; Godot Theme и редактируемые ресурсы",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "UI02",
+    "phase": "transfer",
+    "depends": [
+      "UI01"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Нативные HUD, авторизация, выбор класса, инвентарь и окна",
+    "accept": "Control сцены, anchors, русский текст, проверка landscape и ручного редактирования",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "EDIT01",
+    "phase": "transfer",
+    "depends": [
+      "F02"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Визуальный редактор креплений оружия и аксессуаров",
+    "accept": "Gizmo XYZ, вращение, масштаб, независимые руки, сохранение overrides без изменения оригинала",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "EDIT02",
+    "phase": "transfer",
+    "depends": [
+      "CAP06",
+      "UI02",
+      "EDIT01"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_IMPORT.md"
+    ],
+    "scope": [
+      "tools/world/",
+      "client/world/",
+      "docs/"
+    ],
+    "work": "Проверка полного EDITOR-001 и переносимости контента",
+    "accept": "Открыть, изменить, сохранить, повторно открыть сцены и ресурсы; повторный импорт сохраняет overrides",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
     "id": "F03",
     "phase": "foundation",
     "depends": [
@@ -39,7 +241,7 @@
     "work": "Закрепить версии Godot, Go, SDK; CI запускает Godot и тесты; debug APK без секретов",
     "accept": "CI green; APK устанавливается",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Godot 4.7.2, Android SDK, подписанный Studio APK 0.1.2; CI Godot/Go и установка новой версии не подтверждены."
   },
   {
     "id": "F04",
@@ -75,7 +277,7 @@
     "work": "Инвентаризация Darklord read-only: GUID, пути, хеши, таблицы Lua/XML и сцены",
     "accept": "Повторный индекс идентичен; отчет пропусков",
     "status": "todo",
-    "evidence": ""
+    "evidence": "DGI-001: 1560 Lua источников, 20462 ресурса; 96 сцен, 21720 Transform; воспроизводимость полного индекса не проверена."
   },
   {
     "id": "D02",
@@ -93,7 +295,7 @@
     "work": "Парсер Lua без исполнения, XML, Unity YAML/meta; связи герой-модель-скилл-монстр; полный каталог механик, классов, статов, формул, прогрессии, квестов и экономики с исходными ID и конфликтами",
     "accept": "Fixtures; dangling refs отчет; отчёт покрытия каждой таблицы и механики",
     "status": "todo",
-    "evidence": ""
+    "evidence": "DGI-002–004: классы, уровни 600, формулы, связи, 705 конфликтов; полный перенос механик не завершён."
   },
   {
     "id": "D03",
@@ -111,7 +313,7 @@
     "work": "Экспорт FBX/клипов в GLB, материалы, текстуры, manifest и private pack",
     "accept": "Godot import; четыре типа моделей; визуальная проверка",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Четыре героя, 104 клипа, оружие, аксессуары, переносимый Studio pack; точность всех материалов и креплений не подтверждена."
   },
   {
     "id": "D04",
@@ -129,7 +331,7 @@
     "work": "Конвертер сцен, terrain, коллизий, навигации и размещения объектов",
     "accept": "Сравнение масштаба и координат; тест маршрута",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Пилот арены: 25/25 collision rays, navigation path; столица 320/328 экземпляров, контрольный рендер не прошёл (d8f6031)."
   },
   {
     "id": "D05",
@@ -147,7 +349,7 @@
     "work": "Конвертер VFX, аудио и событий клипов; ручные overrides",
     "accept": "Тест синхронизации; отчет неподдержанных эффектов",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Прототип VFX/аудио четырёх классов, события удара; полное соответствие Unity не проверено."
   },
   {
     "id": "W01",
@@ -165,7 +367,7 @@
     "work": "Протяженная тестовая зона, чанки, LOD, коллизии, навигация",
     "accept": "Маршрут 2–4 минуты без телепорта; замер памяти",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Пилот арены с коллизиями и навигацией; большой город, чанки и LOD не готовы."
   },
   {
     "id": "W02",
@@ -199,10 +401,10 @@
       "client/actors/",
       "client/ui/"
     ],
-    "work": "Герой, камера, джойстик, тап, навигация, экипировка визуально; четыре исходных класса Darklord",
+    "work": "Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord",
     "accept": "Движение и коллизии; Android touch",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Четыре героя, джойстик, камера, тест движения; реальный touch и интеграция города не проверены."
   },
   {
     "id": "A02",
@@ -221,7 +423,7 @@
     "work": "AnimationPlayer/Tree, события атаки, VFX, звук, прерывания",
     "accept": "Попадание совпадает с кадром; нет двойного события",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Studio: анимации, удары, снаряды, эффекты и звук; не полноценный игровой бой."
   },
   {
     "id": "N01",
@@ -336,7 +538,7 @@
     "work": "Квестовый движок, NPC, диалоги, цели, награды",
     "accept": "Повторный запрос не дублирует награду",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Исходные NPC, квесты, диалоги обнаружены; движок не реализован."
   },
   {
     "id": "Q02",
@@ -372,7 +574,7 @@
     "work": "Уровни, инвентарь, экипировка, характеристики, БМ; оригинальная кривая прогрессии и формулы Darklord",
     "accept": "Транзакции; перезаход сохраняет прогресс",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Извлечены исходные уровни, характеристики, формулы; игровой runtime не реализован."
   },
   {
     "id": "R02",
@@ -390,7 +592,7 @@
     "work": "Таланты, усиление, разбор, крылья, маунты, питомцы",
     "accept": "Нет дюпов; эффекты экипировки пересчитываются",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Studio preview крыльев, питомцев, маунтов; RPG механики не реализованы."
   },
   {
     "id": "R03",
@@ -518,7 +720,7 @@
     "work": "Профилирование Android, пресеты, LOD, пулы, чанки",
     "accept": "30 FPS цель на 6 ГБ; реальные замеры",
     "status": "todo",
-    "evidence": ""
+    "evidence": "Studio stress test 100 смен героев, 300 аксессуаров, 1000 ударов; Android FPS не измерен."
   },
   {
     "id": "P02",
