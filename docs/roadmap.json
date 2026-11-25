@@ -81,7 +81,7 @@
     "work": "Исправить родительские трансформации, активность и ориентацию мешей столицы",
     "accept": "Сравнение координат с Unity; повторный рендер без геометрических дефектов",
     "status": "doing",
-    "evidence": "b3cfd65: v6 terrain shader uses original RGB control and 3 splat textures, tiling 20/40/20; Godot build and render pass, visual parity and orientation remain unverified. Next isolate terrain and outlier meshes."
+    "evidence": "7321bd6: audited 525 mesh instances; crystal effect height 587.86 dominates overview; shadow meshes also outliers. Diagnostic capture hides effects/shadows only in memory, no original or scene deletion. CAP03 visual acceptance pending."
   },
   {
     "id": "CAP04",

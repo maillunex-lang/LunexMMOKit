@@ -20,3 +20,6 @@ a326765: 145 exact bindings: 71 identity, 64 X -90 degrees, 10 other rotations. 
 
 ## Terrain prototype
 b3cfd65: v6 terrain shader uses original RGB control and 3 splat textures, tiling 20/40/20; Godot build and render pass, visual parity and orientation remain unverified. Next isolate terrain and outlier meshes.
+
+## Bounds diagnostics
+7321bd6: audited 525 mesh instances; crystal effect height 587.86 dominates overview; shadow meshes also outliers. Diagnostic capture hides effects/shadows only in memory, no original or scene deletion. CAP03 visual acceptance pending.
