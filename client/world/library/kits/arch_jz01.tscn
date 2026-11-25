@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4x7g"]
+size = Vector3(98.61247, 28.708975, 115.59836)
+
+[node name="Kit_arch_jz01" type="Node3D" unique_id=1155869513]
+metadata/kit_id = "arch_jz01"
+metadata/category = "building"
+metadata/source_id = "cs_zhucheng_jz01"
+
+[node name="model" type="Node3D" parent="." unique_id=364331700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.29469, 0)
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=367419818]
+
+[node name="@CollisionShape3D@10" type="CollisionShape3D" parent="Collision" unique_id=1197480825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.900314, 14.354487, -39.746796)
+shape = SubResource("BoxShape3D_t4x7g")

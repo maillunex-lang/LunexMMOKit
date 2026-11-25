@@ -7,3 +7,5 @@ Do not treat a plan as implemented. Never mark done without evidence. Update tas
 All content tasks must satisfy docs/EDITOR.md (EDITOR-001). Do not replace native editable scenes with runtime-only construction. Preserve manual edits on reimport.
 
 After every implementation iteration, including partial progress, update roadmap.json evidence via roadmap.py, STATUS.md, relevant task card and domain report. Regenerate ROAD.md and NEXT.md, validate, commit and push; verify remote HEAD and record CI availability. Do not mark incomplete acceptance as done.
+
+World building follows docs/darklord/WORLD_DESIGN_002.md: hand-authored Godot locations using Darklord art; do not resume 1:1 Unity capital repair as the primary path.

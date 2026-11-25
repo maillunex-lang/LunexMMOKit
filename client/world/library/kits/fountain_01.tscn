@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eo6el"]
+size = Vector3(8.652145, 3.1000607, 8.652145)
+
+[node name="Kit_fountain_01" type="Node3D" unique_id=1168529782]
+metadata/kit_id = "fountain_01"
+metadata/category = "fountain"
+metadata/source_id = "cs_zhucheng_penquan"
+
+[node name="model" type="Node3D" parent="." unique_id=1111177090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.3169518, 0)
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1574177466]
+
+[node name="@CollisionShape3D@20" type="CollisionShape3D" parent="Collision" unique_id=1614014466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 1.5500304, 4.7683716e-07)
+shape = SubResource("BoxShape3D_eo6el")

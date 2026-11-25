@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://eternity_play_wd02"]
+
+[ext_resource type="Script" path="res://world/locations/eternity_capital/eternity_play.gd" id="1"]
+
+[node name="EternityPlay" type="Node3D"]
+script = ExtResource("1")

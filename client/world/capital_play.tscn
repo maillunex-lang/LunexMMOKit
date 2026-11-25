@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://capital_play_cap05"]
+
+[ext_resource type="Script" path="res://world/capital_play.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://world/capital_city.tscn" id="2_city"]
+
+[node name="CapitalPlay" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="CapitalCity" parent="." instance=ExtResource("2_city")]

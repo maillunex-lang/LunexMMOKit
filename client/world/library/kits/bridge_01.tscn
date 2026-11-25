@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0qiu"]
+size = Vector3(35.33371, 4.232108, 14.634859)
+
+[node name="Kit_bridge_01" type="Node3D" unique_id=1768493663]
+metadata/kit_id = "bridge_01"
+metadata/category = "bridge"
+metadata/source_id = "FB_14_qiao"
+
+[node name="model" type="Node3D" parent="." unique_id=1474915775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0970159, 0)
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=191005433]
+
+[node name="@CollisionShape3D@19" type="CollisionShape3D" parent="Collision" unique_id=1206322810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.012636, 2.116054, 4.711146)
+shape = SubResource("BoxShape3D_m0qiu")

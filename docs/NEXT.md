@@ -1,3 +1,3 @@
 # Next
-Task: CAP04 — Восстановить terrain, воду, кристалл, эффекты и освещение
-Read: docs/tasks/CAP04.md, docs/EDITOR.md, docs/darklord/WORLD_IMPORT.md
+Task: WD02 — WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)
+Read: docs/tasks/WD02.md, docs/EDITOR.md, docs/darklord/WORLD_DESIGN_002.md, docs/LOCATIONS.md
