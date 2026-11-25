@@ -27,3 +27,13 @@ Darklord is the primary mechanical and content baseline. Four source classes; pr
 
 ## WORLD-DESIGN-002 — утверждено
 Собственный игровой мир на оригинальных ресурсах Darklord. Не требуется 1:1 перенос Unity-локаций. Сначала одна красивая столица, затем визуальная приёмка, затем City APK и остальные локации.
+
+## WORLD-EDITOR-003 — в дорожной карте
+Нативный Godot EditorPlugin для ручного редактирования локаций владельцем. См. WORLD_EDITOR_003.md.
+
+## GAME-SLICE-001 — в работе
+Готовый вертикальный срез без ожидания APK: механики/квесты/локации на ресурсах Darklord.
+- Столица `eternity_play` + окраина `ashen_outskirts`.
+- Глава 1 квестов (`content/quests/chapter01_quests.json`) со `stable_id`.
+- 4 класса, лёгкий бой (осколочники), порталы.
+- Сюжет «Осколки вечности»; цепочки talk/kill/goto по форме Darklord, контент свой.

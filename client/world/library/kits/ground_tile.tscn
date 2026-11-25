@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Texture2D" path="res://world/library/textures/splat_grass.png" id="1_usjqc"]
+[ext_resource type="Texture2D" path="res://world/library/textures/grass_zhucheng.png" id="1_usjqc"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_imkgb"]
 size = Vector2(20, 20)
@@ -8,21 +8,21 @@ size = Vector2(20, 20)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yh8b4"]
 albedo_texture = ExtResource("1_usjqc")
 roughness = 0.82
-uv1_scale = Vector3(8, 8, 1)
+uv1_scale = Vector3(6, 6, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d7jj0"]
 size = Vector3(20, 0.2, 20)
 
-[node name="Kit_ground_tile" type="Node3D" unique_id=153657436]
+[node name="Kit_ground_tile" type="Node3D" unique_id=1418409318]
 metadata/kit_id = "ground_tile"
 metadata/category = "terrain"
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1921890898]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1591016307]
 mesh = SubResource("PlaneMesh_imkgb")
 surface_material_override/0 = SubResource("StandardMaterial3D_yh8b4")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1048476020]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=493441979]
 
-[node name="@CollisionShape3D@2" type="CollisionShape3D" parent="Collision" unique_id=1949137887]
+[node name="@CollisionShape3D@2" type="CollisionShape3D" parent="Collision" unique_id=37088254]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("BoxShape3D_d7jj0")

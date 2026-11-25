@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://world/library/textures/ground_dm02.png" id="1_0qt3b"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cgm6v"]
+size = Vector2(24, 24)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxokr"]
+albedo_texture = ExtResource("1_0qt3b")
+roughness = 0.82
+uv1_scale = Vector3(6, 6, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_he3er"]
+size = Vector3(24, 0.2, 24)
+
+[node name="Kit_market_tile" type="Node3D" unique_id=949945245]
+metadata/kit_id = "market_tile"
+metadata/category = "plaza"
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1544630203]
+mesh = SubResource("PlaneMesh_cgm6v")
+surface_material_override/0 = SubResource("StandardMaterial3D_sxokr")
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1120476890]
+
+[node name="@CollisionShape3D@5" type="CollisionShape3D" parent="Collision" unique_id=2013571267]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_he3er")

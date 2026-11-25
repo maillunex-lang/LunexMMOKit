@@ -1,7 +1,9 @@
 config_version=5
 [application]
 config/name="LunexMMOKit"
-run/main_scene="res://scenes/studio_boot.tscn"
+run/main_scene="res://world/locations/eternity_capital/eternity_play.tscn"
+[editor_plugins]
+enabled=PackedStringArray("res://addons/lunex_world_editor/plugin.cfg")
 [display]
 window/size/viewport_width=1280
 window/size/viewport_height=720

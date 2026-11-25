@@ -40,6 +40,6 @@ func run():
 	errs += await shot(city, "eternity-capital-gate.png", Vector3(0, 10, -95), Vector3(0, 6, -78), 50.0)
 	errs += await shot(city, "eternity-capital-water.png", Vector3(16, 6, -20), Vector3(0, 1, -30), 55.0)
 	errs += await shot(city, "eternity-capital-playercam.png", Vector3(0, 5.5, -58), Vector3(0, 3, -40), 60.0)
-	errs += await shot(city, "eternity-capital-market.png", Vector3(22, 7, 4), Vector3(34, 2, 0), 55.0)
+	errs += await shot(city, "eternity-capital-market.png", Vector3(20, 6.5, 6), Vector3(34, 1.5, -2), 52.0)
 	print("CAPTURE_DONE errs ", errs)
 	quit(0 if errs == 0 else 1)

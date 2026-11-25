@@ -42,6 +42,8 @@ func _spawn_npc(parent: Node3D, pos: Vector3, yaw: float, npc_name: String) -> v
 	npc.rotation_degrees.y = yaw
 	npc.set_meta("npc_role", "quest")
 	npc.set_meta("editable", true)
+	# Stable ID survives transforms; quests bind to this, not node path/coords.
+	npc.set_meta("stable_id", "npc_" + npc_name.to_lower())
 	# Prefer real class mesh if export exists; else capsule placeholder.
 	var body := Node3D.new()
 	body.name = "Visual"
@@ -71,8 +73,29 @@ func _spawn_npc(parent: Node3D, pos: Vector3, yaw: float, npc_name: String) -> v
 	_own(npc, _city)
 
 func run():
+	# WORLD-EDITOR-003: never clobber owner-edited capital without explicit force.
+	var out_abs := ProjectSettings.globalize_path(OUT)
+	var lock_path := out_abs.get_basename() + ".owner.lock"
+	var force := "--force-overwrite" in OS.get_cmdline_user_args() or "--force-overwrite" in OS.get_cmdline_args()
+	if FileAccess.file_exists(lock_path) and not force:
+		print("OWNER_LOCK refuse overwrite ", lock_path, " (pass --force-overwrite to bake generated)")
+		quit(2)
+		return
+	if FileAccess.file_exists(out_abs):
+		var existing := load(OUT) as PackedScene
+		if existing:
+			var probe: Node = existing.instantiate()
+			if probe and probe.has_meta("owner_edited") and bool(probe.get_meta("owner_edited")) and not force:
+				print("OWNER_EDITED refuse overwrite ", OUT)
+				probe.free()
+				quit(2)
+				return
+			if probe:
+				probe.free()
 	_city = Node3D.new()
 	_city.name = "EternityCapital"
+	_city.set_meta("location_id", "eternity_capital")
+	_city.set_meta("location_revision", 1)
 	root.add_child(_city)
 
 	# --- Ground canvas ---
@@ -154,15 +177,23 @@ func run():
 	inst("lamp_01", palace, Vector3(0, 0.05, 34))
 
 	var market := district("07_Market")
+	# Paved market yard — without this the district sat on washed landscape and looked “gray / no textures”.
+	inst("market_tile", market, Vector3(36, 0.03, 0))
+	inst("market_tile", market, Vector3(36, 0.03, -20), 0.0, Vector3(0.85, 1.0, 0.85))
+	inst("sidewalk_tile", market, Vector3(24, 0.04, -4))
+	inst("sidewalk_tile", market, Vector3(24, 0.04, 8))
 	for i in range(4):
 		inst(["shop_01", "shop_04", "shop_07", "shop_01"][i], market, Vector3(34 + (i % 2) * 12.0, 0.05, -8 + int(i / 2) * 12.0), -90.0)
 		inst(["stall_01", "stall_02", "stall_03"][i % 3], market, Vector3(28 + (i % 2) * 6.0, 0.05, -12 + i * 5.0), -90.0, Vector3(1.2, 1.2, 1.2))
 		inst(["crate_01", "barrel_01", "crate_02"][i % 3], market, Vector3(30 + i * 2.0, 0.05, 2.0), float(i * 15), Vector3(1.3, 1.3, 1.3))
 	inst("lamp_01", market, Vector3(28, 0.05, 0))
 	inst("tree_01", market, Vector3(40, 0.05, 10), 30.0)
+	inst("bush_01", market, Vector3(44, 0.05, 4), 15.0)
 	inst("flag_01", market, Vector3(26, 0.05, -4), 0.0)
 
 	var craft := district("08_Craft")
+	inst("market_tile", craft, Vector3(-36, 0.03, 0))
+	inst("sidewalk_tile", craft, Vector3(-24, 0.04, -4))
 	for i in range(4):
 		inst(["shop_07", "shop_04", "shop_01", "shop_07"][i], craft, Vector3(-34 - (i % 2) * 12.0, 0.05, -8 + int(i / 2) * 12.0), 90.0)
 		inst(["barrel_02", "crate_01", "barrel_01"][i % 3], craft, Vector3(-30 - i * 2.5, 0.05, 2 + i), float(i * 40), Vector3(1.25, 1.25, 1.25))
@@ -200,6 +231,16 @@ func run():
 	inst("crystal_01", portals, Vector3(-28, 0.05, 22), 0.0, Vector3(0.35, 0.55, 0.35))
 	inst("lamp_01", portals, Vector3(28, 0.05, 28))
 	inst("lamp_01", portals, Vector3(-28, 0.05, 28))
+	# East gate → Ashen Outskirts (chapter 1). stable_id for quests/portals.
+	var ashen := Node3D.new()
+	ashen.name = "Portal_AshenGate"
+	ashen.set_meta("stable_id", "portal_ashen_gate")
+	ashen.set_meta("portal_id", "ashen_gate")
+	ashen.set_meta("target_location", "ashen_outskirts")
+	ashen.set_meta("target_scene", "res://world/locations/ashen_outskirts/ashen_play.tscn")
+	portals.add_child(ashen)
+	ashen.position = Vector3(28, 0.05, 22)
+	ashen.owner = _city
 
 	var park := district("11_Park")
 	for i in range(10):
@@ -232,23 +273,22 @@ func run():
 	var env := WorldEnvironment.new()
 	env.name = "WorldEnvironment"
 	var e := Environment.new()
-	e.background_mode = Environment.BG_COLOR
-	e.background_color = Color(0.52, 0.66, 0.8)
-	e.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	e.ambient_light_color = Color(0.75, 0.8, 0.9)
-	e.ambient_light_energy = 0.42
+	e.background_mode = Environment.BG_SKY
+	e.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
+	e.ambient_light_color = Color(0.62, 0.68, 0.78)
+	e.ambient_light_energy = 0.28
 	e.tonemap_mode = Environment.TONE_MAPPER_FILMIC
-	e.tonemap_exposure = 0.95
+	e.tonemap_exposure = 0.88
 	e.fog_enabled = true
-	e.fog_light_color = Color(0.6, 0.7, 0.82)
-	e.fog_density = 0.0015
-	e.fog_aerial_perspective = 0.4
+	e.fog_light_color = Color(0.55, 0.65, 0.78)
+	e.fog_density = 0.0012
+	e.fog_aerial_perspective = 0.35
 	e.glow_enabled = false
 	e.ssao_enabled = false
 	# Soft sky gradient via sky resource if available
 	var sky := Sky.new()
 	var sky_mat := ProceduralSkyMaterial.new()
-	sky_mat.sky_top_color = Color(0.35, 0.55, 0.85)
+	sky_mat.sky_top_color = Color(0.28, 0.48, 0.82)
 	sky_mat.sky_horizon_color = Color(0.72, 0.78, 0.88)
 	sky_mat.ground_bottom_color = Color(0.45, 0.4, 0.35)
 	sky_mat.ground_horizon_color = Color(0.65, 0.62, 0.55)

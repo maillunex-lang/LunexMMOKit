@@ -25,9 +25,9 @@ var KIT_DEFS := [
 	{"id": "statue_01", "category": "statue", "mesh": "statue_01.glb", "tex": "build_jz01.png", "source": "cs_zhucheng_diaoxiang01"},
 	{"id": "statue_base", "category": "statue", "mesh": "statue_base_01.glb", "tex": "wall_qiang01.png", "source": "cs_zhucheng_diaoxiangtai01"},
 	{"id": "crystal_01", "category": "crystal", "mesh": "crystal_mesh.glb", "tex": "", "source": "cs_zhucheng_shuijing", "special": "crystal"},
-	{"id": "tree_01", "category": "tree", "mesh": "tree_01.glb", "tex": "blossom.png", "source": "cs_zhucheng_shu01"},
-	{"id": "tree_plant", "category": "tree", "mesh": "tree_plant.glb", "tex": "blossom.png", "source": "cs_zhucheng_zhiwu01"},
-	{"id": "bush_01", "category": "bush", "mesh": "bush_01.glb", "tex": "splat_grass.png", "source": "cs_zhucheng_guanmu01"},
+	{"id": "tree_01", "category": "tree", "mesh": "tree_01.glb", "tex": "tree_leaf.png", "source": "cs_zhucheng_shu01", "special": "foliage"},
+	{"id": "tree_plant", "category": "tree", "mesh": "tree_plant.glb", "tex": "tree_leaf.png", "source": "cs_zhucheng_zhiwu01", "special": "foliage"},
+	{"id": "bush_01", "category": "bush", "mesh": "bush_01.glb", "tex": "tree_leaf.png", "source": "cs_zhucheng_guanmu01", "special": "foliage"},
 	{"id": "lamp_01", "category": "prop", "mesh": "lamp_01.glb", "tex": "build_jz04.png", "source": "cs_zhucheng_ludeng01"},
 	{"id": "rock_01", "category": "rock", "mesh": "rock_01.glb", "tex": "splat_dirt.png", "source": "cs_haitan_shitou01"},
 	{"id": "rock_02", "category": "rock", "mesh": "rock_02.glb", "tex": "splat_sand.png", "source": "cs_haitan_shitou02"},
@@ -49,7 +49,7 @@ func own_tree(n: Node, owner: Node) -> void:
 	for c in n.get_children():
 		own_tree(c, owner)
 
-func mat_tex(path: String) -> StandardMaterial3D:
+func mat_tex(path: String, special: String = "") -> StandardMaterial3D:
 	var m := StandardMaterial3D.new()
 	if path != "" and ResourceLoader.exists(TEX_DIR + path):
 		m.albedo_texture = load(TEX_DIR + path)
@@ -57,6 +57,12 @@ func mat_tex(path: String) -> StandardMaterial3D:
 		m.albedo_color = Color(0.62, 0.58, 0.5)
 	m.roughness = 0.82
 	m.metallic = 0.0
+	if special == "foliage":
+		# Darklord leaf atlas uses punched alpha; cutout avoids white/gray billboards.
+		m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+		m.alpha_scissor_threshold = 0.35
+		m.cull_mode = BaseMaterial3D.CULL_DISABLED
+		m.roughness = 0.9
 	return m
 
 func crystal_mat() -> StandardMaterial3D:
@@ -174,7 +180,11 @@ func build_mesh_kit(def: Dictionary) -> Dictionary:
 	root.add_child(model)
 	await process_frame
 	var special := String(def.get("special", ""))
-	var fallback: Material = crystal_mat() if special == "crystal" else mat_tex(String(def.get("tex", "")))
+	var fallback: Material
+	if special == "crystal":
+		fallback = crystal_mat()
+	else:
+		fallback = mat_tex(String(def.get("tex", "")), special)
 	# Flatten: reparent MeshInstance3D under kit root with baked global pose (kills FBX float offsets).
 	var mesh_nodes: Array = model.find_children("*", "MeshInstance3D", true, false)
 	var mesh_count := 0
@@ -266,14 +276,16 @@ func run():
 	DirAccess.make_dir_recursive_absolute("/home/gamedev/LunexMMOKit/client/world/library/kits")
 	# Import new water textures
 	await process_frame
-	save_plane_kit("ground_tile", "terrain", "splat_grass.png", Vector2(20, 20), Vector3(8, 8, 1))
+	# Capital grass (cs_zhucheng_dm01) — old splat_grass was sand and read as “no textures”.
+	save_plane_kit("ground_tile", "terrain", "grass_zhucheng.png", Vector2(20, 20), Vector3(6, 6, 1))
 	save_plane_kit("road_tile", "road", "ground_dm02.png", Vector2(12, 20), Vector3(4, 6, 1))
 	save_plane_kit("plaza_tile", "plaza", "ground_dm04.png", Vector2(40, 40), Vector3(10, 10, 1))
+	save_plane_kit("market_tile", "plaza", "ground_dm02.png", Vector2(24, 24), Vector3(6, 6, 1))
 	save_sidewalk_kit()
 	save_water_kit()
 	var report: Array = [
 		{"id": "ground_tile"}, {"id": "road_tile"}, {"id": "plaza_tile"},
-		{"id": "sidewalk_tile"}, {"id": "water_01"},
+		{"id": "market_tile"}, {"id": "sidewalk_tile"}, {"id": "water_01"},
 	]
 	for def in KIT_DEFS:
 		report.append(await build_mesh_kit(def))

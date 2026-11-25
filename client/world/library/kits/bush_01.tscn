@@ -1,10 +1,14 @@
 [gd_scene format=4]
 
-[ext_resource type="Texture2D" path="res://world/library/textures/splat_grass.png" id="1_4316i"]
+[ext_resource type="Texture2D" path="res://world/library/textures/tree_leaf.png" id="1_4316i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofpg6"]
+transparency = 2
+alpha_scissor_threshold = 0.35
+alpha_antialiasing_mode = 0
+cull_mode = 2
 albedo_texture = ExtResource("1_4316i")
-roughness = 0.82
+roughness = 0.9
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_avdri"]
 resource_name = "bush_01_cs_zhucheng_jianzhu022"
@@ -43,26 +47,26 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_6hemi"]
 size = Vector3(4.1339006, 2.5038483, 4.675393)
 
-[node name="Kit_bush_01" type="Node3D" unique_id=264106677]
+[node name="Kit_bush_01" type="Node3D" unique_id=549058372]
 metadata/kit_id = "bush_01"
 metadata/category = "bush"
 metadata/source_id = "cs_zhucheng_guanmu01"
 
-[node name="Meshes" type="Node3D" parent="." unique_id=1532437653]
+[node name="Meshes" type="Node3D" parent="." unique_id=1608896099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0013216734, 0)
 
-[node name="cs_zhucheng_jianzhu02" type="MeshInstance3D" parent="Meshes" unique_id=1491474264]
+[node name="cs_zhucheng_jianzhu02" type="MeshInstance3D" parent="Meshes" unique_id=332743814]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.042419434, 0.85466015, 0.056550503)
 mesh = SubResource("ArrayMesh_avdri")
 surface_material_override/0 = SubResource("StandardMaterial3D_ofpg6")
 
-[node name="cs_zhucheng_jianzhu01" type="MeshInstance3D" parent="Meshes" unique_id=1616832996]
+[node name="cs_zhucheng_jianzhu01" type="MeshInstance3D" parent="Meshes" unique_id=1324125159]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.042419434, 0.85466015, 0.056550503)
 mesh = SubResource("ArrayMesh_x6ldu")
 surface_material_override/0 = SubResource("StandardMaterial3D_ofpg6")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1711659739]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=323346033]
 
-[node name="@CollisionShape3D@26" type="CollisionShape3D" parent="Collision" unique_id=383190266]
+[node name="@CollisionShape3D@27" type="CollisionShape3D" parent="Collision" unique_id=716098423]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.057165384, 1.2519242, 0.0026347637)
 shape = SubResource("BoxShape3D_6hemi")

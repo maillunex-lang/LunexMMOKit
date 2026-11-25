@@ -8,3 +8,6 @@ Data: typed Resources and inspector fields for items, quests, dialogues, skills,
 Import pipeline: deterministic generated base scenes separated from user-owned overrides; no silent overwrite of manual edits. Preserve provenance, unresolved references and conversion reports. Do not commit original Darklord project or secrets. Adapted runtime assets follow existing portability policy.
 Acceptance per content batch: open native scenes in Godot editor, inspect/edit/save/reopen representative nodes and resources, verify runtime behavior and clean-clone build. Report unsupported Unity features rather than silently dropping them.
 Existing Character Studio is a preview tool, not proof of EDITOR-001 completion.
+
+## WORLD-EDITOR-003
+Lunex World Editor is a native Godot 4 `EditorPlugin` (`client/addons/lunex_world_editor/`) for owner location editing on Windows: kit library, transforms, snap, materials, NPC/portal/spawn markers with `stable_id`, collision refresh, NavMesh bake, validators, Undo/Redo. Generators must not overwrite owner overlays. Auto-path uses NavigationMesh, not fixed coordinate chains. See [WORLD_EDITOR_003.md](WORLD_EDITOR_003.md).

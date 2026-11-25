@@ -24,3 +24,9 @@ User direction: Darklord source is baseline for all reusable content and mechani
 
 ## EDITOR-001 (approved)
 Full available Darklord transfer before custom redesign; native editable Godot scenes/resources and protected manual overrides are mandatory. See docs/EDITOR.md.
+
+## WORLD-EDITOR-003 (approved for roadmap)
+Native Lunex World Editor (Godot 4 EditorPlugin) for owner location editing without programming. Compatible with EDITOR-001 and WORLD-DESIGN-002. stable_id for quests; NavMesh auto-path; generator non-overwrite. See docs/WORLD_EDITOR_003.md.
+
+## GAME-SLICE-001 (in progress)
+Vertical playable slice: Eternity Capital + Ashen Outskirts, chapter-1 quests (Осколки вечности), 4 classes, light combat, portals. Uses Darklord assets/mechanics knowledge; not a 1:1 Unity/quest table port. APK verification deferred.
