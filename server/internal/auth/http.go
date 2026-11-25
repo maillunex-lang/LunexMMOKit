@@ -3,6 +3,7 @@ package auth
 import (
 	"encoding/json"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -50,6 +51,46 @@ func (h *HTTP) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	writeJSON(w, map[string]any{"ok": true, "token": token, "account_id": id, "protocol_version": 1})
+}
+
+func (h *HTTP) Logout(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "method", http.StatusMethodNotAllowed)
+		return
+	}
+	h.Svc.Logout(bearer(r))
+	writeJSON(w, map[string]any{"ok": true})
+}
+
+func (h *HTTP) Session(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method", http.StatusMethodNotAllowed)
+		return
+	}
+	token := bearer(r)
+	accountID, err := h.Svc.AccountID(token)
+	if err != nil {
+		http.Error(w, "unauthorized", http.StatusUnauthorized)
+		return
+	}
+	writeJSON(w, map[string]any{
+		"ok": true, "account_id": accountID, "protocol_version": 1, "session": "active",
+	})
+}
+
+// Expire is a DEV/TEST-only hook (LUNEX_ALLOW_TEST_EXPIRE=1) for N01 expired-token checks.
+func (h *HTTP) Expire(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "method", http.StatusMethodNotAllowed)
+		return
+	}
+	if os.Getenv("LUNEX_ALLOW_TEST_EXPIRE") != "1" {
+		http.Error(w, "forbidden", http.StatusForbidden)
+		return
+	}
+	tok := bearer(r)
+	h.Svc.ExpireTokenForTest(tok)
+	writeJSON(w, map[string]any{"ok": true, "expired": true})
 }
 
 func (h *HTTP) Characters(w http.ResponseWriter, r *http.Request) {

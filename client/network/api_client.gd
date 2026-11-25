@@ -21,11 +21,29 @@ func login(login: String, password: String) -> Dictionary:
 		protocol_version = int(res.get("protocol_version", 1))
 	return res
 
+func logout() -> Dictionary:
+	var res := _post("/v1/logout", {})
+	token = ""
+	return res
+
+func session() -> Dictionary:
+	return _req(HTTPClient.METHOD_GET, "/v1/session", {})
+
 func list_characters() -> Dictionary:
 	return _req(HTTPClient.METHOD_GET, "/v1/characters", {})
 
 func create_character(name: String, class_actor_id: String = "10001") -> Dictionary:
 	return _post("/v1/characters", {"name": name, "class_actor_id": class_actor_id})
+
+func reconnect(login: String, password: String) -> Dictionary:
+	## N01: expired/missing token → fresh login and session check.
+	token = ""
+	var res := login(login, password)
+	if not res.get("ok", false):
+		return res
+	var sess := session()
+	res["session"] = sess
+	return res
 
 func _post(path: String, body: Dictionary) -> Dictionary:
 	return _req(HTTPClient.METHOD_POST, path, body)

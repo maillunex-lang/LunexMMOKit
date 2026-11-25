@@ -26,6 +26,8 @@ jobs:
       - run: go test ./...
       - run: go build -o /tmp/lunexd ./cmd/lunexd
       - run: python3 -m json.tool ../shared/protocol/auth.schema.json >/dev/null
+      - name: Auth unit covers expire/logout
+        run: go test ./internal/auth/ -count=1
 
   versions:
     runs-on: ubuntu-latest

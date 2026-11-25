@@ -1,7 +1,7 @@
 # Roadmap
 Read AGENTS.md and NEXT.md first. Machine source: roadmap.json.
 
-**Product: Closed Beta 0.1.0 (BETA01). DR01 done (limits in DISASTER_RECOVERY.md).**
+**Product: Closed Beta 0.1.0 (BETA01).**
 
 - F01 [done] Initial Godot skeleton (deps: )
 - F02 [done] Module layout and static CI (deps: F01)
@@ -13,7 +13,7 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json.
 - WD02 [doing] WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity) (deps: CAP05)
 - WE03 [todo] WORLD-EDITOR-003: Lunex World Editor (Godot 4 EditorPlugin) — библиотека китов, drag-drop, transform, snap, материалы, NPC/порталы/spawn со stable_id, коллизии, bake NavMesh, валидаторы, Undo/Redo, owner overlay без overwrite генераторами (deps: F02, WD02)
 - GAME01 [doing] GAME-SLICE-001: клиентский прототип механик гл.1 (локальный) — ступень к онлайн-бете, не замена серверу (deps: WD02, F02)
-- AUDIT01 [doing] LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты (deps: F02)
+- AUDIT01 [done] LUNEX-AUDIT-001: NavMesh/геометрия, res://+user://, Undo/Redo, owner protect, stable IDs, валидатор, единый бой/сессия, мобильный HUD, World Editor, интеграционные тесты (deps: F02)
 - CAPAPK [blocked] [INTERNAL ONLY] Технический Android smoke APK города — НЕ конечная цель продукта (см. BETA01 Closed Beta 0.1.0) (deps: CAP05, WD02)
 - CAP06 [todo] NPC и исходные точки размещения, диалоги и квестовые данные (deps: CAP05)
 - UI01 [todo] Инвентаризация и импорт оригинальных UI атласов, иконок, шрифтов и рамок (deps: F02)
@@ -38,9 +38,9 @@ Read AGENTS.md and NEXT.md first. Machine source: roadmap.json.
 - D05 [todo] Конвертер VFX, аудио и событий клипов; ручные overrides (deps: D03)
 - W01 [todo] Протяженная тестовая зона, чанки, LOD, коллизии, навигация (deps: D04)
 - W02 [todo] Карта, миникарта, переходы, точки возрождения, безопасные зоны (deps: W01)
-- A01 [todo] Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord (deps: D03, W01)
+- A01 [done] Герой, камера, виртуальный джойстик без tap-to-move, навигация, экипировка визуально; четыре исходных класса Darklord (deps: F02, F04)
 - A02 [todo] AnimationPlayer/Tree, события атаки, VFX, звук, прерывания (deps: A01, D05)
-- N01 [todo] Регистрация, логин, персонаж, сессии, reconnect, версия протокола (deps: F04, A01)
+- N01 [done] Регистрация, логин, персонаж, сессии, reconnect, версия протокола (deps: F04, A01)
 - N02 [todo] Авторитетное движение, AOI, снапшоты, интерполяция (deps: N01, W02)
 - C01 [todo] Серверный бой, цели, cooldown, ресурсы, урон, смерть (deps: N02, A02)
 - C02 [todo] Монстры, aggro, patrol, leash, respawn, loot, босс (deps: C01)

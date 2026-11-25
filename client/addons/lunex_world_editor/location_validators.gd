@@ -90,9 +90,12 @@ static func validate_location(root: Node3D) -> Dictionary:
 		# Connectivity: try path spawn → each NPC/portal
 		if space and region.navigation_mesh.get_polygon_count() > 0 and root.is_inside_tree():
 			var map := root.get_world_3d().navigation_map
-			var spawn_pos := spawns[0].pos if spawns.size() else root.global_position
+			var spawn_pos: Vector3 = root.global_position
+			if spawns.size():
+				spawn_pos = spawns[0]["pos"] as Vector3
 			for entry in npcs + portals + quests:
-				var path: PackedVector3Array = NavigationServer3D.map_get_path(map, spawn_pos, entry.pos, true)
+				var dest: Vector3 = entry["pos"] as Vector3
+				var path: PackedVector3Array = NavigationServer3D.map_get_path(map, spawn_pos, dest, true)
 				if path.is_empty():
 					issues.append({"code": "unreachable", "msg": "no nav path from spawn", "node": entry.node, "stable_id": entry.stable_id})
 

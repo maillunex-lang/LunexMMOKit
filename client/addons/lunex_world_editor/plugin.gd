@@ -24,12 +24,14 @@ func _enter_tree() -> void:
 	add_tool_menu_item("Lunex: Validate Location", _on_validate)
 	add_tool_menu_item("Lunex: Write owner.lock", _on_write_lock)
 	add_tool_menu_item("Lunex: Duplicate Selected (new instance_id)", _on_duplicate_selected)
+	add_tool_menu_item("Lunex: Migrate legacy stable_id → instance_id", _on_migrate_ids)
 
 func _exit_tree() -> void:
 	remove_tool_menu_item("Lunex: Bake Location NavigationMesh")
 	remove_tool_menu_item("Lunex: Validate Location")
 	remove_tool_menu_item("Lunex: Write owner.lock")
 	remove_tool_menu_item("Lunex: Duplicate Selected (new instance_id)")
+	remove_tool_menu_item("Lunex: Migrate legacy stable_id → instance_id")
 	if _dock:
 		remove_control_from_docks(_dock)
 		_dock.queue_free()
@@ -156,6 +158,17 @@ func _on_validate() -> void:
 				var line := String(issue.get("code", "?")) + ": " + String(issue.get("msg", issue.get("node", "")))
 				_issues_panel.add_item(line)
 	print("Lunex World Editor validation: ", JSON.stringify(report))
+
+func _on_migrate_ids() -> void:
+	## FIX-006: legacy stable_id → instance_id + id_kind on open location.
+	const StableIds = preload("res://core/stable_ids.gd")
+	var root := get_edited_location_root()
+	if root == null:
+		push_warning("Lunex World Editor: open a Node3D location scene first.")
+		return
+	var n := StableIds.migrate_legacy_tree(root)
+	root.set_meta("owner_edited", true)
+	print("Lunex World Editor: migrated legacy ids on ", n, " nodes")
 
 func _on_duplicate_selected() -> void:
 	## FIX-006: copy keeps type_id, mints new instance_id.

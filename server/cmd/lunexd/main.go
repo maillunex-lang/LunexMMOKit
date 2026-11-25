@@ -29,12 +29,16 @@ func main() {
 		defer d.Close()
 		health.DB = d
 		log.Printf("database connected")
-		ah := &auth.HTTP{Svc: auth.New(d)}
+		svc := auth.New(d)
+		ah := &auth.HTTP{Svc: svc}
 		mux := http.NewServeMux()
 		mux.HandleFunc("/health", health.Handle)
 		mux.HandleFunc("/version", version)
 		mux.HandleFunc("/v1/register", ah.Register)
 		mux.HandleFunc("/v1/login", ah.Login)
+		mux.HandleFunc("/v1/logout", ah.Logout)
+		mux.HandleFunc("/v1/session", ah.Session)
+		mux.HandleFunc("/v1/test/expire", ah.Expire)
 		mux.HandleFunc("/v1/characters", ah.Characters)
 		serve(*addr, mux)
 		return

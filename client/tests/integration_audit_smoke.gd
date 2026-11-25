@@ -51,7 +51,7 @@ func run() -> void:
 	else:
 		fail("game_hud.tscn")
 
-	# 4) Stable IDs uniqueness
+	# 4) Stable IDs uniqueness + legacy migrate
 	var StableIds = load("res://core/stable_ids.gd")
 	var a = StableIds.new_id(StableIds.Kind.INSTANCE, "house")
 	var b = StableIds.new_id(StableIds.Kind.INSTANCE, "house")
@@ -59,6 +59,16 @@ func run() -> void:
 		fail("stable ids not unique")
 	else:
 		ok("stable ids unique")
+	var legacy := Node3D.new()
+	legacy.name = "PortalWest"
+	legacy.set_meta("stable_id", "portal_only_legacy")
+	root.add_child(legacy)
+	var mig: int = StableIds.migrate_legacy_tree(legacy)
+	if mig >= 1 and String(legacy.get_meta("instance_id", "")) == "portal_only_legacy":
+		ok("legacy stable_id migrate")
+	else:
+		fail("legacy migrate")
+	legacy.queue_free()
 
 	# 5) Owner protect refuses lock
 	var OP = load("res://world/owner_protect.gd")

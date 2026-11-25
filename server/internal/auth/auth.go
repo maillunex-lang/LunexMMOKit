@@ -22,6 +22,8 @@ type Service struct {
 	DB *sql.DB
 	// sessions: token -> accountID, expiry (in-memory until redis; OK for scaffold)
 	sessions map[string]session
+	// SessionTTL is how long login tokens live (default 24h). Tests may shorten.
+	SessionTTL time.Duration
 }
 
 type session struct {
@@ -30,7 +32,7 @@ type session struct {
 }
 
 func New(db *sql.DB) *Service {
-	return &Service{DB: db, sessions: map[string]session{}}
+	return &Service{DB: db, sessions: map[string]session{}, SessionTTL: 24 * time.Hour}
 }
 
 func (s *Service) Register(ctx context.Context, login, password string) (int64, error) {
@@ -65,16 +67,36 @@ func (s *Service) Login(ctx context.Context, login, password string) (token stri
 	if err != nil {
 		return "", 0, err
 	}
-	s.sessions[token] = session{AccountID: accountID, Expires: time.Now().Add(24 * time.Hour)}
+	ttl := s.SessionTTL
+	if ttl <= 0 {
+		ttl = 24 * time.Hour
+	}
+	s.sessions[token] = session{AccountID: accountID, Expires: time.Now().Add(ttl)}
 	return token, accountID, nil
 }
 
 func (s *Service) AccountID(token string) (int64, error) {
 	sess, ok := s.sessions[token]
 	if !ok || time.Now().After(sess.Expires) {
+		if ok {
+			delete(s.sessions, token)
+		}
 		return 0, ErrBadToken
 	}
 	return sess.AccountID, nil
+}
+
+// Logout invalidates one token (reconnect must login again).
+func (s *Service) Logout(token string) {
+	delete(s.sessions, token)
+}
+
+// ExpireTokenForTest forces a token past expiry (N01 acceptance).
+func (s *Service) ExpireTokenForTest(token string) {
+	if sess, ok := s.sessions[token]; ok {
+		sess.Expires = time.Now().Add(-time.Second)
+		s.sessions[token] = sess
+	}
 }
 
 func (s *Service) CreateCharacter(ctx context.Context, accountID int64, name, classActorID string) (int64, error) {
