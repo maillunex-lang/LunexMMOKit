@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mxip"]
+size = Vector3(4.395238, 6.1834707, 3.758507)
+
+[node name="Kit_tree_01" type="Node3D" unique_id=1219482101]
+metadata/kit_id = "tree_01"
+metadata/category = "tree"
+metadata/source_id = "cs_zhucheng_shu01"
+
+[node name="model" type="Node3D" parent="." unique_id=1789090409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015266697, 0)
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1123200322]
+
+[node name="@CollisionShape3D@25" type="CollisionShape3D" parent="Collision" unique_id=688998276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06107831, 3.0917354, -0.42043388)
+shape = SubResource("BoxShape3D_3mxip")

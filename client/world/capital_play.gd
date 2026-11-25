@@ -26,6 +26,12 @@ var camera: Camera3D
 var joystick
 var status_label: Label
 var fps_label: Label
+var graphics_index := 1
+const GRAPHICS_PRESETS := [
+	{"name": "Low", "scale": 0.6, "shadows": false, "msaa": 0},
+	{"name": "Med", "scale": 0.85, "shadows": true, "msaa": 1},
+	{"name": "High", "scale": 1.0, "shadows": true, "msaa": 2},
+]
 
 func _ready() -> void:
 	_load_materials()
@@ -142,7 +148,33 @@ func _build_ui() -> void:
 		b.text = class_names[i] if i < class_names.size() else actor_ids[i]
 		b.pressed.connect(_load_class.bind(i))
 		row.add_child(b)
+	var gfx := Button.new()
+	gfx.name = "GfxButton"
+	gfx.text = "GFX Med"
+	gfx.pressed.connect(_cycle_graphics)
+	row.add_child(gfx)
+	_apply_graphics(graphics_index)
 	_set_status("город")
+
+func _cycle_graphics() -> void:
+	graphics_index = (graphics_index + 1) % GRAPHICS_PRESETS.size()
+	_apply_graphics(graphics_index)
+
+func _apply_graphics(index: int) -> void:
+	var p: Dictionary = GRAPHICS_PRESETS[index]
+	get_tree().root.content_scale_factor = float(p.scale)
+	var sun := get_node_or_null("CapitalCity/CapitalLighting/Sun") as DirectionalLight3D
+	if sun:
+		sun.shadow_enabled = bool(p.shadows)
+	var vp := get_viewport()
+	if vp:
+		vp.msaa_3d = int(p.msaa) as Viewport.MSAA
+	var hud := get_node_or_null("HUD")
+	if hud:
+		var gfx_btn := hud.find_child("GfxButton", true, false) as Button
+		if gfx_btn:
+			gfx_btn.text = "GFX " + String(p.name)
+	print("CAP05_GFX ", p.name)
 
 func _on_joy(dir: Vector2) -> void:
 	if hero:

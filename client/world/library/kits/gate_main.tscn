@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w0j13"]
+size = Vector3(17.626757, 1.6866254, 17.743484)
+
+[node name="Kit_gate_main" type="Node3D" unique_id=1616066165]
+metadata/kit_id = "gate_main"
+metadata/category = "gate"
+metadata/source_id = "cs_yw_xsc_chengmengqian02"
+
+[node name="model" type="Node3D" parent="." unique_id=1579838763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20653284, 0)
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1801914778]
+
+[node name="@CollisionShape3D@7" type="CollisionShape3D" parent="Collision" unique_id=1290986398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0789299, 0.8433127, -0.06855965)
+shape = SubResource("BoxShape3D_w0j13")

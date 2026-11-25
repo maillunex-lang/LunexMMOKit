@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_15h3h"]
+size = Vector3(7.0192757, 5.866189, 7.019274)
+
+[node name="Kit_crystal_01" type="Node3D" unique_id=890672991]
+metadata/kit_id = "crystal_01"
+metadata/category = "crystal"
+metadata/source_id = "cs_zhucheng_shuijing"
+
+[node name="model" type="Node3D" parent="." unique_id=690638540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015202999, 0)
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1059339228]
+
+[node name="@CollisionShape3D@23" type="CollisionShape3D" parent="Collision" unique_id=1277282835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9330945, 0)
+shape = SubResource("BoxShape3D_15h3h")

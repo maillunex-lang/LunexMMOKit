@@ -1,13 +1,13 @@
 # Статус 25.11.2026
-LunexMMOKit / Осколки вечности. Полный перенос Darklord в Godot 4, затем собственные изменения. EDITOR-001. Оригиналы read-only.
-## Реализовано
-- Foundation + CAP01–CAP04: столица v8, water/crystal/walksurface, editable lighting, effect polish.
-- Attachment System (CHAR08) + Studio «Крепления».
-- CAP05 in progress: capital_play with 4 classes, joystick, collisions, camera.
+LunexMMOKit / Осколки вечности. EDITOR-001. Оригиналы read-only.
+## Утверждено
+- WORLD-DESIGN-002: свой мир на ресурсах Darklord, не 1:1 Unity.
+## Реализовано (архив)
+- CAP01–CAP05 и capital_geometry_v1–v8 сохранены как техническая основа.
+- Attachment System / Character Studio.
 ## В работе
-- CAP05 polish → CAPAPK city preview APK.
-- CHARACTER-AUDIT-001 / CHAR02 grip XYZ.
+- WD02: библиотека окружения + новая редактируемая столица.
 ## Очередь
-CAPAPK -> CAP06. Параллельно CHAR02–CHAR10 / EDIT01.
+Визуальная приёмка столицы → CAPAPK → CAP06 / прочие локации. CHAR02–CHAR10 параллельно.
 ## Проверки
-CI green on recent pushes. Screens on VPS darklord-dgi/screens.
+CI на ветках. Скриншоты → darklord-dgi/screens → https://rikagro.ru/gallery/

@@ -1,0 +1,5038 @@
+{
+  "decision": "WORLD-DESIGN-002",
+  "note": "Inventory of Darklord Scene FBX for hand-authored locations. ready=converted GLB available under darklord-dgi/city-glb.",
+  "counts": {
+    "fbx": 626,
+    "ready_glb": 43,
+    "categories": {
+      "walksurface": 5,
+      "terrain": 25,
+      "stairs": 7,
+      "building": 123,
+      "water": 9,
+      "prop": 246,
+      "wall": 31,
+      "bridge": 20,
+      "statue": 13,
+      "rock": 97,
+      "bush": 21,
+      "flower": 1,
+      "tower": 10,
+      "temple": 4,
+      "plaza": 1,
+      "crystal": 1,
+      "statue_or_prop": 10,
+      "tree": 2
+    }
+  },
+  "items": [
+    {
+      "id": "b2789e83831a",
+      "category": "bridge",
+      "name": "FB_14_qiao",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_14_qiao.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "91a83670f80c",
+      "category": "bridge",
+      "name": "cs_binghu_diaoqiao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_diaoqiao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3cff8b8b8159",
+      "category": "bridge",
+      "name": "cs_binghu_yijiqiao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiqiao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ea3940c9559b",
+      "category": "bridge",
+      "name": "cs_binghu_yijiqiao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiqiao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e2dc22e6525f",
+      "category": "bridge",
+      "name": "cs_jingling_muqiao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_muqiao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "88bd6291e2be",
+      "category": "bridge",
+      "name": "cs_jingling_muqiao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_muqiao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "71fe3c66eb0a",
+      "category": "bridge",
+      "name": "cs_jingling_muqiao03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_muqiao03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a4ec3e68e6af",
+      "category": "bridge",
+      "name": "cs_jingling_qiao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_qiao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f64fa6b549ab",
+      "category": "bridge",
+      "name": "cs_jingling_qiao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_qiao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "18bb9340dd00",
+      "category": "bridge",
+      "name": "cs_senlin_muqiao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_muqiao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5914409f57b7",
+      "category": "bridge",
+      "name": "cs_senlin_muqiao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_muqiao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e1406f6622fe",
+      "category": "bridge",
+      "name": "cs_senlin_muqiao03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_muqiao03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ee2a43771dd0",
+      "category": "bridge",
+      "name": "cs_shamozawu_diaoqiao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_diaoqiao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "adb3df1dfb2d",
+      "category": "bridge",
+      "name": "cs_shamozawu_diaoqiao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_diaoqiao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "153ddc964a0c",
+      "category": "bridge",
+      "name": "cs_shamozawu_diaoqiao03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_diaoqiao03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ee61c13351af",
+      "category": "bridge",
+      "name": "cs_shamozawu_diaoqiao04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_diaoqiao04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "dd05408e913c",
+      "category": "bridge",
+      "name": "cs_shamozawu_diaoqiao05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_diaoqiao05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2795c395714a",
+      "category": "bridge",
+      "name": "cs_shamozawu_diaoqiao06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_diaoqiao06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5a864b114c8a",
+      "category": "bridge",
+      "name": "cs_shamozawu_diaoqiao07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_diaoqiao07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f074504d361d",
+      "category": "bridge",
+      "name": "cs_zhaoze_muqiao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_muqiao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5107a62e7610",
+      "category": "building",
+      "name": "FB_03_jianzhu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_03_jianzhu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b38c015d5b4a",
+      "category": "building",
+      "name": "FB_05",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6acdaf87dc2c",
+      "category": "building",
+      "name": "FB_06",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cca5d051160a",
+      "category": "building",
+      "name": "FB_10",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_10.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "594a86e328ef",
+      "category": "building",
+      "name": "FB_18",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_18.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "eedab000db25",
+      "category": "building",
+      "name": "FB_18_jz03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_18_jz03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "345b6c557e58",
+      "category": "building",
+      "name": "FB_18_jz04",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_18_jz04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "90df718033ed",
+      "category": "building",
+      "name": "FB_18_zawu",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_18_zawu.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8f8ce712c3e4",
+      "category": "building",
+      "name": "FB_21_jz01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_21_jz01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e40d8740b30f",
+      "category": "building",
+      "name": "FB_21_jz02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_21_jz02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1539a8da00e9",
+      "category": "building",
+      "name": "FB_3v3_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_3v3_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1af0df8fa962",
+      "category": "building",
+      "name": "cs_binghu_bosstai_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_bosstai_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "68269e3d1964",
+      "category": "building",
+      "name": "cs_binghu_chuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_chuan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9a2283d68a0b",
+      "category": "building",
+      "name": "cs_binghu_fangzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_fangzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1527d2f23422",
+      "category": "building",
+      "name": "cs_binghu_fangzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_fangzi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fa491be070c0",
+      "category": "building",
+      "name": "cs_binghu_yiji01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c15ff739494f",
+      "category": "building",
+      "name": "cs_binghu_yiji01_huopen",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji01_huopen.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "88686e48f405",
+      "category": "building",
+      "name": "cs_binghu_yiji01_jianzhu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji01_jianzhu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c59c178ba9a5",
+      "category": "building",
+      "name": "cs_binghu_yiji01_jianzhu01_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji01_jianzhu01_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a90f028e43c0",
+      "category": "building",
+      "name": "cs_binghu_yiji02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "70b855ebe0e7",
+      "category": "building",
+      "name": "cs_binghu_yiji03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3acf6bc88c18",
+      "category": "building",
+      "name": "cs_binghu_yiji04",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "371398c54c9e",
+      "category": "building",
+      "name": "cs_binghu_yiji05",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5abdd91c13e0",
+      "category": "building",
+      "name": "cs_binghu_yiji06",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1531823b5320",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e37b7d2c0e71",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c2895d1aa16f",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d3e640e5b2a7",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_04",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "14a204a20c08",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_05",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "13780b87e5c0",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_06",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "08bf92086fb0",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_07",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c0ec4da0fb61",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_08",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "43d8b675f4ae",
+      "category": "building",
+      "name": "cs_binghu_yijiposun_09",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yijiposun_09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "90c515ce2fd0",
+      "category": "building",
+      "name": "cs_denglu_jiaodi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_denglu_jiaodi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "030f33ea446e",
+      "category": "building",
+      "name": "cs_haitan_zawujihe01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e3165f21d38c",
+      "category": "building",
+      "name": "cs_haitan_zawujihe02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f9cc935912c2",
+      "category": "building",
+      "name": "cs_haitan_zawujihe03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fac24dc3d642",
+      "category": "building",
+      "name": "cs_haitan_zawujihe04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2dcb5f32430c",
+      "category": "building",
+      "name": "cs_haitan_zawujihe05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "612c71eca397",
+      "category": "building",
+      "name": "cs_haitan_zawujihe06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "23cce81632fe",
+      "category": "building",
+      "name": "cs_haitan_zawujihe07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "19aabde13e95",
+      "category": "building",
+      "name": "cs_haitan_zawujihe08",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2977837fcb74",
+      "category": "building",
+      "name": "cs_haitan_zawujihe09",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5e35926cc039",
+      "category": "building",
+      "name": "cs_haitan_zawujihe10",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_zawujihe10.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9832ef20c24e",
+      "category": "building",
+      "name": "cs_hd_bianjing_jz01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bianjing_jz01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9dd335511872",
+      "category": "building",
+      "name": "cs_hd_bossshouhu_jz01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bossshouhu_jz01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e8c13b969d54",
+      "category": "building",
+      "name": "cs_hd_bossshouhu_jz02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bossshouhu_jz02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2a39cadcaa92",
+      "category": "building",
+      "name": "cs_hd_bossshouhu_jz03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bossshouhu_jz03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "986548c6a095",
+      "category": "building",
+      "name": "cs_hd_bossshouhu_jz04",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bossshouhu_jz04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "31f494db1ad4",
+      "category": "building",
+      "name": "cs_hd_bossshouhu_jz05",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bossshouhu_jz05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "281c217b86a6",
+      "category": "building",
+      "name": "cs_hd_bossshouhu_jz07",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bossshouhu_jz07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "301f9b38a5ed",
+      "category": "building",
+      "name": "cs_hd_bossshouhu_jz08",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_bossshouhu_jz08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3104f0f823d5",
+      "category": "building",
+      "name": "cs_hd_dati",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_hd_dati.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "71ca49bfbe27",
+      "category": "building",
+      "name": "cs_jingling_yiji01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_jingling_yiji01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "379ddefb3a77",
+      "category": "building",
+      "name": "cs_jingling_yiji02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_jingling_yiji02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6a6b1a3d8ee3",
+      "category": "building",
+      "name": "cs_jjc_jz01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_jjc_jz01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b3e1b971b05b",
+      "category": "building",
+      "name": "cs_jjc_jz02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_jjc_jz02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b2d98aa6b6a7",
+      "category": "building",
+      "name": "cs_jjc_jz03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_jjc_jz03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5c0a2349c6cd",
+      "category": "building",
+      "name": "cs_senlin_fangzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_fangzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3c3560eaa7a1",
+      "category": "building",
+      "name": "cs_senlin_mofang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_senlin_mofang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d36ec13f792e",
+      "category": "building",
+      "name": "cs_senlin_mofang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_senlin_mofang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "29b0e9ac9535",
+      "category": "building",
+      "name": "cs_senlin_zawu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_zawu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1690c1bf803c",
+      "category": "building",
+      "name": "cs_shamo_diaosu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_shamo_diaosu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "58ef093c8eb0",
+      "category": "building",
+      "name": "cs_shamoyiji_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_shamoyiji_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fc78e5d1e6bd",
+      "category": "building",
+      "name": "cs_shamoyiji_01_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_shamoyiji_01_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "507dfc22e288",
+      "category": "building",
+      "name": "cs_shamoyiji_01_yinying",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_shamoyiji_01_yinying.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0d5700350a9d",
+      "category": "building",
+      "name": "cs_shamoyiji_02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_shamoyiji_02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f6fc2a982afb",
+      "category": "building",
+      "name": "cs_shamoyiji_02_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_shamoyiji_02_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "31fdd72feaac",
+      "category": "building",
+      "name": "cs_shamozawu_dimian01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_dimian01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ee1181e0dfcd",
+      "category": "building",
+      "name": "cs_shamozawu_guanzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_guanzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7eb241322927",
+      "category": "building",
+      "name": "cs_shamozawu_guanzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_guanzi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2d80e138cf4b",
+      "category": "building",
+      "name": "cs_shamozawu_guanzi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_guanzi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "18a462b4a5f8",
+      "category": "building",
+      "name": "cs_shamozawu_huodui01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_huodui01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "aaa7ddad62b9",
+      "category": "building",
+      "name": "cs_shamozawu_kulou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_kulou01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "32f50e239e6e",
+      "category": "building",
+      "name": "cs_shamozawu_kulou02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_kulou02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "001a5a3130cd",
+      "category": "building",
+      "name": "cs_shamozawu_kulou03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_kulou03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "774bea51c138",
+      "category": "building",
+      "name": "cs_shamozawu_kulou04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_kulou04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0d8ae5163cf1",
+      "category": "building",
+      "name": "cs_shamozawu_kulou05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_kulou05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8bff58cac11a",
+      "category": "building",
+      "name": "cs_shamozawu_kulou06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_kulou06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "997801eaae37",
+      "category": "building",
+      "name": "cs_shamozawu_shapian",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_shapian.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e7440ba99fa1",
+      "category": "building",
+      "name": "cs_shamozawu_suizhuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_suizhuan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5a44247fc00a",
+      "category": "building",
+      "name": "cs_shamozawu_suizhuan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_suizhuan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "eefb9cd94401",
+      "category": "building",
+      "name": "cs_shamozawu_suizhuan03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_suizhuan03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a508c02d8681",
+      "category": "building",
+      "name": "cs_shamozawu_suizhuan04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_suizhuan04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c081e93cdf50",
+      "category": "building",
+      "name": "cs_shamozawu_suizhuan05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_suizhuan05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ad7ccf91c787",
+      "category": "building",
+      "name": "cs_shamozawu_zhalan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhalan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "91c63aa16693",
+      "category": "building",
+      "name": "cs_shamozawu_zhalan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhalan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c8572fb78586",
+      "category": "building",
+      "name": "cs_shamozawu_zhalan03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhalan03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "bcbbf315c468",
+      "category": "building",
+      "name": "cs_shamozawu_zhuzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhuzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "dbe4df95b1b9",
+      "category": "building",
+      "name": "cs_shamozawu_zhuzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhuzi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1a8019876028",
+      "category": "building",
+      "name": "cs_shamozawu_zhuzi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhuzi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0727a0e107f8",
+      "category": "building",
+      "name": "cs_shamozawu_zhuzi04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhuzi04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e9c784825912",
+      "category": "building",
+      "name": "cs_shamozawu_zhuzi05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhuzi05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3e0abd5600ed",
+      "category": "building",
+      "name": "cs_shamozawu_zhuzi06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_zhuzi06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "60f57f2a6a03",
+      "category": "building",
+      "name": "cs_yunding_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_yunding_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6cf08a9b1cdf",
+      "category": "building",
+      "name": "cs_yunding_02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_yunding_02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d853e6c10e37",
+      "category": "building",
+      "name": "cs_zhucheng_dm04",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_dm04.FBX",
+      "glb": "23472d03ac6d7e42.glb",
+      "ready": true
+    },
+    {
+      "id": "da77b2ba9eaf",
+      "category": "building",
+      "name": "cs_zhucheng_fangzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_fangzi01.FBX",
+      "glb": "8dbbe029ad77d807.glb",
+      "ready": true
+    },
+    {
+      "id": "78231f1f55ad",
+      "category": "building",
+      "name": "cs_zhucheng_fangzi01_wa",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_fangzi01_wa.FBX",
+      "glb": "9c7e18a7e2bfb22e.glb",
+      "ready": true
+    },
+    {
+      "id": "aa56414fc501",
+      "category": "building",
+      "name": "cs_zhucheng_fangzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_fangzi02.FBX",
+      "glb": "83d3cd6840d93ff5.glb",
+      "ready": true
+    },
+    {
+      "id": "29f2e8589a30",
+      "category": "building",
+      "name": "cs_zhucheng_fangzi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_fangzi03.FBX",
+      "glb": "2427347c8216db78.glb",
+      "ready": true
+    },
+    {
+      "id": "a6d75dc75f2d",
+      "category": "building",
+      "name": "cs_zhucheng_gonghui01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_gonghui01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a7ac8b675e2f",
+      "category": "building",
+      "name": "cs_zhucheng_gonghui02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_gonghui02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ca87d886059d",
+      "category": "building",
+      "name": "cs_zhucheng_gonghuihuodui_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_gonghuihuodui_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "74b6b6358303",
+      "category": "building",
+      "name": "cs_zhucheng_hunli01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_hunli01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f4c050910e03",
+      "category": "building",
+      "name": "cs_zhucheng_jz01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz01.FBX",
+      "glb": "fdcc0a401f483bf8.glb",
+      "ready": true
+    },
+    {
+      "id": "3958aa97e1ca",
+      "category": "building",
+      "name": "cs_zhucheng_jz01_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz01_a.FBX",
+      "glb": "108f651d905215d5.glb",
+      "ready": true
+    },
+    {
+      "id": "adead6765ac0",
+      "category": "building",
+      "name": "cs_zhucheng_jz01_awalksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz01_awalksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "bffe7ffa4bb0",
+      "category": "building",
+      "name": "cs_zhucheng_jz01_b",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz01_b.FBX",
+      "glb": "3bc340361d3a35d1.glb",
+      "ready": true
+    },
+    {
+      "id": "a8927608539e",
+      "category": "building",
+      "name": "cs_zhucheng_jz01_c",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz01_c.FBX",
+      "glb": "5a5dd5d572b991fc.glb",
+      "ready": true
+    },
+    {
+      "id": "df1fb121ff18",
+      "category": "building",
+      "name": "cs_zhucheng_jz01_tuan",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz01_tuan.FBX",
+      "glb": "40b08e9072966751.glb",
+      "ready": true
+    },
+    {
+      "id": "7569d7ec4691",
+      "category": "building",
+      "name": "cs_zhucheng_jz01_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_zhucheng_jz01_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e4ccbb946574",
+      "category": "building",
+      "name": "cs_zhucheng_jz02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8773d807d76f",
+      "category": "building",
+      "name": "cs_zhucheng_jz03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_jz03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7bf6815dd283",
+      "category": "building",
+      "name": "cs_zhucheng_zawu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu01.FBX",
+      "glb": "bfd3d61aa7f85f28.glb",
+      "ready": true
+    },
+    {
+      "id": "3a9e1bceb558",
+      "category": "building",
+      "name": "cs_zhucheng_zawu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu02.FBX",
+      "glb": "854fc578b45ff5f8.glb",
+      "ready": true
+    },
+    {
+      "id": "34db2791c30e",
+      "category": "building",
+      "name": "cs_zhucheng_zawu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu03.FBX",
+      "glb": "71eaeadde6a56623.glb",
+      "ready": true
+    },
+    {
+      "id": "db609dc4fd2b",
+      "category": "building",
+      "name": "cs_zhucheng_zawu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu04.FBX",
+      "glb": "3e36ca9ea5914004.glb",
+      "ready": true
+    },
+    {
+      "id": "f22238b9c034",
+      "category": "building",
+      "name": "cs_zhucheng_zawu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu05.FBX",
+      "glb": "ceb1efeed46bf387.glb",
+      "ready": true
+    },
+    {
+      "id": "880115c8714d",
+      "category": "building",
+      "name": "cs_zhucheng_zawu06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu06.FBX",
+      "glb": "3f8d372615195513.glb",
+      "ready": true
+    },
+    {
+      "id": "c8fe384982a9",
+      "category": "building",
+      "name": "cs_zhucheng_zawu07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu07.FBX",
+      "glb": "7db8e7bf6e435be0.glb",
+      "ready": true
+    },
+    {
+      "id": "4bce5fa0ed02",
+      "category": "building",
+      "name": "cs_zhucheng_zawu08",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu08.FBX",
+      "glb": "f1eddb4107537f8d.glb",
+      "ready": true
+    },
+    {
+      "id": "ff4138cceb51",
+      "category": "building",
+      "name": "cs_zhucheng_zawu09",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_zawu09.FBX",
+      "glb": "7e4a1347aaa8194e.glb",
+      "ready": true
+    },
+    {
+      "id": "fd7e4c2ea69d",
+      "category": "bush",
+      "name": "cs_haitan_guanmu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_guanmu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "854432cd569c",
+      "category": "bush",
+      "name": "cs_jingling_guanmu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d97ffba29b0e",
+      "category": "bush",
+      "name": "cs_jingling_guanmu01_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu01_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ce000bd6dbe0",
+      "category": "bush",
+      "name": "cs_jingling_guanmu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a73556d95d2a",
+      "category": "bush",
+      "name": "cs_jingling_guanmu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5ba05486fca2",
+      "category": "bush",
+      "name": "cs_jingling_guanmu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4e2425fefcd4",
+      "category": "bush",
+      "name": "cs_jingling_guanmu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3fadbff4f9e9",
+      "category": "bush",
+      "name": "cs_jingling_guanmu06",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1ccbff49ce45",
+      "category": "bush",
+      "name": "cs_jingling_guanmu07",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "dcdeae4f9570",
+      "category": "bush",
+      "name": "cs_jingling_guanmu08",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_guanmu08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a3d0ea2ab9c5",
+      "category": "bush",
+      "name": "cs_senlin_guanmu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_guanmu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2b63ba7f4c18",
+      "category": "bush",
+      "name": "cs_senlin_guanmu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_guanmu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1e5f67d0cf1d",
+      "category": "bush",
+      "name": "cs_senlin_guanmu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_guanmu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e2a1dd7b65c9",
+      "category": "bush",
+      "name": "cs_senlin_guanmu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_guanmu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "294010930052",
+      "category": "bush",
+      "name": "cs_senlin_guanmu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_guanmu05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e3aae1e08fb8",
+      "category": "bush",
+      "name": "cs_zhaoze_guanmu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhaoze_guanmu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f3dff10b0f9c",
+      "category": "bush",
+      "name": "cs_zhaoze_guanmu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhaoze_guanmu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2ca148db55d1",
+      "category": "bush",
+      "name": "cs_zhaoze_guanmu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_guanmu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "df48550b9150",
+      "category": "bush",
+      "name": "cs_zhaoze_guanmu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_guanmu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f7767f340e73",
+      "category": "bush",
+      "name": "cs_zhaoze_guanmu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_guanmu05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "70a1b7351aab",
+      "category": "bush",
+      "name": "cs_zhucheng_guanmu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhucheng_guanmu01.FBX",
+      "glb": "9b6c9c8c7cff7f2f.glb",
+      "ready": true
+    },
+    {
+      "id": "ad46184e4df7",
+      "category": "crystal",
+      "name": "cs_zhucheng_shuijing",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_shuijing.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "35560a5d0d17",
+      "category": "flower",
+      "name": "cs_zhucheng_taohua",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_taohua.FBX",
+      "glb": "a889619c266fb328.glb",
+      "ready": true
+    },
+    {
+      "id": "2b5b48aa95d5",
+      "category": "plaza",
+      "name": "FB_13_pingtai01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_13_pingtai01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "170c7f60ee16",
+      "category": "prop",
+      "name": "FB_05_thing02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_05_thing02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "34bf2dbed892",
+      "category": "prop",
+      "name": "FB_06_thing01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_06_thing01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cd4bcdd89504",
+      "category": "prop",
+      "name": "FB_09_chuan",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_09_chuan.FBX",
+      "glb": "21f4b87252fef18d.glb",
+      "ready": true
+    },
+    {
+      "id": "e75885d7d05f",
+      "category": "prop",
+      "name": "FB_09_pao",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_09_pao.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "96b3156b3328",
+      "category": "prop",
+      "name": "FB_26_ds01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_26_ds01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d8a38387a891",
+      "category": "prop",
+      "name": "cs_binghu_bingchuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_bingchuan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1344a269c962",
+      "category": "prop",
+      "name": "cs_binghu_bingchuan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_bingchuan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "978d195d6fc4",
+      "category": "prop",
+      "name": "cs_binghu_bingchuan03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_bingchuan03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "27db56f271f0",
+      "category": "prop",
+      "name": "cs_binghu_bingchuan04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_bingchuan04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ecdd7cff1eb9",
+      "category": "prop",
+      "name": "cs_binghu_bingchuan05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_bingchuan05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b54f15950046",
+      "category": "prop",
+      "name": "cs_binghu_bingchuan06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_bingchuan06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "aa8f99e69df3",
+      "category": "prop",
+      "name": "cs_binghu_bingzhui01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_bingzhui01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d9c3115bb8b8",
+      "category": "prop",
+      "name": "cs_binghu_cao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_binghu_cao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "27cfeb75b0b3",
+      "category": "prop",
+      "name": "cs_binghu_cao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_binghu_cao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9dfadf53ee61",
+      "category": "prop",
+      "name": "cs_binghu_cao03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_binghu_cao03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "de2f2024800f",
+      "category": "prop",
+      "name": "cs_binghu_chelun01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_chelun01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "746b7263a216",
+      "category": "prop",
+      "name": "cs_binghu_chelun02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_chelun02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5e87de109a99",
+      "category": "prop",
+      "name": "cs_binghu_chuan01_pao",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_chuan01_pao.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "23e8c9020773",
+      "category": "prop",
+      "name": "cs_binghu_ditan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_ditan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3bed3b592712",
+      "category": "prop",
+      "name": "cs_binghu_guanzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_guanzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f7554703ed7b",
+      "category": "prop",
+      "name": "cs_binghu_guanzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_guanzi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0ed1544cf2f6",
+      "category": "prop",
+      "name": "cs_binghu_guanzi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_guanzi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9743f0bb7a89",
+      "category": "prop",
+      "name": "cs_binghu_huoba01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_huoba01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c3182506d8b7",
+      "category": "prop",
+      "name": "cs_binghu_huodui01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_huodui01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "338807209870",
+      "category": "prop",
+      "name": "cs_binghu_huopen01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_huopen01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "55762fe37595",
+      "category": "prop",
+      "name": "cs_binghu_longgu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_longgu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c773415d1e67",
+      "category": "prop",
+      "name": "cs_binghu_longgu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_longgu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "556456bf39e4",
+      "category": "prop",
+      "name": "cs_binghu_muban01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_muban01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3b24ca362b80",
+      "category": "prop",
+      "name": "cs_binghu_muban02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_muban02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4448974bd35a",
+      "category": "prop",
+      "name": "cs_binghu_muban03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_muban03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2da759f5c280",
+      "category": "prop",
+      "name": "cs_binghu_muban04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_muban04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5dd278557732",
+      "category": "prop",
+      "name": "cs_binghu_muban05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_muban05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f8470f70447f",
+      "category": "prop",
+      "name": "cs_binghu_muban06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_muban06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "083833e98a44",
+      "category": "prop",
+      "name": "cs_binghu_mutong01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_mutong01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "92f75c0372ad",
+      "category": "prop",
+      "name": "cs_binghu_mutong02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_mutong02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e4a05314f596",
+      "category": "prop",
+      "name": "cs_binghu_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_binghu_shu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "19cefbacc524",
+      "category": "prop",
+      "name": "cs_binghu_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_binghu_shu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2464f86c5e14",
+      "category": "prop",
+      "name": "cs_binghu_shu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_binghu_shu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9123aca34a4d",
+      "category": "prop",
+      "name": "cs_binghu_shu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_binghu_shu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e809c21a0269",
+      "category": "prop",
+      "name": "cs_binghu_suizhuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_suizhuan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "209aa4bf7d49",
+      "category": "prop",
+      "name": "cs_binghu_suizhuan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_suizhuan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "84047a3f303d",
+      "category": "prop",
+      "name": "cs_binghu_suizhuan03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_suizhuan03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4e3923daf96c",
+      "category": "prop",
+      "name": "cs_binghu_xiangzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_xiangzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "39c5b286c5e9",
+      "category": "prop",
+      "name": "cs_binghu_xiangzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_xiangzi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1c6c46020920",
+      "category": "prop",
+      "name": "cs_binghu_xiangzi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_xiangzi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "79ed9d68a257",
+      "category": "prop",
+      "name": "cs_binghu_xiaoche01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_xiaoche01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c35e6ee20029",
+      "category": "prop",
+      "name": "cs_binghu_yiji01_qizi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji01_qizi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "eba6eeb236cd",
+      "category": "prop",
+      "name": "cs_binghu_zhalan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_zhalan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "74b99508d60e",
+      "category": "prop",
+      "name": "cs_binghu_zhalan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_zhalan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "17d994f7a639",
+      "category": "prop",
+      "name": "cs_binghu_zhalan03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_zhalan03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "38ce004db977",
+      "category": "prop",
+      "name": "cs_binghu_zhalan04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_zhalan04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4e3388a8ad1c",
+      "category": "prop",
+      "name": "cs_binghu_zhalan05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_zhalan05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "698e234eb165",
+      "category": "prop",
+      "name": "cs_binghu_zhangpeng",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_zhangpeng.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5d05f6f888e9",
+      "category": "prop",
+      "name": "cs_haibian_matou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haibian_matou01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "66ae2a48b464",
+      "category": "prop",
+      "name": "cs_haibian_matou02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haibian_matou02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3cbde2501003",
+      "category": "prop",
+      "name": "cs_haibian_matou02_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haibian_matou02_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4558fbc60252",
+      "category": "prop",
+      "name": "cs_haibian_matou03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haibian_matou03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cceb93746cb5",
+      "category": "prop",
+      "name": "cs_haibian_shayu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haibian_shayu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a61d5e1bd22c",
+      "category": "prop",
+      "name": "cs_haitan_cao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_cao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6eebc5e3ce55",
+      "category": "prop",
+      "name": "cs_haitan_chuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_chuan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f8c2b36bf6d9",
+      "category": "prop",
+      "name": "cs_haitan_dachuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_dachuan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4dc1621ae88f",
+      "category": "prop",
+      "name": "cs_haitan_dachuan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_dachuan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8c71e5c9061b",
+      "category": "prop",
+      "name": "cs_haitan_dachuan_dl",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_dachuan_dl.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "bee37f8ee868",
+      "category": "prop",
+      "name": "cs_haitan_ditan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_ditan01.FBX",
+      "glb": "be42740fc9374159.glb",
+      "ready": true
+    },
+    {
+      "id": "ce324bf7608e",
+      "category": "prop",
+      "name": "cs_haitan_huoba01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_huoba01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1e7154751650",
+      "category": "prop",
+      "name": "cs_haitan_huodui01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_huodui01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e3b8e039dfda",
+      "category": "prop",
+      "name": "cs_haitan_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_shu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4eb851f01e61",
+      "category": "prop",
+      "name": "cs_haitan_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_shu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0f08fda50f60",
+      "category": "prop",
+      "name": "cs_haitan_shu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_shu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2495036a19de",
+      "category": "prop",
+      "name": "cs_haitan_shu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_shu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8524b1b65b1d",
+      "category": "prop",
+      "name": "cs_haitan_shu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_shu05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c4a721101c83",
+      "category": "prop",
+      "name": "cs_haitan_yiji01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_yiji01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ae01de4cc1d0",
+      "category": "prop",
+      "name": "cs_haitan_yiji02_g",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_yiji02_g.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9190e937b07b",
+      "category": "prop",
+      "name": "cs_haitan_yiji02_g_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_yiji02_g_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6ba73acec036",
+      "category": "prop",
+      "name": "cs_haitan_yiji03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_yiji03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "83db3de20cd8",
+      "category": "prop",
+      "name": "cs_haitan_yuwang",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_yuwang.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d373b1d59272",
+      "category": "prop",
+      "name": "cs_hd_bianjing_thing01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_bianjing_thing01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "01f8ed5f2b43",
+      "category": "prop",
+      "name": "cs_hd_bianjing_thing02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_bianjing_thing02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3fd0950829da",
+      "category": "prop",
+      "name": "cs_hd_bianjing_thing03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_bianjing_thing03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1aa8d877d8c7",
+      "category": "prop",
+      "name": "cs_hd_hunli_hua01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_hd_hunli_hua01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d874327ecf07",
+      "category": "prop",
+      "name": "cs_hd_hunli_hua02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_hd_hunli_hua02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c5a52a315d3d",
+      "category": "prop",
+      "name": "cs_hd_hunli_huaban",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_hunli_huaban.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e9bb90780051",
+      "category": "prop",
+      "name": "cs_hd_hunli_shalian_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_hunli_shalian_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "77998a6fe9cf",
+      "category": "prop",
+      "name": "cs_hd_hunli_shalian_02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_hunli_shalian_02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6eb71e67cead",
+      "category": "prop",
+      "name": "cs_hd_ryzc_chusheng01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_chusheng01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b67f867c3c71",
+      "category": "prop",
+      "name": "cs_hd_ryzc_chusheng02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_chusheng02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "89904af3b1ba",
+      "category": "prop",
+      "name": "cs_hd_ryzc_dm01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_dm01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "78a2b4b727d1",
+      "category": "prop",
+      "name": "cs_hd_ryzc_dm02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_dm02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "07630462ac53",
+      "category": "prop",
+      "name": "cs_hd_ryzc_dm04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_dm04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "894c9c2be1f0",
+      "category": "prop",
+      "name": "cs_hd_ryzc_dm06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_dm06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "aaaa60f68e24",
+      "category": "prop",
+      "name": "cs_hd_ryzc_langan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_langan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3374043010c0",
+      "category": "prop",
+      "name": "cs_hd_ryzc_langan03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_langan03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "eedc682426c3",
+      "category": "prop",
+      "name": "cs_hd_ryzc_langan04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_langan04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "dd389f153e7e",
+      "category": "prop",
+      "name": "cs_hd_ryzc_langan06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_langan06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "46e3b9fad935",
+      "category": "prop",
+      "name": "cs_hd_ryzc_water",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_water.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7fa2bd82d9d5",
+      "category": "prop",
+      "name": "cs_hd_wangchengqizi",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_wangchengqizi.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6a1cc3a89908",
+      "category": "prop",
+      "name": "cs_jingling_cao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_cao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c6fc942a8c14",
+      "category": "prop",
+      "name": "cs_jingling_cao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_cao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f1cefcf3e3cc",
+      "category": "prop",
+      "name": "cs_jingling_chelun01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_chelun01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "eb97a8ef7c5c",
+      "category": "prop",
+      "name": "cs_jingling_chelun02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_chelun02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "52788cb2f378",
+      "category": "prop",
+      "name": "cs_jingling_huodui",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_huodui.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "27c1e6aa4c32",
+      "category": "prop",
+      "name": "cs_jingling_mogu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_mogu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8427bc1e3f2b",
+      "category": "prop",
+      "name": "cs_jingling_mogu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_mogu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "780d5786d023",
+      "category": "prop",
+      "name": "cs_jingling_mutong01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_mutong01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a9dd8ea16b42",
+      "category": "prop",
+      "name": "cs_jingling_mutong02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_mutong02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b85787b0ac66",
+      "category": "prop",
+      "name": "cs_jingling_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_shu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "02ee0a367f0c",
+      "category": "prop",
+      "name": "cs_jingling_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_shu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e2e18ce24a48",
+      "category": "prop",
+      "name": "cs_jingling_shu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_shu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7e6bc2a300c9",
+      "category": "prop",
+      "name": "cs_jingling_shu03_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_shu03_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "726d73d35da9",
+      "category": "prop",
+      "name": "cs_jingling_shu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_shu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7b4ba326d568",
+      "category": "prop",
+      "name": "cs_jingling_shu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_shu05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "05623c6573de",
+      "category": "prop",
+      "name": "cs_jingling_tengman01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_tengman01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "82633257911c",
+      "category": "prop",
+      "name": "cs_jingling_tengman02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_tengman02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5f841cfd3f7a",
+      "category": "prop",
+      "name": "cs_jingling_tengman03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_tengman03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b4fedf936de7",
+      "category": "prop",
+      "name": "cs_jingling_tengman04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_tengman04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e38d838cffb8",
+      "category": "prop",
+      "name": "cs_jingling_tengman05",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_tengman05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "90de9be426a0",
+      "category": "prop",
+      "name": "cs_jingling_tengman06",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_jingling_tengman06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "630d730a3a78",
+      "category": "prop",
+      "name": "cs_jingling_xiangzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_xiangzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "119da8973d13",
+      "category": "prop",
+      "name": "cs_jingling_xiaoche01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_xiaoche01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "338b57c72d2b",
+      "category": "prop",
+      "name": "cs_jingling_xiaoche02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_xiaoche02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "55ac8d1906ba",
+      "category": "prop",
+      "name": "cs_jingling_yiji03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "dc978da4710c",
+      "category": "prop",
+      "name": "cs_jingling_yiji04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9168e5089874",
+      "category": "prop",
+      "name": "cs_jingling_yiji05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "13892ad1af5e",
+      "category": "prop",
+      "name": "cs_jingling_yiji06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ec0753299c9e",
+      "category": "prop",
+      "name": "cs_jingling_yiji07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b4dab070172c",
+      "category": "prop",
+      "name": "cs_jingling_yiji08",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1533965c6c40",
+      "category": "prop",
+      "name": "cs_jingling_yiji09",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "dbe18778f0d3",
+      "category": "prop",
+      "name": "cs_jingling_yiji10",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji10.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a85b2056e508",
+      "category": "prop",
+      "name": "cs_jingling_yiji11",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji11.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b5ccb9c22c73",
+      "category": "prop",
+      "name": "cs_jingling_yiji12",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji12.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9e8078b22daa",
+      "category": "prop",
+      "name": "cs_jingling_yiji13",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji13.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "475d598a3131",
+      "category": "prop",
+      "name": "cs_jingling_yiji14",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_yiji14.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ff9eb9086de2",
+      "category": "prop",
+      "name": "cs_jingling_zhalan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_zhalan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "51463f48c7dd",
+      "category": "prop",
+      "name": "cs_samo_cao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_samo_cao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "147277bb063d",
+      "category": "prop",
+      "name": "cs_samo_cao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_samo_cao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b3bcc08ab0be",
+      "category": "prop",
+      "name": "cs_samo_cao03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_samo_cao03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "21f443f72af6",
+      "category": "prop",
+      "name": "cs_samo_cao04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_samo_cao04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "75932519adf6",
+      "category": "prop",
+      "name": "cs_samo_cao05",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_samo_cao05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d30077b27ec6",
+      "category": "prop",
+      "name": "cs_senlin_cao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_cao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "59eac9c3c9ec",
+      "category": "prop",
+      "name": "cs_senlin_chezhe",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_chezhe.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d6fdcbee3f6e",
+      "category": "prop",
+      "name": "cs_senlin_dizhuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_dizhuan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d93d1511217c",
+      "category": "prop",
+      "name": "cs_senlin_dizhuan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_dizhuan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "257fa3e71149",
+      "category": "prop",
+      "name": "cs_senlin_dizhuan03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_dizhuan03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4f6ba238ff47",
+      "category": "prop",
+      "name": "cs_senlin_dizhuan04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_dizhuan04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0bfdbfb49789",
+      "category": "prop",
+      "name": "cs_senlin_kushu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_kushu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1ec5f142ee58",
+      "category": "prop",
+      "name": "cs_senlin_kushu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_kushu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5e077fce786c",
+      "category": "prop",
+      "name": "cs_senlin_kushu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_kushu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cc6853b1dd25",
+      "category": "prop",
+      "name": "cs_senlin_ludeng01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_ludeng01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cf6576a6c72d",
+      "category": "prop",
+      "name": "cs_senlin_luoye01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_luoye01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "abee0e273cb4",
+      "category": "prop",
+      "name": "cs_senlin_muban01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_muban01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1ef2b60c9c25",
+      "category": "prop",
+      "name": "cs_senlin_muban02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_muban02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ff53fd33a632",
+      "category": "prop",
+      "name": "cs_senlin_muban03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_muban03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f4a878520f55",
+      "category": "prop",
+      "name": "cs_senlin_mutong01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_mutong01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4b2dd79d0731",
+      "category": "prop",
+      "name": "cs_senlin_mutong02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_mutong02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3c60e1cce48a",
+      "category": "prop",
+      "name": "cs_senlin_mutong03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_mutong03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a51a53f88f0e",
+      "category": "prop",
+      "name": "cs_senlin_mutong04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_mutong04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d1be88fa01c7",
+      "category": "prop",
+      "name": "cs_senlin_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_shu01.FBX",
+      "glb": "588fc6c820d2d6f3.glb",
+      "ready": true
+    },
+    {
+      "id": "af355e4df1da",
+      "category": "prop",
+      "name": "cs_senlin_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_senlin_shu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "bbd18cab9635",
+      "category": "prop",
+      "name": "cs_senlin_tanwei01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_tanwei01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "60bcb5837918",
+      "category": "prop",
+      "name": "cs_senlin_tanwei02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_tanwei02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7060c178998c",
+      "category": "prop",
+      "name": "cs_senlin_tanwei03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_tanwei03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "79f743c85c08",
+      "category": "prop",
+      "name": "cs_senlin_tanwei04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_tanwei04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4c61ba785149",
+      "category": "prop",
+      "name": "cs_senlin_xiangzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_xiangzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b14883c86533",
+      "category": "prop",
+      "name": "cs_senlin_xiangzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_xiangzi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "15bbe02f586c",
+      "category": "prop",
+      "name": "cs_senlin_xiangzi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_xiangzi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3485bbc89f4f",
+      "category": "prop",
+      "name": "cs_senlin_xiaoche01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_xiaoche01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4f95c38b0e27",
+      "category": "prop",
+      "name": "cs_senlin_xiaoche02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_xiaoche02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1acf0e392a15",
+      "category": "prop",
+      "name": "cs_senlin_yinying01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_yinying01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4fb8473b6a18",
+      "category": "prop",
+      "name": "cs_senlin_yun01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_yun01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2d56551e4aab",
+      "category": "prop",
+      "name": "cs_senlin_zhalan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_zhalan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2d2cd68e9461",
+      "category": "prop",
+      "name": "cs_senlin_zhalan02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_senlin_zhalan02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7784dfb97689",
+      "category": "prop",
+      "name": "cs_shamo_kushu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_shamo_kushu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7719d4aad9c3",
+      "category": "prop",
+      "name": "cs_shamo_kushu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_shamo_kushu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "635742dfd046",
+      "category": "prop",
+      "name": "cs_shamo_kushu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_shamo_kushu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f5bd59e1b1db",
+      "category": "prop",
+      "name": "cs_shamo_kushu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_shamo_kushu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "67923bbe9456",
+      "category": "prop",
+      "name": "cs_shamo_longgu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "849271ba1c2a",
+      "category": "prop",
+      "name": "cs_shamo_longgu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8331dae61cd7",
+      "category": "prop",
+      "name": "cs_shamo_longgu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9cb5e0b6e465",
+      "category": "prop",
+      "name": "cs_shamo_longgu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4216a19a9bf4",
+      "category": "prop",
+      "name": "cs_shamo_longgu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "20398adde15a",
+      "category": "prop",
+      "name": "cs_shamo_longgu06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b4730d102fc7",
+      "category": "prop",
+      "name": "cs_shamo_longgu07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c17fa64b87d0",
+      "category": "prop",
+      "name": "cs_shamo_longgu08",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a70f04c360cf",
+      "category": "prop",
+      "name": "cs_shamo_longgu09",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_longgu09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4e016f4cb8b1",
+      "category": "prop",
+      "name": "cs_shamo_pengzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamo_pengzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "88c4f108e08a",
+      "category": "prop",
+      "name": "cs_tiankonghe_sky",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_tiankonghe_sky.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4c0547b12a7d",
+      "category": "prop",
+      "name": "cs_tiankonghe_sky02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_tiankonghe_sky02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f27a5edfe454",
+      "category": "prop",
+      "name": "cs_tiankonghe_sky03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_tiankonghe_sky03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f21f7b7eec81",
+      "category": "prop",
+      "name": "cs_yw_biajing_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_yw_biajing_shu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fb655cc4ced2",
+      "category": "prop",
+      "name": "cs_yw_biajing_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_yw_biajing_shu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d07a1f1e6143",
+      "category": "prop",
+      "name": "cs_yw_biajing_shu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_yw_biajing_shu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "92f0c1210030",
+      "category": "prop",
+      "name": "cs_yw_bianjing_qizi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_yw_bianjing_qizi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "67a2d3c5d97a",
+      "category": "prop",
+      "name": "cs_yw_bianjing_qizi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_yw_bianjing_qizi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4ce8932cbd42",
+      "category": "prop",
+      "name": "cs_yw_bianjing_qizi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_yw_bianjing_qizi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9709db5b3865",
+      "category": "prop",
+      "name": "cs_yw_bianjing_qizi04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_yw_bianjing_qizi04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0624ac07d7d0",
+      "category": "prop",
+      "name": "cs_yw_zhaozeyiji_01_xiao",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_yw_zhaozeyiji_01_xiao.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "60396ba006fc",
+      "category": "prop",
+      "name": "cs_zhaoze_chezhe01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_chezhe01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "02b8f4fc26b8",
+      "category": "prop",
+      "name": "cs_zhaoze_huopen01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_huopen01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "95e093249212",
+      "category": "prop",
+      "name": "cs_zhaoze_kuang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_kuang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2ba6ed3f4dc8",
+      "category": "prop",
+      "name": "cs_zhaoze_kuang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_kuang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3ef2ce2f50d6",
+      "category": "prop",
+      "name": "cs_zhaoze_kuang03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_kuang03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "11be3ce9ee54",
+      "category": "prop",
+      "name": "cs_zhaoze_kuang04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_kuang04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "922d7fb154a7",
+      "category": "prop",
+      "name": "cs_zhaoze_liaowangtai",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_liaowangtai.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d6ab6435d541",
+      "category": "prop",
+      "name": "cs_zhaoze_longgu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_longgu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9fd2d28722f6",
+      "category": "prop",
+      "name": "cs_zhaoze_longgu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_longgu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "326853c7277c",
+      "category": "prop",
+      "name": "cs_zhaoze_mubei01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mubei01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "718cc7e39900",
+      "category": "prop",
+      "name": "cs_zhaoze_mubei02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mubei02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d3bbf145a744",
+      "category": "prop",
+      "name": "cs_zhaoze_mubei03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mubei03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "39faf3edcfb6",
+      "category": "prop",
+      "name": "cs_zhaoze_mubei04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mubei04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cd760039d963",
+      "category": "prop",
+      "name": "cs_zhaoze_mubei05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mubei05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6055585097b5",
+      "category": "prop",
+      "name": "cs_zhaoze_mubei06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mubei06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b205aa301bf0",
+      "category": "prop",
+      "name": "cs_zhaoze_mubei07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mubei07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b8d481c21268",
+      "category": "prop",
+      "name": "cs_zhaoze_mutong01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mutong01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "95e17e93e6be",
+      "category": "prop",
+      "name": "cs_zhaoze_mutong02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_mutong02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f8240456fbb9",
+      "category": "prop",
+      "name": "cs_zhaoze_muxue01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_muxue01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e515caf16280",
+      "category": "prop",
+      "name": "cs_zhaoze_muxue02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_muxue02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f3d1c0dd92a6",
+      "category": "prop",
+      "name": "cs_zhaoze_muxue03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_muxue03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "727964e3c249",
+      "category": "prop",
+      "name": "cs_zhaoze_muxue04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_muxue04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "29fca0ec8d82",
+      "category": "prop",
+      "name": "cs_zhaoze_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhaoze_shu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "97e894ecc1a1",
+      "category": "prop",
+      "name": "cs_zhaoze_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhaoze_shu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0e51d2d3e043",
+      "category": "prop",
+      "name": "cs_zhaoze_shu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhaoze_shu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cf01a7ef0b54",
+      "category": "prop",
+      "name": "cs_zhaoze_shu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhaoze_shu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6c39f71b359a",
+      "category": "prop",
+      "name": "cs_zhaoze_xiangzi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiangzi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6fb25869dd1b",
+      "category": "prop",
+      "name": "cs_zhaoze_xiangzi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiangzi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e558e7eca809",
+      "category": "prop",
+      "name": "cs_zhaoze_xiangzi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiangzi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "40b27f247d2f",
+      "category": "prop",
+      "name": "cs_zhaoze_xiangzi04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiangzi04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e7af0f970d0e",
+      "category": "prop",
+      "name": "cs_zhaoze_xiangzi05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiangzi05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "df83773d1200",
+      "category": "prop",
+      "name": "cs_zhaoze_xiaoche01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiaoche01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d0efaac0a8a2",
+      "category": "prop",
+      "name": "cs_zhaoze_xiaoche02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiaoche02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f7248288c872",
+      "category": "prop",
+      "name": "cs_zhaoze_xiaoche03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_xiaoche03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e033fdacd490",
+      "category": "prop",
+      "name": "cs_zhaoze_yiji01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_yiji01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5abc00f08fa4",
+      "category": "prop",
+      "name": "cs_zhaoze_yiji02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_yiji02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "441ab49d9a82",
+      "category": "prop",
+      "name": "cs_zhucheng_changdeng01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_changdeng01.FBX",
+      "glb": "e068d1ad00e9a542.glb",
+      "ready": true
+    },
+    {
+      "id": "782fbb8f0e5f",
+      "category": "prop",
+      "name": "cs_zhucheng_chuanzhuangshi",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_chuanzhuangshi.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f878bed5702c",
+      "category": "prop",
+      "name": "cs_zhucheng_ludeng01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_ludeng01.FBX",
+      "glb": "461fcff9693f23e0.glb",
+      "ready": true
+    },
+    {
+      "id": "578ef41f8dc7",
+      "category": "prop",
+      "name": "cs_zhucheng_matou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_matou01.FBX",
+      "glb": "81a6247d2c73fbee.glb",
+      "ready": true
+    },
+    {
+      "id": "000d5ddc47de",
+      "category": "prop",
+      "name": "cs_zhucheng_mujia01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_mujia01.FBX",
+      "glb": "e33a35de0e2daee4.glb",
+      "ready": true
+    },
+    {
+      "id": "a989462db121",
+      "category": "prop",
+      "name": "cs_zhucheng_pengzi_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_pengzi_01.FBX",
+      "glb": "7e0ae8283571fca2.glb",
+      "ready": true
+    },
+    {
+      "id": "db1b76cac337",
+      "category": "prop",
+      "name": "cs_zhucheng_pengzi_02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_pengzi_02.FBX",
+      "glb": "1174a7931e0b25a0.glb",
+      "ready": true
+    },
+    {
+      "id": "9dd7f57488ee",
+      "category": "prop",
+      "name": "cs_zhucheng_pengzi_03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_pengzi_03.FBX",
+      "glb": "3a14f51de9d0835f.glb",
+      "ready": true
+    },
+    {
+      "id": "41836485bd48",
+      "category": "prop",
+      "name": "cs_zhucheng_qizi",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_qizi.FBX",
+      "glb": "d26bdcc5b1421735.glb",
+      "ready": true
+    },
+    {
+      "id": "b7d2c50ce72b",
+      "category": "prop",
+      "name": "cs_zhucheng_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhucheng_shu01.FBX",
+      "glb": "e729680f7c910abf.glb",
+      "ready": true
+    },
+    {
+      "id": "f08b7f3499b8",
+      "category": "prop",
+      "name": "cs_zhucheng_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhucheng_shu02.FBX",
+      "glb": "b6c0574c442a0e71.glb",
+      "ready": true
+    },
+    {
+      "id": "cb2626f1ff8d",
+      "category": "prop",
+      "name": "cs_zhucheng_sky",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_sky.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ff0a387430fd",
+      "category": "prop",
+      "name": "cs_zhucheng_xiaochuan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_xiaochuan01.FBX",
+      "glb": "1bbe7184a93fb08e.glb",
+      "ready": true
+    },
+    {
+      "id": "2cf466773e18",
+      "category": "prop",
+      "name": "cs_zhucheng_zhibei01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhucheng_zhibei01.FBX",
+      "glb": "7e851baa99820a70.glb",
+      "ready": true
+    },
+    {
+      "id": "067ffe23f8dc",
+      "category": "rock",
+      "name": "cs_binghu_shanshi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f488b0dd2f98",
+      "category": "rock",
+      "name": "cs_binghu_shanshi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a5279bc4553d",
+      "category": "rock",
+      "name": "cs_binghu_shanshi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7f9c565dba09",
+      "category": "rock",
+      "name": "cs_binghu_shanshi04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "94570b86bbb5",
+      "category": "rock",
+      "name": "cs_binghu_shanshi05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "06872b8a7ea1",
+      "category": "rock",
+      "name": "cs_binghu_shanshi06",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "935df6b5da3a",
+      "category": "rock",
+      "name": "cs_binghu_shanshi07",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1ce4482bbcee",
+      "category": "rock",
+      "name": "cs_binghu_shanshi08",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e4ccacc27384",
+      "category": "rock",
+      "name": "cs_binghu_shanshi09",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a63f814c1d9d",
+      "category": "rock",
+      "name": "cs_binghu_shanshi10",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu_shanshi10.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "46c1a93184c1",
+      "category": "rock",
+      "name": "cs_haitan_shitou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_haitan_shitou01.FBX",
+      "glb": "fc26cd1936e6ec0a.glb",
+      "ready": true
+    },
+    {
+      "id": "9e9689ae5d34",
+      "category": "rock",
+      "name": "cs_haitan_shitou02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_haitan_shitou02.FBX",
+      "glb": "894021a173e10ebf.glb",
+      "ready": true
+    },
+    {
+      "id": "c182a1b6b66b",
+      "category": "rock",
+      "name": "cs_haitan_shitou03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_haitan_shitou03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2e436b58c400",
+      "category": "rock",
+      "name": "cs_jingling_shanshi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_jingling_shanshi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d74d497faeea",
+      "category": "rock",
+      "name": "cs_jingling_shanshi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_jingling_shanshi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6889b08af9fc",
+      "category": "rock",
+      "name": "cs_jingling_shanshi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_jingling_shanshi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4494a9a69a92",
+      "category": "rock",
+      "name": "cs_jingling_shanshi04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_jingling_shanshi04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c18df6d3eff2",
+      "category": "rock",
+      "name": "cs_jingling_shanshi05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_jingling_shanshi05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6de55bff8820",
+      "category": "rock",
+      "name": "cs_jingling_shanshi06",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_jingling_shanshi06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "65ead01f48e4",
+      "category": "rock",
+      "name": "cs_jingling_shanshi07",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_jingling_shanshi07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d3d537f3f4b9",
+      "category": "rock",
+      "name": "cs_rongyan_cao01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_rongyan_cao01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6bcfacfdcd37",
+      "category": "rock",
+      "name": "cs_rongyan_cao02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_rongyan_cao02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cac325d81719",
+      "category": "rock",
+      "name": "cs_rongyan_ditai01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_ditai01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e6553c604fe6",
+      "category": "rock",
+      "name": "cs_rongyan_dmyanjiang_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_dmyanjiang_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cc05e37c9a64",
+      "category": "rock",
+      "name": "cs_rongyan_dmyanjiang_02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_dmyanjiang_02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f450aa9e00e8",
+      "category": "rock",
+      "name": "cs_rongyan_huopen01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_huopen01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "537367acf70f",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a05635674249",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0c1b6076c537",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu02a",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu02a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3cb986102594",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu02b",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu02b.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "941e9fd5defa",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu02c",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu02c.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "73c5eea2fb99",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu02d",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu02d.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "10323c03efc9",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu02e",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu02e.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "78949aafb7de",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu02f",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu02f.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "752c5e9cde66",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2b56832a4acc",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu04",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "34e04ea8f4de",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu05",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2bd37f305c28",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu06",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jianzhu06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4d39385e3a7c",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu_sk01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_jianzhu_sk01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f60a437feb90",
+      "category": "rock",
+      "name": "cs_rongyan_jianzhu_sk02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_jianzhu_sk02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "282cb1c5b806",
+      "category": "rock",
+      "name": "cs_rongyan_lazhu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_lazhu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e927f67670bc",
+      "category": "rock",
+      "name": "cs_rongyan_lazhu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_lazhu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e7ef2b7b83b0",
+      "category": "rock",
+      "name": "cs_rongyan_lazhu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_lazhu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3576393add46",
+      "category": "rock",
+      "name": "cs_rongyan_shitou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a84bfd043b45",
+      "category": "rock",
+      "name": "cs_rongyan_shitou02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2a35b2e84c1a",
+      "category": "rock",
+      "name": "cs_rongyan_shitou03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b3050f76f843",
+      "category": "rock",
+      "name": "cs_rongyan_shitou04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "22b7dc28e875",
+      "category": "rock",
+      "name": "cs_rongyan_shitou05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b28a16cdbc7d",
+      "category": "rock",
+      "name": "cs_rongyan_shitou06",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "119bb8b20f22",
+      "category": "rock",
+      "name": "cs_rongyan_shitou07",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4bf13eb2c98a",
+      "category": "rock",
+      "name": "cs_rongyan_shitou08",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e86736079d6b",
+      "category": "rock",
+      "name": "cs_rongyan_shitou09",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c9e9b9d89fa1",
+      "category": "rock",
+      "name": "cs_rongyan_shitou10",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou10.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8d844ac16cb0",
+      "category": "rock",
+      "name": "cs_rongyan_shitou11",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou11.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "233bdce778b2",
+      "category": "rock",
+      "name": "cs_rongyan_shitou12",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou12.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "980174194c0b",
+      "category": "rock",
+      "name": "cs_rongyan_shitou13",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou13.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "ec0da04f5cbd",
+      "category": "rock",
+      "name": "cs_rongyan_shitou14",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou14.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "93ccf122ab9f",
+      "category": "rock",
+      "name": "cs_rongyan_shitou15",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_shitou15.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "24fcdf90dd84",
+      "category": "rock",
+      "name": "cs_rongyan_shu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_rongyan_shu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "90c818791ab1",
+      "category": "rock",
+      "name": "cs_rongyan_shu02",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_rongyan_shu02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "93a04bfad23c",
+      "category": "rock",
+      "name": "cs_rongyan_shu03",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_rongyan_shu03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "52413abe8733",
+      "category": "rock",
+      "name": "cs_rongyan_suishi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_suishi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "67779b0d4302",
+      "category": "rock",
+      "name": "cs_rongyan_suishi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_suishi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6d9363254367",
+      "category": "rock",
+      "name": "cs_rongyan_suishi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_suishi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "196b0d6c936c",
+      "category": "rock",
+      "name": "cs_rongyan_suishi04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_suishi04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5e75d4c85bca",
+      "category": "rock",
+      "name": "cs_rongyan_suishi05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_rongyan_suishi05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "044ff85b17bf",
+      "category": "rock",
+      "name": "cs_senlin_shitou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4dd3d0cf0638",
+      "category": "rock",
+      "name": "cs_senlin_shitou02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3ac08b116095",
+      "category": "rock",
+      "name": "cs_senlin_shitou03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "618434f05b0b",
+      "category": "rock",
+      "name": "cs_senlin_shitou04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9575de907672",
+      "category": "rock",
+      "name": "cs_senlin_shitou05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "62727acb2438",
+      "category": "rock",
+      "name": "cs_senlin_shitou06",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2dd61e9abd38",
+      "category": "rock",
+      "name": "cs_senlin_shitou07",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9c2fe8f0c559",
+      "category": "rock",
+      "name": "cs_senlin_shitou08",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6342f296d1ae",
+      "category": "rock",
+      "name": "cs_senlin_shitou09",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c679e0bc8492",
+      "category": "rock",
+      "name": "cs_senlin_shitou10",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_shitou10.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "710b35e6fbcf",
+      "category": "rock",
+      "name": "cs_shamo_shitou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "40e0f2024edd",
+      "category": "rock",
+      "name": "cs_shamo_shitou02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "673db5fdbc5d",
+      "category": "rock",
+      "name": "cs_shamo_shitou03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2f47f6fa158b",
+      "category": "rock",
+      "name": "cs_shamo_shitou04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "123be1114bb1",
+      "category": "rock",
+      "name": "cs_shamo_shitou05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "086558b8a18b",
+      "category": "rock",
+      "name": "cs_shamo_shitou06",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "97cd04aa6a17",
+      "category": "rock",
+      "name": "cs_shamo_shitou07",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f7e1dcd50184",
+      "category": "rock",
+      "name": "cs_shamo_shitou08",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f8ebb3f18c48",
+      "category": "rock",
+      "name": "cs_shamo_shitou09",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_shamo_shitou09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8a1a23c93251",
+      "category": "rock",
+      "name": "cs_zhaoze_shanshi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_shanshi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b581d29f0012",
+      "category": "rock",
+      "name": "cs_zhaoze_shanshi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_shanshi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "712e2e7f252b",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b9a6505ce2e8",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "bd78c6f86a59",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fac6d9cb529e",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "77c758570114",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2e1654f0649a",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou06",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a81cd519341c",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou07",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "013b1eb944be",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou08",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "89045061a07c",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou09",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a2d9b7b4d817",
+      "category": "rock",
+      "name": "cs_zhaoze_shitou10",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_zhaoze_shitou10.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2c38cb662253",
+      "category": "stairs",
+      "name": "cs_binghu_taijie01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_taijie01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "da5f716665fe",
+      "category": "stairs",
+      "name": "cs_binghu_yiji01_louti",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_yiji01_louti.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "882d69ce3c5b",
+      "category": "stairs",
+      "name": "cs_haitan_louti01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_louti01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "30e27290a1c6",
+      "category": "stairs",
+      "name": "cs_haitan_louti01_g",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_louti01_g.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "984d66b96efe",
+      "category": "stairs",
+      "name": "cs_haitan_louti01_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_haitan_louti01_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6dae2e8e210b",
+      "category": "stairs",
+      "name": "cs_jingling_taijie01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_taijie01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "67924a8bef33",
+      "category": "stairs",
+      "name": "cs_shamozawu_taijie01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_taijie01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3076a8938c05",
+      "category": "statue",
+      "name": "FB_01_diaoxiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_01_diaoxiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cf7eea2035b0",
+      "category": "statue",
+      "name": "FB_01_diaoxiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_01_diaoxiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a244cef7b12f",
+      "category": "statue",
+      "name": "FB_11_diaoxiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/FB_11_diaoxiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4b7061602438",
+      "category": "statue",
+      "name": "FB_13_diaoxiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/FB_13_diaoxiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f8eaaa953a47",
+      "category": "statue",
+      "name": "cs_haitan_diaoxiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_diaoxiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0620995e8422",
+      "category": "statue",
+      "name": "cs_haitan_diaoxiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_diaoxiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "57f5ae308590",
+      "category": "statue",
+      "name": "cs_haitan_diaoxiang03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_diaoxiang03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3ab3a60c1eea",
+      "category": "statue",
+      "name": "cs_rongyan_diaoxiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_diaoxiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "12df9fdf6de1",
+      "category": "statue",
+      "name": "cs_rongyan_diaoxiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_rongyan_diaoxiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9ba2bac4f514",
+      "category": "statue",
+      "name": "cs_zhaoze_diaoxiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_diaoxiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9ad1cd1f8a35",
+      "category": "statue",
+      "name": "cs_zhucheng_diaoxiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_zhucheng_diaoxiang01.FBX",
+      "glb": "934cc8b70b569db0.glb",
+      "ready": true
+    },
+    {
+      "id": "311ad8682254",
+      "category": "statue",
+      "name": "cs_zhucheng_diaoxiangtai01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_diaoxiangtai01.FBX",
+      "glb": "931ac4d4c09a5830.glb",
+      "ready": true
+    },
+    {
+      "id": "500ed46cb496",
+      "category": "statue",
+      "name": "cs_zhucheng_diaoxiangtai02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhucheng_diaoxiangtai02.FBX",
+      "glb": "c95b939d6bd44205.glb",
+      "ready": true
+    },
+    {
+      "id": "09b72634f25d",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "45bb875dcdba",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_02",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "85a2d3e4e334",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_03",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "344e76aabff0",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_04",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "bf7b4e3b65f1",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_05",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6d0ae74b0f01",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_06",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1c3033020cf5",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_07",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "51a84d25bab2",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_08",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9cbcbb102a02",
+      "category": "statue_or_prop",
+      "name": "cs_binghu__binshanti_09",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_binghu__binshanti_09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4ad1ae11900a",
+      "category": "statue_or_prop",
+      "name": "cs_senlin_baobianshi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/st/cs_senlin_baobianshi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6057b73ba6de",
+      "category": "temple",
+      "name": "cs_binghu_jitan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_jitan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "68d4e2a0abc5",
+      "category": "temple",
+      "name": "cs_jingling_jitan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_jingling_jitan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "63a5dce3c239",
+      "category": "temple",
+      "name": "cs_rongyan_jitan",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_rongyan_jitan.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5ddf8850e95a",
+      "category": "temple",
+      "name": "cs_shamozawu_jitan01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_jitan01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "15d9111dc298",
+      "category": "terrain",
+      "name": "FB_11_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_11_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d9f817a1ee0f",
+      "category": "terrain",
+      "name": "FB_12_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_12_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5a8d76976337",
+      "category": "terrain",
+      "name": "FB_13_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_13_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "a856f9cbb132",
+      "category": "terrain",
+      "name": "FB_14_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_14_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cd6d00ce4d37",
+      "category": "terrain",
+      "name": "FB_16_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/FB_16_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b99628659b0c",
+      "category": "terrain",
+      "name": "FB_25_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_25_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "126258b9d338",
+      "category": "terrain",
+      "name": "FB_28_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_28_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1656e7bb3c14",
+      "category": "terrain",
+      "name": "FB_32_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_32_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b1672ad04af7",
+      "category": "terrain",
+      "name": "FB_33_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_33_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2a9af1ebd360",
+      "category": "terrain",
+      "name": "FB_35_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_35_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9b5f90d9840d",
+      "category": "terrain",
+      "name": "FB_37_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_37_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5e5b238f9f92",
+      "category": "terrain",
+      "name": "FB_38_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/FB_38_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "44570c06406c",
+      "category": "terrain",
+      "name": "cs_hd_bianjing_dibiao",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/cs_hd_bianjing_dibiao.fbx",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "bcf5af3e2e4c",
+      "category": "terrain",
+      "name": "cs_hd_bianjing_dm",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/cs_hd_bianjing_dm.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6f459aca6b65",
+      "category": "terrain",
+      "name": "cs_hd_bianjing_dm02",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/cs_hd_bianjing_dm02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8e2ecac6f857",
+      "category": "terrain",
+      "name": "cs_hd_bianjing_dm04",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/cs_hd_bianjing_dm04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "16ee89def759",
+      "category": "terrain",
+      "name": "cs_hd_bossshouhu_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/cs_hd_bossshouhu_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c9a913074c0e",
+      "category": "terrain",
+      "name": "cs_hd_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/dm/cs_hd_walksurface.fbx",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "79728aac7a7c",
+      "category": "terrain",
+      "name": "cs_yw_binghu02_dixing_walksurfuce",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_yw_binghu02_dixing_walksurfuce.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e64cc9c161a1",
+      "category": "terrain",
+      "name": "cs_yw_binghu_dixing01_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_yw_binghu_dixing01_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fa1e81e91404",
+      "category": "terrain",
+      "name": "cs_yw_haitan_dixing_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_yw_haitan_dixing_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "85f4d802bd0d",
+      "category": "terrain",
+      "name": "cs_yw_senlin_dixing_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_yw_senlin_dixing_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "464cc65e2bbc",
+      "category": "terrain",
+      "name": "cs_yw_shamo_dixing_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_yw_shamo_dixing_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "696fcf3a709f",
+      "category": "terrain",
+      "name": "cs_yw_xinzhaoze_dixing_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_yw_xinzhaoze_dixing_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8772405b7c97",
+      "category": "terrain",
+      "name": "cs_yw_zhucheng_dixing_xiao",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_yw_zhucheng_dixing_xiao.FBX",
+      "glb": "73281fa562c21126.glb",
+      "ready": true
+    },
+    {
+      "id": "c0d1db23375e",
+      "category": "tower",
+      "name": "cs_bianjing_taizi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_bianjing_taizi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1ece1b656b93",
+      "category": "tower",
+      "name": "cs_binghu_taizi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_taizi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "02304f5edb15",
+      "category": "tower",
+      "name": "cs_binghu_taizi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_taizi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4fc5102160be",
+      "category": "tower",
+      "name": "cs_binghu_taizi03",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_taizi03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3cf09e177a83",
+      "category": "tower",
+      "name": "cs_binghu_taizi04",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_binghu_taizi04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "b00d5d417277",
+      "category": "tower",
+      "name": "cs_denglu_taizi001",
+      "source_fbx": "AssetsRaw/Scene/fbx/jz/cs_denglu_taizi001.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e6a02b378ed3",
+      "category": "tower",
+      "name": "cs_jingling_taizi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_taizi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cc1c56029258",
+      "category": "tower",
+      "name": "cs_jingling_taizi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_jingling_taizi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4fc007bf3116",
+      "category": "tower",
+      "name": "cs_shamozawu_taizi01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_taizi01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1dc14e0495ae",
+      "category": "tower",
+      "name": "cs_shamozawu_taizi02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_taizi02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8a034e2e1efd",
+      "category": "tree",
+      "name": "cs_haitan_zhiwu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_haitan_zhiwu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "936f7388f6fd",
+      "category": "tree",
+      "name": "cs_zhucheng_zhiwu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/zb/cs_zhucheng_zhiwu01.FBX",
+      "glb": "f3e3d4b6d412cba8.glb",
+      "ready": true
+    },
+    {
+      "id": "6e56ba191493",
+      "category": "walksurface",
+      "name": "cs_haibian_matou01_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_haibian_matou01_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "1d7e8f006c9e",
+      "category": "walksurface",
+      "name": "cs_haibian_matou02_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_haibian_matou02_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4982e867f51a",
+      "category": "walksurface",
+      "name": "cs_shamo_longgu04_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_shamo_longgu04_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4fd03631ef2a",
+      "category": "walksurface",
+      "name": "cs_shamoyiji_01_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_shamoyiji_01_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c8bcc932d6ea",
+      "category": "walksurface",
+      "name": "cs_shamoyiji_02_walksurface",
+      "source_fbx": "AssetsRaw/Scene/fbx/walksurface/cs_shamoyiji_02_walksurface.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "dd28351b627a",
+      "category": "wall",
+      "name": "cs_binghu_poqiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "022e0cadffcf",
+      "category": "wall",
+      "name": "cs_binghu_poqiang01_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang01_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "881270da5d54",
+      "category": "wall",
+      "name": "cs_binghu_poqiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d54c63fd7db2",
+      "category": "wall",
+      "name": "cs_binghu_poqiang03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "54a7816137db",
+      "category": "wall",
+      "name": "cs_binghu_poqiang04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d24b1d133203",
+      "category": "wall",
+      "name": "cs_binghu_poqiang05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9ad82b8293da",
+      "category": "wall",
+      "name": "cs_binghu_poqiang06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f32883808886",
+      "category": "wall",
+      "name": "cs_binghu_poqiang07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "95c663332e4e",
+      "category": "wall",
+      "name": "cs_binghu_poqiang08",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7a28d9f52099",
+      "category": "wall",
+      "name": "cs_binghu_poqiang09",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_binghu_poqiang09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9d2ae6392e0d",
+      "category": "wall",
+      "name": "cs_haitan_poqiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_poqiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c5a8efb966fa",
+      "category": "wall",
+      "name": "cs_haitan_poqiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_poqiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "5b6014bcf9c8",
+      "category": "wall",
+      "name": "cs_haitan_poqiang03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_poqiang03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "9b67f13f0ba8",
+      "category": "wall",
+      "name": "cs_haitan_poqiang04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_haitan_poqiang04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "2d0e6e70a255",
+      "category": "wall",
+      "name": "cs_hd_ryzc_qiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_qiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "7ccc35bec666",
+      "category": "wall",
+      "name": "cs_hd_ryzc_qiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_qiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e85b1473423d",
+      "category": "wall",
+      "name": "cs_hd_ryzc_qiang03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_qiang03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "05062c9f8dd4",
+      "category": "wall",
+      "name": "cs_hd_ryzc_qiang04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_hd_ryzc_qiang04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "4b9a09be750c",
+      "category": "wall",
+      "name": "cs_shamozawu_poqiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_poqiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0bf1357d898a",
+      "category": "wall",
+      "name": "cs_shamozawu_poqiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_poqiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "3e608a19d389",
+      "category": "wall",
+      "name": "cs_shamozawu_poqiang03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_poqiang03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "513199fcf4a9",
+      "category": "wall",
+      "name": "cs_shamozawu_poqiang04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_shamozawu_poqiang04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "f827c5e72ff4",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang01",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fb3bae140862",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang02",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang02.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d7c7009da040",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang03",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang03.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "23b01e3b704f",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang04",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang04.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "fc34b6c539ba",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang05",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang05.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "acf028eb10da",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang06",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang06.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "64aeff80f6bc",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang07",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang07.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "708efc7a682f",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang08",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang08.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "c02c08b577a0",
+      "category": "wall",
+      "name": "cs_zhaoze_poqiang09",
+      "source_fbx": "AssetsRaw/Scene/fbx/thing/cs_zhaoze_poqiang09.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cb50fe0c67e6",
+      "category": "water",
+      "name": "cs_ haibian_water",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_ haibian_water.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "e92073b50522",
+      "category": "water",
+      "name": "cs_bingshu_chengbaoshui",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_bingshu_chengbaoshui.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "8b84b64acdf4",
+      "category": "water",
+      "name": "cs_senlin_pubu01",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_senlin_pubu01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "0ed503595cbd",
+      "category": "water",
+      "name": "cs_senlin_water01",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_senlin_water01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "216df0be721e",
+      "category": "water",
+      "name": "cs_yw_haitan_water",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_yw_haitan_water.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "95bb711c3481",
+      "category": "water",
+      "name": "cs_yw_haitan_water01",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_yw_haitan_water01.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "6dc7ad4215fc",
+      "category": "water",
+      "name": "cs_yw_zhucheng_dixing1_a",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_yw_zhucheng_dixing1_a.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "d3089e7d648b",
+      "category": "water",
+      "name": "cs_yw_zhucheng_water",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_yw_zhucheng_water.FBX",
+      "glb": null,
+      "ready": false
+    },
+    {
+      "id": "cd370d3e4da9",
+      "category": "water",
+      "name": "cs_zhaoze_water",
+      "source_fbx": "AssetsRaw/Scene/fbx/water/cs_zhaoze_water.FBX",
+      "glb": null,
+      "ready": false
+    }
+  ]
+}

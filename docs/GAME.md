@@ -23,3 +23,7 @@
 
 ## DARKLORD-BASELINE-001
 Darklord is the primary mechanical and content baseline. Four source classes; prior provisional class count, level cap and skill slot limits superseded. Preserve original IDs, formulas and content after validation. No dragon transformations. External references guide improvements only.
+
+
+## WORLD-DESIGN-002 — утверждено
+Собственный игровой мир на оригинальных ресурсах Darklord. Не требуется 1:1 перенос Unity-локаций. Сначала одна красивая столица, затем визуальная приёмка, затем City APK и остальные локации.

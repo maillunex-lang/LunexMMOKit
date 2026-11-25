@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0vojt"]
+size = Vector3(61.25199, 33.49911, 92.003555)
+
+[node name="Kit_palace_02" type="Node3D" unique_id=920459109]
+metadata/kit_id = "palace_02"
+metadata/category = "palace"
+metadata/source_id = "cs_zhucheng_gonghui02"
+
+[node name="model" type="Node3D" parent="." unique_id=1595031377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.739445, 0)
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=436975885]
+
+[node name="@CollisionShape3D@9" type="CollisionShape3D" parent="Collision" unique_id=689325391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.749556, -154.70361)
+shape = SubResource("BoxShape3D_0vojt")

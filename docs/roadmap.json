@@ -120,14 +120,36 @@
     ],
     "work": "Редактируемые коллизии, навигация, герой и камера в городе",
     "accept": "Четыре класса ходят по городу, джойстик без tap-to-move, тесты коллизий",
+    "status": "done",
+    "evidence": "capital_play: 4 classes, joystick (no tap-to-move), follow camera, FPS, GFX Low/Med/High, spawn-pad+walksurface/terrain collisions, flat nav. test_capital_walk: SPAWN_HIT ON_FLOOR walk stable 4/4. Screen capital-play-cap05.png."
+  },
+  {
+    "id": "WD02",
+    "phase": "transfer",
+    "depends": [
+      "CAP05"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/darklord/WORLD_DESIGN_002.md",
+      "docs/LOCATIONS.md"
+    ],
+    "scope": [
+      "client/world/",
+      "tools/world/",
+      "docs/"
+    ],
+    "work": "WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)",
+    "accept": "Каталог ENVIRONMENT_LIBRARY; PackedScene-киты; новая столица с районами ТЗ; ландшафт/свет/коллизии; скриншоты в darklord-dgi/screens; без массовых локаций до визуальной приёмки",
     "status": "doing",
-    "evidence": "capital_play.tscn: collisions (spawn pad + walksurface/terrain trimesh), 4 classes, joystick (no tap-to-move), follow camera, FPS HUD, flat nav region. test_capital_walk: SPAWN_HIT, ON_FLOOR, walk Δz≈3, Y stable, 4/4 classes. Screen capital-play-cap05.png."
+    "evidence": "ENVIRONMENT_LIBRARY.json (626 FBX). 27 PackedScene kits + textures. Hand-authored eternity_capital.tscn (districts: gate, avenue, plaza, crystal, palace, market, craft, quest, portals, park, water, skyline, art). Screens eternity-capital-birdseye/plaza/avenue/gate/water/playercam.png. CAPAPK blocked pending visual acceptance. Unity v1–v8 kept as archive."
   },
   {
     "id": "CAPAPK",
     "phase": "transfer",
     "depends": [
-      "CAP05"
+      "CAP05",
+      "WD02"
     ],
     "read": [
       "docs/EDITOR.md",
@@ -141,8 +163,8 @@
     ],
     "work": "Отдельный Android City Preview APK: четыре класса, джойстик, камера, FPS, пресеты графики; оружие/крылья/маунты через Attachment System",
     "accept": "Подписанный APK, проверка подписи и SHA256, доступная ссылка; установка и FPS на устройствах фиксируются отдельно после проверки пользователем",
-    "status": "todo",
-    "evidence": ""
+    "status": "blocked",
+    "evidence": "Blocked by WORLD-DESIGN-002: City APK waits visual acceptance of new hand-authored capital (WD02), not Unity 1:1 v8 scene."
   },
   {
     "id": "CAP06",
