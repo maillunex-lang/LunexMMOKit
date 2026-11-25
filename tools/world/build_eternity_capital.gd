@@ -34,6 +34,42 @@ func district(name: String) -> Node3D:
 	d.owner = _city
 	return d
 
+func _spawn_npc(parent: Node3D, pos: Vector3, yaw: float, npc_name: String) -> void:
+	var npc := Node3D.new()
+	npc.name = npc_name
+	parent.add_child(npc)
+	npc.position = pos
+	npc.rotation_degrees.y = yaw
+	npc.set_meta("npc_role", "quest")
+	npc.set_meta("editable", true)
+	# Prefer real class mesh if export exists; else capsule placeholder.
+	var body := Node3D.new()
+	body.name = "Visual"
+	npc.add_child(body)
+	var glb_path := "/home/gamedev/darklord-dgi/exports/10001.glb"
+	var loaded := false
+	if FileAccess.file_exists(glb_path):
+		var doc := GLTFDocument.new()
+		var state := GLTFState.new()
+		if doc.append_from_file(glb_path, state) == OK:
+			var model := doc.generate_scene(state) as Node3D
+			if model:
+				body.add_child(model)
+				model.scale = Vector3(1, 1, 1)
+				loaded = true
+	if not loaded:
+		var mi := MeshInstance3D.new()
+		var cap := CapsuleMesh.new()
+		cap.radius = 0.35
+		cap.height = 1.5
+		mi.mesh = cap
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = Color(0.45, 0.55, 0.7)
+		mi.set_surface_override_material(0, mat)
+		mi.position.y = 0.9
+		body.add_child(mi)
+	_own(npc, _city)
+
 func run():
 	_city = Node3D.new()
 	_city.name = "EternityCapital"
@@ -69,6 +105,13 @@ func run():
 	inst("lamp_01", plaza, Vector3(0, 0.05, -13))
 	inst("bush_01", plaza, Vector3(-16, 0.05, 8), 10.0)
 	inst("bush_01", plaza, Vector3(16, 0.05, 8), -10.0)
+	inst("crate_01", plaza, Vector3(-8, 0.05, 6), 15.0, Vector3(1.2, 1.2, 1.2))
+	inst("barrel_01", plaza, Vector3(8, 0.05, 5), -10.0, Vector3(1.2, 1.2, 1.2))
+	inst("flag_01", plaza, Vector3(-6, 0.05, -12), 0.0)
+	inst("flag_01", plaza, Vector3(6, 0.05, -12), 0.0)
+	_spawn_npc(plaza, Vector3(-4, 0.05, 4), 160.0, "PlazaGuard_L")
+	_spawn_npc(plaza, Vector3(4, 0.05, 4), -160.0, "PlazaGuard_R")
+	_spawn_npc(plaza, Vector3(0, 0.05, 8), 180.0, "PlazaElder")
 
 	# --- Gate (textured) ---
 	var gates := district("04_MainGate")
@@ -91,6 +134,15 @@ func run():
 		if i % 2 == 0:
 			inst("bush_01", street, Vector3(-21, 0.05, z), float(i * 12))
 			inst("tree_plant", street, Vector3(22, 0.05, z + 1.0), float(i * 18))
+		# Street clutter
+		inst(["barrel_01", "barrel_02", "crate_01"][i % 3], street, Vector3(-11.5, 0.05, z + 3.5), float(i * 25), Vector3(1.2, 1.2, 1.2))
+		inst(["crate_02", "crate_01", "barrel_01"][i % 3], street, Vector3(11.5, 0.05, z + 1.5), float(i * -20), Vector3(1.15, 1.15, 1.15))
+		if i % 3 == 0:
+			inst("flag_01", street, Vector3(-8.5, 0.05, z - 2.0), 90.0, Vector3(1.1, 1.1, 1.1))
+			inst("flag_01", street, Vector3(8.5, 0.05, z - 2.0), -90.0, Vector3(1.1, 1.1, 1.1))
+		if i % 2 == 1:
+			inst(["stall_01", "stall_02"][i % 2], street, Vector3(-10.5, 0.05, z + 5.0), 90.0, Vector3(0.85, 0.85, 0.85))
+			inst(["stall_02", "stall_03"][i % 2], street, Vector3(10.5, 0.05, z + 5.0), -90.0, Vector3(0.85, 0.85, 0.85))
 
 	# --- Palace (textured gonghui) ---
 	var palace := district("06_Palace")
@@ -104,24 +156,30 @@ func run():
 	var market := district("07_Market")
 	for i in range(4):
 		inst(["shop_01", "shop_04", "shop_07", "shop_01"][i], market, Vector3(34 + (i % 2) * 12.0, 0.05, -8 + int(i / 2) * 12.0), -90.0)
+		inst(["stall_01", "stall_02", "stall_03"][i % 3], market, Vector3(28 + (i % 2) * 6.0, 0.05, -12 + i * 5.0), -90.0, Vector3(1.2, 1.2, 1.2))
+		inst(["crate_01", "barrel_01", "crate_02"][i % 3], market, Vector3(30 + i * 2.0, 0.05, 2.0), float(i * 15), Vector3(1.3, 1.3, 1.3))
 	inst("lamp_01", market, Vector3(28, 0.05, 0))
 	inst("tree_01", market, Vector3(40, 0.05, 10), 30.0)
+	inst("flag_01", market, Vector3(26, 0.05, -4), 0.0)
 
 	var craft := district("08_Craft")
 	for i in range(4):
 		inst(["shop_07", "shop_04", "shop_01", "shop_07"][i], craft, Vector3(-34 - (i % 2) * 12.0, 0.05, -8 + int(i / 2) * 12.0), 90.0)
+		inst(["barrel_02", "crate_01", "barrel_01"][i % 3], craft, Vector3(-30 - i * 2.5, 0.05, 2 + i), float(i * 40), Vector3(1.25, 1.25, 1.25))
 	inst("rock_01", craft, Vector3(-46, 0.05, 6), 25.0)
 	inst("lamp_01", craft, Vector3(-28, 0.05, 0))
+	inst("stall_03", craft, Vector3(-26, 0.05, -4), 90.0, Vector3(1.2, 1.2, 1.2))
 
 	var quest := district("09_QuestNpc")
 	inst("house_03", quest, Vector3(-32, 0.05, 24), 35.0)
 	inst("lamp_01", quest, Vector3(-24, 0.05, 18))
+	inst("flag_01", quest, Vector3(-20, 0.05, 16), 20.0)
 	for i in range(3):
 		var m := MeshInstance3D.new()
 		m.name = "QuestMarker_" + str(i)
 		var sphere := SphereMesh.new()
-		sphere.radius = 0.4
-		sphere.height = 0.8
+		sphere.radius = 0.35
+		sphere.height = 0.7
 		m.mesh = sphere
 		var mat := StandardMaterial3D.new()
 		mat.albedo_color = Color(1.0, 0.82, 0.25)
@@ -130,8 +188,9 @@ func run():
 		mat.emission_energy_multiplier = 1.0
 		m.set_surface_override_material(0, mat)
 		quest.add_child(m)
-		m.position = Vector3(-22 - i * 2.5, 1.1, 18 + i * 1.5)
+		m.position = Vector3(-22 - i * 2.5, 2.4, 18 + i * 1.5)
 		m.owner = _city
+		_spawn_npc(quest, Vector3(-22 - i * 2.5, 0.05, 18 + i * 1.5), 180.0 + i * 20.0, "QuestGiver_" + str(i))
 
 	var portals := district("10_Portals")
 	# Portal frames use arch pieces + soft crystal, not giant cyan blobs

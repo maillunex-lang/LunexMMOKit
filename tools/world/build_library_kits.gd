@@ -31,6 +31,14 @@ var KIT_DEFS := [
 	{"id": "lamp_01", "category": "prop", "mesh": "lamp_01.glb", "tex": "build_jz04.png", "source": "cs_zhucheng_ludeng01"},
 	{"id": "rock_01", "category": "rock", "mesh": "rock_01.glb", "tex": "splat_dirt.png", "source": "cs_haitan_shitou01"},
 	{"id": "rock_02", "category": "rock", "mesh": "rock_02.glb", "tex": "splat_sand.png", "source": "cs_haitan_shitou02"},
+	{"id": "barrel_01", "category": "prop", "mesh": "barrel_01.glb", "tex": "wood_prop.png", "source": "cs_senlin_mutong01"},
+	{"id": "barrel_02", "category": "prop", "mesh": "barrel_02.glb", "tex": "wood_prop.png", "source": "cs_senlin_mutong03"},
+	{"id": "crate_01", "category": "prop", "mesh": "crate_01.glb", "tex": "wood_prop.png", "source": "cs_senlin_xiangzi01"},
+	{"id": "crate_02", "category": "prop", "mesh": "crate_02.glb", "tex": "wood_prop.png", "source": "cs_senlin_xiangzi02"},
+	{"id": "flag_01", "category": "prop", "mesh": "flag_qizi.glb", "tex": "build_jz04.png", "source": "cs_zhucheng_qizi"},
+	{"id": "stall_01", "category": "prop", "mesh": "stall_pengzi01.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_pengzi_01"},
+	{"id": "stall_02", "category": "prop", "mesh": "stall_pengzi02.glb", "tex": "build_jz03.png", "source": "cs_zhucheng_pengzi_02"},
+	{"id": "stall_03", "category": "prop", "mesh": "stall_pengzi03.glb", "tex": "wood_prop.png", "source": "cs_zhucheng_pengzi_03"},
 ]
 
 func _initialize():

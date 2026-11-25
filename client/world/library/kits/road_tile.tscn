@@ -13,16 +13,16 @@ uv1_scale = Vector3(4, 6, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3ubw7"]
 size = Vector3(12, 0.2, 20)
 
-[node name="Kit_road_tile" type="Node3D" unique_id=1315797015]
+[node name="Kit_road_tile" type="Node3D" unique_id=1223092420]
 metadata/kit_id = "road_tile"
 metadata/category = "road"
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1309031557]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=2012285090]
 mesh = SubResource("PlaneMesh_nrqo5")
 surface_material_override/0 = SubResource("StandardMaterial3D_yd2lp")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1430441281]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1641252072]
 
-[node name="@CollisionShape3D@3" type="CollisionShape3D" parent="Collision" unique_id=648055387]
+[node name="@CollisionShape3D@3" type="CollisionShape3D" parent="Collision" unique_id=376137348]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("BoxShape3D_3ubw7")
