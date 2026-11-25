@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="ArrayMesh" path="res://world/models/FB_12_dm01.res" id="1"]
+[ext_resource type="ArrayMesh" path="res://world/models/FB_12_dm_walksurface.res" id="2"]
+[ext_resource type="Texture2D" path="res://world/models/FB_12_ground.png" id="3"]
+[sub_resource type="StandardMaterial3D" id="Ground"]
+albedo_texture = ExtResource("3")
+
+
+[node name="ImportedLayout" type="Node3D"]
+
+[node name="Object_477512445" type="Node3D" parent="."]
+position = Vector3(38.448517, 41.875412, -30.56184)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "FB_12"
+metadata/source_id = "477512445"
+
+[node name="Object_568556382" type="Node3D" parent="."]
+position = Vector3(129.98, 61.1, -130.91)
+quaternion = Quaternion(1.8637677e-07, -0.9366716, -0.35020888, -1.0490348e-07)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "FBCamera"
+metadata/source_id = "568556382"
+
+[node name="Object_311392025" type="Node3D" parent="Object_477512445"]
+position = Vector3(91.05148, -22.815413, -91.23816)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "FB_12_dm"
+metadata/source_id = "311392025"
+
+[node name="Object_359807223" type="Node3D" parent="Object_477512445"]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "walksurface"
+metadata/source_id = "359807223"
+
+[node name="Object_521230284" type="Node3D" parent="Object_477512445"]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "effect"
+metadata/source_id = "521230284"
+
+[node name="Object_750542406" type="Node3D" parent="Object_568556382"]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "FinalCamera"
+metadata/source_id = "750542406"
+
+[node name="Object_1551574763" type="Node3D" parent="Object_568556382"]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0, 0, 0, 1)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "Audio1"
+metadata/source_id = "1551574763"
+
+[node name="Object_1062849935" type="Node3D" parent="Object_477512445/Object_311392025"]
+position = Vector3(0, 33.696377, -6.1035155e-07)
+quaternion = Quaternion(0.7071068, 0, 0, 0.7071068)
+scale = Vector3(1.0747998, 1.0747998, 1.0747998)
+metadata/source_name = "FB_12_dm_walksurface"
+metadata/source_id = "1062849935"
+
+[node name="Object_1435492447" type="Node3D" parent="Object_477512445/Object_311392025"]
+position = Vector3(0, 0, 0)
+quaternion = Quaternion(0.7071068, 0, 0, 0.7071068)
+scale = Vector3(1, 1, 1)
+metadata/source_name = "FB_12_dm01"
+metadata/source_id = "1435492447"
+
+[node name="Object_1817125895" type="Node3D" parent="Object_477512445/Object_359807223"]
+position = Vector3(91.05148, 10.746677, -91.23816)
+quaternion = Quaternion(0.7071068, 0, 0, 0.7071068)
+scale = Vector3(1.16078, 1.1607808, 1.1607808)
+metadata/source_name = "FB_12_dm_walksurface"
+metadata/source_id = "1817125895"
+
+
+[node name="GroundMesh" type="MeshInstance3D" parent="Object_477512445/Object_311392025/Object_1435492447"]
+mesh = ExtResource("1")
+material_override = SubResource("Ground")
+
+[node name="NavigationSource" type="MeshInstance3D" parent="Object_477512445/Object_359807223/Object_1817125895"]
+visible = false
+mesh = ExtResource("2")
