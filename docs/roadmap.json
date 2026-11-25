@@ -142,7 +142,56 @@
     "work": "WORLD-DESIGN-002: библиотека окружения Darklord и новая редактируемая столица (не 1:1 Unity)",
     "accept": "Каталог ENVIRONMENT_LIBRARY; PackedScene-киты; новая столица с районами ТЗ; ландшафт/свет/коллизии; скриншоты в darklord-dgi/screens; без массовых локаций до визуальной приёмки",
     "status": "doing",
-    "evidence": "Beauty pass: textured gate/palace GLBs; jianzhu03 houses; drop walksurface; bridge off-avenue; plaza fountain monument; ProceduralSky; play smoke OK. Screens refreshed. Remaining: denser clutter, roof materials, device FPS (Xvfb≠Android)."
+    "evidence": "Library kits densified (barrels/crates/stalls/flags); plaza/quest NPCs; grass_zhucheng ground; market paved tiles; tree_leaf alpha; build_city→eternity_play; City APK local 468MB. Screens eternity-capital-*.png. Awaiting visual acceptance. WE03 editor next for owner edits."
+  },
+  {
+    "id": "WE03",
+    "phase": "transfer",
+    "depends": [
+      "F02",
+      "WD02"
+    ],
+    "read": [
+      "docs/EDITOR.md",
+      "docs/WORLD_EDITOR_003.md",
+      "docs/darklord/WORLD_DESIGN_002.md",
+      "docs/LOCATIONS.md"
+    ],
+    "scope": [
+      "client/addons/lunex_world_editor/",
+      "client/world/",
+      "tools/world/",
+      "docs/"
+    ],
+    "work": "WORLD-EDITOR-003: Lunex World Editor (Godot 4 EditorPlugin) — библиотека китов, drag-drop, transform, snap, материалы, NPC/порталы/spawn со stable_id, коллизии, bake NavMesh, валидаторы, Undo/Redo, owner overlay без overwrite генераторами",
+    "accept": "Плагин на Windows; place/move/rotate/scale/snap; material override; markers+stable_id; bake nav; герой обходит сдвинутое здание по NavMesh; валидаторы; генератор не затирает owner; shared location_revision",
+    "status": "todo",
+    "evidence": ""
+  },
+  {
+    "id": "GAME01",
+    "phase": "transfer",
+    "depends": [
+      "WD02",
+      "F02"
+    ],
+    "read": [
+      "docs/GAME.md",
+      "docs/STORY.md",
+      "docs/EDITOR.md",
+      "docs/WORLD_EDITOR_003.md",
+      "docs/LOCATIONS.md"
+    ],
+    "scope": [
+      "client/content/quests/",
+      "client/world/locations/",
+      "client/actors/",
+      "docs/"
+    ],
+    "work": "GAME-SLICE-001: вертикальный срез — квесты гл.1, бой, столица+окраина, порталы (ресурсы Darklord, не 1:1)",
+    "accept": "eternity_play: 4 класса, квестовая цепочка talk/kill/goto по stable_id, осколочники, переход в ashen_outskirts; quest smoke OK; APK не блокирует",
+    "status": "doing",
+    "evidence": "chapter01_quests.json; quest_log; combat_dummy; ashen_outskirts; eternity_play; test_quest_smoke OK"
   },
   {
     "id": "CAPAPK",
@@ -446,11 +495,13 @@
     "depends": [
       "CAP06",
       "UI02",
-      "EDIT01"
+      "EDIT01",
+      "WE03"
     ],
     "read": [
       "docs/EDITOR.md",
-      "docs/darklord/WORLD_IMPORT.md"
+      "docs/darklord/WORLD_IMPORT.md",
+      "docs/WORLD_EDITOR_003.md"
     ],
     "scope": [
       "tools/world/",
@@ -595,7 +646,8 @@
       "D04"
     ],
     "read": [
-      "docs/LOCATIONS.md"
+      "docs/LOCATIONS.md",
+      "docs/WORLD_EDITOR_003.md"
     ],
     "scope": [
       "client/world/",

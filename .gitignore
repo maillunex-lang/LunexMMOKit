@@ -9,3 +9,4 @@ assets_private/
 
 client/studio_payload.zip
 build/
+__pycache__/

@@ -26,21 +26,21 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_63p8s"]
 size = Vector3(4.947316, 4.6408844, 5.121219)
 
-[node name="Kit_stall_02" type="Node3D" unique_id=45089253]
+[node name="Kit_stall_02" type="Node3D" unique_id=1245263131]
 metadata/kit_id = "stall_02"
 metadata/category = "prop"
 metadata/source_id = "cs_zhucheng_pengzi_02"
 
-[node name="Meshes" type="Node3D" parent="." unique_id=1399288230]
+[node name="Meshes" type="Node3D" parent="." unique_id=172060056]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012007952, 0)
 
-[node name="cs_zhucheng_pengzi_02" type="MeshInstance3D" parent="Meshes" unique_id=35187477]
+[node name="cs_zhucheng_pengzi_02" type="MeshInstance3D" parent="Meshes" unique_id=2034963189]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_66xaq")
 surface_material_override/0 = SubResource("StandardMaterial3D_t3ihx")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=140457054]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1651940633]
 
-[node name="@CollisionShape3D@36" type="CollisionShape3D" parent="Collision" unique_id=1659317576]
+[node name="@CollisionShape3D@37" type="CollisionShape3D" parent="Collision" unique_id=2026133476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020171642, 2.3204422, -0.09372163)
 shape = SubResource("BoxShape3D_63p8s")

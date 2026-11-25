@@ -1,0 +1,81 @@
+{
+  "chapter": 1,
+  "title": "Пограничье Осколков",
+  "note": "Original Lunex story (Осколки вечности). Mechanics inspired by Darklord quest chain shape (talk/kill/goto/turn-in), not a 1:1 port of t_quest.",
+  "quests": [
+    {
+      "id": "q_ch1_01_audience",
+      "title": "Аудиенция у Старейшины",
+      "summary": "В столице Этернити ходят слухи об осколках. Старейшина площади ждёт героя.",
+      "giver_stable_id": "npc_plazaguard_l",
+      "turnin_stable_id": "npc_plazaelder",
+      "next_quest_id": "q_ch1_02_market_rumors",
+      "reward_xp": 40,
+      "objectives": [
+        {
+          "type": "talk",
+          "stable_id": "npc_plazaelder",
+          "count": 1,
+          "text": "Поговорить со Старейшиной площади"
+        }
+      ]
+    },
+    {
+      "id": "q_ch1_02_market_rumors",
+      "title": "Слухи рынка",
+      "summary": "Торговцы видели свечение за восточными воротами. Узнай подробности у квестодателя.",
+      "giver_stable_id": "npc_plazaelder",
+      "turnin_stable_id": "npc_questgiver_0",
+      "next_quest_id": "q_ch1_03_first_shardlings",
+      "reward_xp": 60,
+      "objectives": [
+        {
+          "type": "talk",
+          "stable_id": "npc_questgiver_0",
+          "count": 1,
+          "text": "Найти квестодателя у дома гильдии"
+        }
+      ]
+    },
+    {
+      "id": "q_ch1_03_first_shardlings",
+      "title": "Первые осколочники",
+      "summary": "За стенами города осколки магии породили тварей. Зачисти подход к Пепельной окраине.",
+      "giver_stable_id": "npc_questgiver_0",
+      "turnin_stable_id": "npc_questgiver_0",
+      "next_quest_id": "q_ch1_04_ashen_gate",
+      "reward_xp": 120,
+      "objectives": [
+        {
+          "type": "kill",
+          "stable_id": "mob_shardling",
+          "count": 3,
+          "text": "Победить осколочников у восточных ворот"
+        }
+      ]
+    },
+    {
+      "id": "q_ch1_04_ashen_gate",
+      "title": "Пепельные врата",
+      "summary": "Портал на окраину стабилен. Пройди через него и осмотри Пепельный рубеж.",
+      "giver_stable_id": "npc_questgiver_0",
+      "turnin_stable_id": "npc_ashen_warden",
+      "next_quest_id": "",
+      "reward_xp": 100,
+      "objectives": [
+        {
+          "type": "goto",
+          "stable_id": "portal_ashen_gate",
+          "count": 1,
+          "text": "Войти в портал Пепельного рубежа"
+        },
+        {
+          "type": "talk",
+          "stable_id": "npc_ashen_warden",
+          "count": 1,
+          "text": "Доложить Хранителю рубежа"
+        }
+      ]
+    }
+  ]
+}

@@ -1,13 +1,11 @@
 # Статус 25.11.2026
-LunexMMOKit / Осколки вечности. WORLD-DESIGN-002. EDITOR-001.
+LunexMMOKit / Осколки вечности. WORLD-DESIGN-002. WORLD-EDITOR-003. GAME-SLICE-001.
 ## В фокусе
-Красивая редактируемая столица Eternity Capital на ресурсах Darklord → визуальная приёмка → City APK.
-## Сделано сегодня
-- Убраны голубые поля (вода FBX) и парящий walksurface/мост с авеню.
-- Gate/palace с встроенными текстурами; дома на атласе jianzhu03.
-- Небо ProceduralSky, районы, play smoke (4 класса).
-- Плотность: barrels/crates/stalls/flags + plaza/quest NPC (class mesh).
-- `build_city.sh` → eternity_play (не CAP v8 archive).
-- Скрины eternity-capital-*.png + eternity-play-smoke.png.
+Готовый вертикальный срез игры: механики, квесты, локации на ресурсах Darklord (не 1:1). APK — позже.
+## Сделано
+- Столица densify + зелёный грунт `grass_zhucheng`, market tiles, leaf alpha.
+- WE03: спека + addon `lunex_world_editor`, owner-lock генераторов, stable_id.
+- Глава 1 квестов (talk/kill/goto), осколочники, портал → Пепельный рубеж.
+- `eternity_play` = main_scene; quest smoke + ashen location.
 ## Дальше
-Визуальная приёмка столицы → City APK. Per-material крыши. CAPAPK после приёмки. CHAR grip параллельно.
+Расширить бой/навыки, больше локаций гл.1, NavMesh bake в play, серверные контракты. CAPAPK после приёмки.

@@ -1,10 +1,14 @@
 [gd_scene format=4]
 
-[ext_resource type="Texture2D" path="res://world/library/textures/blossom.png" id="1_60046"]
+[ext_resource type="Texture2D" path="res://world/library/textures/tree_leaf.png" id="1_60046"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipeuu"]
+transparency = 2
+alpha_scissor_threshold = 0.35
+alpha_antialiasing_mode = 0
+cull_mode = 2
 albedo_texture = ExtResource("1_60046")
-roughness = 0.82
+roughness = 0.9
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5rtgu"]
 resource_name = "tree_01_cs_zhucheng_touming2"
@@ -43,26 +47,26 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_jmw6u"]
 size = Vector3(4.395238, 6.1834707, 3.758507)
 
-[node name="Kit_tree_01" type="Node3D" unique_id=575014495]
+[node name="Kit_tree_01" type="Node3D" unique_id=1524907016]
 metadata/kit_id = "tree_01"
 metadata/category = "tree"
 metadata/source_id = "cs_zhucheng_shu01"
 
-[node name="Meshes" type="Node3D" parent="." unique_id=1210239588]
+[node name="Meshes" type="Node3D" parent="." unique_id=1245665724]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015266697, 0)
 
-[node name="cs_zhucheng_touming" type="MeshInstance3D" parent="Meshes" unique_id=255810167]
+[node name="cs_zhucheng_touming" type="MeshInstance3D" parent="Meshes" unique_id=634537259]
 transform = Transform3D(-0.008023792, -9.826311e-19, 6.404176e-26, -5.3097e-26, 9.565105e-10, 0.008023791, 9.826311e-19, -0.008023791, 9.565105e-10, -0.061078317, 4.8109593, -0.4204338)
 mesh = SubResource("ArrayMesh_5rtgu")
 surface_material_override/0 = SubResource("StandardMaterial3D_ipeuu")
 
-[node name="cs_zhucheng_putong" type="MeshInstance3D" parent="Meshes" unique_id=1273800618]
+[node name="cs_zhucheng_putong" type="MeshInstance3D" parent="Meshes" unique_id=1661586340]
 transform = Transform3D(-0.009161766, -1.1219926e-18, 5.2384826e-26, -6.062748e-26, 1.0921677e-09, 0.006563294, 1.1219927e-18, -0.009161765, 7.8240575e-10, -0.0033697775, 2.6753556e-08, -0.22442508)
 mesh = SubResource("ArrayMesh_l1cdf")
 surface_material_override/0 = SubResource("StandardMaterial3D_ipeuu")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1036043225]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=2109141687]
 
-[node name="@CollisionShape3D@24" type="CollisionShape3D" parent="Collision" unique_id=1209278856]
+[node name="@CollisionShape3D@25" type="CollisionShape3D" parent="Collision" unique_id=1558898984]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06107831, 3.0917354, -0.42043388)
 shape = SubResource("BoxShape3D_jmw6u")

@@ -60,31 +60,31 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_no7rq"]
 size = Vector3(98.61247, 28.708975, 115.59836)
 
-[node name="Kit_arch_jz01" type="Node3D" unique_id=1206755448]
+[node name="Kit_arch_jz01" type="Node3D" unique_id=64680235]
 metadata/kit_id = "arch_jz01"
 metadata/category = "building"
 metadata/source_id = "cs_zhucheng_jz01"
 
-[node name="Meshes" type="Node3D" parent="." unique_id=897595771]
+[node name="Meshes" type="Node3D" parent="." unique_id=1948815247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.29469, 0)
 
-[node name="cs_zhucheng_dm02" type="MeshInstance3D" parent="Meshes" unique_id=1647061771]
+[node name="cs_zhucheng_dm02" type="MeshInstance3D" parent="Meshes" unique_id=1307863244]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gfrpg")
 surface_material_override/0 = SubResource("StandardMaterial3D_p3nex")
 
-[node name="cs_zhucheng_jianzhu02" type="MeshInstance3D" parent="Meshes" unique_id=422235836]
+[node name="cs_zhucheng_jianzhu02" type="MeshInstance3D" parent="Meshes" unique_id=770984343]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.016845703, -6.81249, -34.23764)
 mesh = SubResource("ArrayMesh_idyaa")
 surface_material_override/0 = SubResource("StandardMaterial3D_p3nex")
 
-[node name="cs_zhucheng_qiang002" type="MeshInstance3D" parent="Meshes" unique_id=1579924543]
+[node name="cs_zhucheng_qiang002" type="MeshInstance3D" parent="Meshes" unique_id=2047779612]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 3.4332275e-05, -3.4093633, -3.1560974)
 mesh = SubResource("ArrayMesh_44egs")
 surface_material_override/0 = SubResource("StandardMaterial3D_p3nex")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=101479861]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=896497891]
 
-[node name="@CollisionShape3D@10" type="CollisionShape3D" parent="Collision" unique_id=168041007]
+[node name="@CollisionShape3D@11" type="CollisionShape3D" parent="Collision" unique_id=1888010295]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.900314, 14.354487, -39.746796)
 shape = SubResource("BoxShape3D_no7rq")

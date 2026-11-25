@@ -100,41 +100,41 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_0piak"]
 size = Vector3(7.0192757, 5.866189, 7.019274)
 
-[node name="Kit_crystal_01" type="Node3D" unique_id=1004805957]
+[node name="Kit_crystal_01" type="Node3D" unique_id=1457620877]
 metadata/kit_id = "crystal_01"
 metadata/category = "crystal"
 metadata/source_id = "cs_zhucheng_shuijing"
 
-[node name="Meshes" type="Node3D" parent="." unique_id=1242393295]
+[node name="Meshes" type="Node3D" parent="." unique_id=781714075]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015202999, 0)
 
-[node name="cs_zhucheng_shuijing02" type="MeshInstance3D" parent="Meshes" unique_id=1437942976]
+[node name="cs_zhucheng_shuijing02" type="MeshInstance3D" parent="Meshes" unique_id=1299497441]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_4xmwx")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing01" type="MeshInstance3D" parent="Meshes" unique_id=1176487511]
+[node name="cs_zhucheng_shuijing01" type="MeshInstance3D" parent="Meshes" unique_id=516083757]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_hlxy8")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing04" type="MeshInstance3D" parent="Meshes" unique_id=1203467734]
+[node name="cs_zhucheng_shuijing04" type="MeshInstance3D" parent="Meshes" unique_id=137848830]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.63643396, 2.2209303, 0.5769675)
 mesh = SubResource("ArrayMesh_nsne3")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing2" type="MeshInstance3D" parent="Meshes" unique_id=1107208601]
+[node name="cs_zhucheng_shuijing2" type="MeshInstance3D" parent="Meshes" unique_id=1647834558]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_msppt")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="cs_zhucheng_shuijing03" type="MeshInstance3D" parent="Meshes" unique_id=862585390]
+[node name="cs_zhucheng_shuijing03" type="MeshInstance3D" parent="Meshes" unique_id=885878330]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.9604645e-07, 2.9039252, 7.003546e-07)
 mesh = SubResource("ArrayMesh_e37fy")
 surface_material_override/0 = SubResource("StandardMaterial3D_qqtov")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=1109125954]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1945964988]
 
-[node name="@CollisionShape3D@23" type="CollisionShape3D" parent="Collision" unique_id=456255549]
+[node name="@CollisionShape3D@24" type="CollisionShape3D" parent="Collision" unique_id=1911275031]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9330945, 0)
 shape = SubResource("BoxShape3D_0piak")

@@ -13,16 +13,16 @@ uv1_scale = Vector3(2, 6, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_oiyve"]
 size = Vector3(6, 0.2, 20)
 
-[node name="Kit_sidewalk_tile" type="Node3D" unique_id=139771092]
+[node name="Kit_sidewalk_tile" type="Node3D" unique_id=1345877932]
 metadata/kit_id = "sidewalk_tile"
 metadata/category = "road"
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=805708909]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1924567477]
 mesh = SubResource("PlaneMesh_8j2ki")
 surface_material_override/0 = SubResource("StandardMaterial3D_m24bq")
 
-[node name="Collision" type="StaticBody3D" parent="." unique_id=967563606]
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1764748421]
 
-[node name="@CollisionShape3D@5" type="CollisionShape3D" parent="Collision" unique_id=1813746201]
+[node name="@CollisionShape3D@6" type="CollisionShape3D" parent="Collision" unique_id=19960378]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("BoxShape3D_oiyve")
