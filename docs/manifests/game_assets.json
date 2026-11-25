@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T10:39:17Z",
+  "generated_at": "2026-11-25T11:00:48Z",
   "product": "Осколки вечности",
   "note": "Used game resources only. Original Darklord / full DGI / full asset library are NOT included.",
   "count": 359,
-  "total_bytes": 130654353,
+  "total_bytes": 130660149,
   "duplicate_sha256_groups": 12,
   "duplicates": [
     {
@@ -1254,11 +1254,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:1f605dec3d63:library_dock.gd",
+      "id": "asset:9a233b8815d1:library_dock.gd",
       "category": "editor",
       "path": "client/addons/lunex_world_editor/library_dock.gd",
-      "size": 5968,
-      "sha256": "1f605dec3d63fad2e72df04802219ac2fc94e39056f70cd90dc37d918925f28c",
+      "size": 7070,
+      "sha256": "9a233b8815d1b7fe23bb4a469e458e46d54a18afb68ad48808d0cdefd59589a7",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Darklord-adapted (not original project)",
@@ -1293,11 +1293,11 @@
       "license_status": "restricted_adapted_runtime"
     },
     {
-      "id": "asset:b43bc3822e36:location_validators.gd",
+      "id": "asset:299773562af3:location_validators.gd",
       "category": "editor",
       "path": "client/addons/lunex_world_editor/location_validators.gd",
-      "size": 5982,
-      "sha256": "b43bc3822e36c8c3d3aaf57c67e1e8cc2d2cacf1a8b09fe576f3204857ebbd42",
+      "size": 6062,
+      "sha256": "299773562af3db7c40feca8c45e4190c7f51a86704d6526e643e470e556acb4b",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1332,11 +1332,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:27c0b99d7747:plugin.gd",
+      "id": "asset:192c1174a0cb:plugin.gd",
       "category": "editor",
       "path": "client/addons/lunex_world_editor/plugin.gd",
-      "size": 8657,
-      "sha256": "27c0b99d77472ec74eafaad91f9d1b4439196ee86e973249bf29b21d930b1fef",
+      "size": 9272,
+      "sha256": "192c1174a0cbd0df55da666b0a83d990f27f6d48840f26780f29184ae5c9c4e1",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1865,11 +1865,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:1b13a908e569:game_session.gd",
+      "id": "asset:0098139bcad0:game_session.gd",
       "category": "core",
       "path": "client/core/game_session.gd",
-      "size": 4601,
-      "sha256": "1b13a908e569c9d8f2ab35fb07166874d7e149d43f80c118fa4e0e8907c550d4",
+      "size": 6572,
+      "sha256": "0098139bcad0b2d4c97a56c53ed8f98bd33ab12f59b7ff4e2161b466d1dc3e1f",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1891,11 +1891,11 @@
       "license_status": "project"
     },
     {
-      "id": "asset:f96f411357e1:stable_ids.gd",
+      "id": "asset:d1c4cd271d95:stable_ids.gd",
       "category": "core",
       "path": "client/core/stable_ids.gd",
-      "size": 2475,
-      "sha256": "f96f411357e116fd33ad20d56119bf9921a1ccdd42fb5402145726fc5bb46581",
+      "size": 4049,
+      "sha256": "d1c4cd271d951c0ff77bd8b8e3dceea3c09a572f8ffd5f53f3cd0ea013c3e51f",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
@@ -1969,11 +1969,11 @@
       "license_status": "restricted_adapted_runtime"
     },
     {
-      "id": "asset:0b6895057e34:api_client.gd",
+      "id": "asset:e2c10a296930:api_client.gd",
       "category": "network",
       "path": "client/network/api_client.gd",
-      "size": 3226,
-      "sha256": "0b6895057e34a845b18597c58983d52b0a9f1d3cfed16609ab6fe278aa80e660",
+      "size": 3680,
+      "sha256": "e2c10a2969304d9ab4480debf63d4176ae13baeb29e1771e895e9fb774e17d16",
       "version": 1,
       "source": "lunex_authored",
       "provenance": "Lunex",
